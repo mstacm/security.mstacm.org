@@ -1,0 +1,90 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACM SIG-Security</title>
+		<a href="index.html" class="w3-center w3-padding w3-margin"><img src="header-logo-wide.png" style="width:90%;height:20%;padding:15px;"></a>
+
+		<!-- Link Stylesheet -->
+		<link rel="stylesheet" href="https://acmsigsec.mst.edu/w3schools.css">
+		<link rel="stylesheet" type="text/css" href="styles.css">
+
+		<div id="nav">
+			<ul>
+				<li><a href="cdt.html" class="menu">Cyber Defense Team</a></li>
+				<li><a href="talks.html" class="menu">Talks & Events</a></li>
+				<li><a href="learn.html" class="menu">Learn Security</a></li>
+				<li><a href="education.html" class="menu">S&T Education</a></li>
+				<li><a href="archives.html" class="menu">Archives</a></li>
+				<li><a href="join.html" class="menu">Join SIG-Sec</a></li>
+				<li><a href="contact.html" class="menu">Contact Us</a></li>
+			</ul>
+		</div>
+</head>
+
+<body style="padding:0px; margin:0px; background-color:#fff;font-family:helvetica, arial, verdana, sans-serif">
+
+		<!-- insert slideshow image -->
+		<!-- <img class="mySlides" src="archives/images/insert image filename here"> -->
+		<div class="w3-margin w3-padding w3-content w3-display-container w3-left" style="width:35%; margin-left:20px;">
+			<a href=""><img class="mySlides w3-center" style="width:100%" src="archives/images/2017-01-21-cyberspark.png"></a>
+			<a href=""><img class="mySlides w3-center" style="width:100%" src="archives/images/enterprise-security.png"></a>
+			<a href=""><img class="mySlides w3-center" style="width:100%" src="archives/images/ccdc-recruitment.png"></a>
+			<a href=""><img class="mySlides w3-center" style="width:100%" src="archives/images/lan-tap-build.png"></a>
+			<a href=""><img class="mySlides w3-center" style="width:100%" src="archives/images/physical-security.png"></a>
+
+			<a class="w3-btn-floating w3-display-left" onclick="plusDivs(-1)">&#10094;</a>
+			<a class="w3-btn-floating w3-display-right" onclick="plusDivs(+1)">&#10095;</a>
+		</div>
+
+		<script>
+		var slideIndex = 1;
+		showDivs(slideIndex);
+
+		function plusDivs(n) {
+			showDivs(slideIndex += n);
+		}
+
+		function showDivs(n) {
+				var i;
+				var x = document.getElementsByClassName("mySlides");
+				if (n > x.length) {slideIndex = 1}
+				if (n < 1) {slideIndex = x.length} ;
+				for (i = 0; i < x.length; i++) {
+						x[i].style.display = "none";
+				}
+				x[slideIndex-1].style.display = "block";
+		}
+
+		var slideIndex = 0;
+		carousel();
+
+		function carousel() {
+			var i;
+			var x = document.getElementsByClassName("mySlides");
+			for (i = 0; i < x.length; i++) {
+				x[i].style.display = "none";
+			}
+			slideIndex++;
+			if (slideIndex > x.length) {slideIndex = 1}
+			x[slideIndex-1].style.display = "block";
+			setTimeout(carousel, 4000); // Change image every 2 seconds
+		}
+		</script>
+
+		<!-- Upcoming Events and Talks Calendar -->
+
+		<!-- Abstract -->
+		<div class="w3-padding w3-margin w3-large w3-half">
+			<h1>About SIG-Security</h1>
+			<p>Our local ACM Special Interest Group on Security's mission is to help develop the cybersecurity profession for the student body of Missouri University of Science and Technology by sponsoring high-quality workshops and lectures from both local and national industry professionals, as well as hosting on campus security events and competitions.</p>
+		</div>
+
+		<!-- Events Calendar -->
+	<div class="w3-center w3-margin w3-padding">
+		<iframe src="https://calendar.google.com/calendar/embed?title=Upcoming%20Events%20and%20Talks&amp;mode=WEEK&amp;height=400&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=mst.edu_7u3stm8bn7l2umuastep5fmbl0%40group.calendar.google.com&amp;color=%238C500B&amp;ctz=America%2FChicago" style="border-width:0" width="900" height="400" frameborder="0" scrolling="no"></iframe>
+	</div>
+
+</body>
+</html>
