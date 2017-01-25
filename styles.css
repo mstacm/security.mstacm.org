@@ -14,18 +14,18 @@ h1, h2, h3, h4, h5, h6 {
 	margin: 0 0 1em 0;
 	padding: 0;
 	background-color: #f2f2f2;
-	border-bottom: 1px solid #ccc;  
+	border-bottom: 1px solid #ccc;
 }
-	
+
 #nav ul {
 	list-style: none;
 	width: 900px;
 	margin: 0 auto;
-	padding: 0; 
+	padding: 0;
 }
 
 #nav li {
-	float: left; 
+	float: left;
 }
 
 #nav li a {
@@ -36,16 +36,24 @@ h1, h2, h3, h4, h5, h6 {
 	color: #1B3F1B;
 	border-right: 1px solid #ccc;
 }
-	
+
 #nav li:first-child a {
-	border-left: 1px solid #ccc; 
+	border-left: 1px solid #ccc;
 }
-	
+
 #nav li a:hover {
 	color: #c00;
-	background-color: #fff; 
+	background-color: #fff;
 }
 
 a {
 	text-decoration:none;
+}
+
+.contact_info_left {
+	border-right:2px solid white;
+}
+
+.contact_info_right {
+	border-left:2px solid white;
 }
