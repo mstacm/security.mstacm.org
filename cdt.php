@@ -12,7 +12,7 @@
 
 		<div id="nav">
 			<ul>
-				<li><a href="cdt.html" class="menu">Cyber Defense Team</a></li>
+				<li><a href="cdt.php" class="menu">Cyber Defense Team</a></li>
 				<li><a href="talks.html" class="menu">Talks & Events</a></li>
 				<li><a href="learn.html" class="menu">Learn Security</a></li>
 				<li><a href="education.html" class="menu">S&T Education</a></li>
@@ -33,11 +33,20 @@
 	</tr>
 	<tr>
 		<td>Global Ranking</td>
-		<td>241</td>
+  <?php
+      $json = file_get_contents('https://ctftime.org/api/v1/teams/15342/');
+      $obj = json_decode($json, TRUE);
+      echo "<td>";
+      echo $obj['rating'][0]['2016']['rating_place'];
+      ?>
 	</tr>
 	<tr>
-		<td>Academic Ranking</td>
-		<td>241</td>
+		<td>Rating Points</td>
+  <?php
+      echo "<td>";
+      echo $obj['rating'][0]['2016']['rating_points'];
+      echo "</td>";
+   ?>
 	</tr>
 	<tr>
 		<td>Academic US Ranking</td>
