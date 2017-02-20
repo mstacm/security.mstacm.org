@@ -18,7 +18,7 @@
 				<li><a href="education.html" class="menu">S&T Education</a></li>
 				<li><a href="archives.html" class="menu">Archives</a></li>
 				<li><a href="join.html" class="menu">Join SIG-Sec</a></li>
-				<li><a href="contact.html" class="menu">Contact Us</a></li>
+				<li><a href="contact.html" class="menu">Officers</a></li>
 			</ul>
 		</div>
 </head>
