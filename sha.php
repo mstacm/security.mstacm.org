@@ -6,7 +6,7 @@ if (isset($_GET['name']) and isset($_GET['password'])) {
     if ($name == $password) {
         print 'Your password can not be your name.';
     } else if (sha1($name) === sha1($password)) {
-        print 'flag'
+        print 'flag';
     } else {
         print '<p class="alert">Invalid password.</p>';
     }
