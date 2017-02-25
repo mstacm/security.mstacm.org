@@ -18,6 +18,8 @@ if (isset($_GET['name']) and isset($_GET['password'])) {
         print var_dump($password);
         print var_dump($name);
     } else {
+	echo (sha1($name));
+	echo (sha1($password));
         print '<p class="alert">Invalid password.</p>';
         print var_dump($password);
         print var_dump($name);
