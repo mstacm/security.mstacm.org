@@ -5,13 +5,13 @@ if (isset($_GET['name']) and isset($_GET['password'])) {
 
     if ($name == $password) {
         print 'Your password can not be your name.';
-        print var_dump($name) . var_dump($password);
+        print (string) var_dump($name) . var_dump($password);
     } else if (sha1($name) === sha1($password)) {
         print 'flag'
-        print var_dump($name) . var_dump($password);
+        print (string) var_dump($name) . var_dump($password);
     } else {
         print '<p class="alert">Invalid password.</p>';
-        print var_dump($name) . var_dump($password);
+        print (string) var_dump($name) . var_dump($password);
     }
 }
 ?>
