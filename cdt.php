@@ -28,7 +28,7 @@
 <!-- CDT Stats -->
 <table class="w3-twothird w3-table w3-large w3-border w3-bordered" style="margin:16px 0 0 40px; height:222px">
 	<tr class="w3-gray">
-		<td class="w3-light-grey w3-text-light-green w3-wide"><strong>M57 Capture the Flag Stats</strong></td>
+		<td class="w3-light-grey w3-text-light-green w3-wide"><strong>M57 2017 Capture the Flag Stats</strong></td>
 		<td class="w3-light-grey"></td>
 	</tr>
 	<tr>
