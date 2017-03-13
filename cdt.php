@@ -44,7 +44,7 @@
 		<td>Rating Points</td>
   <?php
       echo "<td>";
-      echo $obj['rating'][0]['2016']['rating_points'];
+      echo $obj['rating'][0]['2017']['rating_points'];
       echo "</td>";
    ?>
 	</tr>
