@@ -37,7 +37,7 @@
       $json = file_get_contents('https://ctftime.org/api/v1/teams/15342/');
       $obj = json_decode($json, TRUE);
       echo "<td>";
-      echo $obj['rating'][0]['2016']['rating_place'];
+      echo $obj['rating'][0]['2017']['rating_place'];
       ?>
 	</tr>
 	<tr>
