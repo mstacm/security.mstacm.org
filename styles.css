@@ -57,3 +57,25 @@ a {
 .contact_info_right {
 	border-left:2px solid white;
 }
+
+.team-container {
+	background-color: lightblue;
+	position: fixed;
+	margin: auto;
+	margin-left:25%;
+	margin-right:25%;
+    width: 50%;
+    border: 1px solid darkgray;
+    padding: 200px;
+}
+
+.team-progress-bar1{
+	background-color: lightcoral;
+	position: absolute;
+	margin: auto;
+	margin-left:25%;
+	margin-right:25%;
+	width:17%;
+	padding:10px;
+	border: 2px solid darkgrey;
+}
