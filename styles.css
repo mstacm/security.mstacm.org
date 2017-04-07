@@ -61,7 +61,6 @@ a {
 .team-container {
 	background-color: lightblue;
 	position: fixed;
-	margin: auto;
 	margin-left:25%;
 	margin-right:25%;
     width: 50%;
@@ -72,7 +71,6 @@ a {
 .team-progress-bar1{
 	background-color: lightcoral;
 	position: absolute;
-	margin: auto;
 	margin-left:25%;
 	margin-right:25%;
 	width:17%;
