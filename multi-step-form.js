@@ -56,6 +56,17 @@ function prev_step2() {
 	document.getElementById("active3").style.color = "gray";
 }
 
+//Functions to change color based on team type selection
+function indivSelect(){
+    document.getElementById("indiv").style.backgroundColor = "#ace011";
+    document.getElementById("group").style.backgroundColor = "#A4C34A";
+}
+
+function groupSelect(){
+    document.getElementById("indiv").style.backgroundColor = "#A4C34A";
+    document.getElementById("group").style.backgroundColor = "#ace011";
+}
+
 //Functions that add and remove dynamic input
 var boxcount = 1;
 function new_link()
@@ -64,7 +75,7 @@ function new_link()
 	var div1 = document.createElement('div');
 	div1.id = boxcount;
 	// link to delete extended form elements
-	var delLink = '<div style="text-align:left; float: right; margin-right:250px; border-radius:5px;padding:2px; background-color:#004a00";><a href="javascript:delIt('+ boxcount +')" style="text-decoration:none; color:white; font-weight:700; height:1px;">-</a></div>';
+	var delLink = '<div style="text-align:left; float: right; margin-right:220px; border-radius:5px;padding:2px; background-color:#004a00";><a href="javascript:delIt('+ boxcount +')" style="text-decoration:none; color:white; font-weight:700; height:1px;">-</a></div>';
 	div1.innerHTML = document.getElementById('newlinktpl').innerHTML + delLink;
 	document.getElementById('newlink').appendChild(div1);
 }

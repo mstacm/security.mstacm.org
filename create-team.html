@@ -53,8 +53,8 @@
 		<fieldset id="first1">
 			<h2 class="title">Select Your Team Type</h2>
 			<p class="subtitle">Step 1</p>
-			<div class="group">Group</div>
-			<div class="indiv" onclick="iniv()">Individual</div>
+			<div class="group" id="group" onclick="groupSelect()">Group</div>
+			<div class="indiv" id="indiv" onclick="indivSelect()">Individual</div>
 			<input id="next_btn1" onclick="next_step1()" type="button" value="Next">
 		</fieldset>
 
@@ -119,7 +119,7 @@
 		</table>
 
 		<!-- Pay with Stripe button-->
-		<form action="/your-server-side-code" method="POST">
+		<form action="/your-server-side-code" method="POST" class="paytime">
 		<script
 			src="https://checkout.stripe.com/checkout.js" class="stripe-button"
 			data-key="pk_test_6pRNASCoBOKtIshFeQd4XMUh"
