@@ -59,21 +59,13 @@ a {
 }
 
 .team-container {
-	background-color: lightblue;
-	position: fixed;
+	margin-top:80px;
+	margin-bottom:300px;
 	margin-left:25%;
 	margin-right:25%;
-    width: 50%;
-    border: 1px solid darkgray;
-    padding: 200px;
+    padding: 0px;
 }
-
-.team-progress-bar1{
-	background-color: lightcoral;
-	position: absolute;
-	margin-left:25%;
-	margin-right:25%;
-	width:17%;
-	padding:10px;
-	border: 2px solid darkgrey;
+html{
+	height:100%;
+	margin: auto;
 }

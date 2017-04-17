@@ -1,13 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+	<!-- meta and script-->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta content="noindex, nofollow" name="robots">
+	<!-- Including JS File Here -->
+	<script src="multi-step-form.js" type="text/javascript"></script>
+
     <title>ACM SIG-Security</title>
 		<a href="index.html" class="w3-center w3-padding w3-margin"><img src="header-logo-wide.png" style="width:90%;height:20%;padding:15px;"></a>
 
 		<!-- Link Stylesheet -->
 		<link rel="stylesheet" href="https://acmsigsec.mst.edu/w3schools.css">
+		<link rel="stylesheet" type="text/css" href="multi-step-form-css.css">
 		<link rel="stylesheet" type="text/css" href="styles.css">
 
 		<div id="nav">
@@ -24,16 +31,118 @@
 </head>
 
 <body>
-	<div class="w3-container w3-padding w3-margin w3-xlarge w3-center w3-wide" style="margin: 20px 20px 20px 20px">Register For Event</div>
-
+	
     <!-- container for main form -->
-	<div class="team-progress-bar1 w3-xlarge w3-center">Enter</div>
-    <div class="team-container">
-        <div class="team-progress-bar2"></div>
-        <div class="team-progress-bar3"></div>
+	 <div class="team-container">
+        
+		<div class="content1">
+
+		<!-- Multistep Form -->
+		<div class="main1">
+		<form action="#" class="regform" method="get">
+
+		<!-- Progressbar -->
+		<ul id="progressbar1">
+			<li id="active1">Choose</li>
+			<li id="active2">Information</li>
+			<li id="active3">Comfirm</li>
+		</ul>
+		<!-- Fieldsets -->
+
+		<!-- Part 1: Choose Team Type -->
+		<fieldset id="first1">
+			<h2 class="title">Select Your Team Type</h2>
+			<p class="subtitle">Step 1</p>
+			<div class="group">Group</div>
+			<div class="indiv" onclick="iniv()">Individual</div>
+			<input id="next_btn1" onclick="next_step1()" type="button" value="Next">
+		</fieldset>
+
+		<!-- Part 2: Fill out Team information -->
+		<fieldset id="second1">
+		<h2 class="title">Enter Team Information</h2>
+		<p class="subtitle">Step 2</p>
+
+		<!-- Dynamic input boxes -->
+		<h4 class="label">Team Name</h4>
+		<input id="teamname" class="text_field" name="Team Name" placeholder="Teamname" type="text">
+		<br />
+		<style>
+			#newlink {width:600px}
+		</style>
+		<h4 class="label" style="float: left;">Name</h4>
+		<h4 class="label"style="float: left; margin-left: 150px;">Email</h4>
+		<form method="post" action="">
+			<div id="newlink">
+			<table border=0>
+			<tr>
+				<!--Take user input name and email-->
+				<td> <input id="name" type="text" name="linkurl[]" placeholder="Name" value=""> </td>
+				<td>  <input id="email" class="text_field" name="email[]" placeholder="Email" type="text" value=""> </td>
+			</tr>
+			</table>
+			</div>
+			<p>
+				<br>
+				<!--<input type="submit" name="submit1">-->
+				<input class="button1" type="reset" name="reset1">
+			</p>
+			<p id="addnew">
+				<a class="button1 addnew" href="javascript:new_link()">Add New </a>
+			</p>
+		</form>
+
+		<!-- Template for next set of name and email when add is pressed -->
+		<div id="newlinktpl" style="display:none">
+		<div>
+		<table border=0>
+			<tr>
+				<td> <input id="name" type="text" name="linkurl[]" placeholder="Name" value=""> </td>
+				<td>  <input id="email" class="text_field" name="email[]" placeholder="Email" type="text" value=""> </td>
+			</tr>
+		</table>
+		</div>
+		</div>
+
+		<input id="pre_btn1" onclick="prev_step1()" type="button" value="Previous">
+		<input id="next_btn2" name="next" onclick="next_step2(); insertValues();" type="button" value="Next">
+		</fieldset>
+
+		<!-- Part 3: Review and Pay -->
+		<fieldset id="third1">
+		<h2 class="title">Confirm and Pay</h2>
+		<p class="subtitle">Step 3</p>
+
+		<!-- Display table of previous user input -->
+		<table border="1">
+			<script>thing();</script>
+		</table>
+
+		<!-- Pay with Stripe button-->
+		<form action="/your-server-side-code" method="POST">
+		<script
+			src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+			data-key="pk_test_6pRNASCoBOKtIshFeQd4XMUh"
+			data-amount="199"
+			data-name="Stripe.com"
+			data-description="Widget"
+			data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+			data-locale="auto"
+			data-zip-code="true">
+		</script>
+		</form>
+
+			<!-- Submit and previous buttons-->
+			<input id="pre_btn2" onclick="prev_step2()" type="button" value="Previous">
+			<input class="submit_btn" onclick="validation(event)" type="submit" value="Submit">
+		</fieldset>
+		</form>
+		</div>
+		</div>
+
     </div>
-    
-		
+
+	
 
 	<script>
 		function myFunction(id) {
