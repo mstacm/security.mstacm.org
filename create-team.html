@@ -67,9 +67,9 @@
 			<br />
 			<h4 class="label">Amount Due: $45 </h4>
 
-			<!-- Pay with Stripe button-->
+			<!-- Pay with Stripe button
 		<form id="pay-form" action="create_team.html" method="POST">
-			<div id="pay-form-err" onclick="validation(event); insertValues(); appendARow();"></div>
+			<div id="pay-form-err"></div>
 				<script
 					src="https://checkout.stripe.com/checkout.js" class="stripe-button"
 					data-key="pk_test_6pRNASCoBOKtIshFeQd4XMUh"
@@ -83,8 +83,9 @@
 				<h4 class="label">Coupon Code: </h4>
 				<input type="text" name="discount" placeholder="coupon" value="" />
 		</form>
-		<br />
+		<br />-->
 
+		<button on-click="pushToSheet()" type="text">clicky</button>
 		<!--Submit button to send everything to the spreadsheets or database
 		<input class="submit_btn" id="submit-btn" onclick=" insertValues(); appendARow();" type="submit" value="Submit">-->
 		</fieldset>
