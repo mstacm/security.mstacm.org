@@ -120,18 +120,19 @@ const spreadsheetId = '1gQ-1MlOeSUH4OiIC-SSIPCICU_yK1rw5erHHHSVk_sc'
 auth.authorize((err, tokens)=>{
   console.log(tokens)
 })
-
-sheets.spreadsheets.values.append({
-  spreadsheetId,
-  range: 'Sheet1!1:1000',
-  valueInputOption: 'USER_ENTERED',
-  includeValuesInResponse: true,
-  resource:{
-    values: [['cats', 3, 4]]
-  }
-}, (err, response) => {
-  console.log(response.updates)
-})
+function addthings(){
+  sheets.spreadsheets.values.append({
+    spreadsheetId,
+    range: 'Sheet1!1:1000',
+    valueInputOption: 'USER_ENTERED',
+    includeValuesInResponse: true,
+    resource:{
+      values: [['cats', 3, 4]]
+    }
+  }, (err, response) => {
+    console.log(response.updates)
+  })
+}
 
 
 
