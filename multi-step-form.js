@@ -28,19 +28,6 @@ if (count != 0 || y == 0) {
 	document.getElementById("active2").style.color = "#a4c34a";
 }*/
 
-//create array for name and email
-let name_email_array = [];
-let e = "";
-let n = "";
-let name = document.getElementById("name").value;
-let email = document.getElementById("email").value;
-
-
-//insert values into array from user input
-function insertValues(){
-	name_email_array.push(name);
-	name_email_array.push(email);
-}
 
 //function append row to spreadsheet
 function appendARow() {
@@ -76,8 +63,7 @@ var charge = stripe.charges.create({
   source: token,
 }, function(err, charge) {
   // asynchronously called
-},
-)
+})
 
 stripe.coupons.create({
   amount_off: 500,
@@ -91,17 +77,64 @@ stripe.coupons.retrieve(
   "ACM",
   function(err, coupon) {
     // asynchronously called
-  }
-);
+  })
 
 
 /*---------------------------------
 functions to handle data pushed to Google spreadsheet
 -----------------------------------*/
-var GoogleSpreadsheet = require('google-spreadsheet');
-var async = require('async');
- 
-// spreadsheet key is the long id in the sheets URL 
-var doc = new GoogleSpreadsheet('1gQ-1MlOeSUH4OiIC-SSIPCICU_yK1rw5erHHHSVk_sc');
-var sheet;
+//Tutorial from:
+//https://egghead.io/lessons/node-js-use-google-sheets-with-node-and-express-in-fun-side-projects
+
+//create array for name and email
+let name_email_array = [];
+let name = document.getElementById("name").value;
+let email = document.getElementById("email").value;
+
+//insert values into array from user input
+function insertValues(){
+	name_email_array.push(name);
+	name_email_array.push(email);
+}
+
+//add files and libraries
+const google = require('googleapis')
+const credentials = require('./credentials.json')
+
+//authentication
+const auth = new google.auth.JWT(
+  credentials.client_email,
+  null,
+  credentials.private_key,
+  [
+    'https://www.googleapis.com/auth/spreadsheets'
+  ],
+  null
+)
+google.options({auth})
+
+const sheets = google.sheets('v4')
+const spreadsheetId = '1gQ-1MlOeSUH4OiIC-SSIPCICU_yK1rw5erHHHSVk_sc'
+
+//test authentication
+auth.authorize((err, tokens)=>{
+  console.log(tokens)
+})
+
+sheets.spreadsheets.values.append({
+  spreadsheetId,
+  range: 'Sheet1!1:1000',
+  valueInputOption: 'USER_ENTERED',
+  includeValuesInResponse: true,
+  resource:{
+    values: [['cats', 3, 4]]
+  }
+}, (err, response) => {
+  console.log(response.updates)
+})
+
+
+
+
+
 
