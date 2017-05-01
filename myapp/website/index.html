@@ -1,0 +1,100 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+   <body>
+<script src="https://js.stripe.com/v3/"></script>
+<form action="/charge" method="post" id="payment-form">
+  <div class="group">
+    <label>
+      <span>Name</span>
+      <input class="field" id="name" placeholder="Jane Doe"name="name" type='text' />
+    </label>
+    <label>
+      <span>Email</span>
+      <input class="field" id="email" name="email" placeholder="something@here.com" type="email" />
+    </label>
+    <label>
+      <span>Coupon</span>
+      <input class="field" id="coupon" placeholder="coupon" />
+    </label>
+  </div>
+  <div class="group">
+    <label>
+      <span>Card</span>
+      <div id="card-element" class="field"></div>
+    </label>
+  </div><div id="success"></div>
+  <button type="submit">Pay $25</button>
+  <div class="outcome">
+    <div class="error"></div>
+    <div class="success">
+      Success! Your Stripe token is <span class="token"></span>
+    </div>
+  </div>
+</form>
+
+      <script>
+      //Create a Stripe client
+var stripe = Stripe('pk_test_6pRNASCoBOKtIshFeQd4XMUh');
+var elements = stripe.elements();
+
+var card = elements.create('card', {
+  style: {
+    base: {
+      iconColor: '#666EE8',
+      color: '#31325F',
+      lineHeight: '40px',
+      fontWeight: 300,
+      fontFamily: '"Helvetica Neue", Helvetica, sans-serif',
+      fontSize: '15px',
+
+      '::placeholder': {
+        color: '#CFD7E0',
+      },
+    },
+  }
+});
+card.mount('#card-element');
+
+function setOutcome(result) {
+  var successElement = document.querySelector('.success');
+  var errorElement = document.querySelector('.error');
+  successElement.classList.remove('visible');
+  errorElement.classList.remove('visible');
+
+  if (result.token) {
+    // Use the token to create a charge or a customer
+    // https://stripe.com/docs/charges
+    successElement.querySelector('.token').textContent = result.token.id;
+    successElement.classList.add('visible');
+
+    // Insert the token ID into the form so it gets submitted to the server
+    var form = document.getElementById('payment-form');
+    var hiddenInput = document.createElement('input');
+    hiddenInput.setAttribute('type', 'hidden');
+    hiddenInput.setAttribute('name', 'stripeToken');
+    hiddenInput.setAttribute('value', result.token.id);
+    form.appendChild(hiddenInput);
+
+    // Submit the form
+    form.submit();
+
+  } else if (result.error) {
+    errorElement.textContent = result.error.message;
+    errorElement.classList.add('visible');
+  }
+}
+
+card.on('change', function(event) {
+  setOutcome(event);
+});
+
+document.querySelector('form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  var form = document.querySelector('form');
+  stripe.createToken(card).then(setOutcome);
+});
+</script>
+   </body>
+</html>
