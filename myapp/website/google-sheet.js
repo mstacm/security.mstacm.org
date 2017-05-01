@@ -2,7 +2,7 @@
 var request;
 
 // Bind to the submit event of our form
-$("#payment-form").submit(function(event){
+$("#foo").submit(function(event){
 
     // Abort any pending request
     if (request) {
