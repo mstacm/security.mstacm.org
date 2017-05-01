@@ -12,7 +12,7 @@ $("#foo").submit(function(event){
     var $form = $(this);
 
     // Let's select and cache all the fields
-    var $inputs = $form.find("input, button");
+    var $inputs = $form.find("input, select, button, textarea");
 
     // Serialize the data in the form
     var serializedData = $form.serialize();
