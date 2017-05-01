@@ -1,52 +1,28 @@
 @import "http://fonts.googleapis.com/css?family=Droid+Serif";  /* This Line is to import Google font style */
 
-.content1{
-    margin-top:20px auto;
-    width:45%;
+.middle{
+    text-align: center;
+    box-shadow: 2 black;
+    width: 600px;
+    margin-left: 25%;
 }
 .main1{
-    float:left;
-    width:650px;
-    margin-top:80px
-}
-.group{
-    margin:25px;
-    padding: 10px 40px 10px 40px;
-    background-color: #A4C34A;
-    text-align:center;
-    font-family:'Droid Serif',serif;
-    font-weight: 700;
-    border-radius:4px;
-}
-.group:hover{
-    background-color:#ace011;
-    cursor:pointer;
-}
-.indiv{
-    margin:25px;
-    padding: 10px 40px 10px 40px;
-    background-color: #A4C34A;
-    text-align:center;
-    font-family:'Droid Serif',serif;
-    font-weight: 700;
-    border-radius:4px;
-}
-.indiv:hover{
-    background-color:#ace011;
-    cursor:pointer;
+    width:450px;
+    margin-left:10%; 
+
 }
 .name{
-    float: left;
     width:25%;
+    margin:15px 25px;
 }
 .email{
     display:block;
-    float:right;
     width:40%;
     margin-right:10px;
 }
 .spacer{
-    margin:40px;
+    margin-bottom:80px;
+    padding-bottom: 80px;
 }
 .button1{
     width:120px;
@@ -61,33 +37,22 @@
     text-decoration: none;
     font-size: 12px;
 }
-.paytime{
-    margin-left:25px;
+#pay-form{
+    margin-left:45%;
+    padding-left: 43%;
 }
 label{
-    margin-right:50px;
-    margin-top:20px;
-    margin-bottom:0;
+    margin:15px 25px;
+    margin-top:10px;
 }
-td, th, table, div{
+td, table, div{
     margin: 0;
     padding:0;
 }
-#newlink{
+th{
+    text-align: left;
+    margin: 0;
     padding:0;
-    margin:0;
-    width: 10px;
-    height: 150px;
-    overflow: scroll;
-}
-#progressbar1{
-    margin:0;
-    padding-left:40px;
-    text-align: center;
-    font-size:18px;
-}
-#active1{
-    color:#a4c34a;
 }
 fieldset{
     display:none;
@@ -107,10 +72,10 @@ fieldset{
     margin-left:0;
     box-shadow:3px 3px 25px 1px gray
 }
-input[type=text],input[type=password],select{
-    width:90%;
+input[type=text],select{
+    width:100%;
     margin:1px;
-    height:20px;
+    height:30px;
     padding:10px;
     border:2px solid #a4c34a;
     border-radius:4px
@@ -136,11 +101,5 @@ input[type=submit],input[type=button]{
 }
 h2,p{
     text-align:center;
-    font-family:'Droid Serif',serif
-}
-li{
-    margin-right:52px;
-    display:inline;
-    color:#c1c5cc;
     font-family:'Droid Serif',serif
 }
