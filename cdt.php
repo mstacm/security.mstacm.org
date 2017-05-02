@@ -51,7 +51,7 @@
 	</tr>
 	<tr>
 		<td>Academic US Ranking</td>
-		<td>29</td>
+		<td>19</td>
 	</tr>
 </table>
 
