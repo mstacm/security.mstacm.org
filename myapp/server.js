@@ -15,21 +15,17 @@ app.use(bodyParser.json());
 
 
 //link to static folder webpage
-app.use(express.static('website'));
+app.use(express.static('/myapp/website'));
 
 app.get("/", (req, res) =>
-<<<<<<< HEAD
   res.render("https://acmsigsec.mst.edu/myapp/website/index2.html", {keyPublishable}));
 
 app.get('/success', function(req, res){
     res.render('https://acmsigsec.mst.edu/myapp/website/success.html',{
-=======
-  res.render("index.html", {keyPublishable}));
+    });
 
 app.get('/success', function(req, res){
     res.render('success.html',{
->>>>>>> master
-
     });
 });
 
@@ -53,13 +49,8 @@ app.post('/charge', function(req, res) {
     });
     console.log("your payment passed");
     console.log("your amount was"+JSON.stringify(real_amount));
-<<<<<<< HEAD
     res.redirect('/success');
-=======
-    res.redirect('/success.html');
->>>>>>> master
 });
-app.listen(3000);
 
 
 // const server = app.listen(3000, listening);
