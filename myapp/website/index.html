@@ -5,8 +5,8 @@
   </head>
   <body>
     <h2>Stripe Checkout Example</h2>
-    
-    <form action="https://acmsigsec.mst.edu/myapp/server" method="post" id="payment-form">
+    <form method="post" id="payment-form" action="/charge">
+        
   <div class="form-row">
     <label for="card-element">
       Credit or debit card
@@ -18,12 +18,23 @@
     <!-- Used to display form errors -->
     <div id="card-errors"></div>
   </div>
-
   <input type="submit" class="submit" value="Submit Payment">
 </form>
   </body>
 
   <script>
+    function submit1(){
+      form1 = document.getElementById("foo");
+      form1.target='_blank';
+      form1.action='https://script.google.com/macros/s/AKfycbwIaHWXzwbtD3EbdoCGZpHwe77GJICUEyk1ENaWbPjRWgAC_pc/exec';
+      form1.submit();
+    }
+    function submit2(){
+      form2=document.getElementById("payment-form");
+      form2.target='_blank';
+      form2.action='../charge';
+      form2.submit();
+    }
       var stripe = Stripe('pk_test_6pRNASCoBOKtIshFeQd4XMUh');
 var elements = stripe.elements();
 

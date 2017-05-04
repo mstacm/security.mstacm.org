@@ -21,7 +21,8 @@ app.use(express.static('website'));
 app.get("/", (req, res) =>
   res.render("/index.html", {keyPublishable}));
 
-app.post('https://acmsigsec.mst.edu/myapp/server', function(req, res) {
+app.post('/charge', function(req, res) {
+
   let Chargeamount = 500;
   var token = req.body.stripeToken;
   var charge = stripe.charges.create({
