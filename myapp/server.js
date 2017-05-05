@@ -19,7 +19,7 @@ app.use(express.static('website'));
 
 //gets
 app.get("/", (req, res) =>
-  res.render("/index.html", {keyPublishable}));
+  res.render("https://acmsigsec.mst.edu/myapp/website/index.html", {keyPublishable}));
 
 app.post('/charge', function(req, res) {
 
@@ -36,7 +36,7 @@ app.post('/charge', function(req, res) {
     }
   });
   console.log("your payment was successful.");
-    res.redirect('/success.html');
+    res.redirect('https://acmsigsec.mst.edu/myapp/website/success.html');
 });
 app.listen(3000);
 // const server = app.listen(3000, listening);
