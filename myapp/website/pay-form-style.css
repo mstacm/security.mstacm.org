@@ -1,3 +1,10 @@
+* {
+  font-family: "Helvetica Neue", Helvetica;
+  font-size: 15px;
+  font-variant: normal;
+  padding: 0;
+  margin: 0;
+}
 .middle1{
     text-align: center;
     box-shadow: 2 black;
