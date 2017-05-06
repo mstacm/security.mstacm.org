@@ -46,8 +46,13 @@ spreadsheet.add({
   });
   console.log("Info added: " + req.body.name + " " + req.body.email);
 
-  //create stripe charge
+  //Checks for right coupon code
   let Chargeamount = 500;
+  if (req.body.coupons === "ACM" || req.body.coupons === "acm" || req.body.coupons === "Acm"){
+    Chargeamount = 1000;
+  }
+
+  //create stripe charge
   var token = req.body.stripeToken;
   var charge = stripe.charges.create({
     amount: Chargeamount,
@@ -59,6 +64,7 @@ spreadsheet.add({
         console.log("your card was declined");
     }
   });
+  console.log("You were charged " + JSON.stringify(Chargeamount));
   console.log("your payment was successful.");
     res.redirect('https://acmsigsec.mst.edu/myapp/website/success.html');
 });
