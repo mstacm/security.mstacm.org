@@ -44,6 +44,7 @@ spreadsheet.add({
   function(err, res){
     console.log(err);
   });
+  console.log("Info added: " + req.body.name + " " + req.body.email);
 
   //create stripe charge
   let Chargeamount = 500;
