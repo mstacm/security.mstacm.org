@@ -15,7 +15,7 @@
 
 		<!-- Link Stylesheet -->
 		<link rel="stylesheet" href="https://acmsigsec.mst.edu/w3schools.css">
-		<link rel="stylesheet" type="text/css" href="/pay-form-style.css">
+		<link rel="stylesheet" type="text/css" href="pay-form-style.css">
 		<link rel="stylesheet" type="text/css" href="../../styles.css">
 
     <!-- Nav bar -->
@@ -34,10 +34,11 @@
 </head>
 
 <body>
-	
+  <div class="mainbody">
     <div class="middle1">
       <!-- Input boxes to take user data and send it to google spreadsheets -->
-      <h2>Stripe Checkout Example</h2>
+      <h2>Sign Up for TracerFIRE</h2>
+      <div class="styleLine"></div>
         <form method="post" id="payment-form" action="../charge">
           <label>Name</label>
             <input id='names' name='name' type='text'>
@@ -47,13 +48,13 @@
           </p><p>
             <label>Coupon</label>
             <input id='coupons' name='coupons' type='text'>
-          </p>
+          </p><br />
           <!-- Display the Card element, uses Elements from Stripe -->
           <div class="form-row">
             <label for="card-element">
               Credit or debit card
             </label>
-            <div id="card-element" style="padding-left: 70%px; padding-right: 70%px;">
+            <div id="card-element">
               <!-- a Stripe Element will be inserted here. -->
             </div>
 
@@ -63,6 +64,7 @@
               <input type="submit" class="submit" value="Submit Payment">
           </form>
 	    </div>
+    </div>
       <!-- Used to display some in page stuff, look closer at this later -->
 	    <script>
 		    function myFunction(id) {
@@ -86,7 +88,7 @@
           'style': {
             'base': {
               'fontFamily': 'Arial, sans-serif',
-              'fontSize': '20px',
+              'fontSize': '15px',
               'color': '#C1C7CD',
             },
             'invalid': {
