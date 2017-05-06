@@ -38,11 +38,17 @@
     <div class="middle">
         <h2>Stripe Checkout Example</h2>
     <form method="post" id="payment-form" action="../charge">
+    <label>Name</label>
+        <input id='name' name='name' type='text'>
+      </p><p>
+        <label>Email Address</label>
+        <input id='email' name='email' type='email'>
+      </p>
   <div class="form-row">
     <label for="card-element">
       Credit or debit card
     </label>
-    <div id="card-element" style="padding-left: 300px; padding-right: 300px;">
+    <div id="card-element" style="padding-left: 70%px; padding-right: 70%px;">
       <!-- a Stripe Element will be inserted here. -->
     </div>
 
