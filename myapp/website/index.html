@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-
 	<!-- meta and script-->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,6 +18,7 @@
 		<link rel="stylesheet" type="text/css" href="../../multi-step-form-css.css">
 		<link rel="stylesheet" type="text/css" href="../../styles.css">
 
+    <!-- Nav bar -->
 		<div id="nav">
 			<ul>
 				<li><a href="https://acmsigsec.mst.edu/cdt.php" class="menu">Cyber Defense Team</a></li>
@@ -35,108 +35,113 @@
 
 <body>
 	
-    <div class="middle">
-        <h2>Stripe Checkout Example</h2>
-    <form method="post" id="payment-form" action="../charge">
-    <label>Name</label>
-        <input id='name' name='name' type='text'>
-      </p><p>
-        <label>Email Address</label>
-        <input id='email' name='email' type='email'>
-      </p>
-      <p>
-        <label>Coupon</label>
-        <input id='coupons' name='coupons' type='text'>
-      </p>
-  <div class="form-row">
-    <label for="card-element">
-      Credit or debit card
-    </label>
-    <div id="card-element" style="padding-left: 70%px; padding-right: 70%px;">
-      <!-- a Stripe Element will be inserted here. -->
-    </div>
+    <div class="middle1">
+      <!-- Input boxes to take user data and send it to google spreadsheets -->
+      <h2>Stripe Checkout Example</h2>
+        <form method="post" id="payment-form" action="../charge">
+          <label>Name</label>
+            <input id='names' name='name' type='text'>
+          </p><p>
+            <label>Email Address</label>
+            <input id='emails' name='email' type='email'>
+          </p><p>
+            <label>Coupon</label>
+            <input id='coupons' name='coupons' type='text'>
+          </p>
+          <!-- Display the Card element, uses Elements from Stripe -->
+          <div class="form-row">
+            <label for="card-element">
+              Credit or debit card
+            </label>
+            <div id="card-element" style="padding-left: 70%px; padding-right: 70%px;">
+              <!-- a Stripe Element will be inserted here. -->
+            </div>
 
-    <!-- Used to display form errors -->
-    <div id="card-errors"></div>
-  </div><br />
-  <input type="submit" class="submit" value="Submit Payment">
-</form>
+            <!-- Used to display form errors -->
+            <div id="card-errors"></div>
+            </div><br />
+              <input type="submit" class="submit" value="Submit Payment">
+          </form>
+	    </div>
+      <!-- Used to display some in page stuff, look closer at this later -->
+	    <script>
+		    function myFunction(id) {
+          var x = document.getElementById(id);
+          if (x.className.indexOf("w3-show") == -1) {
+              x.className += " w3-show";
+          } else {
+              x.className = x.className.replace(" w3-show", "");
+          }
+        }
+	    </script>
+      <!-- Client Side Javascript to tokenize the card data and send it to the Server.js
+      which then it will be sent to stripe servers to charge the card. The info doesn't 
+      touch our own server.' -->
+      <script>
+        var stripe = Stripe('pk_test_6pRNASCoBOKtIshFeQd4XMUh');
+        var elements = stripe.elements();
 
-	</div>
+        //Style the card button
+        var card = elements.create('card', {
+          'style': {
+            'base': {
+              'fontFamily': 'Arial, sans-serif',
+              'fontSize': '20px',
+              'color': '#C1C7CD',
+            },
+            'invalid': {
+              'color': 'red',
+            },
+          }
+        });
 
-	<script>
-		function myFunction(id) {
-			var x = document.getElementById(id);
-			if (x.className.indexOf("w3-show") == -1) {
-					x.className += " w3-show";
-			} else {
-					x.className = x.className.replace(" w3-show", "");
-			}
-		}
-	</script>
-  <script>
-var stripe = Stripe('pk_test_6pRNASCoBOKtIshFeQd4XMUh');
-var elements = stripe.elements();
+        // Add an instance of the card UI component into the `card-element` 
+        card.mount('#card-element');
 
-var card = elements.create('card', {
-  'style': {
-    'base': {
-      'fontFamily': 'Arial, sans-serif',
-      'fontSize': '20px',
-      'color': '#C1C7CD',
-    },
-    'invalid': {
-      'color': 'red',
-    },
-  }
-});
+        // Error checking on page
+        card.addEventListener('change', function(event) {
+          var displayError = document.getElementById('card-errors');
+          if (event.error) {
+            displayError.textContent = event.error.message;
+          } else {
+            displayError.textContent = '';
+          }
+        });
 
-// Add an instance of the card UI component into the `card-element` <div>
-card.mount('#card-element');
+        // Grabs the token and hides it in page then sends it to server
+        function stripeTokenHandler(token) {
+          // Insert the token ID into the form so it gets submitted to the server
+          var form = document.getElementById('payment-form');
+          var hiddenInput = document.createElement('input');
+          hiddenInput.setAttribute('type', 'hidden');
+          hiddenInput.setAttribute('name', 'stripeToken');
+          hiddenInput.setAttribute('value', token.id);
+          form.appendChild(hiddenInput);
 
-card.addEventListener('change', function(event) {
-  var displayError = document.getElementById('card-errors');
-  if (event.error) {
-    displayError.textContent = event.error.message;
-  } else {
-    displayError.textContent = '';
-  }
-});
+          // Submit the form
+          form.submit();
+        }
 
-function stripeTokenHandler(token) {
-  // Insert the token ID into the form so it gets submitted to the server
-  var form = document.getElementById('payment-form');
-  var hiddenInput = document.createElement('input');
-  hiddenInput.setAttribute('type', 'hidden');
-  hiddenInput.setAttribute('name', 'stripeToken');
-  hiddenInput.setAttribute('value', token.id);
-  form.appendChild(hiddenInput);
+        // Create the token from the user data submited above 
+        function createToken() {
+          stripe.createToken(card).then(function(result) {
+            if (result.error) {
+              // Inform the user if there was an error
+              var errorElement = document.getElementById('card-errors');
+              errorElement.textContent = result.error.message;
+            } else {
+              // Send the token to your server
+              stripeTokenHandler(result.token);
+            }
+          });
+        };
 
-  // Submit the form
-  form.submit();
-}
-
-function createToken() {
-  stripe.createToken(card).then(function(result) {
-    if (result.error) {
-      // Inform the user if there was an error
-      var errorElement = document.getElementById('card-errors');
-      errorElement.textContent = result.error.message;
-    } else {
-      // Send the token to your server
-      stripeTokenHandler(result.token);
-    }
-  });
-};
-
-// Create a token when the form is submitted.
-var form = document.getElementById('payment-form');
-form.addEventListener('submit', function(e) {
-  e.preventDefault();
-  createToken();
-});
+        // Create a token when the form is submitted.
+        var form = document.getElementById('payment-form');
+        form.addEventListener('submit', function(e) {
+          e.preventDefault();
+          createToken();
+        });
   </script>
-
 </body>
-
 </html>
