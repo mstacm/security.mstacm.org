@@ -1,9 +1,15 @@
 //Install this to update the javascript so you don't have to re-run the console
 //npm install nodemon -g
 
+//require .dotenv to load the environmental variables
+//Tutorial here: https://sendgrid.com/blog/node-environment-variables/
+var dotenv = require('dotenv');
+dotenv.load()
+
+//set stripe keys
 console.log("server is starting.");
-const keyPublishable = "pk_test_6pRNASCoBOKtIshFeQd4XMUh";
-const keySecret = "sk_test_BQokikJOvBiI2HlWgH4olfQ2";
+const keyPublishable = process.env.TEST_PUBLISH_KEY;
+const keySecret = process.env.TEST_SECRET_KEY;
 
 //libraries
 const express = require('express');
@@ -16,10 +22,10 @@ var Spreadsheet = require('google-spreadsheet-append-es5');
 //Documentation here: https://www.npmjs.com/package/google-spreadsheet-append-es5
 var spreadsheet = Spreadsheet({
 	auth: {
-		email: "tracer@astral-subject-166716.iam.gserviceaccount.com",
-		keyFile: "key-final.pem"
+		email: process.env.AUTH_EMAIL,
+		keyFile: process.env.KEY_FILE
 	},
-	fileId: '1h05kF6CiH_UBITneLEsItsc1jbyf7zDGnpMSE9jSgRk'
+	fileId: process.env.FEILD_ID
 });
 
 //set app
@@ -60,12 +66,17 @@ spreadsheet.add({
     source: token,
 
   }, function (err, charge){
+    //if charge fails
     if(err){
         console.log("your card was declined");
+        res.redirect('https://acmsigsec.mst.edu/myapp/website/declined.html');
+    }
+    //If charge succeeds
+    if (charge){
+      console.log("You were charged " + JSON.stringify(Chargeamount));
+      console.log("your payment was successful.");
+      res.redirect('https://acmsigsec.mst.edu/myapp/website/success.html');
     }
   });
-  console.log("You were charged " + JSON.stringify(Chargeamount));
-  console.log("your payment was successful.");
-    res.redirect('https://acmsigsec.mst.edu/myapp/website/success.html');
 });
 app.listen(3000);
