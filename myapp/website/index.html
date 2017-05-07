@@ -6,9 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta content="noindex, nofollow" name="robots">
 	<!-- Including JS Files Here -->
-	<script src="multi-step-form.js" type="text/javascript"></script>
 	<script src="https://js.stripe.com/v3/"></script>
-	<script type="text/javascript">Stripe.setPublishableKey("put your public stripe key here");</script>
 
     <title>ACM SIG-Security</title>
 		<a href="https://acmsigsec.mst.edu/index.html" class="w3-center w3-padding w3-margin"><img src="../../header-logo-wide.png" style="width:90%;height:20%;padding:15px;"></a>
@@ -80,7 +78,7 @@
       which then it will be sent to stripe servers to charge the card. The info doesn't 
       touch our own server.' -->
       <script>
-        var stripe = Stripe('pk_test_6pRNASCoBOKtIshFeQd4XMUh');
+        var stripe = Stripe(process.env.TEST_PUBLISH_KEY);
         var elements = stripe.elements();
 
         //Style the card button
@@ -100,7 +98,6 @@
         // Add an instance of the card UI component into the `card-element` 
         card.mount('#card-element');
 
-        // Error checking on page
         card.addEventListener('change', function(event) {
           var displayError = document.getElementById('card-errors');
           if (event.error) {
@@ -110,7 +107,6 @@
           }
         });
 
-        // Grabs the token and hides it in page then sends it to server
         function stripeTokenHandler(token) {
           // Insert the token ID into the form so it gets submitted to the server
           var form = document.getElementById('payment-form');
@@ -122,28 +118,27 @@
 
           // Submit the form
           form.submit();
-        }
-
-        // Create the token from the user data submited above 
-        function createToken() {
-          stripe.createToken(card).then(function(result) {
-            if (result.error) {
-              // Inform the user if there was an error
-              var errorElement = document.getElementById('card-errors');
-              errorElement.textContent = result.error.message;
-            } else {
-              // Send the token to your server
-              stripeTokenHandler(result.token);
-            }
-          });
         };
 
-        // Create a token when the form is submitted.
-        var form = document.getElementById('payment-form');
-        form.addEventListener('submit', function(e) {
-          e.preventDefault();
-          createToken();
-        });
+          function createToken() {
+            stripe.createToken(card).then(function(result) {
+              if (result.error) {
+                // Inform the user if there was an error
+                var errorElement = document.getElementById('card-errors');
+                errorElement.textContent = result.error.message;
+              } else {
+                // Send the token to your server
+                stripeTokenHandler(result.token);
+              }
+            });
+          };
+
+          // Create a token when the form is submitted.
+          var form = document.getElementById('payment-form');
+          form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            createToken();
+          });
   </script>
 </body>
 </html>

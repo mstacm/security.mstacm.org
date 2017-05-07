@@ -53,30 +53,35 @@ spreadsheet.add({
   console.log("Info added: " + req.body.name + " " + req.body.email);
 
   //Checks for right coupon code
-  let Chargeamount = 500;
+  let Chargeamount = 1000;
   if (req.body.coupons === "ACM" || req.body.coupons === "acm" || req.body.coupons === "Acm"){
-    Chargeamount = 1000;
+    Chargeamount = 5000;
   }
 
   //create stripe charge
   var token = req.body.stripeToken;
+  console.log("token is: "+ JSON.stringify(req.body.stripeToken));
   var charge = stripe.charges.create({
     amount: Chargeamount,
     currency: "usd",
+    description: "test charge",
     source: token,
 
   }, function (err, charge){
     //if charge fails
     if(err){
+        console.log(err);
         console.log("your card was declined");
         res.redirect('https://acmsigsec.mst.edu/myapp/website/declined.html');
     }
     //If charge succeeds
-    if (charge){
+    else{
       console.log("You were charged " + JSON.stringify(Chargeamount));
       console.log("your payment was successful.");
       res.redirect('https://acmsigsec.mst.edu/myapp/website/success.html');
     }
   });
 });
-app.listen(3000);
+app.listen(3000, function(){
+  console.log("listening on port 3000");
+});
