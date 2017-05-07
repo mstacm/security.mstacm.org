@@ -1,6 +1,4 @@
-
-multi-step-form\.js
-
+website/.env/
 node_modules/googleapis/
 
 myapp/node_modules/\.bin/
