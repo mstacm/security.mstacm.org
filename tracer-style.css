@@ -98,7 +98,9 @@ input[type=submit],input[type=button]{
     border:none;
     border-radius:4px;
     color:#fff;
-    font-family:'Droid Serif',serif
+    font-family:'Droid Serif',serif;
+    cursor:pointer;
+    
 }
 h2,p{
     text-align:center;

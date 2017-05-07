@@ -77,4 +77,11 @@ label {
   line-height: 40px;
   display: block;
 }
+.price{
+  font-size: 20px;
+  font-weight: 500;
+}
+th {
+    text-align: left;
+}
 

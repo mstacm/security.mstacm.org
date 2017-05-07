@@ -35,19 +35,35 @@
   <div class="mainbody">
     <div class="middle1">
       <!-- Input boxes to take user data and send it to google spreadsheets -->
-      <h2>Sign Up for TracerFIRE</h2>
+      <h2>Register for TracerFIRE</h2>
       <div class="styleLine"></div>
         <form method="post" id="payment-form" action="../charge">
           <label>Name</label>
-            <input id='names' name='name' type='text'>
+            <input id='names' name='name' type='text' placeholder="Joe Miner">
           </p><p>
             <label>Email Address</label>
-            <input id='emails' name='email' type='email'>
+            <input id='emails' name='email' type='email' placeholder="youremail@here.com">
           </p><p>
             <label>Coupon</label>
-            <input id='coupons' name='coupons' type='text'>
+            <input id='coupons' name='coupons' type='text' placeholder="PROMO33">
           </p><br />
           <!-- Display the Card element, uses Elements from Stripe -->
+          <div class="price">
+            <table>
+              <tr>
+                <th>Membership</th>
+                <th>Price</th>
+              </tr>
+              <tr>
+                <td>ACM Member</td>
+                <td>$45.00</td>
+              </tr>
+              <tr>
+                <td>Non-ACM Member</td>
+                <td>$50.00</td>
+              </tr>
+            </table>
+          </div>
           <div class="form-row">
             <label for="card-element">
               Credit or debit card
