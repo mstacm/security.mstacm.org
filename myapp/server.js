@@ -65,7 +65,9 @@ spreadsheet.add({
     amount: Chargeamount,
     currency: "usd",
     description: "TracerFire Fall 2017 - Team Purchase",
-    metadata: {description: req.body.email},
+    metadata: {email: req.body.email,
+      name: req.body.name
+    },
     source: token,
 
   }, function (err, charge){
