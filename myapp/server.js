@@ -53,9 +53,9 @@ spreadsheet.add({
   console.log("Info added: " + req.body.name + " " + req.body.email);
 
   //Checks for right coupon code
-  let Chargeamount = 1000;
-  if (req.body.coupons === "ACM" || req.body.coupons === "acm" || req.body.coupons === "Acm"){
-    Chargeamount = 5000;
+  let Chargeamount = 4000;
+  if (req.body.coupons === "ACM99" || req.body.coupons === "acm99" || req.body.coupons === "Acm99"){
+    Chargeamount = 3500;
   }
 
   //create stripe charge
