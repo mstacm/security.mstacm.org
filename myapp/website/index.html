@@ -97,6 +97,8 @@
       which then it will be sent to stripe servers to charge the card. The info doesn't 
       touch our own server.' -->
       <script>
+        var dotenv = require('dotenv');
+        dotenv.load()
         var stripe = Stripe(process.env.TEST_PUBLISH_KEY);
         var elements = stripe.elements();
 
