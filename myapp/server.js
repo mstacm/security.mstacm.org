@@ -64,7 +64,8 @@ spreadsheet.add({
   var charge = stripe.charges.create({
     amount: Chargeamount,
     currency: "usd",
-    description: "test charge",
+    description: "TracerFire Fall 2017 - Team Purchase",
+    metadata: {description: req.body.email},
     source: token,
 
   }, function (err, charge){
