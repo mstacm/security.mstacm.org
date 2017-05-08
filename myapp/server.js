@@ -45,8 +45,8 @@ app.post('/charge', function(req, res) {
   // append new row
 spreadsheet.add({
   timestamp: new Date(), 
-  name: req.body.name, 
-  email: req.body.email}, 
+  name: "'" + req.body.name, 
+  email: "'" + req.body.email}, 
   function(err, res){
     console.log(err);
   });

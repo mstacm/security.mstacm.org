@@ -58,8 +58,8 @@ input[type=text],input[type=email],select{
     width:40%;
     margin:1px;
     height:30px;
-    padding:10px;
     border:1px solid #a4c34a;
+    line-height:30px;
     border-radius:2px;
     cursor:pointer;
 }
