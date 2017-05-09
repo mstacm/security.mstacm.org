@@ -42,9 +42,9 @@ app.get("/", (req, res) =>
 app.post('/charge', function(req, res) {
 
   //Checks for right coupon code
-  let Chargeamount = process.env.FAKE_PROMO;
-  if (req.body.coupons === "ACM99" || req.body.coupons === "acm99" || req.body.coupons === "Acm99"){
-    Chargeamount = process.env.REAL_PROMO;
+  let Chargeamount = 4000;
+  if (req.body.coupons === process.env.PROMO){
+    Chargeamount = 3500;
   }
 
   //create stripe charge
