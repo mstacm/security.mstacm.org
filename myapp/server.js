@@ -41,17 +41,6 @@ app.get("/", (req, res) =>
 //post the charge from stripe TracerFire page
 app.post('/charge', function(req, res) {
 
-  //post to google spreadsheet
-  // append new row
-spreadsheet.add({
-  timestamp: new Date(), 
-  name: "'" + req.body.name, 
-  email: "'" + req.body.email}, 
-  function(err, res){
-    console.log(err);
-  });
-  console.log("Info added: " + req.body.name + " " + req.body.email);
-
   //Checks for right coupon code
   let Chargeamount = 4000;
   if (req.body.coupons === "ACM99" || req.body.coupons === "acm99" || req.body.coupons === "Acm99"){
@@ -79,6 +68,16 @@ spreadsheet.add({
     }
     //If charge succeeds
     else{
+        //post to google spreadsheet
+        // append new row
+        spreadsheet.add({
+          timestamp: new Date(), 
+          name: "'" + req.body.name, 
+          email: "'" + req.body.email}, 
+          function(err, res){
+            console.log(err);
+          });
+      console.log("Info added: " + req.body.name + " " + req.body.email);
       console.log("You were charged " + JSON.stringify(Chargeamount));
       console.log("your payment was successful.");
       res.redirect('https://acmsigsec.mst.edu/myapp/website/success.html');
