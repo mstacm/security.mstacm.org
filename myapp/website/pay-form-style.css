@@ -19,7 +19,7 @@ h2{
   height: 1px;
   width:100%;
 }
-.form-row{
+#card-element{
   background-color: white;
   border: solid 1px #a4c34a;
 }
@@ -32,6 +32,9 @@ h2{
     box-shadow: 10px 10px 5px #888888;
     font-weight: 500;
     padding:10px;
+}
+table{
+  border: solid 1px #a4c34a;
 }
 .middle2{
     width: 700px;
