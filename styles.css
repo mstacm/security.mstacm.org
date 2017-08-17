@@ -19,7 +19,7 @@ h1, h2, h3, h4, h5, h6 {
 
 #nav ul {
 	list-style: none;
-	width: 900px;
+	width: 90%;
 	margin: 0 auto;
 	padding: 0;
 }
@@ -71,4 +71,7 @@ html{
 }
 .red{
 	background-color: #FF4444;
+}
+.redbutton{
+	color:green;
 }
