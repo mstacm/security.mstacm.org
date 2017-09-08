@@ -13,8 +13,7 @@
 		<div id="nav">
 			<ul>
 				<li><a href="cdt.php" class="menu">Cyber Defense Team</a></li>
-				<li><a href="talks.html" class="menu">Talks & Events</a></li>
-				<li><a class="red" href="tracerfire.html" class="menu">Tracer FIRE</a></li>
+				<li><a href="talks.html" class="menu">Meetings</a></li>
 				<li><a href="learn.html" class="menu">Learn Security</a></li>
 				<li><a href="education.html" class="menu">S&T Education</a></li>
 				<li><a href="archives.html" class="menu">Archives</a></li>
