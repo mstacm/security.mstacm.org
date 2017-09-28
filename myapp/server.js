@@ -42,9 +42,9 @@ app.get("/", (req, res) =>
 app.post('/charge', function(req, res) {
 
   //Checks for right coupon code
-  let Chargeamount = 4000;
+  let Chargeamount = 3500;
   if (req.body.coupons === process.env.PROMO){
-    Chargeamount = 3500;
+    Chargeamount = 3000;
   }
 
   //create stripe charge
@@ -53,7 +53,7 @@ app.post('/charge', function(req, res) {
   var charge = stripe.charges.create({
     amount: Chargeamount,
     currency: "usd",
-    description: "TracerFire Fall 2017 - Team Purchase",
+    description: "Wireless Workshop Fall 2017 - Member Purchase",
     metadata: {email: req.body.email,
       name: req.body.name
     },
