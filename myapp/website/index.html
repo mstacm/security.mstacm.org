@@ -45,6 +45,15 @@
             <label>Email Address</label>
             <input id='emails' name='email' type='email' placeholder="youremail@here.com">
           </p><p>
+            <label>Major</label>
+            <input id='major' name='major' type='text' placeholder="Computer Science">
+          </p><p>
+            <label>Have you ever attended a Wireless Workshop?</label>
+            <input id='attend' name='attend' type='text' placeholder="yes/no">
+          </p><p>
+            <label>Are you an S&T ACM Student Chapter Member?</label>
+            <input id='acm' name='acm' type='text' placeholder="yes/no">
+          </p><p>
             <label>Coupon</label>
             <input id='coupons' name='coupons' type='text' placeholder="PROMO33">
           </p><br />
@@ -52,30 +61,31 @@
           <div class="price">
             <table>
               <tr>
-                <th>Membership</th>
-                <th>Price</th>
+                <th><h4>Membership</h4></th>
+                <th><h4>Price</h4></th>
               </tr>
               <tr>
-                <td>S&T ACM Student Chapter Member</td>
+                <td>S&T ACM Student Chapter Member ----------------------------</td>
                 <td>$30.00</td>
               </tr>
               <tr>
-                <td>Normal Registration Price</td>
+                <td>Normal Registration Price -----------------------------------------</td>
                 <td>$35.00</td>
               </tr>
               <tr>
-                <th>Coupon Required for Member Discount</th>
+                <th><h4>Coupon Required for Member Discount</h4></th>
               </tr>
               <tr>
                 <td>Please Contact Eric Michalak: esmxv3@mst.edu</td>
               </tr>
             </table>
-          </div>
+          </div><br />
           <div class="form-row">
             <label for="card-element">
               Credit or debit card
-              <img src="powered_by_stripe.png" alt="powered by stripe" style="float: right;">
-            </label>
+              <img src="credit-cards4.png" alt="mastercard, visa, discover" style="float: right;"><br />
+              <img src="powered_by_stripe.png" alt="powered by stripe" style="float: right;"><br />
+            </label><br /><br />
             <div id="card-element">
               <!-- a Stripe Element will be inserted here. -->
             </div>
@@ -86,7 +96,7 @@
               <input type="submit" class="submit" value="Submit Payment">
           </form>
 	    </div>
-    </div>
+    </div><br /><br /><br />
       <!-- Used to display some in page stuff, look closer at this later -->
 	    <script>
 		    function myFunction(id) {

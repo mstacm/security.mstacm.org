@@ -7,6 +7,7 @@
 }
 h2{
   text-align: center;
+  color: #004A00;
 }
 /*.mainbody{
   background-image: url("small_steps.png");
@@ -21,20 +22,20 @@ h2{
 }
 #card-element{
   background-color: white;
-  border: solid 1px #a4c34a;
+  border-bottom: solid 1px #a4c34a;
 }
 .middle1{
     width: 500px;
     margin-left: auto ;
     margin-right: auto ;
     margin-top: 100px;
-    background-color: #DFDFDF;
+    background-color: #F2F2F2;
     box-shadow: 10px 10px 5px #888888;
     font-weight: 500;
     padding:10px;
 }
 table{
-  border: solid 1px #a4c34a;
+  
 }
 .middle2{
     width: 700px;
@@ -55,16 +56,17 @@ input[type=submit],input[type=button]{
     border-radius:4px;
     color:#fff;
     cursor:pointer;
-    font-family:'Droid Serif',serif
+    font-family:'Droid Serif',serif;
+    box-shadow: 4px 4px 2px #888888;
 }
 input[type=text],input[type=email],select{
+    cursor: text;
     width:40%;
     margin:1px;
-    height:30px;
-    border:1px solid #a4c34a;
+    height:25px;
+    border-bottom:1px solid #a4c34a;
     line-height:30px;
     border-radius:2px;
-    cursor:pointer;
 }
 .name{
     width:25%;
