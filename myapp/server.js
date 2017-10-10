@@ -74,7 +74,6 @@ RowsCheck.load({
     }
     //If there is still registration space then continue
     else{
-      console.log(JSON.stringify(info.totalRows));
   //Checks for right coupon code
   let Chargeamount = 3500;
   if (req.body.coupons === process.env.PROMO){
