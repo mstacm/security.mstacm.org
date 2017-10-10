@@ -85,7 +85,7 @@ app.post('/charge', function(req, res) {
       console.log("You were charged " + JSON.stringify(Chargeamount));
       console.log("your payment was successful.");
       res.redirect('https://acmsigsec.mst.edu/myapp/website/success.html');
-    });//end else
+    };//end else
   });//end function
 });//end charge
   
