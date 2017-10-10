@@ -80,15 +80,16 @@ app.post('/charge', function(req, res) {
           acm: "'" + req.body.acm}, 
           function(err, res){
             console.log(err);
-          });//spreadsheet end
+          });//end add
       console.log("Info added: " + req.body.name + " " + req.body.email);
       console.log("You were charged " + JSON.stringify(Chargeamount));
       console.log("your payment was successful.");
       res.redirect('https://acmsigsec.mst.edu/myapp/website/success.html');
-      
-    }//else end
-});//end
-});//end post
+    });//end else
+  });//end function
+});//end charge
+  
+
 app.listen(3000, function(){
   console.log("listening on port 3000");
 });
