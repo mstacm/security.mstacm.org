@@ -17,6 +17,7 @@ const app = express();
 const stripe = require("stripe")(keySecret);
 const bodyParser = require('body-parser');
 var Spreadsheet = require('google-spreadsheet-append-es5');
+//var RowsCheck = require('')
 
 //Authentication to spreadsheet for google. Used the npm google-spreadsheet-append-es5
 //Documentation here: https://www.npmjs.com/package/google-spreadsheet-append-es5
@@ -68,22 +69,26 @@ app.post('/charge', function(req, res) {
     }
     //If charge succeeds
     else{
-        //post to google spreadsheet
+          //post to google spreadsheet
         // append new row
         spreadsheet.add({
           timestamp: new Date(), 
           name: "'" + req.body.name, 
-          email: "'" + req.body.email}, 
+          email: "'" + req.body.email,
+          major: "'" + req.body.major,
+          attendedbefore: "'" + req.body.attend,
+          acm: "'" + req.body.acm}, 
           function(err, res){
             console.log(err);
-          });
+          });//spreadsheet end
       console.log("Info added: " + req.body.name + " " + req.body.email);
       console.log("You were charged " + JSON.stringify(Chargeamount));
       console.log("your payment was successful.");
       res.redirect('https://acmsigsec.mst.edu/myapp/website/success.html');
-    }
-  });
-});
+      
+    }//else end
+});//end
+});//end post
 app.listen(3000, function(){
   console.log("listening on port 3000");
 });
