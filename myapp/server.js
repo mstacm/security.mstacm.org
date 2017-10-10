@@ -62,14 +62,13 @@ RowsCheck.load({
     console.log(JSON.stringify(err));
     throw err;
   }
-  spread.receive(function(err, rows, info){
-    var limit = info.totalRows;
+  spread.metadata(function(err, metadata){
     if(err){
       console.log(JSON.stringify(err));
       throw err;
     }
     //Checks the spreadsheet to make sure it has enough free rows
-    else if(limit > '3'){
+    else if(metadata.rowCount > 3){
       console.log("Registration is full! All rows used.");
       res.redirect('https://acmsigsec.mst.edu/myapp/website/regFull.html');
     }
