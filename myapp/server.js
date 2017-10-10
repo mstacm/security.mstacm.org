@@ -1,6 +1,10 @@
 //Install this to update the javascript so you don't have to re-run the console
 //npm install nodemon -g
 
+//This server uses GoogleAPI to push results to a spreadsheet. The tracer service account email
+//will need to be shared with your desired spreadsheet. Here is the link to the dashboard:
+//https://console.developers.google.com/iam-admin/serviceaccounts/project?project=astral-subject-166716
+
 //require .dotenv to load the environmental variables
 //Tutorial here: https://sendgrid.com/blog/node-environment-variables/
 var dotenv = require('dotenv');
@@ -17,7 +21,7 @@ const app = express();
 const stripe = require("stripe")(keySecret);
 const bodyParser = require('body-parser');
 var Spreadsheet = require('google-spreadsheet-append-es5');
-//var RowsCheck = require('')
+var RowsCheck = require('edit-google-spreadsheet');
 
 //Authentication to spreadsheet for google. Used the npm google-spreadsheet-append-es5
 //Documentation here: https://www.npmjs.com/package/google-spreadsheet-append-es5
@@ -41,6 +45,35 @@ app.get("/", (req, res) =>
 
 //post the charge from stripe TracerFire page
 app.post('/charge', function(req, res) {
+
+  //Checks to see if we are out of available rows in spreadsheet
+  //Authentication to spreadsheet to count the rows in the google spreadsheet.
+//Used edit-google-spreadsheet. Documentation here: https://github.com/jpillora/node-edit-google-spreadsheet
+RowsCheck.load({
+  debug: true,
+  spreadsheetID: process.env.FEILD_ID,
+  worksheetName: 'Sheet1',
+  oauth : {
+    email: process.env.AUTH_EMAIL,
+    keyFile: process.env.KEY_FILE
+  }
+}, function sheetReady(err, spread){
+  if(err){
+    console.log(JSON.stringify(err));
+    throw err;
+  }
+  spread.receive(function(err, rows, info){
+    if(err){
+      console.log(JSON.stringify(err));
+      throw err;
+    }
+    //Checks the spreadsheet to make sure it has enough free rows
+    else if(info.totalRows > 5){
+      console.log("Registration is full! All rows used.");
+      res.redirect('https://acmsigsec.mst.edu/myapp/website/regFull.html');
+    }
+    //If there is still registration space then continue
+    else{
 
   //Checks for right coupon code
   let Chargeamount = 3500;
@@ -87,7 +120,10 @@ app.post('/charge', function(req, res) {
       res.redirect('https://acmsigsec.mst.edu/myapp/website/success.html');
     };//end else
   });//end function
+  }
+  });//end rowcheck
 });//end charge
+});
   
 
 app.listen(3000, function(){
