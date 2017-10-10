@@ -68,13 +68,13 @@ RowsCheck.load({
       throw err;
     }
     //Checks the spreadsheet to make sure it has enough free rows
-    else if(info.lastRow > 3){
+    else if(info.totalRows >= 3){
       console.log("Registration is full! All rows used.");
       res.redirect('https://acmsigsec.mst.edu/myapp/website/regFull.html');
     }
     //If there is still registration space then continue
     else{
-
+      console.log(JSON.stringify(info.totalRows));
   //Checks for right coupon code
   let Chargeamount = 3500;
   if (req.body.coupons === process.env.PROMO){
