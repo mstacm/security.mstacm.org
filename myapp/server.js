@@ -68,7 +68,7 @@ RowsCheck.load({
       throw err;
     }
     //Checks the spreadsheet to make sure it has enough free rows
-    else if(info.totalRows > 5){
+    else if(info.lastRow > 3){
       console.log("Registration is full! All rows used.");
       res.redirect('https://acmsigsec.mst.edu/myapp/website/regFull.html');
     }
