@@ -51,7 +51,7 @@ app.post('/charge', function(req, res) {
 //Used edit-google-spreadsheet. Documentation here: https://github.com/jpillora/node-edit-google-spreadsheet
 RowsCheck.load({
   debug: true,
-  spreadsheetId: process.env.FEILD_ID,
+  spreadsheetName: process.env.FEILD_ID,
   worksheetName: 'Sheet1',
   oauth : {
     email: process.env.AUTH_EMAIL,
