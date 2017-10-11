@@ -51,7 +51,7 @@ app.post('/charge', function(req, res) {
 //Used edit-google-spreadsheet. Documentation here: https://github.com/jpillora/node-edit-google-spreadsheet
 RowsCheck.load({
   debug: true,
-  spreadsheetID: process.env.FEILD_ID,
+  spreadsheetId: process.env.FEILD_ID,
   worksheetName: 'Sheet1',
   oauth : {
     email: process.env.AUTH_EMAIL,
@@ -69,7 +69,7 @@ RowsCheck.load({
       throw err;
     }
     //Checks the spreadsheet to make sure it has enough free rows
-    else if(count >= 3){
+    else if(count > 6){
       console.log("Registration is full! All rows used.");
       res.redirect('https://acmsigsec.mst.edu/myapp/website/regFull.html');
     }
