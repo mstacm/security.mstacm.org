@@ -21,7 +21,7 @@ const app = express();
 const stripe = require("stripe")(keySecret);
 const bodyParser = require('body-parser');
 var Spreadsheet = require('google-spreadsheet-append-es5');
-var RowsCheck = require('edit-google-spreadsheet');
+//var RowsCheck = require('edit-google-spreadsheet');
 
 //Authentication to spreadsheet for google. Used the npm google-spreadsheet-append-es5
 //Documentation here: https://www.npmjs.com/package/google-spreadsheet-append-es5
@@ -49,32 +49,7 @@ app.post('/charge', function(req, res) {
   //Checks to see if we are out of available rows in spreadsheet
   //Authentication to spreadsheet to count the rows in the google spreadsheet.
 //Used edit-google-spreadsheet. Documentation here: https://github.com/jpillora/node-edit-google-spreadsheet
-RowsCheck.load({
-  debug: true,
-  spreadsheetId: JSON.stringify(process.env.FEILD_ID),
-  worksheetId: 'Sheet1',
-  oauth : {
-    email: process.env.AUTH_EMAIL,
-    keyFile: process.env.KEY_FILE
-  }
-}, function sheetReady(err, spread){
-  if(err){
-    console.log(JSON.stringify(err));
-    throw err;
-  }
-  spread.receive(function(err, row, info){
-    let count = parseInt(info.totalRows)
-    if(err){
-      console.log(JSON.stringify(err));
-      throw err;
-    }
-    //Checks the spreadsheet to make sure it has enough free rows
-    else if(count > 60){
-      console.log("Registration is full! All rows used.");
-      res.redirect('https://acmsigsec.mst.edu/myapp/website/regFull.html');
-    }
-    //If there is still registration space then continue
-    else{
+
   //Checks for right coupon code
   let Chargeamount = 3500;
   if (req.body.coupons === process.env.PROMO){
@@ -120,10 +95,8 @@ RowsCheck.load({
       res.redirect('https://acmsigsec.mst.edu/myapp/website/success.html');
     };//end else
   });//end function
-  }
-  });//end rowcheck
 });//end charge
-});
+
   
 
 app.listen(3000, function(){
