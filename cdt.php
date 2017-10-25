@@ -45,13 +45,13 @@
 		<td>Rating Points</td>
   <?php
       echo "<td>";
-      echo $obj['rating'][0]['2017']['rating_points'];
+      echo (int) $obj['rating'][0]['2017']['rating_points'];
       echo "</td>";
    ?>
 	</tr>
 	<tr>
 		<td>Academic US Ranking</td>
-		<td>19</td>
+		<td>20</td>
 	</tr>
 </table>
 
@@ -130,6 +130,7 @@
             Tanner Winkelman<br/>
             Tevin Niang-Trost<br/>
             Trevan Lang<br/>
+            Tanner Stephens<br/>
     	</div>
     	<div class="w3-third w3-large">
 
@@ -176,7 +177,6 @@
             Shelby Hayes<br/>
             Shwam McCormick<br/>
             Steve Giangreco<br/>
-            Tanner Stephens<br/>
     	</div>
     </div>
 
