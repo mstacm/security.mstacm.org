@@ -146,6 +146,11 @@
             Henry Wong<br/>
             Jeff Gould<br/>
             Joey Klix<br/>
+             Michael Becker<br/>
+             Nathan LaRose<br/>
+             Patrick Dillon<br/>
+             SammyBRaps<br/>
+             Sara Newman<br/>
     	</div>
     	<div class="w3-third w3-large">
     		Jonathan Miller<br/>
@@ -166,19 +171,12 @@
             Matthew Stroble<br/>
             Savannah Collins<br/>
             Shelby Hayes<br/>
-                        Shwam McCormick<br/>
-                        Steve Giangreco<br/>
-                        Tanner Stephens<br/>
-                        Tanner Winkelman<br/>
-                        Tevin Niang-Trost<br/>
-                        Trevan Lang<br/>
-    	</div>
-    	<div class="w3-third w3-large">
-    	    Michael Becker<br/>
-            Nathan LaRose<br/>
-            Patrick Dillon<br/>
-            SammyBRaps<br/>
-            Sara Newman<br/>
+            Shwam McCormick<br/>
+            Steve Giangreco<br/>
+            Tanner Stephens<br/>
+            Tanner Winkelman<br/>
+            Tevin Niang-Trost<br/>
+            Trevan Lang<br/>
     	</div>
     </div>
 
