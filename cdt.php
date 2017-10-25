@@ -127,6 +127,9 @@
             Conor Kohls<br/>
             Cooper Healy<br/>
             Dalton R. Cole<br/>
+            Tanner Winkelman<br/>
+            Tevin Niang-Trost<br/>
+            Trevan Lang<br/>
     	</div>
     	<div class="w3-third w3-large">
 
