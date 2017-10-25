@@ -177,9 +177,6 @@
             Shwam McCormick<br/>
             Steve Giangreco<br/>
             Tanner Stephens<br/>
-            Tanner Winkelman<br/>
-            Tevin Niang-Trost<br/>
-            Trevan Lang<br/>
     	</div>
     </div>
 
