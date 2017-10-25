@@ -106,39 +106,81 @@
 
 <!-- Members -->
 <div class="w3-container w3-twothird w3-margin w3-padding w3-center">
-	<div class="w3-wide w3-padding w3-xlarge">Current CDT Members</div>
-	<div class="w3-third w3-large">
-		Sammie Bush<br/>
-		Trey Nickelsen<br/>
-		Eric Michalak<br/>
-		Sean Ryan<br/>
-		Deborah Yu<br/>
-		Dalton Cole<br/>
-		Andrew Truong<br/>
-		Quincy Conduff<br/>
-	</div>
-	<div class="w3-third w3-large">
+	<!-- Members -->
+    <div class="w3-container w3-twothird w3-margin w3-padding w3-center">
+    	<div class="w3-wide w3-padding w3-xlarge">Current CDT Members</div>
+    	<div class="w3-third w3-large">
+    	    Aaron Joyce<br/>
+    		Adam Eaton<br/>
+            Adam Evans<br/>
+            Adam Gausmann<br/>
+            Alec Belue<br/>
+            Alex Hatfalvi<br/>
+            Allison Chan<br/>
+            Andrew Sunarto<br/>
+            Brendan Curran<br/>
+            Brenden Barlow<br/>
+            Caleb Berg<br/>
+            Carson Vance<br/>
+            Cody Less<br/>
+            Cody Roberts<br/>
+            Conor Kohls<br/>
+            Cooper Healy<br/>
+            Dalton R. Cole<br/>
+    	</div>
+    	<div class="w3-third w3-large">
 
-		Aaron Joyce<br/>
-		Shawn McCormick<br/>
-		Steve Vogel<br/>
-		Brandon Eisenbath<br/>
-		Brian Yadaemc<br/>
-		Mark Anderson<br/>
-		Steven Giangreco<br/>
-		Brendan Barlow<br/>
-	</div>
-	<div class="w3-third w3-large">
-		Jessica Barlow<br/>
-		Adam Evans<br/>
-		Chris Eitutis<br/>
-		Adam Murvihil<br/>
-		Adam Bowers<br/>
-		Austin Bentley<br/>
-		Noah Prince<br/>
-		Ethan O’Dell<br/>
-	</div>
-</div>
+    		Brenden Barlow<br/>
+            Caleb Berg<br/>
+            Carson Vance<br/>
+            Cody Less<br/>
+            Cody Roberts<br/>
+            Conor Kohls<br/>
+            Cooper Healy<br/>
+            Dalton R. Cole<br/>
+            Daniel Post<br/>
+            David Wood<br/>
+            Eric Michalak<br/>
+            Gavin Lewis<br/>
+            Hannah Reinbolt<br/>
+            Henry Wong<br/>
+            Jeff Gould<br/>
+            Joey Klix<br/>
+    	</div>
+    	<div class="w3-third w3-large">
+    		Jonathan Miller<br/>
+            Jose Alega<br/>
+            Joseph Kipp<br/>
+            Josh Cash<br/>
+            Josh Herman<br/>
+            Joshua Pondrom<br/>
+            Kat Ward<br/>
+            Kevin Newell<br/>
+            Kevin Schoonover<br/>
+            Kristin Walker<br/>
+            Lucas Hinkebein<br/>
+            Lucas Winkelman<br/>
+            Luis Ocampo<br/>
+            Luke Smith<br/>
+            Mark Myers<br/>
+            Matthew Stroble<br/>
+    	</div>
+    	<div class="w3-third w3-large">
+    	    Michael Becker<br/>
+            Nathan LaRose<br/>
+            Patrick Dillon<br/>
+            SammyBRaps<br/>
+            Sara Newman<br/>
+            Savannah Collins<br/>
+            Shelby Hayes<br/>
+            Shwam McCormick<br/>
+            Steve Giangreco<br/>
+            Tanner Stephens<br/>
+            Tanner Winkelman<br/>
+            Tevin Niang-Trost<br/>
+            Trevan Lang<br/>
+    	</div>
+    </div>
 
 
 </body>
