@@ -164,6 +164,14 @@
             Luke Smith<br/>
             Mark Myers<br/>
             Matthew Stroble<br/>
+            Savannah Collins<br/>
+            Shelby Hayes<br/>
+                        Shwam McCormick<br/>
+                        Steve Giangreco<br/>
+                        Tanner Stephens<br/>
+                        Tanner Winkelman<br/>
+                        Tevin Niang-Trost<br/>
+                        Trevan Lang<br/>
     	</div>
     	<div class="w3-third w3-large">
     	    Michael Becker<br/>
@@ -171,14 +179,6 @@
             Patrick Dillon<br/>
             SammyBRaps<br/>
             Sara Newman<br/>
-            Savannah Collins<br/>
-            Shelby Hayes<br/>
-            Shwam McCormick<br/>
-            Steve Giangreco<br/>
-            Tanner Stephens<br/>
-            Tanner Winkelman<br/>
-            Tevin Niang-Trost<br/>
-            Trevan Lang<br/>
     	</div>
     </div>
 
