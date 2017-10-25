@@ -130,6 +130,7 @@
             Tanner Winkelman<br/>
             Tevin Niang-Trost<br/>
             Trevan Lang<br/>
+            Tanner Stephens<br/>
     	</div>
     	<div class="w3-third w3-large">
 
@@ -176,7 +177,6 @@
             Shelby Hayes<br/>
             Shwam McCormick<br/>
             Steve Giangreco<br/>
-            Tanner Stephens<br/>
     	</div>
     </div>
 
