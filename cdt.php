@@ -101,7 +101,7 @@
 
 <!-- CDT Abstract -->
 <div class="w3-twothird w3-center" style="margin:16px 0 0 40px;">
-  <p> The mission of Missouri University of Science and Technology's Capture The Flag team, M57, is to provide hands-on experience and help team members develop attack-oriented cybersecurity skills by competing in online CTF competitions. Members of M57 learn relevant security tools and methods of attacking vulnerable systems presented during CTF’s. M57 strives to be a prominent force in the CTF community by excelling in competitions, providing well written documentation, and developing resources to other team members </p>
+  <p> The mission of Missouri University of Science and Technology's Capture The Flag team, M57, is to provide hands-on experience and help team members develop attack-oriented cybersecurity skills by competing in online CTF competitions. Members of M57 learn relevant security tools and methods of attacking vulnerable systems presented during CTF’s. M57 strives to be a prominent force in the CTF community by excelling in competitions, providing well written documentation, and developing resources to other team members. </p>
 </div>
 
 <!-- Members -->
