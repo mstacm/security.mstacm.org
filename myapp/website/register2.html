@@ -37,7 +37,7 @@
   <div class="mainbody">
     <div class="middle1">
       <!-- Input boxes to take user data and send it to google spreadsheets -->
-      <h2>Register for Cyber Boot Camp</h2>
+      <h2>Application for Cyber Boot Camp</h2>
       <div class="styleLine"></div>
         <form method="post" id="payment-form" action="/register/charge2">
           <label>Name</label>
@@ -49,14 +49,8 @@
             <label>Major</label>
             <input id='major' name='major' type='text' placeholder="Computer Science">
           </p><p>
-            <label>Have you ever attended a Wireless Workshop?</label>
+            <label>Have you ever attended a Cyber Boot Camp?</label>
             <input id='attend' name='attend' type='text' placeholder="yes/no">
-          </p><p>
-            <label>Are you an S&T ACM Student Chapter Member?</label>
-            <input id='acm' name='acm' type='text' placeholder="yes/no">
-          </p><p>
-            <label>Coupon</label>
-            <input id='coupons' name='coupons' type='text' placeholder="PROMO33">
           </p><br />
           <!-- Display the Card element, uses Elements from Stripe -->
           <div class="price">
@@ -66,18 +60,15 @@
                 <th><h4>Price</h4></th>
               </tr>
               <tr>
-                <td>S&T ACM Student Chapter Member ----------------------------</td>
-                <td>$30.00</td>
-              </tr>
-              <tr>
                 <td>Normal Registration Price -----------------------------------------</td>
-                <td>$35.00</td>
+                <td>$250.00</td>
+                <td>(Hotel, Transportation, NOT food)</td>
               </tr>
               <tr>
-                <th><h4>Coupon Required for Member Discount</h4></th>
+                <th><h4>20 people will be selected</h4></th>
               </tr>
               <tr>
-                <td>Please Contact Eric Michalak: esmxv3@mst.edu</td>
+                <td>If you are not chosen you will be refunded.</td>
               </tr>
             </table>
           </div><br />

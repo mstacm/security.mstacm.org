@@ -118,10 +118,7 @@ app.post('/charge2', function(req, res) {
 //Used edit-google-spreadsheet. Documentation here: https://github.com/jpillora/node-edit-google-spreadsheet
 
   //Checks for right coupon code
-  let Chargeamount = 3500;
-  if (req.body.coupons === process.env.PROMO2){
-    Chargeamount = 3000;
-  }
+  let Chargeamount = 25000;
 
   //create stripe charge
   var token = req.body.stripeToken;
@@ -152,7 +149,6 @@ app.post('/charge2', function(req, res) {
           email: "'" + req.body.email,
           major: "'" + req.body.major,
           attendedbefore: "'" + req.body.attend,
-          acm: "'" + req.body.acm}, 
           function(err, res){
             console.log(err);
           });//end add
