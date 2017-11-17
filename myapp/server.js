@@ -148,7 +148,8 @@ app.post('/charge2', function(req, res) {
           name: "'" + req.body.name, 
           email: "'" + req.body.email,
           major: "'" + req.body.major,
-          attendedbefore: "'" + req.body.attend,
+          attendedbefore: "'" + req.body.attend
+          }, 
           function(err, res){
             console.log(err);
           });//end add
