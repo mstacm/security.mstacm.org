@@ -40,7 +40,7 @@ var spreadsheet2 = Spreadsheet({
 		email: process.env.AUTH_EMAIL,
 		keyFile: process.env.KEY_FILE
 	},
-	fileId: "1HnHfvkYYdlcDBCKyq9SV32WkKkeo_BvgPWCxpo-Tolg" //process.env.FEILD_ID2
+	fileId: process.env.FEILD_ID2
 });
 
 //set app
