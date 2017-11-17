@@ -44,10 +44,10 @@ var spreadsheet2 = Spreadsheet({
 });
 
 //set app
-app.set('website', __dirname + '/website');
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 app.use(express.static('website'));
+app.set('website', __dirname + '/website');
 
 //gets
 app.get("/wifi/", (req, res) =>
