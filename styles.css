@@ -19,7 +19,7 @@ h1, h2, h3, h4, h5, h6 {
 
 #nav ul {
 	list-style: none;
-	width: 80%; 
+	width: 90%; 
 	margin: 0 auto;
 	padding: 0;
 }
@@ -30,7 +30,7 @@ h1, h2, h3, h4, h5, h6 {
 
 #nav li a {
 	display: block;
-	padding: 8px 15px;
+	padding: 8px 10px;
 	text-decoration: none;
 	font-weight: bold;
 	color: #1B3F1B;
