@@ -14,8 +14,8 @@ dotenv.load()
 console.log("server is starting.");
 const keyPublishable = process.env.TEST_PUBLISH_KEY;
 const keySecret = process.env.TEST_SECRET_KEY;
-const testPub = pk_test_6mBUzKTw5gUD99Nf3EwID98W;
-const testSec = sk_test_9ZGlktvPFLh1mq4KTxcwDSBV;
+const testPub = "pk_test_6mBUzKTw5gUD99Nf3EwID98W";
+const testSec = "sk_test_9ZGlktvPFLh1mq4KTxcwDSBV";
 
 //libraries
 const express = require('express');
