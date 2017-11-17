@@ -20,7 +20,7 @@ const testSec = sk_test_9ZGlktvPFLh1mq4KTxcwDSBV;
 //libraries
 const express = require('express');
 const app = express();
-const stripe = require("stripe")(keySecret);
+const stripe = require("stripe")(testSec);
 const bodyParser = require('body-parser');
 var Spreadsheet = require('google-spreadsheet-append-es5');
 //var RowsCheck = require('edit-google-spreadsheet');
