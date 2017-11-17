@@ -39,9 +39,9 @@
   <div class="mainbody">
     <div class="middle1">
       <!-- Input boxes to take user data and send it to google spreadsheets -->
-      <h2>Register for Wireless Workshop</h2>
+      <h2>Register for Cyber Boot Camp</h2>
       <div class="styleLine"></div>
-        <form method="post" id="payment-form" action="../charge">
+        <form method="post" id="payment-form" action="../charge2">
           <label>Name</label>
             <input id='names' name='name' type='text' placeholder="Joe Miner">
           </p><p>
@@ -96,8 +96,7 @@
             <!-- Used to display form errors -->
             <div id="card-errors"></div>
             </div><br />
-             <!-- <input type="submit" class="submit" value="Submit Payment"> -->
-             <h3>Registration is temporarily closed. Please try again later!</h3>
+              <input type="submit" class="submit" value="Submit Payment">
           </form>
 	    </div>
     </div><br /><br /><br />
@@ -116,7 +115,7 @@
       which then it will be sent to stripe servers to charge the card. The info doesn't 
       touch our own server.' -->
       <script>
-        var stripe = Stripe("pk_live_rXRE81suFTuEjgWFo76GVW0p");
+        var stripe = Stripe("pk_test_6mBUzKTw5gUD99Nf3EwID98W");
         var elements = stripe.elements();
 
         //Style the card button

@@ -16,7 +16,6 @@
 				<li><a href="talks.html" class="menu">Meetings</a></li>
 				<li><a href="learn.html" class="menu">Learn Security</a></li>
 				<li><a href="wire-shop.html" class="menu">Wireless Workshop</a></li>
-				<li><a href="bootcamp.html" class="menu">Cyber Boot Camp</a></li>
 				<li><a href="education.html" class="menu">S&T Education</a></li>
 				<li><a href="archives.html" class="menu">Archives</a></li>
 				<li><a href="join.html" class="menu">Join SIG-Sec</a></li>
@@ -70,6 +69,10 @@
 </div>
 
 <!-- Upcoming Events and Talks -->
+<div class="w3-padding w3-container w3-twothird" style="margin:20px 0 0 40px;">
+	<div class="w3-center w3-xxlarge w3-text-dark-grey"><strong>What is CDT?</strong></div>
+	<div class="w3-center w3-xlarge w3-text-dark-grey w3-wide">Team Captain Contact Info</div>
+</div>
 
 <!-- Join CDT -->
 <div class="w3-padding w3-container w3-twothird" style="margin:20px 0 0 40px;">
