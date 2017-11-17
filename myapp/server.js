@@ -50,11 +50,11 @@ app.use(bodyParser.json());
 app.use(express.static('website'));
 
 //gets
-app.get("/wifi", (req, res) =>
+app.get("/wifi/", (req, res) =>
   res.render("https://acmsigsec.mst.edu/myapp/website/index.html", {testPub}));
 
 //gets
-app.get("/cybercamp", (req, res) =>
+app.get("/cybercamp/", (req, res) =>
   res.render("https://acmsigsec.mst.edu/myapp/website/register2.html", {testPub}));
 
 //post the charge from stripe Wireless Workshop page
