@@ -60,9 +60,8 @@
                 <th><h4>Price</h4></th>
               </tr>
               <tr>
-                <td>Normal Registration Price -----------------------------------------</td>
+                <td>Normal Registration Price --(Hotel, Transportation, NOT food)</td>
                 <td>$250.00</td>
-                <td>(Hotel, Transportation, NOT food)</td>
               </tr>
               <tr>
                 <th><h4>20 people will be selected</h4></th>
@@ -104,7 +103,7 @@
       which then it will be sent to stripe servers to charge the card. The info doesn't 
       touch our own server.' -->
       <script>
-        var stripe = Stripe("pk_test_6mBUzKTw5gUD99Nf3EwID98W");
+        var stripe = Stripe("pk_live_rXRE81suFTuEjgWFo76GVW0p");
         var elements = stripe.elements();
 
         //Style the card button
