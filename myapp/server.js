@@ -14,11 +14,13 @@ dotenv.load()
 console.log("server is starting.");
 const keyPublishable = process.env.TEST_PUBLISH_KEY;
 const keySecret = process.env.TEST_SECRET_KEY;
+const pub = "pk_test_6mBUzKTw5gUD99Nf3EwID98W";
+const sec = "sk_test_9ZGlktvPFLh1mq4KTxcwDSBV";
 
 //libraries
 const express = require('express');
 const app = express();
-const stripe = require("stripe")(keySecret);
+const stripe = require("stripe")(sec);
 const bodyParser = require('body-parser');
 var Spreadsheet = require('google-spreadsheet-append-es5');
 //var RowsCheck = require('edit-google-spreadsheet');
@@ -53,7 +55,7 @@ app.get("/", (req, res) =>
 
 //gets
 app.get("./cybercamp/", (req, res) =>
-  res.render("https://acmsigsec.mst.edu/myapp/website/register2.html", {keyPublishable}));
+  res.render("https://acmsigsec.mst.edu/myapp/website/register2.html", {pub}));
 
 //post the charge from stripe Wireless Workshop page
 app.post('/charge', function(req, res) {
