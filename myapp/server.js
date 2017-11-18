@@ -125,7 +125,7 @@ app.post('/charge2', function(req, res) {
   //create stripe charge
   var token = req.body.stripeToken;
   console.log("token is: "+ JSON.stringify(req.body.stripeToken));
-  var charge = stripe.charges.create({
+  var charge2 = stripe.charges.create({
     amount: Chargeamount,
     currency: "usd",
     description: "Cyber Boot Camp Spring 2018 - Member Purchase",
@@ -134,7 +134,7 @@ app.post('/charge2', function(req, res) {
     },
     source: token,
 
-  }, function (err, charge){
+  }, function (err, charge2){
     //if charge fails
     if(err){
         console.log(err);
