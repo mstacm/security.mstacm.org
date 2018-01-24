@@ -85,8 +85,8 @@
 			<td class="w3-text-dark-gray w3-xxlarge w3-right">CCDC Captain</td>
 		</tr>
 		<tr class="w3-left-align w3-xlarge">
-			<td class="w3-text-dark-gray"><a href="mailto:esmxv3@mst.edu">Eric Michalak</a></td>
-			<td class="w3-text-dark-gray w3-right"><a href="mailto:slbmnc@mst.edu">Sammie Bush</a></td>
+			<td class="w3-text-dark-gray"><a href="mailto:esmxv3@mst.edu">Brendan Curran</a></td>
+			<td class="w3-text-dark-gray w3-right"><a href="mailto:slbmnc@mst.edu">Adam Eaton and Sammie Bush</a></td>
 		</tr>
 	</table>
 </div>
@@ -113,7 +113,7 @@
 <div class="w3-container w3-twothird w3-margin w3-padding w3-center">
 	<!-- Members -->
     <div class="w3-container w3-twothird w3-margin w3-padding w3-center">
-    	<div class="w3-wide w3-padding w3-xlarge">Current CDT Members</div>
+    	<div class="w3-wide w3-padding w3-xlarge">Fall 2017 CDT Members</div>
     	<div class="w3-third w3-large">
     	    Aaron Joyce<br/>
     		Adam Eaton<br/>
