@@ -15,8 +15,8 @@
 				<li><a href="cdt.php" class="menu">Cyber Defense Team</a></li>
 				<li><a href="talks.html" class="menu">Meetings</a></li>
 				<li><a href="learn.html" class="menu">Learn Security</a></li>
-				<li><a href="wire-shop.html" class="menu">Wireless Workshop</a></li>
-				<li><a href="bootcamp.html" class="menu">Cyber Boot Camp</a></li>
+				<!--<li><a href="wire-shop.html" class="menu">Wireless Workshop</a></li>
+				<li><a href="bootcamp.html" class="menu">Cyber Boot Camp</a></li>-->
 				<li><a href="education.html" class="menu">S&T Education</a></li>
 				<li><a href="archives.html" class="menu">Archives</a></li>
 				<li><a href="join.html" class="menu">Join SIG-Sec</a></li>
