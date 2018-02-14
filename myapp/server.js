@@ -65,9 +65,9 @@ app.post('/charge', function(req, res) {
 //Used edit-google-spreadsheet. Documentation here: https://github.com/jpillora/node-edit-google-spreadsheet
 
   //Checks for right coupon code
-  let Chargeamount = 3500;
+  let Chargeamount = 2000;
   if (req.body.coupons === process.env.PROMO){
-    Chargeamount = 3000;
+    Chargeamount = 1500;
   }
 
   //create stripe charge
@@ -76,7 +76,7 @@ app.post('/charge', function(req, res) {
   var charge = stripe.charges.create({
     amount: Chargeamount,
     currency: "usd",
-    description: "Wireless Workshop Fall 2017 - Member Purchase",
+    description: "CyberSpark Spring 2018 - Member Purchase",
     metadata: {email: req.body.email,
       name: req.body.name
     },
@@ -120,7 +120,8 @@ app.post('/charge2', function(req, res) {
 //Used edit-google-spreadsheet. Documentation here: https://github.com/jpillora/node-edit-google-spreadsheet
 
   //Checks for right coupon code
-  let Chargeamount = 25000;
+  let Chargeamount = 20000;
+
 
   //create stripe charge
   var token = req.body.stripeToken;
