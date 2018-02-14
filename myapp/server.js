@@ -20,7 +20,7 @@ const sec = "sk_test_9ZGlktvPFLh1mq4KTxcwDSBV";
 //libraries
 const express = require('express');
 const app = express();
-const stripe = require("stripe")(keySecret);
+const stripe = require("stripe")(sec);
 const bodyParser = require('body-parser');
 var Spreadsheet = require('google-spreadsheet-append-es5');
 //var RowsCheck = require('edit-google-spreadsheet');
@@ -51,11 +51,11 @@ app.set('website', __dirname + '/website');
 
 //gets
 app.get("/", (req, res) =>
-  res.render("https://acmsigsec.mst.edu/myapp/website/index.html", {keyPublishable}));
+  res.render("https://acmsigsec.mst.edu/myapp/website/index.html", {pub}));
 
 //gets
 app.get("./cybercamp/", (req, res) =>
-  res.render("https://acmsigsec.mst.edu/myapp/website/register2.html", {keyPublishable}));
+  res.render("https://acmsigsec.mst.edu/myapp/website/register2.html", {pub}));
 
 //post the charge from stripe Wireless Workshop page
 app.post('/charge', function(req, res) {
