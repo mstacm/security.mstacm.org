@@ -35,13 +35,13 @@ var spreadsheet = Spreadsheet({
 	fileId: process.env.FEILD_ID
 });
 
-var spreadsheet2 = Spreadsheet({
+/*var spreadsheet2 = Spreadsheet({
 	auth: {
 		email: process.env.AUTH_EMAIL,
 		keyFile: process.env.KEY_FILE
 	},
 	fileId: process.env.FEILD_ID2
-});
+});*/
 
 //set app
 app.use(bodyParser.urlencoded({extended: false}));
@@ -98,7 +98,7 @@ app.post('/charge', function(req, res) {
           name: req.body.name,
           email: req.body.email,
           major: req.body.major,
-          attendedbefore: req.body.attend,
+          attend: req.body.attend,
           acm: req.body.acm},
           function(err, res){
             console.log(err);
