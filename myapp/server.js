@@ -29,10 +29,10 @@ var Spreadsheet = require('google-spreadsheet-append-es5');
 //Documentation here: https://www.npmjs.com/package/google-spreadsheet-append-es5
 var spreadsheet = Spreadsheet({
 	auth: {
-		email: process.env.AUTH_EMAIL,
-		keyFile: process.env.KEY_FILE
+		email: 'register@astral-subject-166716.iam.gserviceaccount.com',
+		keyFile: './final-key1.pem'
 	},
-	fileId: process.env.FEILD_ID
+	fileId: '1oAwdhG_paNzcEaBipeqSXCFcwpsIg4YXCdpOMst1b5g'//process.env.FEILD_ID
 });
 
 /*var spreadsheet2 = Spreadsheet({
