@@ -30,7 +30,7 @@ var Spreadsheet = require('google-spreadsheet-append-es5');
 var spreadsheet = Spreadsheet({
 	auth: {
 		email: 'register@astral-subject-166716.iam.gserviceaccount.com',
-		keyFile: './final-key1.pem'
+		keyFile: 'final-key1.pem'
 	},
 	fileId: '1oAwdhG_paNzcEaBipeqSXCFcwpsIg4YXCdpOMst1b5g'//process.env.FEILD_ID
 });
