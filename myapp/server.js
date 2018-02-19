@@ -94,12 +94,12 @@ app.post('/charge', function(req, res) {
           //post to google spreadsheet
         // append new row
         spreadsheet.add({
-          timestamp: new Date(), 
-          name: "'" + req.body.name,
-          email: "'" + req.body.email,
-          major: "'" + req.body.major,
-          attend: "'" + req.body.attend,
-          acm: "'" + req.body.acm},
+          timestamp: "thing0",
+          name: "thing",
+          email: "thing2",
+          major: "thing3",
+          attend: "thing4",
+          acm: "thing5"},
           function(err, res){
             console.log(err);
           });//end add
