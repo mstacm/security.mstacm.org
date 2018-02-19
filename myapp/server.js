@@ -95,11 +95,11 @@ app.post('/charge', function(req, res) {
         // append new row
         spreadsheet.add({
           timestamp: new Date(), 
-          name: "'" + req.body.name, 
-          email: "'" + req.body.email,
-          major: "'" + req.body.major,
-          attendedbefore: "'" + req.body.attend,
-          acm: "'" + req.body.acm}, 
+          name: req.body.name,
+          email: req.body.email,
+          major: req.body.major,
+          attendedbefore: req.body.attend,
+          acm: req.body.acm},
           function(err, res){
             console.log(err);
           });//end add
