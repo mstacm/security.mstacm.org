@@ -29,10 +29,10 @@ var Spreadsheet = require('google-spreadsheet-append-es5');
 //Documentation here: https://www.npmjs.com/package/google-spreadsheet-append-es5
 var spreadsheet = Spreadsheet({
 	auth: {
-		email: 'register@astral-subject-166716.iam.gserviceaccount.com',
-		keyFile: 'final-key1.pem'
+		email: process.env.AUTH_EMAIL,
+		keyFile: process.env.KEY_FILE
 	},
-	fileId: '1oAwdhG_paNzcEaBipeqSXCFcwpsIg4YXCdpOMst1b5g'//process.env.FEILD_ID
+	fileId: process.env.FEILD_ID
 });
 
 /*var spreadsheet2 = Spreadsheet({
@@ -94,12 +94,12 @@ app.post('/charge', function(req, res) {
           //post to google spreadsheet
         // append new row
         spreadsheet.add({
-          timestamp: "thing0",
-          name: "thing",
-          email: "thing2",
-          major: "thing3",
-          attend: "thing4",
-          acm: "thing5"},
+          timestamp: new Date(),
+          name: "'" + req.body.name,
+          email: "'" + req.body.email,
+          major: "'" + req.body.major,
+          attend: "'" + req.body.attend,
+          acm: "'" + req.body.acm},
           function(err, res){
             console.log(err);
           });//end add
