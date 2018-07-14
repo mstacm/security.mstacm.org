@@ -23,7 +23,7 @@
 				<li><a href="https://acmsigsec.mst.edu/talks.html" class="menu">Talks & Events</a></li>
 			<!--	<li><a class="red" href="https://acmsigsec.mst.edu/tracerfire.html" class="menu">Tracer FIRE</a></li>-->
 				<li><a href="https://acmsigsec.mst.edu/learn.html" class="menu">Learn Security</a></li>
-                <!--<li><a href="https://acmsigsec.mst.edu/cyberspark.html" class="menu">CyberSpark</a></li>-->
+                <li><a href="https://acmsigsec.mst.edu/cyberspark.html" class="menu">CyberSpark</a></li>
         <!--<li><a href="https://acmsigsec.mst.edu/wire-shop.html" class="menu">Wireless Workshop</a></li>
         <li><a href="https://acmsigsec.mst.edu/bootcamp.html" class="menu">Cyber Boot Camp</a></li>-->
         <li><a href="https://acmsigsec.mst.edu/education.html" class="menu">S&T Education</a></li>
@@ -58,7 +58,7 @@
             <input id='acm' name='acm' type='text' placeholder="yes/no">
           </p><p>
             <label>Coupon</label>
-            <input id='coupons' name='coupons' type='text' placeholder="PROMO33">
+            <input id='coupons' name='coupons' type='text' placeholder="PROMO">
           </p><br />
           <!-- Display the Card element, uses Elements from Stripe -->
           <div class="price">
@@ -79,7 +79,7 @@
                 <th><h4>Coupon Required for Member Discount</h4></th>
               </tr>
               <tr>
-                <td>Please Contact Brendan Curran: bdcm33@mst.edu or on ACM Sig-Sec Discord</td>
+                <td>Please Contact Tanner Stephens: trsxw8@mst.edu or on ACM Sig-Sec Discord</td>
               </tr>
             </table>
           </div><br />
@@ -96,8 +96,8 @@
             <!-- Used to display form errors -->
             <div id="card-errors"></div>
             </div><br />
-            <h3 style="color:red">Registration is closed! Please try again next time!</h3>
-             <!--<input type="submit" class="submit" value="Submit Payment">-->
+            <!--<h3 style="color:red">Registration is closed! Please try again next time!</h3>-->
+             <input type="submit" class="submit" value="Submit Payment">
           </form>
 	    </div>
     </div><br /><br /><br />
@@ -116,7 +116,7 @@
       which then it will be sent to stripe servers to charge the card. The info doesn't 
       touch our own server.' -->
       <script>
-        var stripe = Stripe("pk_live_rXRE81suFTuEjgWFo76GVW0p");
+        var stripe = Stripe("pk_test_6mBUzKTw5gUD99Nf3EwID98W");
         var elements = stripe.elements();
 
         //Style the card button

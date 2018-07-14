@@ -14,8 +14,6 @@ dotenv.load()
 console.log("server is starting.");
 const keyPublishable = process.env.TEST_PUBLISH_KEY;
 const keySecret = process.env.TEST_SECRET_KEY;
-const pub = "pk_test_6mBUzKTw5gUD99Nf3EwID98W";
-const sec = "sk_test_9ZGlktvPFLh1mq4KTxcwDSBV";
 
 //libraries
 const express = require('express');
@@ -23,7 +21,6 @@ const app = express();
 const stripe = require("stripe")(keySecret);
 const bodyParser = require('body-parser');
 var Spreadsheet = require('google-spreadsheet-append-es5');
-//var RowsCheck = require('edit-google-spreadsheet');
 
 //Authentication to spreadsheet for google. Used the npm google-spreadsheet-append-es5
 //Documentation here: https://www.npmjs.com/package/google-spreadsheet-append-es5
@@ -35,7 +32,8 @@ var spreadsheet = Spreadsheet({
 	fileId: process.env.FEILD_ID
 });
 
-/*var spreadsheet2 = Spreadsheet({
+/* For secondary registration
+var spreadsheet2 = Spreadsheet({
 	auth: {
 		email: process.env.AUTH_EMAIL,
 		keyFile: process.env.KEY_FILE
@@ -76,7 +74,7 @@ app.post('/charge', function(req, res) {
   var charge = stripe.charges.create({
     amount: Chargeamount,
     currency: "usd",
-    description: "CyberSpark Spring 2018 - Member Purchase",
+    description: "CyberSpark Fall 2018 - Member Purchase",
     metadata: {email: req.body.email,
       name: req.body.name
     },
