@@ -163,6 +163,6 @@ app.post('/charge2', function(req, res) {
 });//end charge
   
 
-app.listen(3000, function(){
-  console.log("listening on port 3000");
+app.listen(7000, function(){
+  console.log("listening on port 7000");
 });
