@@ -63,9 +63,9 @@ app.post('/charge', function(req, res) {
 //Used edit-google-spreadsheet. Documentation here: https://github.com/jpillora/node-edit-google-spreadsheet
 
   //Checks for right coupon code
-  let Chargeamount = 2000;
+  let Chargeamount = 2500;
   if (req.body.coupons === process.env.PROMO){
-    Chargeamount = 1500;
+    Chargeamount = 2000;
   }
 
   //create stripe charge
