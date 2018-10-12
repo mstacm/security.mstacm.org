@@ -26,6 +26,7 @@
         <!--<li><a href="https://acmsigsec.mst.edu/cyberspark.html" class="menu">CyberSpark</a></li>-->
         <!--<li><a href="https://acmsigsec.mst.edu/wire-shop.html" class="menu">Wireless Workshop</a></li>
         <li><a href="https://acmsigsec.mst.edu/bootcamp.html" class="menu">Cyber Boot Camp</a></li>-->
+                <li><a href="wire-shop.html" class="menu">Wireless Workshop</a></li>
         <li><a href="https://acmsigsec.mst.edu/education.html" class="menu">S&T Education</a></li>
         <li><a href="https://acm.mst.edu/" class="menu">ACM General</a></li>
 				<li><a href="https://acmsigsec.mst.edu/archives.html" class="menu">Archives</a></li>
@@ -41,7 +42,7 @@
       <!-- Input boxes to take user data and send it to google spreadsheets -->
       <h2>Register for Wireless Workshop</h2>
       <div class="styleLine"></div>
-        <form method="post" id="payment-form" action="../charge">
+        <!---<input method="post" id="payment-form" action="../charge">-->
           <label>Name</label>
             <input id='names' name='name' type='text' placeholder="Joe Miner">
           </p><p>
@@ -60,6 +61,9 @@
             <label>Coupon</label>
             <input id='coupons' name='coupons' type='text' placeholder="PROMO">
           </p><br />
+            <input type='radio' name='charge' value='charge' id="button1"> $15</input>
+          </p><br />
+             <input type='radio' name='charge' value='charge' id="button2"> $15</input>
           <!-- Display the Card element, uses Elements from Stripe -->
           <div class="price">
             <table>
