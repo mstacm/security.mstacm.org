@@ -57,17 +57,21 @@
           </p><p>
             <label>Are you an S&T ACM Student Chapter Member?</label>
             <input id='acm' name='acm' type='text' placeholder="yes/no">
-          </p><p>
+          </p>
+		  <!--<p>
             <label>Coupon</label>
             <input id='coupons' name='coupons' type='text' placeholder="PROMO">
-          </p><br />
-            <input type='radio' name='charge' value='charge' id="button1"> $15</input>
-          </p><br />
-             <input type='radio' name='charge' value='charge' id="button2"> $15</input>
+          </p><br />-->
+			<label>Admission only - $15 regular - $10 ACM members</label>
+            <input type='radio' name='admin' id="admin" checked="checked"> Admission only</input>
+          </p>
+			<label>Admission + Hardware - $25 regular - $20 ACM members</label>
+            <input type='radio' name='admin' id="adminhardware"> Admission + Hardware</input>
           <!-- Display the Card element, uses Elements from Stripe -->
+		  <br />
           <div class="price">
             <table>
-              <tr>
+              <!--<tr>
                 <th><h4>Membership</h4></th>
                 <th><h4>Price</h4></th>
               </tr>
@@ -78,7 +82,7 @@
               <tr>
                 <td>Normal Registration Price -----------------------------------------</td>
                 <td>$25.00</td>
-              </tr>
+              </tr>-->
               <tr>
                 <th><h4>Coupon Required for Member Discount</h4></th>
               </tr>
@@ -86,7 +90,10 @@
                 <td>Please Contact Tanner Stephens: trsxw8@mst.edu or on ACM Sig-Sec Discord</td>
               </tr>
             </table>
-          </div><br />
+			<p>
+			<label>Coupon</label>
+			<input id='coupons' name='coupons' type='text' placeholder="PROMO"></p>
+          </div><br /><br />
           <div class="form-row">
             <label for="card-element">
               Credit or debit card
