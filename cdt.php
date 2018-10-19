@@ -16,7 +16,7 @@
 				<li><a href="talks.html" class="menu">Events</a></li>
 				<li><a href="learn.html" class="menu">Learn Security</a></li>
 			    <!--<li><a href="cyberspark.html" class="menu">CyberSpark</a></li> -->
-				<!--<li><a href="wire-shop.html" class="menu">Wireless Workshop</a></li>
+				<li><a href="wire-shop.html" class="menu">Wireless Workshop</a></li>
 				<li><a href="bootcamp.html" class="menu">Cyber Boot Camp</a></li>-->
 				<li><a href="education.html" class="menu">S&T Education</a></li>
 				<li><a href="https://acm.mst.edu/" class="menu">ACM General</a></li>

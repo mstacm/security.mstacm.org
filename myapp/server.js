@@ -63,7 +63,41 @@ app.post('/charge', function(req, res) {
 //Used edit-google-spreadsheet. Documentation here: https://github.com/jpillora/node-edit-google-spreadsheet
 
   //Checks for right coupon code
+  // let Chargeamount = 2500;
+  // if (req.body.coupons === process.env.PROMO){
+  //   Chargeamount = 2000;
+
   let Chargeamount = 2500;
+  // If only hardware
+  if (req.body.hardware === true){
+    if (req.body.coupons === process.env.PROMO){
+    Chargeamount = 2000;
+    }
+}
+// If hardware and regular
+  else if (req.body.register_only === true && req.body.hardware === true){
+    if (req.body.coupons === process.env.PROMO){
+    Chargeamount = 2000;
+    }
+}
+// If only regular
+  else if (req.body.register_only === true){
+    if (req.body.coupons === process.env.PROMO){
+    Chargeamount = 1000;
+    }
+    else {
+      Chargeamount = 1500;
+    }
+}
+// If only regular
+  else {
+    if (req.body.coupons === process.env.PROMO){
+    Chargeamount = 1000;
+    }
+    else {
+      Chargeamount = 1500;
+    }
+  }
   if (req.body.coupons === process.env.PROMO){
     Chargeamount = 2000;
   }
@@ -74,7 +108,7 @@ app.post('/charge', function(req, res) {
   var charge = stripe.charges.create({
     amount: Chargeamount,
     currency: "usd",
-    description: "CyberSpark Fall 2018 - Member Purchase",
+    description: "Wireless Workshop Fall 2018 - Member Purchase",
     metadata: {email: req.body.email,
       name: req.body.name
     },
@@ -97,7 +131,9 @@ app.post('/charge', function(req, res) {
           email: "'" + req.body.email,
           major: "'" + req.body.major,
           attendbefore: "'" + req.body.attend,
-          acm: "'" + req.body.acm},
+          acm: "'" + req.body.acm,
+          register_only: "'" + req.body.register-only,
+          hardware_included: "'" + req.body.hardware},
           function(err, res){
             console.log(err);
           });//end add
