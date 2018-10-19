@@ -12,8 +12,8 @@ dotenv.load()
 
 //set stripe keys
 console.log("server is starting.");
-const keyPublishable = process.env.REAL_PUBLISH_KEY;
-const keySecret = process.env.REAL_SECRET_KEY;
+const keyPublishable = process.env.TEST_PUBLISH_KEY;
+const keySecret = process.env.TEST_SECRET_KEY;
 
 //libraries
 const express = require('express');
