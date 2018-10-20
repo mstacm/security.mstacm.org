@@ -56,15 +56,13 @@
           </p><p>
             <label>Are you an S&T ACM Student Chapter Member?</label>
             <input id='acm' name='acm' type='text' placeholder="yes/no">
-          </p>
-		  <!--<p>
-            <label>Coupon</label>
-            <input id='coupons' name='coupons' type='text' placeholder="PROMO">
-          </p><br />-->
-			<label>Admission only - $15 regular - $10 ACM members</label>
+          </p><br />
+			<label>Admission only</label>
+			<label>$15 regular - $10 ACM members</label>
             <input type='radio' name='register' value="no" checked="checked"> Admission only</input>
           </p>
-			<label>Admission + Hardware - $25 regular - $20 ACM members</label>
+			<label>Admission + Hardware</label>
+			<label>$25 regular - $20 ACM members</label>
             <input type='radio' name='register' value="yes"> Admission + Hardware</input>
           <!-- Display the Card element, uses Elements from Stripe -->
 		  <br /><br />
@@ -126,7 +124,7 @@
       which then it will be sent to stripe servers to charge the card. The info doesn't 
       touch our own server.' -->
       <script>
-        var stripe = Stripe("pk_test_6mBUzKTw5gUD99Nf3EwID98W");
+        var stripe = Stripe("pk_live_rXRE81suFTuEjgWFo76GVW0p");
         var elements = stripe.elements();
 
         //Style the card button

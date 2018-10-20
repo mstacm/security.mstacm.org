@@ -12,8 +12,8 @@ dotenv.load()
 
 //set stripe keys
 console.log("server is starting.");
-const keyPublishable = process.env.TEST_PUBLISH_KEY;
-const keySecret = process.env.TEST_SECRET_KEY;
+const keyPublishable = process.env.REAL_PUBLISH_KEY;
+const keySecret = process.env.REAL_SECRET_KEY;
 
 //libraries
 const express = require('express');
@@ -127,7 +127,7 @@ app.post('/charge', function(req, res) {
           major: "'" + req.body.major,
           attendbefore: "'" + req.body.attend,
           acm: "'" + req.body.acm,
-          hardware: "'" + req.body.register},
+          hardware: req.body.register},
           function(err, res){
             console.log(err);
           });//end add
