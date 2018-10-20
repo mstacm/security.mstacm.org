@@ -98,9 +98,6 @@ app.post('/charge', function(req, res) {
       Chargeamount = 1500;
     }
   }
-  if (req.body.coupons === process.env.PROMO){
-    Chargeamount = 2000;
-  }
 
   //create stripe charge
   var token = req.body.stripeToken;
@@ -132,8 +129,8 @@ app.post('/charge', function(req, res) {
           major: "'" + req.body.major,
           attendbefore: "'" + req.body.attend,
           acm: "'" + req.body.acm,
-          register_only: "'" + req.body.register-only,
-          hardware_included: "'" + req.body.hardware},
+          register_only: "'" + Boolean(req.body.register-only),
+          hardware_included: "'" + Boolean(req.body.hardware)},
           function(err, res){
             console.log(err);
           });//end add
