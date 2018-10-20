@@ -69,26 +69,24 @@ app.post('/charge', function(req, res) {
 
   let Chargeamount = 2500;
   // If only hardware
-  if (req.body.hardware === true){
+  if (req.body.register === 'yes'){
     if (req.body.coupons === process.env.PROMO){
     Chargeamount = 2000;
     }
-}
-// If hardware and regular
-  else if (req.body.register_only === true && req.body.hardware === true){
-    if (req.body.coupons === process.env.PROMO){
-    Chargeamount = 2000;
+    else{
+	Chargeamount = 2500;
     }
-}
-// If only regular
-  else if (req.body.register_only === true){
+  }
+// If regular
+  else if (req.body.register === 'no'){
     if (req.body.coupons === process.env.PROMO){
     Chargeamount = 1000;
     }
-    else {
-      Chargeamount = 1500;
-    }
+    else{
+	Chargeamount = 1500;
 }
+}
+
 // If only regular
   else {
     if (req.body.coupons === process.env.PROMO){
@@ -129,8 +127,7 @@ app.post('/charge', function(req, res) {
           major: "'" + req.body.major,
           attendbefore: "'" + req.body.attend,
           acm: "'" + req.body.acm,
-          register_only: "'" + Boolean(req.body.register-only),
-          hardware_included: "'" + Boolean(req.body.hardware)},
+          hardware: "'" + req.body.register},
           function(err, res){
             console.log(err);
           });//end add
