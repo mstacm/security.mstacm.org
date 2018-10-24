@@ -21,9 +21,7 @@
 			<ul>
 				<li><a href="https://acmsigsec.mst.edu/cdt.php" class="menu">Cyber Defense Team</a></li>
 				<li><a href="https://acmsigsec.mst.edu/talks.html" class="menu">Events</a></li>
-			  <!--<li><a class="red" href="https://acmsigsec.mst.edu/tracerfire.html" class="menu">Tracer FIRE</a></li>-->
 				<li><a href="https://acmsigsec.mst.edu/learn.html" class="menu">Learn Security</a></li>
-        <!--<li><a href="https://acmsigsec.mst.edu/cyberspark.html" class="menu">CyberSpark</a></li>-->
         <li><a href="https://acmsigsec.mst.edu/wire-shop.html" class="menu">Wireless Workshop</a></li>
 	<li><a href="lockpick.html" class="menu">Lockpick Competition</a></li>
         <!--<li><a href="https://acmsigsec.mst.edu/bootcamp.html" class="menu">Cyber Boot Camp</a></li>-->
@@ -40,9 +38,9 @@
   <div class="mainbody">
     <div class="middle1">
       <!-- Input boxes to take user data and send it to google spreadsheets -->
-      <h2>Register for Wireless Workshop</h2>
+      <h2>Application for Cyber Boot Camp</h2>
       <div class="styleLine"></div>
-        <form method="post" id="payment-form" action="../charge">
+        <form method="post" id="payment-form" action="/register/charge2">
           <label>Name</label>
             <input id='names' name='name' type='text' placeholder="Joe Miner">
           </p><p>
@@ -52,46 +50,28 @@
             <label>Major</label>
             <input id='major' name='major' type='text' placeholder="Computer Science">
           </p><p>
-            <label>Have you ever attended a Wireless Workshop event?</label>
+            <label>Have you ever attended a Cyber Boot Camp?</label>
             <input id='attend' name='attend' type='text' placeholder="yes/no">
-          </p><p>
-            <label>Are you an S&T ACM Student Chapter Member?</label>
-            <input id='acm' name='acm' type='text' placeholder="yes/no">
           </p><br />
-			<p><h3 style="text-align:left;">Admission only</h3><p/>
-			<p>$15 regular - $10 ACM members</p>
-            <input type='radio' name='register' value="no" checked="checked"> Admission only</input>
-          </p>
-			<p><h3 style="text-align:left;">Admission + Hardware</h3></p>
-			<p>$25 regular - $20 ACM members</p>
-            <input type='radio' name='register' value="yes"> Admission + Hardware</input>
           <!-- Display the Card element, uses Elements from Stripe -->
-		  <br /><br />
           <div class="price">
             <table>
-              <!--<tr>
+              <tr>
                 <th><h4>Membership</h4></th>
                 <th><h4>Price</h4></th>
               </tr>
               <tr>
-                <td>S&T ACM Student Chapter Member --------------------------</td>
-                <td>$20.00</td>
+                <td>Normal Application Price (Hotel, Transportation, NOT food): </td>
+                <td>$250.00</td>
               </tr>
               <tr>
-                <td>Normal Registration Price -----------------------------------------</td>
-                <td>$25.00</td>
-              </tr>-->
-              <tr>
-                <th><h4>Coupon Required for Member Discount</h4></th>
+                <th><h4>20 people will be selected</h4></th>
               </tr>
               <tr>
-                <td>Please Contact Tanner Stephens: trsxw8@mst.edu or on ACM Sig-Sec Discord</td>
+                <td>If you are not chosen you will be refunded.</td>
               </tr>
             </table>
-			<p>
-			<label>Coupon</label>
-			<input id='coupons' name='coupons' type='text' placeholder="PROMO"></p>
-          </div><br /><br />
+          </div><br />
           <div class="form-row">
             <label for="card-element">
               Credit or debit card
@@ -105,8 +85,8 @@
             <!-- Used to display form errors -->
             <div id="card-errors"></div>
             </div><br />
-            <!--<h3 style="color:red">Registration is closed! Please try again next time!</h3>-->
-            <input type="submit" class="submit" value="Submit Payment">
+              <!--<input type="submit" class="submit" value="Submit Payment">-->
+              <h3 style="color:red">Registration is full! Please try again next time!</h3>
           </form>
 	    </div>
     </div><br /><br /><br />

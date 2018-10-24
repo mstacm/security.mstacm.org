@@ -32,14 +32,14 @@ var spreadsheet = Spreadsheet({
 	fileId: process.env.FEILD_ID
 });
 
-/* For secondary registration
+// For secondary registration
 var spreadsheet2 = Spreadsheet({
 	auth: {
 		email: process.env.AUTH_EMAIL,
 		keyFile: process.env.KEY_FILE
 	},
 	fileId: process.env.FEILD_ID2
-});*/
+});
 
 //set app
 app.use(bodyParser.urlencoded({extended: false}));
@@ -52,7 +52,7 @@ app.get("/", (req, res) =>
   res.render("https://acmsigsec.mst.edu/myapp/website/index.html", {keyPublishable}));
 
 //gets
-app.get("./cybercamp/", (req, res) =>
+app.get("./lockpick/", (req, res) =>
   res.render("https://acmsigsec.mst.edu/myapp/website/register2.html", {keyPublishable}));
 
 //post the charge from stripe Wireless Workshop page
@@ -140,7 +140,7 @@ app.post('/charge', function(req, res) {
 });//end charge
 
 
-//post the charge from stripe Wireless Workshop page
+//post the charge from stripe Lockpicking page page
 app.post('/charge2', function(req, res) {
 
   //Checks to see if we are out of available rows in spreadsheet
@@ -148,7 +148,7 @@ app.post('/charge2', function(req, res) {
 //Used edit-google-spreadsheet. Documentation here: https://github.com/jpillora/node-edit-google-spreadsheet
 
   //Checks for right coupon code
-  let Chargeamount = 20000;
+  let Chargeamount = 500;
 
 
   //create stripe charge
@@ -157,7 +157,7 @@ app.post('/charge2', function(req, res) {
   var charge2 = stripe.charges.create({
     amount: Chargeamount,
     currency: "usd",
-    description: "Cyber Boot Camp Spring 2018 - Member Purchase",
+    description: "Lockpicking Comp Fall 2018 - Member Purchase",
     metadata: {email: req.body.email,
       name: req.body.name
     },
