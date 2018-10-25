@@ -178,9 +178,7 @@ app.post('/charge2', function(req, res) {
           timestamp: new Date(), 
           name: "'" + req.body.name, 
           email: "'" + req.body.email,
-          major: "'" + req.body.major,
-          attendedbefore: "'" + req.body.attend
-          }, 
+          major: "'" + req.body.major}, 
           function(err, res){
             console.log(err);
           });//end add
