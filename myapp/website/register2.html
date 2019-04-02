@@ -36,9 +36,9 @@
   <div class="mainbody">
     <div class="middle1">
       <!-- Input boxes to take user data and send it to google spreadsheets -->
-      <h2>Lockpicking Competition Registration</h2>
+      <h2>Cantenna Registration</h2>
       <div class="styleLine"></div>
-        <form method="post" id="payment-form" action="../charge2">
+        <form method="post" id="payment-form" action="../charge">
           <label>Name</label>
             <input id='names' name='name' type='text' placeholder="Joe Miner">
           </p><p>
@@ -50,7 +50,10 @@
           </p><p>
             <label>Have you ever attended our Lockpicking Competition?</label>
             <input id='attend' name='attend' type='text' placeholder="yes/no">
-          </p><br />
+          </p><p>
+            <label>Are you an S&T ACM Student Chapter Member?</label>
+            <input id='acm' name='acm' type='text' placeholder="yes/no">
+          </p>
           <!-- Display the Card element, uses Elements from Stripe -->
           <div class="price">
             <table>
@@ -59,7 +62,7 @@
                 <th><h4>Price</h4></th>
               </tr>
               <tr>
-                <td>Fee: </td>
+                <td>Team Admission: </td>
                 <td>$5.00</td>
               </tr>
             </table>
@@ -77,8 +80,8 @@
             <!-- Used to display form errors -->
             <div id="card-errors"></div>
             </div><br />
-              <!--<input type="submit" class="submit" value="Submit Payment">-->
-              <h3 style="color:red">Registration is closed! Please try again next time!</h3>
+              <input type="submit" class="submit" value="Submit Payment">
+              <!--<h3 style="color:red">Registration is closed! Please try again next time!</h3>-->
           </form>
 	    </div>
     </div><br /><br /><br />
@@ -97,7 +100,7 @@
       which then it will be sent to stripe servers to charge the card. The info doesn't 
       touch our own server.' -->
       <script>
-        var stripe = Stripe("pk_live_rXRE81suFTuEjgWFo76GVW0p");
+        var stripe = Stripe("pk_test_6mBUzKTw5gUD99Nf3EwID98W");
         var elements = stripe.elements();
 
         //Style the card button
