@@ -12,8 +12,8 @@ dotenv.load()
 
 //set stripe keys
 console.log("server is starting.");
-const keyPublishable = process.env.REAL_PUBLISH_KEY;
-const keySecret = process.env.REAL_SECRET_KEY;
+const keyPublishable = process.env.TEST_PUBLISH_KEY;
+const keySecret = process.env.TEST_SECRET_KEY;
 
 //libraries
 const express = require('express');
@@ -67,35 +67,7 @@ app.post('/charge', function(req, res) {
   // if (req.body.coupons === process.env.PROMO){
   //   Chargeamount = 2000;
 
-  let Chargeamount = 2500;
-  // If only hardware
-  if (req.body.register === 'yes'){
-    if (req.body.coupons === process.env.PROMO){
-    Chargeamount = 2000;
-    }
-    else{
-	Chargeamount = 2500;
-    }
-  }
-// If regular
-  else if (req.body.register === 'no'){
-    if (req.body.coupons === process.env.PROMO){
-    Chargeamount = 1000;
-    }
-    else{
-	Chargeamount = 1500;
-}
-}
-
-// If only regular
-  else {
-    if (req.body.coupons === process.env.PROMO){
-    Chargeamount = 1000;
-    }
-    else {
-      Chargeamount = 1500;
-    }
-  }
+  let Chargeamount = 500;
 
   //create stripe charge
   var token = req.body.stripeToken;
@@ -103,7 +75,7 @@ app.post('/charge', function(req, res) {
   var charge = stripe.charges.create({
     amount: Chargeamount,
     currency: "usd",
-    description: "Wireless Workshop Fall 2018 - Member Purchase",
+    description: "Cantenna Spring 2019 - Member Purchase",
     metadata: {email: req.body.email,
       name: req.body.name
     },
@@ -126,8 +98,7 @@ app.post('/charge', function(req, res) {
           email: "'" + req.body.email,
           major: "'" + req.body.major,
           attendbefore: "'" + req.body.attend,
-          acm: "'" + req.body.acm,
-          hardware: req.body.register},
+          acm: "'" + req.body.acm},
           function(err, res){
             console.log(err);
           });//end add

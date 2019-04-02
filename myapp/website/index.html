@@ -56,10 +56,6 @@
           </p><p>
             <label>Are you an S&T ACM Student Chapter Member?</label>
             <input id='acm' name='acm' type='text' placeholder="yes/no">
-          </p><br />
-			<p><h3 style="text-align:left;">Admission</h3><p/>
-			<p>$5 per Team</p>
-            <input type='radio' name='register' value="no" checked="checked"> Admission</input>
           </p>
 		<!--	<p><h3 style="text-align:left;">Admission + Hardware</h3></p>
 			<p>$25 regular - $20 ACM members</p>
@@ -101,8 +97,8 @@
             <!-- Used to display form errors -->
             <div id="card-errors"></div>
             </div><br />
-            <h3 style="color:red">Registration is closed! Please try again next time!</h3>
-            <!--<input type="submit" class="submit" value="Submit Payment">-->
+            <!--<h3 style="color:red">Registration is closed! Please try again next time!</h3>-->
+           <input type="submit" class="submit" value="Submit Payment">
           </form>
 	    </div>
     </div><br /><br /><br />
@@ -121,7 +117,7 @@
       which then it will be sent to stripe servers to charge the card. The info doesn't 
       touch our own server.' -->
       <script>
-        var stripe = Stripe("pk_live_rXRE81suFTuEjgWFo76GVW0p");
+        var stripe = Stripe("pk_test_6mBUzKTw5gUD99Nf3EwID98W");
         var elements = stripe.elements();
 
         //Style the card button
