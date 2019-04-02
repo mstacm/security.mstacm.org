@@ -39,7 +39,7 @@
   <div class="mainbody">
     <div class="middle1">
       <!-- Input boxes to take user data and send it to google spreadsheets -->
-      <h2>Register for Wireless Workshop</h2>
+      <h2>Register for Cantenna</h2>
       <div class="styleLine"></div>
         <form method="post" id="payment-form" action="../charge">
           <label>Name</label>
@@ -51,47 +51,43 @@
             <label>Major</label>
             <input id='major' name='major' type='text' placeholder="Computer Science">
           </p><p>
-            <label>Have you ever attended a Wireless Workshop event?</label>
+            <label>Have you ever attended a Cantenna event?</label>
             <input id='attend' name='attend' type='text' placeholder="yes/no">
           </p><p>
             <label>Are you an S&T ACM Student Chapter Member?</label>
             <input id='acm' name='acm' type='text' placeholder="yes/no">
           </p><br />
-			<p><h3 style="text-align:left;">Admission only</h3><p/>
-			<p>$15 regular - $10 ACM members</p>
-            <input type='radio' name='register' value="no" checked="checked"> Admission only</input>
+			<p><h3 style="text-align:left;">Admission</h3><p/>
+			<p>$5 per Team</p>
+            <input type='radio' name='register' value="no" checked="checked"> Admission</input>
           </p>
-			<p><h3 style="text-align:left;">Admission + Hardware</h3></p>
+		<!--	<p><h3 style="text-align:left;">Admission + Hardware</h3></p>
 			<p>$25 regular - $20 ACM members</p>
             <input type='radio' name='register' value="yes"> Admission + Hardware</input>
-          <!-- Display the Card element, uses Elements from Stripe -->
+           Display the Card element, uses Elements from Stripe -->
 		  <br /><br />
           <div class="price">
             <table>
-              <!--<tr>
+              <tr>
                 <th><h4>Membership</h4></th>
                 <th><h4>Price</h4></th>
               </tr>
               <tr>
-                <td>S&T ACM Student Chapter Member --------------------------</td>
-                <td>$20.00</td>
+                <td>Admission  --------------------------</td>
+                <td>$5.00</td>
               </tr>
-              <tr>
-                <td>Normal Registration Price -----------------------------------------</td>
-                <td>$25.00</td>
-              </tr>-->
-              <tr>
+              <!----<tr>
                 <th><h4>Coupon Required for Member Discount</h4></th>
-              </tr>
+              </tr>-->
               <tr>
                   <td>Please Contact Tanner Stephens: trsxw8@mst.edu or on ACM Sig-Sec Discord
                       <a href="https://discord.gg/cfD6ry7" style="color:blue">Here</a></td>
               </tr>
             </table>
 			<p>
-			<label>Coupon</label>
+			<!--<label>Coupon</label>
 			<input id='coupons' name='coupons' type='text' placeholder="PROMO"></p>
-          </div><br /><br />
+          </div><br /><br />-->
           <div class="form-row">
             <label for="card-element">
               Credit or debit card
