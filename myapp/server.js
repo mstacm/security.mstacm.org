@@ -12,8 +12,8 @@ dotenv.load()
 
 //set stripe keys
 console.log("server is starting.");
-const keyPublishable = process.env.REAL_PUBLISH_KEY;
-const keySecret = process.env.REAL_SECRET_KEY;
+const keyPublishable = process.env.TEST_PUBLISH_KEY;
+const keySecret = process.env.TEST_SECRET_KEY;
 
 //libraries
 const express = require('express');
@@ -63,9 +63,9 @@ app.post('/charge', function(req, res) {
 //Used edit-google-spreadsheet. Documentation here: https://github.com/jpillora/node-edit-google-spreadsheet
 
   //Checks for right coupon code
-  let Chargeamount = 1700;
+  let Chargeamount = 3000;
   if (req.body.coupons === process.env.PROMO){
-    Chargeamount = 1400; }
+    Chargeamount = 2500; }
 
   //create stripe charge
   var token = req.body.stripeToken;
@@ -73,7 +73,7 @@ app.post('/charge', function(req, res) {
   var charge = stripe.charges.create({
     amount: Chargeamount,
     currency: "usd",
-    description: "Lantap Workshop Spring 2019 - Member Purchase",
+    description: "Wireless Workshop Fall 2019 - Member Purchase",
     metadata: {email: req.body.email,
       name: req.body.name
     },

@@ -23,7 +23,7 @@
 				<li><a href="https://acmsigsec.mst.edu/talks.html" class="menu">Events</a></li>
 				<li><a href="https://acmsigsec.mst.edu/learn.html" class="menu">Learn Security</a></li>
         <!--<li><a href="https://acmsigsec.mst.edu/bootcamp.html" class="menu">Cyber Boot Camp</a></li>-->
-        <li><a href="https://acmsigsec.mst.edu/lantap.html" class="menu">Lantap</a></li>
+        <li><a href="https://acmsigsec.mst.edu/wire-shop.html" class="menu">Wireless Workshop</a></li>
         <li><a href="https://acmsigsec.mst.edu/education.html" class="menu">S&T Education</a></li>
         <li><a href="https://acm.mst.edu/" class="menu">ACM General</a></li>
 				<li><a href="https://acmsigsec.mst.edu/archives.html" class="menu">Archives</a></li>
@@ -37,7 +37,7 @@
   <div class="mainbody">
     <div class="middle1">
       <!-- Input boxes to take user data and send it to google spreadsheets -->
-      <h2>Lantap Workshop Registration</h2>
+      <h2>Wireless Workshop Registration</h2>
       <div class="styleLine"></div>
         <form method="post" id="payment-form" action="../charge">
           <label>Name</label>
@@ -49,7 +49,7 @@
             <label>Major</label>
             <input id='major' name='major' type='text' placeholder="Computer Science">
           </p><p>
-            <label>Have you ever attended our Lantap Competition?</label>
+            <label>Have you ever attended our Wireless Workshop?</label>
             <input id='attend' name='attend' type='text' placeholder="yes/no">
           </p><p>
             <label>Are you an S&T ACM Student Chapter Member?</label>
@@ -67,15 +67,15 @@
               </tr>
               <tr>
                 <td>ACM Member Admission: </td>
-                <td>$14.00</td>
+                <td>$30.00</td>
               </tr>
               <tr>
                   <td>Regular Admission: </td>
-                  <td>$17.00</td>
+                  <td>$25.00</td>
               </tr>
               <tr>
                   <td>Please contact for coupon: </td>
-                  <td>trsxw8@mst.edu</td>
+                  <td>kanm29@mst.edu</td>
               </tr>
             </table>
           </div><br /><br />
@@ -112,7 +112,7 @@
       which then it will be sent to stripe servers to charge the card. The info doesn't 
       touch our own server.' -->
       <script>
-        var stripe = Stripe("pk_live_rXRE81suFTuEjgWFo76GVW0p");
+        var stripe = Stripe("pk_test_5K6vSoTGrPyY2cBw3nNSixV300Z8JOVkl7");
         var elements = stripe.elements();
 
         //Style the card button
