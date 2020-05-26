@@ -481,6 +481,14 @@ mark,
   height: auto;
 }
 
+/*Charles Rawlins*/
+/*.img-fluid-rounded {*/
+/*  width: auto;*/
+/*  height: auto;*/
+/*  border-radius: 50%;*/
+
+/*}*/
+
 .img-thumbnail {
   padding: 0.25rem;
   background-color: #fff;
