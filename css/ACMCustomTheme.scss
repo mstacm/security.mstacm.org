@@ -1,0 +1,15 @@
+
+$theme-colors: (
+        "primary": #9acc14,
+        "danger": #ff4136
+);
+
+$navbar-dark-color: #9acc14;
+$navbar-dark-hover-color: #9acc14;
+
+.navbar-dark {
+  background-color: #1e2125;
+}
+
+@import "../bootstrap/scss/bootstrap";
+
