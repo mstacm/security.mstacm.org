@@ -5,7 +5,6 @@
 <!--Page: index-->
 <!--Desc: This is the first/main page for the ACM website. Users access other pages via links in this page.-->
 
-
 <head>
 
   <meta charset="utf-8">
@@ -16,17 +15,19 @@
   <title>ACM SIG-Security</title>
 
   <!-- Bootstrap core CSS -->
-  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<!--  <link href="bootstrap/dist/css/bootstrap.css" rel="stylesheet">-->
+  <link href="css/ACMCustomTheme.css" rel="stylesheet">
 
   <!-- Custom styles for this template -->
   <link href="css/acmfrontpage.css" rel="stylesheet">
+  <link href="css/particles.css" media="screen" rel="stylesheet">
 
 </head>
 
 <body>
 
-  <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+<!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
     <div class="container">
       <a class="navbar-brand" href="index.html">ACM SIG-Security at MS&T</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -43,7 +44,10 @@
             <a class="nav-link" href="subPages/learnSecurity.html">Learn Security</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="subPages/officersAndContact.html">Contact and Officers</a>
+            <a class="nav-link" href="subPages/officersAndContact.html">Contact Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Events</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">MORE TO COME!</a>
@@ -53,97 +57,109 @@
     </div>
   </nav>
 
-  <!-- Header -->
-  <header class="bg-primary py-5 mb-5">
-    <div class="container h-100">
-      <div class="row h-100 align-items-center">
-        <div class="col-lg-12">
-          <h1 class="display-4 text-white mt-5 mb-2">ACM SIG-Security</h1>
-          <p class="lead mb-5 text-white-50">Come learn about cybersecurity!</p>
-        </div>
-      </div>
-    </div>
-  </header>
+<!-- Setup Particles and page background -->
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script src="https://threejs.org/examples/js/libs/stats.min.js"></script>
+<div class="jumbotron-main">
+  <div id="particles-js">
+    <canvas class="particles-js-canvas-el" width="1409" height="319" style="width: 100%; height: 100%;">
+    </canvas>
+  </div><!-- /.particles div -->
+  <script src="./scripts/particles.js"></script>
+<!--  Custom div to allow particles to go behind bootstrap widgets (MAIN PAGE CONTENT GOES HERE!)-->
+  <div class="container page-content">
+    <div class="page-content">
+        <div class="card bg-dark py-3 text-white">
+          <div class="row justify-content-center">
+            <div class="col-md-8 mb-3">
+              <h2>What We Do</h2>
+              <hr class="bg-primary">
+              <p>The Association for Computing Machinery (ACM) is the worlds largest scientific and educational computing society.
+                ACM was founded in 1947 and is a not-for-profit professional membership group.
+                The local branch welcomes you to join us in learning about the computing world.
+              </p>
+              <p>Our ACM Security group is a local ACM branch whose mission is to help develop the cybersecurity
+                profession for the student body of Missouri University of Science and Technology (MS&T) by sponsoring
+                high-quality workshops and lectures from both local and national industry professionals,
+                as well as hosting a variety of on-campus security events and competitions.
+              </p>
+              <a class="btn btn-primary btn-lg" href="subPages/learnSecurity.html">Start Learning!</a>
+            </div>
+            <div class="col-md-3 mb-3">
+              <h2>
+                Weekly Meetings
+              </h2>
+              <hr class="bg-primary">
+              <ul>
+                <li>ACM General @ Wed. 6 PM in CS 203</li>
+                <li>Security @ Fri. 6 AM in CS 203</li>
 
-  <!-- Page Content -->
-  <div class="container">
+              </ul>
+            </div>
+          </div>
+        </div>
 
-    <div class="row">
-      <div class="col-md-8 mb-5">
-        <h2>What We Do</h2>
-        <hr>
-        <p>The Association for Computing Machinery (ACM) is the worlds largest scientific and educational computing society.
-          ACM was founded in 1947 and is a not-for-profit professional membership group.
-          The local branch welcomes you to join us in learning about the computing world.
-        </p>
-        <p>Our ACM Security group is a local ACM branch whose mission is to help develop the cybersecurity
-          profession for the student body of Missouri University of Science and Technology (MS&T) by sponsoring
-          high-quality workshops and lectures from both local and national industry professionals,
-          as well as hosting a variety of on-campus security events and competitions.
-        </p>
-        <a class="btn btn-primary btn-lg" href="subPages/learnSecurity.html">Start Learning!</a>
+<!--      Card row for images to other pages.-->
+      <div class="row py-4 ">
+        <div class="col-md-4 mb-5">
+          <div class="card h-100 bg-dark text-white">
+            <img class="card-img-top" src="http://placehold.it/300x200" alt="">
+            <div class="card-body">
+              <h4 class="card-title">Events</h4>
+              <p class="card-text">Come check out some of our exciting events!</p>
+            </div>
+            <div class="card-footer">
+              <a href="#" class="btn btn-primary">Find Out More!</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-5">
+          <div class="card h-100 bg-dark text-white">
+            <img class="card-img-top" src="http://placehold.it/300x200" alt="">
+            <div class="card-body">
+              <h4 class="card-title">Cyber Defense Team</h4>
+              <p class="card-text">Our Cyber Defense Team actively participates in real-world capture the flag (CTF) and cyber
+                defense challenges. </p>
+            </div>
+            <div class="card-footer">
+              <a href="#" class="btn btn-primary">Find Out More!</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-5">
+          <div class="card h-100 bg-dark text-white">
+            <img class="card-img-top" src="http://placehold.it/300x200" alt="">
+            <div class="card-body">
+              <h4 class="card-title">ACM General</h4>
+              <p class="card-text">ACM SIG-Security is only a small subsection of ACM.</p>
+            </div>
+            <div class="card-footer">
+              <a href="https://acm.mst.edu/" class="btn btn-primary">Find Out More!</a>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="col-md-4 mb-5">
-        <p>Add calender here and remove events card below?</p>
-      </div>
-    </div>
-    <!-- /.row -->
 
-    <div class="row">
-      <div class="col-md-4 mb-5">
-        <div class="card h-100">
-          <img class="card-img-top" src="http://placehold.it/300x200" alt="">
-          <div class="card-body">
-            <h4 class="card-title">Events</h4>
-            <p class="card-text">Come check out some of our exciting events!</p>
-          </div>
-          <div class="card-footer">
-            <a href="#" class="btn btn-primary">Find Out More!</a>
-          </div>
-        </div>
+
+      <div class="card bg-dark">
+        <p class="m-0 text-center text-white">Copyright &copy; ACM SIG-Security 2020</p>
       </div>
-      <div class="col-md-4 mb-5">
-        <div class="card h-100">
-          <img class="card-img-top" src="http://placehold.it/300x200" alt="">
-          <div class="card-body">
-            <h4 class="card-title">Cyber Defense Team</h4>
-            <p class="card-text">Our Cyber Defense Team actively participates in real-world capture the flag (CTF) and cyber
-            defense challenges. </p>
-          </div>
-          <div class="card-footer">
-            <a href="#" class="btn btn-primary">Find Out More!</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4 mb-5">
-        <div class="card h-100">
-          <img class="card-img-top" src="http://placehold.it/300x200" alt="">
-          <div class="card-body">
-            <h4 class="card-title">ACM General</h4>
-            <p class="card-text">ACM SIG-Security is only a small subsection of ACM.</p>
-          </div>
-          <div class="card-footer">
-            <a href="https://acm.mst.edu/" class="btn btn-primary">Find Out More!</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- /.row -->
+  </div>
+
+
+    <!-- Footer -->
+<!--    <footer class="py-3">-->
+
+      <!-- /.container -->
+<!--    </footer>-->
+
 
   </div>
-  <!-- /.container -->
-
-  <!-- Footer -->
-  <footer class="py-5 bg-dark">
-    <div class="container">
-      <p class="m-0 text-center text-white">Copyright &copy; ACM SIG-Security 2020</p>
-    </div>
-    <!-- /.container -->
-  </footer>
+</div>
 
 <!--  &lt;!&ndash; Bootstrap core JavaScript &ndash;&gt;-->
   <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="bootstrap/dist/js/bootstrap.bundle.js"></script>
 
 </body>
 
