@@ -70,11 +70,12 @@ function generateOfficers(){
             } else {
                 yearParam.setAttribute('aria-selected', 'false');
             }
+            // yearParam.setAttribute('style','color: dark;');
             yearParam.innerHTML = yearEntries[i].year;
             yearBlock.appendChild(yearParam);
             yearTabs = document.getElementById("yearTabs");
             yearTabs.appendChild(yearBlock);
-            yearTabs.style.marginBottom = "10px";
+            // yearTabs.style.marginBottom = "20px";
 
         }
 
@@ -98,9 +99,9 @@ function generateOfficers(){
 
             for(var j = 0; j < yearEntries[i].officerEntries.length; j++) {
                 // Officer entry div
-                tabBlock += '<div class="col-md-auto d-flex align-items-stretch" >';
+                tabBlock += '<div class="col-md-auto">'; // d-flex align-items-stretch" >';
                 // Officer Card div
-                tabBlock += '<div class="card h-auto mb-3" style="width: 15rem;">'
+                tabBlock += '<div class="card h-auto mb-3 bg-dark text-white" style="width: 15rem;">'
                 // Card header
                 tabBlock += '<div class="card-header">' + yearEntries[i].officerEntries[j].role + '</div>'
                 // Card image
@@ -151,6 +152,8 @@ function generateOfficers(){
             officerTabContents.innerHTML += tabBlock;
 
         }
+
+        print("Hello");
 
     });
 
