@@ -3540,7 +3540,7 @@ input[type=button].btn-block {
 }
 
 .nav-tabs {
-  border-bottom: 1px solid #dee2e6;
+  border-bottom: 1px solid #1e2125;
 }
 .nav-tabs .nav-item {
   margin-bottom: -1px;
@@ -3551,7 +3551,7 @@ input[type=button].btn-block {
   border-top-right-radius: 0.25rem;
 }
 .nav-tabs .nav-link:hover, .nav-tabs .nav-link:focus {
-  border-color: #e9ecef #e9ecef #dee2e6;
+  border-color: #e9ecef #e9ecef #1e2125;
 }
 .nav-tabs .nav-link.disabled {
   color: #6c757d;
@@ -3560,9 +3560,9 @@ input[type=button].btn-block {
 }
 .nav-tabs .nav-link.active,
 .nav-tabs .nav-item.show .nav-link {
-  color: #495057;
-  background-color: #fff;
-  border-color: #dee2e6 #dee2e6 #fff;
+  color: #1e2125;
+  background-color: #343a40;
+  border-color: #1e2125;
 }
 .nav-tabs .dropdown-menu {
   margin-top: -1px;

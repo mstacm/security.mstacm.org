@@ -3,26 +3,27 @@
 <head>
 
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="ACM SIG-Security Homepage">
-    <meta name="author" content="ACM SIG-Security">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+    <meta content="ACM SIG-Security Homepage" name="description">
+    <meta content="ACM SIG-Security" name="author">
 
     <title>ACM SIG-Security</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/ACMCustomTheme.css" rel="stylesheet">
     <!-- Custom styles for this template -->
-    <link href="../css/acmfrontpage.css" rel="stylesheet">
+    <!--    <link href="../css/acmfrontpage.css" rel="stylesheet">-->
+    <link href="../css/particles.css" media="screen" rel="stylesheet">
     <!--    Scripts-->
-    <script type="text/javascript" src="../scripts/libraries/d3/d3.js"></script>
-    <script type="text/javascript" src="../scripts/officerProfileGen.js"></script>
+    <script src="../scripts/libraries/d3/d3.min.js" type="text/javascript"></script>
+<!--    <script src="../scripts/officerProfileGen.js" type="text/javascript"></script>-->
 
 </head>
 
 <body>
 
 <!-- Navigation -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
     <div class="container">
         <a class="navbar-brand" href="../index.html">ACM SIG-Security at MS&T</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -30,62 +31,331 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="../index.html">Home
-                        <span class="sr-only">(current)</span>
-                    </a>
-                </li>
                 <li class="nav-item">
+                    <a class="nav-link" href="../index.html">Home</a>
+                </li>
+                <li class="nav-item active">
                     <a class="nav-link" href="learnSecurity.html">Learn Security</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="officersAndContact.html">Contact Us</a>
+                    <a class="nav-link" href="events.html">Events</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">MORE TO COME!</a>
+                    <a class="nav-link" href="joinsigsec.html">Join Sig-Sec</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="officersAndContact.html">Contact Us</a>
                 </li>
             </ul>
         </div>
     </div>
 </nav>
 
-<div class="container py-2">
-    <div class="row">
-        <div class="col-md-8 mb-5">
-            <h2>Change Me!</h2>
-            <hr>
-            <p> Talk about club officers?
-            </p>
-        </div>
-        <div class="col-md-4 mb-5">
-            <h2>Contact Us</h2>
-            <hr>
-            <address>
-                <strong>ACM SIG-Security</strong>
-                <br>ADDRESS
-                <br>
-            </address>
-            <address>
-                <abbr title="Phone">Phone:</abbr>
-                (573) ###-####
-                <br>
-                <abbr title="Email">Email:</abbr>
-                <a href="mailto:#">name@example.com</a>
-            </address>
-        </div>
-    </div>
-</div>
+<!--<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>-->
+<!--<script src="https://threejs.org/examples/js/libs/stats.min.js"></script>-->
 
-<div class="container bg-light border">
-    <ul class="nav nav-tabs" id="yearTabs">
-        <!--Auto-generate year headers go here from officerProfileGen.js-->
-        <!--        Current comment here is for future development reference.-->
-        <!--        <li class="nav-item">-->
-        <!--            <a class="nav-link active" id="2021" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Home</a>-->
-        <!--        </li>-->
+<div class="jumbotron-main">
+    <div id="particles-js">
+        <canvas class="particles-js-canvas-el" width="1409" height="319" style="width: 100%; height: 100%;">
+        </canvas>
+    </div><!-- /.particles div -->
+    <script src="../scripts/particles.js"></script>
+    <!--  Custom div to allow particles to go behind bootstrap widgets (MAIN PAGE CONTENT GOES HERE!)-->
+    <div class="container page-content">
+        <div class="container py-2 bg-dark text-white rounded mb-3">
+            <div class="row">
+                <div class="col-md-8 mb-5">
+                    <h2>Club Officers</h2>
+                    <hr>
 
-    </ul>
-    <div class="tab-content" id="officerTabContents">
+                    <p> Each of our club officers is a student of Missouri University of Science & Technology
+                        (MS&T). We are all enthusiastic about security and love learning new things! If you are
+                        looking to get involved with the club activities or are looking for a place to start
+                        learning about security, don't hesitate to contact us!
+                    </p>
+                </div>
+                <div class="col-md-4 mb-5">
+                    <h2>Club Contact</h2>
+                    <hr>
+                    <address>
+                        <strong>ACM SIG-Security</strong>
+                        <br>ADDRESS
+                        <br>
+                    </address>
+                    <address>
+                        <abbr title="Phone">Phone:</abbr>
+                        (573) ###-####
+                        <br>
+                        <abbr title="Email">Email:</abbr>
+                        <a href="mailto:#">name@example.com</a>
+                    </address>
+                </div>
+            </div>
+        </div>
+
+        <div class="container bg-dark text-white rounded my-3 h-auto">
+            <ul class="nav nav-tabs bg-dark text-white mt-3" id="yearTabs">
+                <!--Auto-generate year headers go here from officerProfileGen.js-->
+                <!--        Current comment here is for future development reference.-->
+                <!--        <li class="nav-item">-->
+                <!--            <a class="nav-link active" id="2021" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Home</a>-->
+                <!--        </li>-->
+                <li class="nav-item"><a aria-controls="2020Content" aria-selected="true"
+                                        class="nav-link active show" data-toggle="tab"
+                                        href="#2020Content" id="2020ID" role="tab">2020</a></li>
+                <li class="nav-item"><a aria-controls="2019Content" aria-selected="false" class="nav-link"
+                                        data-toggle="tab" href="#2019Content"
+                                        id="2019ID" role="tab">2019</a></li>
+                <li class="nav-item"><a aria-controls="2018Content" aria-selected="false" class="nav-link"
+                                        data-toggle="tab" href="#2018Content"
+                                        id="2018ID" role="tab">2018</a></li>
+                <li class="nav-item"><a aria-controls="2017Content" aria-selected="false" class="nav-link"
+                                        data-toggle="tab" href="#2017Content"
+                                        id="2017ID" role="tab">2017</a></li>
+                <li class="nav-item"><a aria-controls="2016Content" aria-selected="false" class="nav-link"
+                                        data-toggle="tab" href="#2016Content"
+                                        id="2016ID" role="tab">2016</a></li>
+                <li class="nav-item"><a aria-controls="2015Content" aria-selected="false" class="nav-link"
+                                        data-toggle="tab" href="#2015Content"
+                                        id="2015ID" role="tab">2015</a></li>
+                <li class="nav-item"><a aria-controls="2014Content" aria-selected="false" class="nav-link"
+                                        data-toggle="tab" href="#2014Content"
+                                        id="2014ID" role="tab">2014</a></li>
+                <li class="nav-item"><a aria-controls="2013Content" aria-selected="false" class="nav-link"
+                                        data-toggle="tab" href="#2013Content"
+                                        id="2013ID" role="tab">2013</a></li>
+                <li class="nav-item"><a aria-controls="2012Content" aria-selected="false" class="nav-link"
+                                        data-toggle="tab" href="#2012Content"
+                                        id="2012ID" role="tab">2012</a></li>
+                <li class="nav-item"><a aria-controls="2011Content" aria-selected="false" class="nav-link"
+                                        data-toggle="tab" href="#2011Content"
+                                        id="2011ID" role="tab">2011</a></li>
+                <li class="nav-item"><a aria-controls="2010Content" aria-selected="false" class="nav-link"
+                                        data-toggle="tab" href="#2010Content"
+                                        id="2010ID" role="tab">2010</a></li>
+            </ul>
+            <div class="tab-content" id="officerTabContents">
+                <!--        Officer card entries are generated here from officerProfileGen.js.-->
+                <!--        Current comments are here for reference to further officer card development-->
+                <!--        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">...</div>-->
+                <!--        <div class="tab-pane fade show active" id="Fall2019Content" role="tabpanel" aria-labelledby="Fall2019ID" aria-selected="true">-->
+                <!--            <div class="row justify-content-md-center" >-->
+                <!--                <div class="col-md-auto" >-->
+                <!--                    <div class="card h-auto mb-3" style="width: 15rem;">-->
+                <!--                        <div class="card-header">Club Chair</div>-->
+                <!--                        <img class="img-fluid" src="../images/OldOfficerPics/kevin-newell.png" alt="Kevin" style="width: 100%">-->
+                <!--                        <div class="card-body"style="width: 15rem;">-->
+                <!--                            <h5 class="card-title">Kevin Newell</h5>-->
+                <!--                            <p class="card-text">Likes coding and being alive.</p>-->
+                <!--                        </div>-->
+                <!--                        <ul class="list-group list-group-flush">-->
+                <!--                            <li class="list-group-item">CS Senior</li>-->
+                <!--                        </ul>-->
+                <!--                        <div class="card-footer"style="width: 15rem;">-->
+                <!--                            <a href="mailto:kanm29@mst.edu" class="btn btn-secondary">Email</a>-->
+                <!--                        </div>-->
+                <!--                    </div>-->
+                <!--                </div>-->
+
+                <!--            </div>-->
+                <!--        </div>-->
+
+                <div aria-labelledby="2020ID" aria-selected="true" class="tab-pane fade show active" id="2020Content"
+                     role="tabpanel">
+                    <div class="row justify-content-md-center py-3">
+                        <div class="col-md-auto">
+                            <div class="card h-auto mb-3 bg-dark text-white" style="width: 15rem;">
+                                <div class="card-header">Chair</div>
+                                <img alt="Hannah Reinbolt" class="img-fluid"
+                                     src="../images/Fall2020Pics/hannah-reinbolt.png" style="width: 100%">
+                                <div class="card-body" style="width: 15rem;"><h5 class="card-title">Hannah Reinbolt</h5>
+                                    <p class="card-text">Loves security!</p></div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">Senior CS</li>
+                                </ul>
+                                <div class="card-footer" style="width: 15rem;"><a class="btn btn-secondary"
+                                                                                  href="mailto:hmrvg9@mst.edu">Email</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-auto">
+                            <div class="card h-auto mb-3 bg-dark text-white" style="width: 15rem;">
+                                <div class="card-header">Webmaster</div>
+                                <img alt="Charles Rawlins" class="img-fluid"
+                                     src="../images/Fall2020Pics/CharlesRawlins.png"
+                                     style="width: 100%">
+                                <div class="card-body" style="width: 15rem;"><h5 class="card-title">Charles Rawlins</h5>
+                                    <p class="card-text"> Diving into the world of distributed ledgers.</p></div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">PhD Comp. E</li>
+                                </ul>
+                                <div class="card-footer" style="width: 15rem;"><a class="btn btn-secondary"
+                                                                                  href="mailto:crfmb@mst.edu">Email</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-auto">
+                            <div class="card h-auto mb-3 bg-dark text-white" style="width: 15rem;">
+                                <div class="card-header">Chair &amp; CPTC Captain</div>
+                                <img alt="Kevin Newell" class="img-fluid" src="../images/Fall2020Pics/kevin-newell.png"
+                                     style="width: 100%">
+                                <div class="card-body" style="width: 15rem;"><h5 class="card-title">Kevin Newell</h5>
+                                    <p class="card-text">Likes coding and being alive!</p></div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">CS Senior</li>
+                                </ul>
+                                <div class="card-footer" style="width: 15rem;"><a class="btn btn-secondary"
+                                                                                  href="mailto:kanm29@mst.edu">Email</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div aria-labelledby="2019ID" aria-selected="false" class="tab-pane fade show" id="2019Content"
+                     role="tabpanel">
+                    <div class="row justify-content-md-center py-3">
+                        <div class="col-md-auto">
+                            <div class="card h-auto mb-3 bg-dark text-white" style="width: 15rem;">
+                                <div class="card-header">Chair &amp; CPTC Captain</div>
+                                <img alt="Kevin Newell" class="img-fluid" src="../images/Fall2020Pics/kevin-newell.png"
+                                     style="width: 100%">
+                                <div class="card-body" style="width: 15rem;"><h5 class="card-title">Kevin Newell</h5>
+                                    <p class="card-text">Likes coding and being alive!</p></div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">CS Senior</li>
+                                </ul>
+                                <div class="card-footer" style="width: 15rem;"><a class="btn btn-secondary"
+                                                                                  href="mailto:kanm29@mst.edu">Email</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-auto">
+                            <div class="card h-auto mb-3 bg-dark text-white" style="width: 15rem;">
+                                <div class="card-header">Advisor</div>
+                                <img alt="Dr. Taylor" class="img-fluid" src="../images/OldOfficerPics/blank.png"
+                                     style="width: 100%">
+                                <div class="card-body" style="width: 15rem;"><h5 class="card-title">Dr. Taylor</h5>
+                                    <p class="card-text">Doctor dude</p></div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">Dr.</li>
+                                </ul>
+                                <div class="card-footer" style="width: 15rem;"><a class="btn btn-secondary"
+                                                                                  href="mailto:taylor@mst.edu">Email</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-auto">
+                            <div class="card h-auto mb-3 bg-dark text-white" style="width: 15rem;">
+                                <div class="card-header">Vice Chair</div>
+                                <img alt="Hannah Reinbolt" class="img-fluid"
+                                     src="../images/Fall2020Pics/hannah-reinbolt.png" style="width: 100%">
+                                <div class="card-body" style="width: 15rem;"><h5 class="card-title">Hannah Reinbolt</h5>
+                                    <p class="card-text">Loves security!</p></div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">Junior CS</li>
+                                </ul>
+                                <div class="card-footer" style="width: 15rem;"><a class="btn btn-secondary"
+                                                                                  href="mailto:hmrvg9@mst.edu">Email</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-auto">
+                            <div class="card h-auto mb-3 bg-dark text-white" style="width: 15rem;">
+                                <div class="card-header">Webmaster</div>
+                                <img alt="Jamason Velvet" class="img-fluid" src="../images/OldOfficerPics/blank.png"
+                                     style="width: 100%">
+                                <div class="card-body" style="width: 15rem;"><h5 class="card-title">Jamason Velvet</h5>
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">CS</li>
+                                </ul>
+                                <div class="card-footer" style="width: 15rem;"><a class="btn btn-secondary"
+                                                                                  href="mailto:jsvg78@mst.edu">Email</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-auto">
+                            <div class="card h-auto mb-3 bg-dark text-white" style="width: 15rem;">
+                                <div class="card-header">Archivist</div>
+                                <img alt="Joel Pashi" class="img-fluid" src="../images/OldOfficerPics/blank.png"
+                                     style="width: 100%">
+                                <div class="card-body" style="width: 15rem;"><h5 class="card-title">Joel Pashi</h5>
+                                    <p class="card-text">!ADDMOREOFFICERS!</p></div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">CS</li>
+                                </ul>
+                                <div class="card-footer" style="width: 15rem;"><a class="btn btn-secondary"
+                                                                                  href="mailto:jkpxb6@mst.edu">Email</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-auto">
+                            <div class="card h-auto mb-3 bg-dark text-white" style="width: 15rem;">
+                                <div class="card-header">Chair</div>
+                                <img alt="Tanner Stephens" class="img-fluid" src="../images/OldOfficerPics/blank.png"
+                                     style="width: 100%">
+                                <div class="card-body" style="width: 15rem;"><h5 class="card-title">Tanner Stephens</h5>
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">CS</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-auto">
+                            <div class="card h-auto mb-3 bg-dark text-white" style="width: 15rem;">
+                                <div class="card-header">Overlord</div>
+                                <img alt="Hello world!" class="img-fluid" src="../images/OldOfficerPics/blank.png"
+                                     style="width: 100%">
+                                <div class="card-body" style="width: 15rem;"><h5 class="card-title">Hello world!</h5>
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">Freshmen</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div aria-labelledby="2018ID" aria-selected="false" class="tab-pane fade show" id="2018Content"
+                     role="tabpanel">
+                    <div class="row justify-content-md-center py-3"></div>
+                </div>
+                <div aria-labelledby="2017ID" aria-selected="false" class="tab-pane fade show" id="2017Content"
+                     role="tabpanel">
+                    <div class="row justify-content-md-center py-3"></div>
+                </div>
+                <div aria-labelledby="2016ID" aria-selected="false" class="tab-pane fade show" id="2016Content"
+                     role="tabpanel">
+                    <div class="row justify-content-md-center py-3"></div>
+                </div>
+                <div aria-labelledby="2015ID" aria-selected="false" class="tab-pane fade show" id="2015Content"
+                     role="tabpanel">
+                    <div class="row justify-content-md-center py-3"></div>
+                </div>
+                <div aria-labelledby="2014ID" aria-selected="false" class="tab-pane fade show" id="2014Content"
+                     role="tabpanel">
+                    <div class="row justify-content-md-center py-3"></div>
+                </div>
+                <div aria-labelledby="2013ID" aria-selected="false" class="tab-pane fade show" id="2013Content"
+                     role="tabpanel">
+                    <div class="row justify-content-md-center py-3"></div>
+                </div>
+                <div aria-labelledby="2012ID" aria-selected="false" class="tab-pane fade show" id="2012Content"
+                     role="tabpanel">
+                    <div class="row justify-content-md-center py-3"></div>
+                </div>
+                <div aria-labelledby="2011ID" aria-selected="false" class="tab-pane fade show" id="2011Content"
+                     role="tabpanel">
+                    <div class="row justify-content-md-center py-3"></div>
+                </div>
+                <div aria-labelledby="2010ID" aria-selected="false" class="tab-pane fade show" id="2010Content"
+                     role="tabpanel">
+                    <div class="row justify-content-md-center py-3"></div>
+                </div>
+
+            </div>
+        </div>
+
+
         <!--        Officer card entries are generated here from officerProfileGen.js.-->
         <!--        Current comments are here for reference to further officer card development-->
         <!--        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">...</div>-->
@@ -113,11 +383,68 @@
 
 
     </div>
+
+<!--    Autogenerated officer entries-->
+
+<!--Working nav example-->
+<!--<div class="container">-->
+<!--    <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">-->
+<!--        <li class="nav-item">-->
+<!--            <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Home</a>-->
+<!--        </li>-->
+<!--        <li class="nav-item">-->
+<!--            <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Profile</a>-->
+<!--        </li>-->
+<!--    </ul>-->
+<!--    <div class="tab-content" id="pills-tabContent">-->
+<!--        <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">-->
+<!--            <div class="row justify-content-md-center py-3">-->
+<!--                <div class="col-md-auto">-->
+<!--                    <div class="card h-auto mb-3 bg-dark text-white" style="width: 15rem;">-->
+<!--                        <div class="card-header">Chair &amp; CPTC Captain</div>-->
+<!--                        <img alt="Kevin Newell" class="img-fluid" src="../images/Fall2020Pics/hannah-reinbolt.png"-->
+<!--                             style="width: 100%">-->
+<!--                        <div class="card-body" style="width: 15rem;"><h5 class="card-title">Kevin Newell</h5>-->
+<!--                            <p class="card-text">Likes coding and being alive!</p></div>-->
+<!--                        <ul class="list-group list-group-flush">-->
+<!--                            <li class="list-group-item">CS Senior</li>-->
+<!--                        </ul>-->
+<!--                        <div class="card-footer" style="width: 15rem;"><a class="btn btn-secondary"-->
+<!--                                                                          href="mailto:kanm29@mst.edu">Email</a></div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--            -->
+<!--        <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">-->
+
+<!--            <div class="row justify-content-md-center py-3">-->
+<!--                <div class="col-md-auto">-->
+<!--                    <div class="card h-auto mb-3 bg-dark text-white" style="width: 15rem;">-->
+<!--                        <div class="card-header">Chair &amp; CPTC Captain</div>-->
+<!--                        <img alt="Kevin Newell" class="img-fluid" src="../images/Fall2020Pics/kevin-newell.png"-->
+<!--                             style="width: 100%">-->
+<!--                        <div class="card-body" style="width: 15rem;">-->
+<!--                            <h5 class="card-title">Kevin Newell</h5>-->
+<!--                            <p class="card-text">Likes coding and being alive!</p>-->
+<!--                        </div>-->
+<!--                        <ul class="list-group list-group-flush">-->
+<!--                            <li class="list-group-item">CS Senior</li>-->
+<!--                        </ul>-->
+<!--                        <div class="card-footer" style="width: 15rem;">-->
+<!--                            <a class="btn btn-secondary" href="mailto:kanm29@mst.edu">Email</a>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+
 </div>
 
 <!--  &lt;!&ndash; Bootstrap core JavaScript &ndash;&gt;-->
 <script src="../vendor/jquery/jquery.min.js"></script>
-<script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="../bootstrap/dist/js/bootstrap.bundle.js"></script>
 
 </body>
 
