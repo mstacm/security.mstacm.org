@@ -98,7 +98,7 @@ function generateOfficers(){
             tabBlock += '<div class="row justify-content-md-center py-3">';
 
             for(var j = 0; j < yearEntries[i].officerEntries.length; j++) {
-                // Officer entry div
+                // Officer col div
                 tabBlock += '<div class="col-md-auto">'; // d-flex align-items-stretch" >';
                 // Officer Card div
                 tabBlock += '<div class="card h-auto mb-3 bg-dark text-white" style="width: 15rem;">'
@@ -153,7 +153,7 @@ function generateOfficers(){
 
         }
 
-        print("Hello");
+        console.log("Made it!")
 
     });
 
