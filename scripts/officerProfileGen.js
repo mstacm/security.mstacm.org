@@ -7,8 +7,8 @@ class yearEntry{
 
     constructor(yearEntry) {
         this.year = yearEntry;
-        this.contentID = this.year.replace(/\s/g, '') + "Content";
-        this.tabID = this.year.replace(/\s/g, '') + "ID";
+        this.contentID = "Content" + this.year.replace(/\s/g, '');
+        this.tabID = "ID" + this.year.replace(/\s/g, '');
         this.officerEntries = [];
     }
 
@@ -61,7 +61,7 @@ function generateOfficers(){
                 yearParam.setAttribute('class', 'nav-link');
             }
             yearParam.setAttribute('id', yearEntries[i].tabID);
-            yearParam.setAttribute('data-toggle', 'tab');
+            yearParam.setAttribute('data-toggle', 'pill');
             yearParam.setAttribute('href', "#" + yearEntries[i].contentID);
             yearParam.setAttribute('role', 'tab');
             yearParam.setAttribute('aria-controls', yearEntries[i].contentID);
@@ -95,13 +95,14 @@ function generateOfficers(){
                     ' role="tabpanel" aria-labelledby="'+ yearEntries[i].tabID + '" aria-selected="false">';
             }
             // Row div
-            tabBlock += '<div class="row justify-content-md-center py-3">';
+            tabBlock += '<div class="row justify-content-md-center py-1" style="background-color:#17191c;">';
 
             for(var j = 0; j < yearEntries[i].officerEntries.length; j++) {
+
                 // Officer col div
-                tabBlock += '<div class="col-md-auto">'; // d-flex align-items-stretch" >';
+                tabBlock += '<div class="col-md-auto py-2">'; // d-flex align-items-stretch" >';
                 // Officer Card div
-                tabBlock += '<div class="card h-auto mb-3 bg-dark text-white" style="width: 15rem;">'
+                tabBlock += '<div class="card h-100 mb-3 bg-dark text-white" style="width: 15rem;">'
                 // Card header
                 tabBlock += '<div class="card-header">' + yearEntries[i].officerEntries[j].role + '</div>'
                 // Card image
@@ -121,16 +122,12 @@ function generateOfficers(){
                 tabBlock += '<h5 class="card-title">' + yearEntries[i].officerEntries[j].name + '</h5>';
                 // Card body desc.
                 if (yearEntries[i].officerEntries[j].desc != "N/A") {
-                    tabBlock += '<p class="card-text">' + yearEntries[i].officerEntries[j].desc + '</p>';
+                    tabBlock += '<p class="card-text">' + yearEntries[i].officerEntries[j].desc + '\n</p>';
+                    tabBlock += '<p class="card-text">' + yearEntries[i].officerEntries[j].educ + '</p>';
                 }
 
                 // Card body /div
                 tabBlock += '</div>';
-
-                // Card education unordered list
-                tabBlock += '<ul class="list-group list-group-flush">';
-                tabBlock += '<li class="list-group-item">' + yearEntries[i].officerEntries[j].educ + '</li>';
-                tabBlock += '</ul>';
 
                 //Card email
                 if (yearEntries[i].officerEntries[j].email != "N/A") {
@@ -152,11 +149,11 @@ function generateOfficers(){
             officerTabContents.innerHTML += tabBlock;
 
         }
-
-        console.log("Made it!")
-
     });
 
 }
+
+
+
 
 
