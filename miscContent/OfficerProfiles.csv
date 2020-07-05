@@ -1,17 +1,25 @@
-desc,name,role,image,education,officerDesc,email
-YEAR,2020
-OFFICER,Hannah Reinbolt,Chair,../images/Fall2020Pics/hannah-reinbolt.png,CS Senior,Loves security!,hmrvg9@mst.edu
-OFFICER,Charles Rawlins,Webmaster,../images/Fall2020Pics/CharlesRawlins.png,PhD CpE, Diving into the world of distributed ledgers.,crfmb@mst.edu
+desc,name,role,image,education,officerDesc,email,linkedin
+YEAR,Fall 2020
+OFFICER,Hannah Reinbolt,Chair,../images/Fall2020Pics/hannah-reinbolt.png,CS Senior,"Dedicated to cyber-security, exploring new technology, and chilling with the friends!",hmrvg9@mst.edu,https://www.linkedin.com/in/hannah-reinbolt-4b453693/
+OFFICER,Dr. Taylor,Advisor,N/A,CS PhD,Associate Professor with tenure and Associate Chair of Undergraduate Studies and Outreach Activities in the <a href="https://cs.mst.edu/">CS Department</a> at Missouri S&T.,taylor@mst.edu,N/A
+OFFICER,Charles Rawlins,Webmaster,../images/Fall2020Pics/CharlesRawlins.png,CpE PhD Student,Currently researching the world of distributed ledgers for the next generation of the Internet.,crfmb@mst.edu,https://www.linkedin.com/in/charles-rawlins-b37294123/
+OFFICER,Kevin Newell,Chair & CPTC Captain,../images/Fall2020Pics/kevin-newell.png,CS Senior,Likes coding and being alive!,kanm29@mst.edu,N/A
+OFFICER,Pamela Petterchak,Vice-chair,../images/Fall2020Pics/pamela_petterchak.png,CS/CpE Junior,"Future cybersecurity professional, interested in social engineering prevention and national security.",pfpg7m@mst.edu,https://www.linkedin.com/in/pamela-petterchak/
+YEAR,Fall 2019
 OFFICER,Kevin Newell,Chair & CPTC Captain,../images/Fall2020Pics/kevin-newell.png,CS Senior,Likes coding and being alive!,kanm29@mst.edu
-OFFICER,Pamela Petterchak,Vice-chair,../images/Fall2020Pics/pamela_petterchak.png,CS/CpE Junior,"Future cybersecurity professional, interested in social engineering prevention and national security.",pfpg7m@mst.edu
-YEAR,2019
-OFFICER,Kevin Newell,Chair & CPTC Captain,../images/Fall2020Pics/kevin-newell.png,CS Senior,Likes coding and being alive!,kanm29@mst.edu
-OFFICER,Dr. Taylor,Advisor,N/A,Dr.,Doctor dude,taylor@mst.edu
-OFFICER,Hannah Reinbolt,Vice Chair,../images/Fall2020Pics/hannah-reinbolt.png,CS Junior,Loves security!,hmrvg9@mst.edu
-OFFICER,Jamason Velvet,Webmaster,N/A,CS,N/A,jsvg78@mst.edu
-OFFICER,Joel Pashi,Archivist,N/A,CS,!ADDMOREOFFICERS!,jkpxb6@mst.edu
-OFFICER,Tanner Stephens,Chair,N/A,CS,N/A,N/A
-OFFICER,Hello world!,Overlord,N/A,Freshmen,N/A,N/A
+OFFICER,Dr. Taylor,Advisor,N/A,CS PhD,Associate Professor with tenure and Associate Chair of Undergraduate Studies and Outreach Activities in the <a href="https://cs.mst.edu/">CS Department</a> at Missouri S&T.,taylor@mst.edu,N/A
+OFFICER,Hannah Reinbolt,Vice Chair,../images/Fall2020Pics/hannah-reinbolt.png,CS Junior,"Dedicated to cyber-security, exploring new technology, and chilling with the friends!",hmrvg9@mst.edu,https://www.linkedin.com/in/hannah-reinbolt-4b453693/
+OFFICER,Jamason Velvet,Webmaster,N/A,CS,N/A,jsvg78@mst.edu,N/A
+OFFICER,Joel Pashi,Archivist/Secretary,N/A,CS,N/A,jkpxb6@mst.edu,N/A
+OFFICER,Morgen Nicodemus,CTF Captain,N/A,CS,N/A,mrnx8d@mst.edu,N/A
+OFFICER,Gavin Lewis,CCDC Captain,N/A,CS,N/A,gzlfyb@mst.edu,N/A
+OFFICER,Kevin Patel,Special Projects,../images/Fall2020Pics/Kevin_Patel.png,CS Junior,N/A,krppmc@mst.edu,N/A
+OFFICER,Nicholas Lambert,Special Projects,N/A,CS,N/A,nalbbb@mst.edu,N/A
+OFFICER,Ethan O'Dell,Special Projects,N/A,CS,N/A,eofx7@mst.edu,N/A
+OFFICER,Divya Digavalli,Special Projects,N/A,CS,N/A,ddmgw@mst.edu,N/A
+OFFICER,Brenden Barlow,Special Projects,N/A,CS Senior,N/A,bkb9tb@mst.edu,N/A
+OFFICER,Pamela Petterchak,Special Projects,N/A,CS Junior,pfpg7m@mst.edu,N/A
+YEAR,Spring 2019
 YEAR,2018
 YEAR,2017
 YEAR,2016
