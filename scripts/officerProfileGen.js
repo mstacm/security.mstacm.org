@@ -14,7 +14,7 @@ class yearEntry{
 
     addEntry(dataEntry){
 
-        var newOfficer = {name:dataEntry.name, role:dataEntry.role, image:dataEntry.image, educ:dataEntry.education, desc:dataEntry.officerDesc, email:dataEntry.email};
+        var newOfficer = {name:dataEntry.name, role:dataEntry.role, image:dataEntry.image, educ:dataEntry.education, desc:dataEntry.officerDesc, email:dataEntry.email, linkedin:dataEntry.linkedin};
         this.officerEntries.push(newOfficer);
     }
 
@@ -130,11 +130,17 @@ function generateOfficers(){
                 tabBlock += '</div>';
 
                 //Card email
-                if (yearEntries[i].officerEntries[j].email != "N/A") {
-                    tabBlock += '<div class="card-footer" style="width: 15rem;">';
-                    tabBlock += '<a href="mailto:' + yearEntries[i].officerEntries[j].email + '" class="btn btn-secondary">Email</a>';
-                    tabBlock += '</div>';
+                tabBlock += '<div class="card-footer " style="width: 15rem;">';
+                if (yearEntries[i].officerEntries[j].email != "N/A"){
+                    tabBlock += '<a href="mailto:' + yearEntries[i].officerEntries[j].email + '" class="btn btn-secondary float-left">Email</a>';
                 }
+
+                if (yearEntries[i].officerEntries[j].linkedin != "N/A"){
+                    tabBlock += '<a href="' + yearEntries[i].officerEntries[j].linkedin +'" class="btn btn-secondary float-right">LinkedIn</a>';
+                }
+                // Card footer /div
+                tabBlock += '</div>';
+
 
                 // Officer card /div
                 tabBlock += '</div>';
