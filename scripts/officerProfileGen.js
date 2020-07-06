@@ -102,7 +102,11 @@ function generateOfficers(){
                 // Officer col div
                 tabBlock += '<div class="col-md-auto py-2">'; // d-flex align-items-stretch" >';
                 // Officer Card div
-                tabBlock += '<div class="card h-100 mb-3 bg-dark text-white" style="width: 15rem;">'
+                if(yearEntries[i].year == "Spring 2020" || yearEntries[i].year == "Fall 2019"){
+                    tabBlock += '<div class="card h-100 mb-3 bg-dark text-white" style="width: 15rem;">'
+                }else{
+                    tabBlock += '<div class="card h-75 mb-3 bg-dark text-white" style="width: 15rem;">'
+                }
                 // Card header
                 tabBlock += '<div class="card-header">' + yearEntries[i].officerEntries[j].role + '</div>'
                 // Card image
@@ -110,7 +114,9 @@ function generateOfficers(){
                     tabBlock += '<img class="img-fluid" src="../images/OldOfficerPics/blank.png" alt="' +
                         yearEntries[i].officerEntries[j].name + '" style="width: 100%">';
 
-                } else {
+                } else if(yearEntries[i].officerEntries[j].image == "BLANK"){
+                    // Empty image
+                }else {
                     tabBlock += '<img class="img-fluid" src="' + yearEntries[i].officerEntries[j].image + '" alt="' +
                         yearEntries[i].officerEntries[j].name + '" style="width: 100%">';
                 }
@@ -129,19 +135,20 @@ function generateOfficers(){
                 // Card body /div
                 tabBlock += '</div>';
 
-                //Card email
-                tabBlock += '<div class="card-footer " style="width: 15rem;">';
-                if (yearEntries[i].officerEntries[j].email != "N/A"){
-                    tabBlock += '<a href="mailto:' + yearEntries[i].officerEntries[j].email + '" class="btn btn-secondary float-left">Email</a>';
+                //Card email and linkedin
+                if((yearEntries[i].officerEntries[j].email || yearEntries[i].officerEntries[j].linkedin) != "N/A") {
+                    tabBlock += '<div class="card-footer " style="width: 15rem;">';
+                    if (yearEntries[i].officerEntries[j].email != "N/A") {
+                        tabBlock += '<a href="mailto:' + yearEntries[i].officerEntries[j].email + '" class="btn btn-secondary float-left">Email</a>';
+                    }
+
+                    if (yearEntries[i].officerEntries[j].linkedin != "N/A") {
+                        tabBlock += '<a href="' + yearEntries[i].officerEntries[j].linkedin + '" class="btn btn-secondary float-right">LinkedIn</a>';
+                    }
+                    // Card footer /div
+                    tabBlock += '</div>';
+
                 }
-
-                if (yearEntries[i].officerEntries[j].linkedin != "N/A"){
-                    tabBlock += '<a href="' + yearEntries[i].officerEntries[j].linkedin +'" class="btn btn-secondary float-right">LinkedIn</a>';
-                }
-                // Card footer /div
-                tabBlock += '</div>';
-
-
                 // Officer card /div
                 tabBlock += '</div>';
                 // Officer col /div
