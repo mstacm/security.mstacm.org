@@ -1,10 +1,14 @@
 desc,name,role,image,education,officerDesc,email,linkedin
 YEAR,Spring 2020
 OFFICER,Hannah Reinbolt,Chair,../images/Fall2020Pics/hannah-reinbolt.png,CS Senior,"Dedicated to cyber-security, exploring new technology, and chilling with the friends!",hmrvg9@mst.edu,https://www.linkedin.com/in/hannah-reinbolt-4b453693/
-OFFICER,Dr. Taylor,Advisor,N/A,CS PhD,Associate Professor with tenure and Associate Chair of Undergraduate Studies and Outreach Activities in the <a href="https://cs.mst.edu/">CS Department</a> at Missouri S&T.,taylor@mst.edu,N/A
-OFFICER,Charles Rawlins,Webmaster,../images/Fall2020Pics/CharlesRawlins.png,CpE PhD Student,Currently researching the world of distributed ledgers for the next generation of the Internet.,crfmb@mst.edu,https://www.linkedin.com/in/charles-rawlins-b37294123/
-OFFICER,Kevin Newell,Chair & CPTC Captain,../images/Fall2020Pics/kevin-newell.png,CS Senior,Likes coding and being alive!,kanm29@mst.edu,N/A
 OFFICER,Pamela Petterchak,Vice-chair,../images/Fall2020Pics/pamela_petterchak.png,CS/CpE Junior,"Future cybersecurity professional, interested in social engineering prevention and national security.",pfpg7m@mst.edu,https://www.linkedin.com/in/pamela-petterchak/
+OFFICER,Charles Rawlins,Webmaster,../images/Fall2020Pics/CharlesRawlins.png,CpE PhD Student,Currently researching the world of distributed ledgers for the next generation of the Internet.,crfmb@mst.edu,https://www.linkedin.com/in/charles-rawlins-b37294123/
+OFFICER,Dr. Taylor,Advisor,N/A,CS PhD,Associate Professor with tenure and Associate Chair of Undergraduate Studies and Outreach Activities in the <a href="https://cs.mst.edu/">CS Department</a> at Missouri S&T.,taylor@mst.edu,N/A
+OFFICER,Matthew Stroble,Secretary,BLANK,N/A,N/A,N/A,N/A
+OFFICER,Morgen Nicodemus,CPTC Captain,BLANK,N/A,N/A,N/A,N/A
+OFFICER,Gavin Lewis,CCDC Captain,BLANK,N/A,N/A,N/A,N/A
+OFFICER,Jamason Velvet,CTF Captain & Special Projects,BLANK,N/A,N/A,N/A,N/A
+OFFICER,Anthony Sharp,Special Projects,BLANK,N/A,N/A,N/A,N/A
 YEAR,Fall 2019
 OFFICER,Kevin Newell,Chair & CPTC Captain,../images/Fall2020Pics/kevin-newell.png,CS Senior,Likes coding and being alive!,kanm29@mst.edu
 OFFICER,Dr. Taylor,Advisor,N/A,CS PhD,Associate Professor with tenure and Associate Chair of Undergraduate Studies and Outreach Activities in the <a href="https://cs.mst.edu/">CS Department</a> at Missouri S&T.,taylor@mst.edu,N/A
