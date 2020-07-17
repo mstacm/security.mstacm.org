@@ -1,2 +1,59 @@
-CAT,Training
-SOURCE,hak5,https://www.hak5.org/
+CAT,Training/Testing
+SRC,SecurityTube,http://www.securitytube.net/
+SRC,Metasploit Unleashed,https://www.offensive-security.com/metasploit-unleashed/
+SRC,Null Byte,https://null-byte.wonderhowto.com/how-to/
+SRC,Security Sift,https://www.securitysift.com/
+SRC,Open Security Training,http://opensecuritytraining.info/Training.html
+SRC,Khan Academy Crypto,https://www.khanacademy.org/computing/computer-science/cryptography/
+SRC,overthewire,https://overthewire.org/wargames/
+SRC,PentesterLab,https://www.pentesterlab.com/
+SRC,bWAPP,http://www.itsecgames.com/
+SRC,Metasploitable,https://sourceforge.net/projects/metasploitable/
+SRC,OWASP WebGoat,https://owasp.org/www-project-webgoat/
+SRC,Halls of Valhalla Challenges,https://halls-of-valhalla.org/beta/challenges
+SRC,Ma's Reversing,http://3564020356.org/
+SRC,hackthissite,https://www.hackthissite.org/
+SRC,Hacker Test,http://www.hackertest.net/
+CAT,News/Blogs
+SRC,Cyberpunk ICE,https://cyberpunk.xyz/ice
+SRC,Krebs on Security,https://krebsonsecurity.com/
+SRC,SANS Reading Room,https://www.sans.org/reading-room/
+SRC,Infosec Institute,https://resources.infosecinstitute.com/
+SRC,Packet Storm Security,https://packetstormsecurity.com/
+SRC,corelan,https://www.corelan.be/
+SRC,Blackhat,https://www.blackhat.com/
+SRC,Linux Magazine,https://www.linux-magazine.com/
+SRC,2600 News,https://www.2600.com/
+SRC,Threat Post,https://threatpost.com/
+SRC,(IN)SECURE Magazine,https://www.helpnetsecurity.com/insecuremag-archive/
+SRC,HITB Magazine,http://magazine.hitb.org/index.html
+SRC,DEFCON,https://media.defcon.org/
+CAT,Vulnerabilities
+SRC,Router PWN,http://routerpwn.com/
+SRC,Exploit DB,https://www.exploit-db.com/
+SRC,CVE Details,https://www.cvedetails.com/
+CAT,Physical Security
+SRC,howstuffworks: Lock Picking,https://home.howstuffworks.com/home-improvement/household-safety/lock-picking1.htm
+SRC,ToooL,https://toool.us/resources.html
+SRC,BosnianBill,https://www.youtube.com/user/bosnianbill/videos?sort=p&flow=grid&view=0
+SRC,lockpicking101,https://www.lockpicking101.com/
+SRC,Sparrows Lock Picks,https://www.sparrowslockpicks.com/Default.asp
+CAT,Hardware Tools
+SRC,hak5,https://www.hak5.org/
+SRC,acehackware,https://acehackware.com/
+SRC,photoBump,http://unlocked.own-hero.net/2014/07/10/preview-photobump-plastic-bumpkeys/
+SRC,VulnHub,https://www.vulnhub.com/
+SRC,Enigma Group,https://www.enigmagroup.org/
+SRC,Smash the Stack,http://smashthestack.org/
+CAT,Virtual Tools
+SRC,Kali Linux,https://www.kali.org/
+SRC,pfSense,https://www.pfsense.org/
+SRC,Tails,https://tails.boum.org/
+SRC,ophcrack,https://ophcrack.sourceforge.io/
+SRC,SANS SIFT,https://digital-forensics.sans.org/community/downloads
+CAT,Academia
+SRC,IEEExplore Security,https://ieeexplore.ieee.org/search/searchresult.jsp?newsearch=true&queryText=Security
+SRC,ACM Digital Library,https://dl-acm-org.libproxy.mst.edu/action/doSearch?AllField=Security
+CAT,Media
+SRC,Security Now!,https://www.grc.com/securitynow.htm/
+SRC,Malicious Life,https://malicious.life/
