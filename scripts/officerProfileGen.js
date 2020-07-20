@@ -13,7 +13,7 @@ class yearEntry{
     }
 
     addEntry(dataEntry){
-
+        // Parse data over...
         var newOfficer = {name:dataEntry.name, role:dataEntry.role, image:dataEntry.image, educ:dataEntry.education, desc:dataEntry.officerDesc, email:dataEntry.email, linkedin:dataEntry.linkedin};
         this.officerEntries.push(newOfficer);
     }
