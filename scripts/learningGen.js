@@ -194,20 +194,20 @@ function generateCourses(){
                 tabBlock += '<div class="tab-pane fade show" id="'+
                     catEntries[i].contentID+'" role="tabpanel" aria-labelledby="'+catEntries[i].tabID+'">';
             }
-            tabBlock += '<div class="row justify-content-md-center mt-2">';
+            tabBlock += '<div class="row d-flex justify-content-md-center mt-2">';
 
             for(var j=0;j < catEntries[i].classEntries.length; j++){
                 // Change background color based on course difficulty level
                 switch(catEntries[i].classEntries[j].level){
                     case 'Undergrad_Grad':
-                        tabBlock += '<div class="card h-100 mb-3 mx-2 bg-warning text-black-50" style="width: 15rem;">';
+                        tabBlock += '<div class="card  mb-3 mx-2 bg-warning text-black-50" style="width: 15rem;">';
                         break;
                     case 'Grad':
-                        tabBlock += '<div class="card h-100 mb-3 mx-2 bg-danger text-black-50" style="width: 15rem;">';
+                        tabBlock += '<div class="card  mb-3 mx-2 bg-danger text-black-50" style="width: 15rem;">';
                         break;
                     case 'Undergrad':
                     default:
-                        tabBlock += '<div class="card h-100 mb-3 mx-2 bg-primary text-black-50" style="width: 15rem;">';
+                        tabBlock += '<div class="card mb-3 mx-2 bg-primary text-black-50" style="width: 15rem;">';
                         break;
                 };
 

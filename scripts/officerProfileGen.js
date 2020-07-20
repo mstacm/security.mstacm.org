@@ -51,7 +51,12 @@ function generateOfficers(){
 
         // Generate year tabs
         for(var i = 0; i < yearEntries.length; i++) {
-            // This is one way to generate alot of html code with js, the officer entry shows another way.
+            // Example entry
+            // <li class="nav-item">
+            //     <a class="nav-link active" id="2021" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Home</a>
+            //     </li>
+
+
             yearBlock = document.createElement('li',);
             yearBlock.setAttribute('class', 'nav-item');
             yearParam = document.createElement('a');
@@ -83,6 +88,30 @@ function generateOfficers(){
         var officerTabContents = document.getElementById("officerTabContents");
 
         for (var i = 0; i < yearEntries.length; i++){
+
+            // Example entry.
+        // <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">...</div>
+        //     <div class="tab-pane fade show active" id="Fall2019Content" role="tabpanel" aria-labelledby="Fall2019ID" aria-selected="true">
+        //         <div class="row justify-content-md-center" >
+        //         <div class="col-md-auto" >
+        //         <div class="card h-auto mb-3" style="width: 15rem;">
+        //         <div class="card-header">Club Chair</div>
+        //     <img class="img-fluid" src="../images/officers/kevin-newell.png" alt="Kevin" style="width: 100%">
+        //         <div class="card-body"style="width: 15rem;">
+        //         <h5 class="card-title">Kevin Newell</h5>
+        //     <p class="card-text">Likes coding and being alive.</p>
+        //     </div>
+        //     <ul class="list-group list-group-flush">
+        //         <li class="list-group-item">CS Senior</li>
+        //     </ul>
+        //     <div class="card-footer"style="width: 15rem;">
+        //         <a href="mailto:kanm29@mst.edu" class="btn btn-secondary">Email</a>
+        //         </div>
+        //         </div>
+        //         </div>
+        //
+        //         </div>
+        //         </div>
 
             // Tab officer Content
             // Tab div
