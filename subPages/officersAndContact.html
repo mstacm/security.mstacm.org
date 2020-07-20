@@ -38,9 +38,6 @@
                 <li class="nav-item">
                     <a class="nav-link" href="./events.html">Events</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="joinacmsec.html">Join Sig-Sec</a>
-                </li>
                 <li class="nav-item active">
                     <a class="nav-link" href="./officersAndContact.html">Contact Us
                         <span class="sr-only">(current)</span>
@@ -62,7 +59,6 @@
     <!--  Custom div to allow particles to go behind bootstrap widgets (MAIN PAGE CONTENT GOES HERE!)-->
     <div class="container page-content">
         <div class="page-content">
-
             <div class="container py-2 bg-dark text-white rounded mb-3">
                 <div class="row">
                     <div class="col-md-8 mb-5">
@@ -70,9 +66,9 @@
                         <hr>
 
                         <p> Each of our club officers is a student of Missouri University of Science & Technology
-                            (MS&T). We are all enthusiastic about security and love learning new things! If you are
-                            looking to get involved with the club activities or are looking for a place to start
-                            learning about security, don't hesitate to contact us!
+                            (MS&T). We are all enthusiastic about security and love learning new things about security!
+                            If you are looking to get involved with the club activities or are looking for a place to
+                            start learning about security, don't hesitate to contact us!
                         </p>
                     </div>
                     <div class="col-md-4 mb-5">
@@ -94,8 +90,34 @@
                 </div>
             </div>
 
+            <div class="container my-2 bg-dark text-white rounded">
+                <div class="row justify-content-center">
+                    <div class="col-5 pt-2">
+                        <h2>Security Mailing List</h2>
+                        <hr class="bg-primary">
+                        <form class="form-group" name="SScontactform" method="post" action="../scripts/send_SS_email.php">
+                            <input class="form-control my-1" type="text" placeholder="Name">
+                            <input class="form-control my-1" type="text" placeholder="Email Address">
+                            <input type="submit" value="Sign Up" class="btn btn-primary disabled"style="margin-bottom:10px">
+                        </form>
+                    </div>
+                    <div class="col-5 pt-2">
+                        <h2>CDT Mailing List</h2>
+                        <hr class="bg-primary">
+                        <form class="w3-container" name="CDTcontactform" method="post" action="../scripts/send_CDT_email.php">
+                            <input class="form-control my-1" type="text" placeholder="Name">
+                            <input class="form-control my-1" type="text" placeholder="Email Address">
+                            <input type="submit" value="Sign Up" class="btn btn-primary disabled"style="margin-bottom:10px">
+                        </form>
+                    </div>
+                </div>
+
+
+
+            </div>
+
             <div class="container bg-dark text-white rounded my-3 h-auto">
-<!--                TODO: Make tabs more simplified?-->
+<!--                TODO: Make tabs more simplified? (e.g. scroll bars?)-->
                 <ul class="nav nav-pills pt-2" id="yearTabs">
                 <!--Auto-generate year headers go here from officerGen.js-->
                 <!--        Current comment here is for future development reference.-->
