@@ -1,6 +1,6 @@
 // NAME: Charles Rawlins
 // Func: offerGen.js
-// Desc: These functions dynamically generates/deletes the officer entries for the officersAndContact.html page.
+// Desc: These functions automatically generates the officer entries for the officersAndContact.html page.
 
 // Basic class used for handling year and officer data.
 class yearEntry{

@@ -1,167 +1,178 @@
 // NAME: Charles Rawlins
 // Func: learningGen.js
-// Desc: These functions dynamically generates/deletes the learning resource
+// Desc: This script automatically generates the learning resource
 // and course entries for the learnSecurity.html page.
 
-// Basic class used for handling learning data.
+// Basic class used for handling learning resource data.
 class learningEntry{
 
     constructor(learningEntry) {
-        this.year = yearEntry;
-        this.contentID = "Content" + this.year.replace(/\s/g, '');
-        this.tabID = "ID" + this.year.replace(/\s/g, '');
-        this.officerEntries = [];
+        this.learning = learningEntry;
+        this.contentID = "Content" + this.learning.replace(/\s/g, '');
+        this.tabID = "ID" + this.learning.replace(/\s/g, '');
+        this.learningEntries = [];
     }
 
     addEntry(dataEntry){
-
-        var newOfficer = {name:dataEntry.name, role:dataEntry.role, image:dataEntry.image, educ:dataEntry.education, desc:dataEntry.officerDesc, email:dataEntry.email, linkedin:dataEntry.linkedin};
-        this.officerEntries.push(newOfficer);
+        var newData = {name:dataEntry.name, site:dataEntry.site};
+        this.learningEntries.push(newData);
     }
 
 }
 
-// Generate content upon load of learningResources.html
-window.onload = generateLearning();
-// window.onload = generateCourses();
+// Basic class used for handling the Missouri S&T course data.
+class classEntry{
 
-// Calls the d3 csv read function and parses/generates officer card entries for officersAndContact.html
+    constructor(classEntry) {
+        this.class = classEntry;
+        this.contentID = "Content" + this.class.replace(/\s/g, '');
+        this.tabID = "ID" + this.class.replace(/\s/g, '');
+        this.classEntries = [];
+    }
+
+    addEntry(dataEntry){
+        // TODO: Edit with params
+        var newData = {name:dataEntry.name, site:dataEntry.site};
+        this.classEntries.push(newData);
+    }
+
+}
+
+// Generate content for both navs upon load of learningResources.html
+window.onload = generateLearning();
+window.onload = generateCourses();
+
+// TODO: make website entries cards with descriptions?
+// Calls the d3 csv read function and parses/generates entries for the learning resources.
 function generateLearning(){
-    // Read in officer data with d3 (let this be the only function processed for clarity)
-    d3.csv("../miscContent/OfficerProfiles.csv").then(function(data){
+    // Read in learning data with d3 (let this be the only function processed for clarity)
+    d3.csv("../miscContent/learningResources.csv").then(function(data){
 
         // Parse csv lines into headers and officer data
-        var yearEntries = [];
-        var workingYear = {};
+        var catEntries = [];
+        var workingSite = {};
         for(var i = 0; i < data.length; i++){
 
-
-            if(data[i].desc == "YEAR"){ // Year category entry
-                if(Object.keys(workingYear).length != 0) {
-                    yearEntries.push(workingYear);
+            if(data[i].desc == "CAT"){ // Year category entry
+                if(Object.keys(workingSite).length != 0) {
+                    catEntries.push(workingSite);
                 }
-                workingYear = new yearEntry(data[i].name);
-
+                workingSite = new learningEntry(data[i].name);
 
             }else{ // Officer entry (can add more categories if needed later)
-                workingYear.addEntry(data[i]);
-
+                workingSite.addEntry(data[i]);
             }
 
         }
-        yearEntries.push(workingYear);
+        catEntries.push(workingSite);
 
-        // Generate year tabs
-        for(var i = 0; i < yearEntries.length; i++) {
-            // This is one way to generate alot of html code with js, the officer entry shows another way.
-            yearBlock = document.createElement('li',);
-            yearBlock.setAttribute('class', 'nav-item');
-            yearParam = document.createElement('a');
-            if (i == 0) {
-                yearParam.setAttribute('class', 'nav-link active');
-            } else {
-                yearParam.setAttribute('class', 'nav-link');
-            }
-            yearParam.setAttribute('id', yearEntries[i].tabID);
-            yearParam.setAttribute('data-toggle', 'pill');
-            yearParam.setAttribute('href', "#" + yearEntries[i].contentID);
-            yearParam.setAttribute('role', 'tab');
-            yearParam.setAttribute('aria-controls', yearEntries[i].contentID);
-            if (i == 0) {
-                yearParam.setAttribute('aria-selected', 'true');
-            } else {
-                yearParam.setAttribute('aria-selected', 'false');
-            }
-            // yearParam.setAttribute('style','color: dark;');
-            yearParam.innerHTML = yearEntries[i].year;
-            yearBlock.appendChild(yearParam);
-            yearTabs = document.getElementById("yearTabs");
-            yearTabs.appendChild(yearBlock);
-            // yearTabs.style.marginBottom = "20px";
+        // Generate cat tab html code
+        var catBlock = '';
+        for(var i = 0; i < catEntries.length; i++) {
 
-        }
-
-        // Generate year tab contents from officer csv file.
-        var officerTabContents = document.getElementById("officerTabContents");
-
-        for (var i = 0; i < yearEntries.length; i++){
-
-            // Tab officer Content
-            // Tab div
-            tabBlock = "";
-            if (i == 0){
-                var tabBlock = '<div class="tab-pane fade show active" id="' + yearEntries[i].contentID + '"' +
-                    ' role="tabpanel" aria-labelledby="'+ yearEntries[i].tabID + '" aria-selected="true">';
+            catBlock += '<li class="nav-item py-2">';
+            if(i == 0){
+                catBlock += '<a class="nav-link active" id="'+catEntries[i].tabID+'" data-toggle="tab" href="#' + catEntries[i].contentID+'" role="tab" aria-controls="'+catEntries[i].contentID+'" aria-selected="true">'+catEntries[i].learning+'</a>'
             }else{
-                var tabBlock = '<div class="tab-pane fade show" id="' + yearEntries[i].contentID + '"' +
-                    ' role="tabpanel" aria-labelledby="'+ yearEntries[i].tabID + '" aria-selected="false">';
-            }
-            // Row div
-            tabBlock += '<div class="row justify-content-md-center py-1" style="background-color:#17191c;">';
-
-            for(var j = 0; j < yearEntries[i].officerEntries.length; j++) {
-
-                // Officer col div
-                tabBlock += '<div class="col-md-auto py-2">'; // d-flex align-items-stretch" >';
-                // Officer Card div
-                if(yearEntries[i].year == "Spring 2020" || yearEntries[i].year == "Fall 2019"){
-                    tabBlock += '<div class="card h-100 mb-3 bg-dark text-white" style="width: 15rem;">'
-                }else{
-                    tabBlock += '<div class="card h-75 mb-3 bg-dark text-white" style="width: 15rem;">'
-                }
-                // Card header
-                tabBlock += '<div class="card-header">' + yearEntries[i].officerEntries[j].role + '</div>'
-                // Card image
-                if (yearEntries[i].officerEntries[j].image == "N/A") {
-                    tabBlock += '<img class="img-fluid" src="../images/OldOfficerPics/blank.png" alt="' +
-                        yearEntries[i].officerEntries[j].name + '" style="width: 100%">';
-
-                } else if(yearEntries[i].officerEntries[j].image == "BLANK"){
-                    // Empty image
-                }else {
-                    tabBlock += '<img class="img-fluid" src="' + yearEntries[i].officerEntries[j].image + '" alt="' +
-                        yearEntries[i].officerEntries[j].name + '" style="width: 100%">';
-                }
-
-
-                // Card body div
-                tabBlock += '<div class="card-body"style="width: 15rem;">';
-                // Card body title
-                tabBlock += '<h5 class="card-title">' + yearEntries[i].officerEntries[j].name + '</h5>';
-                // Card body desc.
-                if (yearEntries[i].officerEntries[j].desc != "N/A") {
-                    tabBlock += '<p class="card-text">' + yearEntries[i].officerEntries[j].desc + '\n</p>';
-                    tabBlock += '<p class="card-text">' + yearEntries[i].officerEntries[j].educ + '</p>';
-                }
-
-                // Card body /div
-                tabBlock += '</div>';
-
-                //Card email and linkedin
-                if((yearEntries[i].officerEntries[j].email || yearEntries[i].officerEntries[j].linkedin) != "N/A") {
-                    tabBlock += '<div class="card-footer " style="width: 15rem;">';
-                    if (yearEntries[i].officerEntries[j].email != "N/A") {
-                        tabBlock += '<a href="mailto:' + yearEntries[i].officerEntries[j].email + '" class="btn btn-secondary float-left">Email</a>';
-                    }
-
-                    if (yearEntries[i].officerEntries[j].linkedin != "N/A") {
-                        tabBlock += '<a href="' + yearEntries[i].officerEntries[j].linkedin + '" class="btn btn-secondary float-right">LinkedIn</a>';
-                    }
-                    // Card footer /div
-                    tabBlock += '</div>';
-
-                }
-                // Officer card /div
-                tabBlock += '</div>';
-                // Officer col /div
-                tabBlock += '</div>';
+                catBlock += '<a class="nav-link" id="'+catEntries[i].tabID+'" data-toggle="tab" href="#' + catEntries[i].contentID+'" role="tab" aria-controls="'+catEntries[i].contentID+'" aria-selected="false">'+catEntries[i].learning+'</a>'
             }
 
-            // Row /div
-            tabBlock += '</div>';
-            // Tab /div
-            tabBlock +='</div>';
-            officerTabContents.innerHTML += tabBlock;
+            catBlock += '</li>'
+
+        }
+        let resourceTab = document.getElementById('resourceTab')
+        resourceTab.innerHTML += catBlock
+
+        var tabContents = document.getElementById('resourceTabContent')
+
+        // Generate year tab contents from learning csv file.
+        for (var i = 0; i < catEntries.length; i++){
+
+            tabBlock = "";
+            if(i == 0){
+                tabBlock += '<div class="tab-pane fade show active" id="'+catEntries[i].contentID+'" role="tabpanel" aria-labelledby="'+catEntries[i].tabID+'">';
+            }else{
+                tabBlock += '<div class="tab-pane fade show" id="'+catEntries[i].contentID+'" role="tabpanel" aria-labelledby="'+catEntries[i].tabID+'">';
+            }
+            tabBlock += '<div class="row justify-content-md-center mt-2">';
+
+            for(var j=0;j < catEntries[i].learningEntries.length; j++){
+                // tabBlock += '<div class="col-sm-2" >';
+                tabBlock += '<a class="btn btn-primary mx-1 my-1" href="'+catEntries[i].learningEntries[j].site +'" target="_blank">'+catEntries[i].learningEntries[j].name+'</a><br/>';
+                // tabBlock += '</div>'; // Col div
+            }
+            tabBlock += '</div>'; // Row div
+            tabBlock += '</div>'; // tab div
+
+            tabContents.innerHTML += tabBlock;
+
+        }
+    });
+
+}
+
+// Calls the d3 csv read function and parses/generates entries for the course resources.
+function generateCourses(){
+    // Read in learning data with d3 (let this be the only function processed for clarity)
+    d3.csv("../miscContent/learningResources.csv").then(function(data){
+
+        // Parse csv lines into headers and officer data
+        var catEntries = [];
+        var workingSite = {};
+        for(var i = 0; i < data.length; i++){
+
+            if(data[i].desc == "CAT"){ // Year category entry
+                if(Object.keys(workingSite).length != 0) {
+                    catEntries.push(workingSite);
+                }
+                workingSite = new learningEntry(data[i].name);
+
+            }else{ // Officer entry (can add more categories if needed later)
+                workingSite.addEntry(data[i]);
+            }
+
+        }
+        catEntries.push(workingSite);
+
+        // Generate cat tab html code
+        var catBlock = '';
+        for(var i = 0; i < catEntries.length; i++) {
+
+            catBlock += '<li class="nav-item py-2">';
+            if(i == 0){
+                catBlock += '<a class="nav-link active" id="'+catEntries[i].tabID+'" data-toggle="tab" href="#' + catEntries[i].contentID+'" role="tab" aria-controls="'+catEntries[i].contentID+'" aria-selected="true">'+catEntries[i].learning+'</a>'
+            }else{
+                catBlock += '<a class="nav-link" id="'+catEntries[i].tabID+'" data-toggle="tab" href="#' + catEntries[i].contentID+'" role="tab" aria-controls="'+catEntries[i].contentID+'" aria-selected="false">'+catEntries[i].learning+'</a>'
+            }
+
+            catBlock += '</li>'
+
+        }
+        let resourceTab = document.getElementById('resourceTab')
+        resourceTab.innerHTML += catBlock
+
+        var tabContents = document.getElementById('resourceTabContent')
+
+        // Generate year tab contents from learning csv file.
+        for (var i = 0; i < catEntries.length; i++){
+
+            tabBlock = "";
+            if(i == 0){
+                tabBlock += '<div class="tab-pane fade show active" id="'+catEntries[i].contentID+'" role="tabpanel" aria-labelledby="'+catEntries[i].tabID+'">';
+            }else{
+                tabBlock += '<div class="tab-pane fade show" id="'+catEntries[i].contentID+'" role="tabpanel" aria-labelledby="'+catEntries[i].tabID+'">';
+            }
+            tabBlock += '<div class="row justify-content-md-center mt-2">';
+
+            for(var j=0;j < catEntries[i].learningEntries.length; j++){
+                // tabBlock += '<div class="col-sm-2" >';
+                tabBlock += '<a class="btn btn-primary mx-1 my-1" href="'+catEntries[i].learningEntries[j].site +'" target="_blank">'+catEntries[i].learningEntries[j].name+'</a><br/>';
+                // tabBlock += '</div>'; // Col div
+            }
+            tabBlock += '</div>'; // Row div
+            tabBlock += '</div>'; // tab div
+
+            tabContents.innerHTML += tabBlock;
 
         }
     });
