@@ -122,33 +122,11 @@
 				<div class="card bg-dark text-white my-3">
 					<h2 class="text-center pt-2">Upcoming General Meeting Events</h2>
 					<hr class="bg-primary"style="width:95%; margin: 10px 27px 10px 27px; ">
-<!--					TODO: Autogenerate current events?-->
-					<div class="row  no-gutters justify-content-md-center pt-3" style="background-color:#17191c;">
-							<div class="card h-100 my-3 bg-dark text-white" style="width: 50rem;">
-								<div class="card-header"><h2>Enterprise Security</h2></div>
-								<div class="card-body">
-									<p><strong>Date:</strong> Tuesday, November 29, 2016</p>
-
-									<p><strong>Time:</strong> 7:00pm - 9:00pm</p>
-
-									<p><strong>Place:</strong> CS216</p>
-
-									<p><strong>Abstract:</strong> The Internet of Things (IoT) is being used by adversaries to develop botnets for Distributed Denial of Service attacks. Industrial control systems, critical infrastructure, and even cars are becoming targets of attacks. The average time to detect and respond to security incidents is increasing. This talk will address the challenges of defending a modern enterprise: tools, risk management and resource allocation, threat modeling and risk analysis, Lockheed Martin’s Cyber Kill Chain, human factors of information security, topics in security architecture, and motivations and behaviors of adversaries. We will also look at why current and historic defense mechanisms have failed.
-									</p>
-
-									<p><strong>Biography:</strong> Stefan Maerz is a Computer Information Security Specialist at Los Alamos National Laboratory (LANL),a contractor to the Department of Energy’s National Nuclear Security Administration.He works in the Office of the Chief Information Officer, providing governance to LANL’s information security program. Prior to that, Stefan consulted in healthcare,developed security programs,and supported an enterprise network as a systems administrator. He is a recent graduate of Missouri S&T.
-									</p>
-									<p class="card-text">
-									</p>
-									<p class="card-text">CpE PhD Student</p>
-							</div>
-
-
+					<div class="row  no-gutters justify-content-md-center pt-3" style="background-color:#17191c;" id="currentContent">
 						</div>
 					</div>
 				</div>
 
-<!--			TODO: Create archive of past events.-->
 			<div class="card bg-dark text-white">
 				<div class="col-auto">
 					<h2 class="text-center text-white">Past Events</h2>
@@ -156,16 +134,13 @@
 				</div>
 				<div class="row mb-2" >
 					<div class="col-2 mb-3 ml-2">
-						<ul class="nav nav-pills flex-column" id="resourceTab">
-							 <li class="nav-item">
-							      <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Coming soon!</a>
-							</li>
+						<ul class="nav nav-pills flex-column" id="contentTab">
 						</ul>
 					</div>
 					<div class="col-9 rounded ml-4"  style="background-color:#17191c;">
-						<div class="tab-content" id="resourceTabContent">
-
+						<div class="tab-content" id="contentTabContent">
 						</div>
+
 					</div>
 				</div>
 			</div>
@@ -178,10 +153,8 @@
 
 <!--Scripts-->
 <script type="text/javascript" src="../scripts/libraries/d3/d3.js"></script>
-<script type="text/javascript" src="../scripts/eventGen.js"></script>
-<!--<script src="//ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>-->
+<script type="text/javascript" src="../scripts/meetingContentGen.js"></script>
 <script src="../vendor/jquery/jquery.min.js"></script>
-<!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>-->
 <script src="../bootstrap/dist/js/bootstrap.min.js"></script>
 </body>
 </html>
