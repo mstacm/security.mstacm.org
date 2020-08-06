@@ -13,7 +13,7 @@ class contentEntry{
         this.time = contentEntry.time
         this.place = contentEntry.place
         this.abstract = contentEntry.abstract
-        this.education = contentEntry.education
+        this.author = contentEntry.author
         this.biography = contentEntry.biography
     }
 
@@ -31,7 +31,7 @@ class yearContentEntry{
     addEntry(dataEntry){
         // Parse data over...
         var newContent = {title:dataEntry.title, date:dataEntry.date, time:dataEntry.time,
-            education:dataEntry.education, place:dataEntry.place, abstract:dataEntry.abstract,biography:dataEntry.biography};
+            author:dataEntry.author, place:dataEntry.place, abstract:dataEntry.abstract,biography:dataEntry.biography};
         this.conEntries.push(newContent);
     }
 
@@ -61,13 +61,12 @@ function generateCurrent(){
             contentBlock += '<div class="card h-100 my-3 bg-dark text-white" style="width: 50rem;">'
             contentBlock += '<div class="card-header"><h2>'+contentEntries[i].title+'</h2></div>'
             contentBlock += '<div class="card-body">'
+            contentBlock += '<p><strong>Presented By: </strong>'+contentEntries[i].author+'</p>'
             contentBlock += '<p><strong>Date: </strong>'+contentEntries[i].date+'</p>'
             contentBlock += '<p><strong>Time: </strong>'+contentEntries[i].time+'</p>'
             contentBlock += '<p><strong>Place: </strong>'+contentEntries[i].place+'</p>'
             contentBlock += '<p><strong>Abstract: </strong>'+contentEntries[i].abstract+'</p>'
             contentBlock += '<p><strong>Biography: </strong>'+contentEntries[i].biography+'</p>'
-            contentBlock += '<p class="card-text"></p>'
-            contentBlock += '<p class="card-text">'+contentEntries[i].education+'</p>'
             contentBlock += '</div>'
             contentBlock += '</div>'
             contentBlock += '</div>'
@@ -142,13 +141,12 @@ function generateOld(){
                 tabBlock += '<div class="card h-100 my-3 bg-dark text-white" style="width: 50rem;">'
                 tabBlock += '<div class="card-header"><h2>'+contentEntries[i].conEntries[j].title+'</h2></div>'
                 tabBlock += '<div class="card-body">'
+                tabBlock += '<p><strong>Presented By: </strong>'+contentEntries[i].conEntries[j].author+'</p>'
                 tabBlock += '<p><strong>Date: </strong>'+contentEntries[i].conEntries[j].date+'</p>'
                 tabBlock += '<p><strong>Time: </strong>'+contentEntries[i].conEntries[j].time+'</p>'
                 tabBlock += '<p><strong>Place: </strong>'+contentEntries[i].conEntries[j].place+'</p>'
                 tabBlock += '<p><strong>Abstract: </strong>'+contentEntries[i].conEntries[j].abstract+'</p>'
                 tabBlock += '<p><strong>Biography: </strong>'+contentEntries[i].conEntries[j].biography+'</p>'
-                tabBlock += '<p class="card-text"></p>'
-                tabBlock += '<p class="card-text">'+contentEntries[i].conEntries[j].education+'</p>'
                 tabBlock += '</div>'
                 tabBlock += '</div>'
 
