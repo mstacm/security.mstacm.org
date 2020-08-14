@@ -1,7 +1,8 @@
 // NAME: Charles Rawlins
-// Func: learningGen.js
-// Desc: This script automatically generates the learning resource
-// and course entries for the learnSecurity.html page.
+// FILE: learningGen.js
+// DESC: This script automatically generates the learning resource
+// and course entries for the learnSecurity.html page. It reads from learningResources.csv and secClasses.csv
+// for content. The other auto-generated resource pages use this page as a template (e.g. copy-paste).
 
 // Basic class used for handling learning resource data.
 class learningEntry{
@@ -45,13 +46,12 @@ class classEntry{
 window.onload = generateLearning();
 window.onload = generateCourses();
 
-// TODO: make website entries cards with descriptions?
 // Calls the d3 csv read function and parses/generates entries for the learning resources.
 function generateLearning(){
     // Read in learning data with d3 (let this be the only function processed for clarity)
     d3.csv("../miscContent/learningResources.csv").then(function(data){
 
-        // Parse csv lines into headers and officer data
+        // Parse csv lines into headers and learning resource data
         var catEntries = [];
         var workingSite = {};
         for(var i = 0; i < data.length; i++){
@@ -75,7 +75,8 @@ function generateLearning(){
 
             // li entry example:
             // <li class="nav-item">
-            //      <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Home</a>
+            //      <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home"
+            //      role="tab" aria-controls="home" aria-selected="true">Home</a>
             // </li>
 
             catBlock += '<li class="nav-item py-2">';
@@ -101,7 +102,9 @@ function generateLearning(){
         for (var i = 0; i < catEntries.length; i++){
             // learning resource button example:
             // <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-            //     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, eveniet earum. Sed accusantium eligendi molestiae quo hic velit nobis et, tempora placeat ratione rem blanditiis voluptates vel ipsam? Facilis, earum!</p>
+            //     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, eveniet earum.
+            //     Sed accusantium eligendi molestiae quo hic velit nobis et, tempora placeat ratione
+            //     rem blanditiis voluptates vel ipsam? Facilis, earum!</p>
             // </div>
 
             tabBlock = "";
@@ -133,7 +136,7 @@ function generateCourses(){
     // Read in learning data with d3 (let this be the only function processed for clarity)
     d3.csv("../miscContent/secClasses.csv").then(function(data){
 
-        // Parse csv lines into headers and officer data
+        // Parse csv lines into headers and learning resource data
         var catEntries = [];
         var workingClass = {};
         for(var i = 0; i < data.length; i++){

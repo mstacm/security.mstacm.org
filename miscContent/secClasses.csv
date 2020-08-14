@@ -1,5 +1,5 @@
 desc,course,year,title,details,level
-CAT,CompSci
+CAT,Computer Science
 SRC,CompSci 2500,2020,Algorithms,Intro to basic algorithms.,Undergrad
 SRC,CompSci 3600,2020,Intro to Computer Security,"Intro to Computer/Cyber Security, encryption, networking, etc. Taught by Patrick Taylor",Undergrad
 SRC,CompSci 3601,2020,Digital Forensics,"Digital forensics, legal procedures, find data in hard drives, taught by Karl Lutzen",Undergrad
@@ -17,7 +17,7 @@ SRC,CompSci 6601,2020,Privacy Preserving Data Integration and Analysis,"Basic pr
 SRC,CompSci 6602,2020,Network Performance Analysis,Modeling and analysis of computer networks.,Grad
 SRC,CompSci 6603,2020,Advanced Topics in Wireless Networks,Fundamentals and recent advances in wireless networking,Grad
 SRC,CompSci 6605,2020,Advanced Network Security,"Authentication, denial of service and other security issues on wired and wireless networks.",Grad
-CAT,IST
+CAT,Information Security and Technology
 SRC,IS&T 3321,2020,Network Performance Design and Management,"Design, manage and deply computer networks and protocols.",Undergrad
 SRC,IS&T 3333,2020,Data Networks and Information Security,Current/New networking and information security priciples,Undergrad
 SRC,IS&T 3343,2020,Systems Analysis,"Buisiness information systems are analyzed, designed and introduced into the buisiness environment.",Undergrad
@@ -27,7 +27,7 @@ SRC,IS&T 6336,2020,Foundations of Internet Computing,Computer networking and web
 SRC,IS&T 6443,2020,Information Retrieval and Analysis,"Storage and retreival systems, text mining, collaborative filtering, etc.",Grad
 SRC,IS&T 6448,2020,Building the Data Warehouse,"Data modeling and processes to build a data warehouse. Security, schemes, web access, etc.",Grad
 SRC,IS&T 6780,2020,Adv Human and Organizational Factors in Cybersecurity,"Current challenges in protecting integrity, availability and confidentiality of information.",Grad
-CAT,CompEng
+CAT,Computer Engineering
 SRC,CompEng 5410,2020,Intro to Computer Communication Networks,"Design of computer networks, protocols, archetecture and performance. Hardware-side networking.",Undergrad_Grad
 SRC,CompEng 5420,2020,Intro to Network Security,"Network management, testing and security. Key encryption, management, intrusion detection, etc.",Undergrad_Grad
 SRC,CompEng 5430,2020,Wireless Networks,"Transmission fundamentals, coding techniques, error control, satellite and cellular networks, etc.",Undergrad_Grad

@@ -1,7 +1,7 @@
 // NAME: Charles Rawlins
 // Func: meetingContentGen.js
 // Desc: This script automatically generates the content resource
-// for the events.html page.
+// for the events.html page from oldMeetingContent.csv and upcomingMeetingContent.csv.
 
 // Basic class used for handling the acm meeting content data.
 class contentEntry{
@@ -18,6 +18,7 @@ class contentEntry{
     }
 
 }
+
 
 class yearContentEntry{
 

@@ -1,4 +1,7 @@
-
+// NAME: Charles Rawlins
+// FILE: particles.js
+// DESC: Generates cool particles for webpage backgrounds for the entire site.
+// SRC: https://www.bootdey.com/snippets/view/Particles-js-banner
 particlesJS("particles-js", {
     "particles": {
         "number": {

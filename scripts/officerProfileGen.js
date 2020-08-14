@@ -1,6 +1,7 @@
 // NAME: Charles Rawlins
-// Func: offerGen.js
-// Desc: These functions automatically generates the officer entries for the officersAndContact.html page.
+// FILE: officerProfileGen.js
+// Desc: These functions automatically generates the officer entries for the officersAndContact.html
+// page from the content in OfficerProfiles.csv.
 
 // Basic class used for handling year and officer data.
 class yearEntry{
@@ -12,7 +13,8 @@ class yearEntry{
         this.officerEntries = [];
     }    addEntry(dataEntry){
         // Parse data over...
-        var newOfficer = {name:dataEntry.name, role:dataEntry.role, image:dataEntry.image, educ:dataEntry.education, desc:dataEntry.officerDesc, email:dataEntry.email, linkedin:dataEntry.linkedin};
+        var newOfficer = {name:dataEntry.name, role:dataEntry.role, image:dataEntry.image,
+            educ:dataEntry.education, desc:dataEntry.officerDesc, email:dataEntry.email, linkedin:dataEntry.linkedin};
         this.officerEntries.push(newOfficer);
     }
 
