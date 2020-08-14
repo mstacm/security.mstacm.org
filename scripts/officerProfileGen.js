@@ -10,9 +10,7 @@ class yearEntry{
         this.contentID = "Content" + this.year.replace(/\s/g, '');
         this.tabID = "ID" + this.year.replace(/\s/g, '');
         this.officerEntries = [];
-    }
-
-    addEntry(dataEntry){
+    }    addEntry(dataEntry){
         // Parse data over...
         var newOfficer = {name:dataEntry.name, role:dataEntry.role, image:dataEntry.image, educ:dataEntry.education, desc:dataEntry.officerDesc, email:dataEntry.email, linkedin:dataEntry.linkedin};
         this.officerEntries.push(newOfficer);
@@ -131,11 +129,8 @@ function generateOfficers(){
                 // Officer col div
                 tabBlock += '<div class="col-md-auto py-2">'; // d-flex align-items-stretch" >';
                 // Officer Card div
-                if(yearEntries[i].year == "Spring 2020" || yearEntries[i].year == "Fall 2019"){
-                    tabBlock += '<div class="card h-100 mb-3 bg-dark text-white" style="width: 15rem;">'
-                }else{
-                    tabBlock += '<div class="card h-75 mb-3 bg-dark text-white" style="width: 15rem;">'
-                }
+                tabBlock += '<div class="card h-100 mb-3 bg-dark text-white" style="width: 15rem;">'
+
                 // Card header
                 tabBlock += '<div class="card-header">' + yearEntries[i].officerEntries[j].role + '</div>'
                 // Card image
