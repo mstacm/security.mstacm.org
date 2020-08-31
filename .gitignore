@@ -1,4 +1,3 @@
-website/.env/
-node_modules/googleapis/
-myapp/node_modules
-myapp/node_modules/\.bin/
+updateSite.sh
+
+
