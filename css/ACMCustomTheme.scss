@@ -1,0 +1,30 @@
+
+// Change main theme and button colors
+$theme-colors: (
+        "primary": #9acc14,
+        "danger": #ff4136
+);
+
+
+// Change nav bar colors
+$navbar-dark-color: #9acc14;
+$navbar-dark-hover-color: #9acc14;
+
+.navbar-dark {
+  background-color: #040405;
+}
+
+// Change nav-link colors
+$nav-tabs-border-color: #1e2125;
+$nav-tabs-link-active-color: #1e2125;
+$nav-tabs-link-active-bg: #343a40;
+$nav-tabs-link-active-border-color: #1e2125;
+//$nav-tabs-link-hover-border-color: #1e2125 #1e2125 #1e2125;
+
+//.nav-link.active .nav-link{
+//  background-color: #343a40 !important;
+//  border-color: #1e2125;
+//}
+
+@import "../bootstrap/scss/bootstrap";
+

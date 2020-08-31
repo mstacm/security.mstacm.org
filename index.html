@@ -1,107 +1,179 @@
 ﻿<!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ACM SIG-Security</title>
-		<a href="index.html" class="w3-center w3-padding w3-margin"><img src="header-logo-wide.png" style="width:90%;height:20%;padding:15px;"></a>
 
-		<!-- Link Stylesheet -->
-		<link rel="stylesheet" href="https://acmsigsec.mst.edu/w3schools.css">
-		<link rel="stylesheet" type="text/css" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="ACM Security Website Homepage">
+  <meta name="keywords" content="ACM Security, Missouri S&T">
+  <meta name="author" content="Charles Rawlins">
 
-		<div id="nav">
-			<ul>
-				<li><a href="cdt.php" class="menu">Cyber Defense Team</a></li>
-				<li><a href="talks.html" class="menu">Events</a></li>
-				<li><a href="learn.html" class="menu">Learn Security</a></li>
-				<!--<li><a href="cyberspark.html" class="menu">CyberSpark</a></li>
-				<li><a href="wire-shop.html" class="menu">Wireless Workshop</a></li>
-				<li><a href="bootcamp.html" class="menu">Cyber Boot Camp</a></li>-->
-				<li><a href="wire-shop.html" class="menu">Wireless Workshop</a></li>
-				<li><a href="education.html" class="menu">S&T Education</a></li>
-				<li><a href="https://acm.mst.edu/" class="menu">ACM General</a></li>
-				<li><a href="archives.html" class="menu">Archives</a></li>
-				<li><a href="join.html" class="menu">Join SIG-Sec</a></li>
-				<li><a href="contact.html" class="menu">Officers</a></li>
-			</ul>
-		</div>
+  <title>ACM Security Homepage</title>
+
+  <!-- CSS Files -->
+  <link href="css/ACMCustomTheme.css" rel="stylesheet">
+  <link href="css/acmfrontpage.css" rel="stylesheet">
+  <link href="css/particles.css" media="screen" rel="stylesheet">
+
 </head>
 
-<body style="padding:0px; margin:0px; background-color:#fff;font-family:helvetica, arial, verdana, sans-serif">
+<body>
 
-		<!-- insert slideshow image -->
-		<!-- <img class="mySlides" src="archives/images/insert image filename here"> -->
-		<!-- <div class="w3-margin w3-padding w3-content w3-display-container w3-left" style="width:35%; margin-left:20px;">
-			<a href=""><img class="mySlides w3-center" style="width:100%" src="archives/images/2017-04-19-Cantenna.png"></a>
-			<a href=""><img class="mySlides w3-center" style="width:100%" src="archives/images/2017-02-15-Sandia-Secure-Networking.png"></a>
-			<a href=""><img class="mySlides w3-center" style="width:100%" src="archives/images/2017-02-01-recruitment.png"></a>
-			<a href=""><img class="mySlides w3-center" style="width:100%" src="archives/images/2017-01-21-cyberspark.png"></a>
-			<a href=""><img class="mySlides w3-center" style="width:100%" src="archives/images/enterprise-security.png"></a>
+<!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">ACM Security at Missouri S&T</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home
+              <span class="sr-only">(current)</span> <!--Used for accessibility with text readers-->
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./subPages/learnSecurity.html">Learn Security</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./subPages/events.html">Events</a>
+          </li>
+          <li>
+            <a class="nav-link" href="./subPages/cdtpage.html">Cyber Defense</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./subPages/officersAndContact.html">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-			<a class="w3-btn-floating w3-display-left" onclick="plusDivs(-1)">&#10094;</a>
-			<a class="w3-btn-floating w3-display-right" onclick="plusDivs(+1)">&#10095;</a>
-		</div>-->
-		<!--
-		<script>
-		var slideIndex = 1;
-		showDivs(slideIndex);
+<!-- Setup Particles and page background -->
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<div class="jumbotron-main">
+  <div id="particles-js">
+    <canvas class="particles-js-canvas-el" width="1409" height="319" style="width: 100%; height: 100%;">
+    </canvas>
+  </div>
+  <script src="./scripts/particles.js"></script>
+<!--  Custom div to allow particles to go behind bootstrap widgets-->
+  <div class="container page-content">
+    <div class="page-content">
+        <div class="card bg-dark py-3 text-white">
+          <div class="row justify-content-center">
+            <div class="col-md-8 mb-3">
+              <h2>What We Do</h2>
+              <hr class="bg-primary">
+              <p>The Association for Computing Machinery (ACM) is the worlds largest scientific
+                and educational computing society. ACM was founded in 1947 and is a not-for-profit
+                professional membership group. The local branch welcomes you to join us in
+                learning about the computing world.
+              </p>
+              <p>Our ACM Security group is a local ACM branch whose mission is to help develop the cybersecurity
+                profession for the student body of Missouri University of Science and Technology (Missouri S&T)
+                by sponsoring high-quality workshops and lectures from both local and national industry professionals,
+                as well as hosting a variety of on-campus security events and competitions.
+              </p>
+              <a class="btn btn-primary btn-lg" href="subPages/learnSecurity.html">Start Learning!</a>
+            </div>
+            <div class="col-md-3 mb-3">
+              <h2>
+                Weekly Meetings
+              </h2>
+              <hr class="bg-primary">
+              <ul>
+                <li><strong>Security:</strong> Mon. 5 PM in the <a href="https://discord.gg/44A6kdv">
+                  ACM Security Discord</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
 
-		function plusDivs(n) {
-			showDivs(slideIndex += n);
-		}
+<!--      Row of relevant site features.-->
+      <div class="row pt-4 mb-4">
+        <div class="col-md-4">
+          <div class="card h-100 bg-dark text-white">
+            <img class="card-img-top" src="./images/SourcePics/cbc.jpg" alt="">
+            <div class="card-body">
+              <h4 class="card-title">Events</h4>
+              <p class="card-text">Come check out some of our exciting security
+                events involving industry professionals!</p>
+            </div>
+            <div class="card-footer">
+              <a href="#" class="btn btn-primary">Find Out More!</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100 bg-dark text-white">
+            <img class="card-img-top" src="./images/SourcePics/cyberspark.jpg" alt="">
+            <div class="card-body">
+              <h4 class="card-title">Cyber Defense Team</h4>
+              <p class="card-text">Our Cyber Defense Team actively participates in real-world capture
+                the flag (CTF) and cyber defense challenges. </p>
+            </div>
+            <div class="card-footer">
+              <a href="#" class="btn btn-primary">Find Out More!</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100 bg-dark text-white">
+            <img class="card-img-top" src="./images/SourcePics/acm-logo.png" alt="">
+            <div class="card-body">
+              <h4 class="card-title">ACM General</h4>
+              <p class="card-text">ACM Security is only a small subsection of ACM,
+                there are many other organizations each with different devotions.</p>
+            </div>
+            <div class="card-footer">
+              <a href="https://acm.mst.edu/" class="btn btn-primary">Find Out More!</a>
+            </div>
+          </div>
+        </div>
+      </div>
 
-		function showDivs(n) {
-				var i;
-				var x = document.getElementsByClassName("mySlides");
-				if (n > x.length) {slideIndex = 1}
-				if (n < 1) {slideIndex = x.length} ;
-				for (i = 0; i < x.length; i++) {
-						x[i].style.display = "none";
-				}
-				x[slideIndex-1].style.display = "block";
-		}
+<!--      Sponser images and copyright.-->
+        <div class="card bg-dark h-auto mb-4">
+            <p class="text-center text-white pt-2">Copyright &copy; ACM Security 2020</p>
+<!--          Sponser pictures will go here in the future!-->
+<!--          <div class="row justify-content-md-center mb-4">-->
+<!--            Replace images with sponser images. (Coming Soon!)-->
+<!--            <div class="col-sm-auto px-3">-->
+<!--                <img src="http://placehold.it/100x100" class="rounded mx-auto d-block" -->
+<!--                     alt="Future Sponser" style="width: 10rem">-->
+<!--            </div>-->
+<!--            <div class="col-sm-auto px-3">-->
+<!--              <img src="http://placehold.it/100x100" class="rounded mx-auto d-block" -->
+<!--                   alt="Future Sponser" style="width: 10rem">-->
+<!--            </div>-->
+<!--            <div class="col-sm-auto px-3">-->
+<!--              <img src="http://placehold.it/100x100" class="rounded mx-auto d-block" -->
+<!--                   alt="Future Sponser" style="width: 10rem">-->
+<!--            </div>-->
+<!--          </div>-->
 
-		var slideIndex = 0;
-		carousel();
+        </div>
+  </div>
 
-		function carousel() {
-			var i;
-			var x = document.getElementsByClassName("mySlides");
-			for (i = 0; i < x.length; i++) {
-				x[i].style.display = "none";
-			}
-			slideIndex++;
-			if (slideIndex > x.length) {slideIndex = 1}
-			x[slideIndex-1].style.display = "block";
-			setTimeout(carousel, 4000); // Change image every 2 seconds
-		}
-		</script>
-		-->
-		<!-- Upcoming Events and Talks Calendar -->
+  </div>
+</div>
 
-		<!-- Abstract -->
-		<div class="w3-padding w3-margin w3-large" style="text-align: center">
-			<h1>About ACM Security</h1>
-			<p>Our ACM Security group is a local ACM branch whose mission is to help develop the cybersecurity profession for the student body of Missouri University of Science and Technology by sponsoring high-quality workshops and lectures from both local and national industry professionals, as well as hosting on campus security events and competitions.</p>
-		</div>
-
-		<!--<div class="w3-padding w3-margin w3-large" style="text-align: center">
-		<img style="display: block; margin-left: auto; margin-right: auto; width: 50%;"src="https://acmsigsec.mst.edu/archives/icons/handtheme.png" alt="Avatar">
-    </div>-->
-
-		<div class="w3-padding w3-margin w3-large" style="text-align: center">
-			<h1>Visit ACM General</h1>
-			<p>The Association for Computing Machinery is an international learned society for computing. It was founded in 1947 and is the world's largest scientific and educational computing society. It is a not-for-profit professional membership group.
-				Our local branch welcomes you to join us in learning about the computing world. 
-			</p>
-			<a class="redbutton" href="https://acm.mst.edu/">Click Here To Visit Our Local ACM Website</a>
-		</div>
-
-		<!-- Events Calendar -->
-	<div class="w3-center w3-margin w3-padding">
-		<iframe src="https://calendar.google.com/calendar/embed?title=ACM%20Sig-Sec&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=mst.edu_7u3stm8bn7l2umuastep5fmbl0%40group.calendar.google.com&amp;color=%23875509&amp;ctz=America%2FChicago" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
-	</div>
+<!--Scripts-->
+<script src="../vendor/jquery/jquery.min.js"></script>
+<script src="../bootstrap/dist/js/bootstrap.min.js"></script>
 
 </body>
+
+<!--  ________________________________    -->
+<!--< You have enabled 'hacker' mode! >   -->
+<!--  --------------------------------    -->
+<!--    \  ^__^                           -->
+<!--     \ (oo)\_______                   -->
+<!--       (__)\        )\/\              -->
+<!--            ||----ww|                 -->
+<!--            ||     ||                 -->
+
 </html>
