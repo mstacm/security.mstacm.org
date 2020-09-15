@@ -40,7 +40,7 @@ class yearContentEntry{
 
 // Generate content for both navs upon load of learningResources.html
 // window.onload = generateCurrent();
-window.onload = generateOld();
+// window.onload = generateOld();
 
 // Calls the d3 csv read function and parses/generates entries for the current meeting topics.
 function generateCurrent(){
