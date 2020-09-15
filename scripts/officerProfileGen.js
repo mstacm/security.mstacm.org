@@ -165,11 +165,11 @@ function generateOfficers(){
                 if((yearEntries[i].officerEntries[j].email || yearEntries[i].officerEntries[j].linkedin) != "N/A") {
                     tabBlock += '<div class="card-footer " style="width: 15rem;">';
                     if (yearEntries[i].officerEntries[j].email != "N/A") {
-                        tabBlock += '<a href="mailto:' + yearEntries[i].officerEntries[j].email + '" class="btn btn-secondary float-left">Email</a>';
+                        tabBlock += '<a href="mailto:' + yearEntries[i].officerEntries[j].email + '" class="btn btn-primary float-left">Email</a>';
                     }
 
                     if (yearEntries[i].officerEntries[j].linkedin != "N/A") {
-                        tabBlock += '<a href="' + yearEntries[i].officerEntries[j].linkedin + '" class="btn btn-secondary float-right">LinkedIn</a>';
+                        tabBlock += '<a href="' + yearEntries[i].officerEntries[j].linkedin + '" class="btn btn-primary float-right">LinkedIn</a>';
                     }
                     // Card footer /div
                     tabBlock += '</div>';

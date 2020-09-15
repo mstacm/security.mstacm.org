@@ -19,7 +19,6 @@ class contentEntry{
 
 }
 
-
 class yearContentEntry{
 
     constructor(yearEntry) {
