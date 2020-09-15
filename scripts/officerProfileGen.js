@@ -1,6 +1,6 @@
 // NAME: Charles Rawlins
 // FILE: officerProfileGen.js
-// Desc: These functions automatically generates the officer entries for the officersAndContact.html
+// Desc: These functions automatically generates the officer entries for the /contact/
 // page from the content in OfficerProfiles.csv.
 
 // Basic class used for handling year and officer data.
@@ -20,10 +20,10 @@ class yearEntry{
 
 }
 
-// Generate the officer cards upon load of officersAndContact.html
+// Generate the officer cards upon load of /contact/
 window.onload = generateOfficers()
 
-// Calls the d3 csv read function and parses/generates officer card entries for officersAndContact.html
+// Calls the d3 csv read function and parses/generates officer card entries for /contact/
 function generateOfficers(){
     // Read in officer data with d3 (let this be the only function processed for clarity)
     d3.csv("../miscContent/OfficerProfiles.csv").then(function(data){
@@ -191,8 +191,3 @@ function generateOfficers(){
     });
 
 }
-
-
-
-
-
