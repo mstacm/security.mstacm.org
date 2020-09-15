@@ -218,7 +218,7 @@ function generateCourses(){
                     catEntries[i].classEntries[j].year+')</div>';
                 tabBlock += '<div class="card-body" style="width: 15rem;">';
                 tabBlock += '<h5 class="card-title">'+catEntries[i].classEntries[j].title+'</h5>';
-                tabBlock += '<p class="card-text">'+catEntries[i].classEntries[j].details+'</p>';
+                tabBlock += '<p class="card-text text-black-50">'+catEntries[i].classEntries[j].details+'</p>';
                 tabBlock += '</div>';
                 tabBlock += '</div>';
             }
