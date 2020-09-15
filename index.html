@@ -12,9 +12,11 @@
   <title>ACM Security Homepage</title>
 
   <!-- CSS Files -->
-  <link href="css/ACMCustomTheme.css" rel="stylesheet">
+  <link href="css/mdb-free.css" rel="stylesheet">
   <link href="css/acmfrontpage.css" rel="stylesheet">
   <link href="css/particles.css" media="screen" rel="stylesheet">
+<!--  <link rel="stylesheet" href="css/mdb.min.css">-->
+
 
 </head>
 
@@ -30,7 +32,7 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="#">Home
+            <a class="nav-link" href="index.html">Home
               <span class="sr-only">(current)</span> <!--Used for accessibility with text readers-->
             </a>
           </li>
@@ -40,7 +42,7 @@
           <li class="nav-item">
             <a class="nav-link" href="./subPages/events.html">Events</a>
           </li>
-          <li>
+          <li class="nav-item">
             <a class="nav-link" href="./subPages/cdtpage.html">Cyber Defense</a>
           </li>
           <li class="nav-item">
@@ -62,7 +64,7 @@
 <!--  Custom div to allow particles to go behind bootstrap widgets-->
   <div class="container page-content">
     <div class="page-content">
-        <div class="card bg-dark py-3 text-white">
+        <div class="card bg-dark py-3 text-white animated fadeIn">
           <div class="row justify-content-center">
             <div class="col-md-8 mb-3">
               <h2>What We Do</h2>
@@ -77,7 +79,7 @@
                 by sponsoring high-quality workshops and lectures from both local and national industry professionals,
                 as well as hosting a variety of on-campus security events and competitions.
               </p>
-              <a class="btn btn-primary btn-lg" href="subPages/learnSecurity.html">Start Learning!</a>
+              <a class="btn btn-primary" href="subPages/learnSecurity.html">Start Learning!</a>
             </div>
             <div class="col-md-3 mb-3">
               <h2>
@@ -95,11 +97,11 @@
 <!--      Row of relevant site features.-->
       <div class="row pt-4 mb-4">
         <div class="col-md-4">
-          <div class="card h-100 bg-dark text-white">
+          <div class="card h-100 bg-dark text-white animated fadeIn">
             <img class="card-img-top" src="./images/SourcePics/cbc.jpg" alt="">
             <div class="card-body">
               <h4 class="card-title">Events</h4>
-              <p class="card-text">Come check out some of our exciting security
+              <p class="card-text text-white">Come check out some of our exciting security
                 events involving industry professionals!</p>
             </div>
             <div class="card-footer">
@@ -108,11 +110,11 @@
           </div>
         </div>
         <div class="col-md-4">
-          <div class="card h-100 bg-dark text-white">
+          <div class="card h-100 bg-dark text-white animated fadeIn">
             <img class="card-img-top" src="./images/SourcePics/cyberspark.jpg" alt="">
             <div class="card-body">
               <h4 class="card-title">Cyber Defense Team</h4>
-              <p class="card-text">Our Cyber Defense Team actively participates in real-world capture
+              <p class="card-text text-white">Our Cyber Defense Team actively participates in real-world capture
                 the flag (CTF) and cyber defense challenges. </p>
             </div>
             <div class="card-footer">
@@ -121,11 +123,11 @@
           </div>
         </div>
         <div class="col-md-4">
-          <div class="card h-100 bg-dark text-white">
+          <div class="card h-100 bg-dark text-white animated fadeIn">
             <img class="card-img-top" src="./images/SourcePics/acm-logo.png" alt="">
             <div class="card-body">
               <h4 class="card-title">ACM General</h4>
-              <p class="card-text">ACM Security is only a small subsection of ACM,
+              <p class="card-text text-white">ACM Security is only a small subsection of ACM,
                 there are many other organizations each with different devotions.</p>
             </div>
             <div class="card-footer">
@@ -136,7 +138,7 @@
       </div>
 
 <!--      Sponser images and copyright.-->
-        <div class="card bg-dark h-auto mb-4">
+        <div class="card bg-dark h-auto mb-4 animated fadeIn">
             <p class="text-center text-white pt-2">Copyright &copy; ACM Security 2020</p>
 <!--          Sponser pictures will go here in the future!-->
 <!--          <div class="row justify-content-md-center mb-4">-->
@@ -164,6 +166,8 @@
 <!--Scripts-->
 <script src="../vendor/jquery/jquery.min.js"></script>
 <script src="../bootstrap/dist/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="scripts/mdb.min.js"></script>
+
 
 </body>
 
