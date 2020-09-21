@@ -1,7 +1,7 @@
 // NAME: Charles Rawlins
 // FILE: learningGen.js
 // DESC: This script automatically generates the learning resource
-// and course entries for the learnSecurity.html page. It reads from learningResources.csv and secClasses.csv
+// and course entries for the /learn/ page. It reads from learningResources.csv and secClasses.csv
 // for content. The other auto-generated resource pages use this page as a template (e.g. copy-paste).
 
 // Basic class used for handling learning resource data.
@@ -42,7 +42,7 @@ class classEntry{
 
 }
 
-// Generate content for both navs upon load of learningResources.html
+// Generate content for both navs upon load of /learn/
 window.onload = generateLearning();
 window.onload = generateCourses();
 
@@ -231,8 +231,3 @@ function generateCourses(){
     });
 
 }
-
-
-
-
-
