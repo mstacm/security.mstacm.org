@@ -28,6 +28,7 @@ app.use(express.json());
 
 app.get('/emaillists',((req, res) =>{
     res.send('It Works!');
+    //TODO setup sending back emails
 }));
 
 // PORT
