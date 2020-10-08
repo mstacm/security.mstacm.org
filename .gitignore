@@ -1,3 +1,4 @@
-updateSite.sh
-
+./updateSite.sh
+./scripts/send_CDT_email.php
+./scripts/send_SS_email.php
 
