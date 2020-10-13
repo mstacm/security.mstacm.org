@@ -99,24 +99,44 @@
                         <div class="col-5 pt-2" align="center">
                             <h2 class="justify-content-center">Security Mailing List</h2>
                             <hr class="bg-primary">
-                            <a href="#" class="btn btn-primary disabled mx-2 mb-2" role="button" aria-disabled="true">
-                                Send an email to sigsec@mst.edu and <br/>
-                                request to be added to the security list!
+
+                            <div class="input-group input-group-sm mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="secNameEntry">Name:</span>
+                                </div>
+                                <input type="text" class="form-control" aria-label="Small" aria-describedby="secEmailEntry">
+                            </div>
+
+                            <div class="input-group input-group-sm mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="secEmail">Email:</span>
+                                </div>
+                                <input type="text" class="form-control" aria-label="Small" aria-describedby="secEmail">
+                            </div>
+
+                            <a href="#" class="btn btn-primary mx-2 mb-2" role="button" id="secButton">
+                                Submit
                             </a>
                         </div>
                         <div class="col-5 pt-2" align="center">
                             <h2>CDT Mailing List</h2>
                             <hr class="bg-primary">
-                            <a href="#" class="btn btn-primary disabled mx-2 mb-2" role="button" aria-disabled="true">
-                                Send an email to sigsec@mst.edu and <br/> request to be added to the Cyber Defense list!
-                            </a>
-                        </div>
-                    </div>
-                    <div class="row justify-content-center pt-2" align="center">
-                        <div class="col-3 pt-2" align="center">
-                            <a href="https://groups.google.com/forum/embed/?place=forum/sec-brief&showsearch=true&showpopout=true&showtabs=false"
-                               class="btn btn-primary  mx-2 mb-2" role="button" id="forum_embed" target="_blank">
-                                Check out Dr. T's Security Brief!
+                            <div class="input-group input-group-sm mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="cdtName">Name:</span>
+                                </div>
+                                <input type="text" class="form-control" aria-label="Small" aria-describedby="cdtName" id="cdtNameEntry">
+                            </div>
+
+                            <div class="input-group input-group-sm mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="cdtEmail">Email:</span>
+                                </div>
+                                <input type="text" class="form-control" aria-label="Small" aria-describedby="cdtEmail" id="cdtEmailEntry">
+                            </div>
+
+                            <a href="test" class="btn btn-primary mx-2 mb-2" role="button" id="cdtButton">
+                                Submit
                             </a>
                         </div>
                     </div>
@@ -149,7 +169,8 @@
 <script type="text/javascript" src="../scripts/officerProfileGen.js"></script>
 <script src="../vendor/jquery/jquery.min.js"></script>
 <script src="../bootstrap/dist/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="scripts/mdb.min.js"></script>
+<script type="text/javascript" src="../scripts/mdb.min.js"></script>
+<script type="text/javascript" src="../scripts/sendMailEntry.js"></script>
 
 </body>
 
