@@ -32,7 +32,7 @@ function emailRequest(name,email,type){
     $.ajax({
 
         type:'POST',
-        url:'http://acmsec.mst.edu/emaillists',
+        url:'https://acmsec.mst.edu/emaillists',
         data:JSON.stringify({userName:name,userEmail:email, mailType:type}),
         datatype: "application/json",
         contentType: "application/json",
