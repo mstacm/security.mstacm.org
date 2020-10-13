@@ -1,1 +1,0 @@
-//TODO setup ss emailing list
