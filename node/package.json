@@ -1,0 +1,12 @@
+{
+  "name": "acmsecbackend",
+  "version": "1.0.0",
+  "description": "Backend files for acmsec.mst.edu, including API endpoints for event registration and merch purchases",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Test the API endpoints with Postman!\"",
+    "start": "nodemon index.js"
+  },
+  "author": "Charles Rawlins",
+  "license": "ISC"
+}
