@@ -1,4 +1,4 @@
 website/.env/
 node_modules/googleapis/
-myapp/node_modules
-myapp/node_modules/\.bin/
+../node/myapp/node_modules
+../node/myapp/node_modules/\.bin/
