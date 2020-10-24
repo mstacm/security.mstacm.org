@@ -9,12 +9,12 @@
 	<script src="https://js.stripe.com/v3/"></script>
 
     <title>ACM SIG-Security</title>
-		<a href="https://acmsigsec.mst.edu/index.html" class="w3-center w3-padding w3-margin"><img src="../../OldSite/header-logo-wide.png" style="width:90%;height:20%;padding:15px;"></a>
+		<a href="https://acmsigsec.mst.edu/index.html" class="w3-center w3-padding w3-margin"><img src="../../../OldSite/header-logo-wide.png" style="width:90%;height:20%;padding:15px;"></a>
 
 		<!-- Link Stylesheet -->
 		<link rel="stylesheet" href="https://acmsigsec.mst.edu/w3schools.css">
 		<link rel="stylesheet" type="text/css" href="pay-form-style.css">
-		<link rel="stylesheet" type="text/css" href="../../OldSite/styles.css">
+		<link rel="stylesheet" type="text/css" href="../../../OldSite/styles.css">
 
     <!-- Nav bar -->
 		<div id="nav">
@@ -22,8 +22,9 @@
 				<li><a href="https://acmsigsec.mst.edu/cdt.php" class="menu">Cyber Defense Team</a></li>
 				<li><a href="https://acmsigsec.mst.edu/talks.html" class="menu">Events</a></li>
 				<li><a href="https://acmsigsec.mst.edu/learn.html" class="menu">Learn Security</a></li>
-        <!--<li><a href="https://acmsigsec.mst.edu/bootcamp.html" class="menu">Cyber Boot Camp</a></li>-->
         <li><a href="https://acmsigsec.mst.edu/wire-shop.html" class="menu">Wireless Workshop</a></li>
+        <li><a href="https://acmsigsec.mst.edu/lantap.html" class="menu">Lantap</a></li>
+        <!--<li><a href="https://acmsigsec.mst.edu/bootcamp.html" class="menu">Cyber Boot Camp</a></li>-->
         <li><a href="https://acmsigsec.mst.edu/education.html" class="menu">S&T Education</a></li>
         <li><a href="https://acm.mst.edu/" class="menu">ACM General</a></li>
 				<li><a href="https://acmsigsec.mst.edu/archives.html" class="menu">Archives</a></li>
@@ -37,9 +38,9 @@
   <div class="mainbody">
     <div class="middle1">
       <!-- Input boxes to take user data and send it to google spreadsheets -->
-      <h2>Wireless Workshop Registration</h2>
+      <h2>Application for Cyber Boot Camp</h2>
       <div class="styleLine"></div>
-        <form method="post" id="payment-form" action="../charge">
+        <form method="post" id="payment-form" action="/register/charge2">
           <label>Name</label>
             <input id='names' name='name' type='text' placeholder="Joe Miner">
           </p><p>
@@ -49,15 +50,9 @@
             <label>Major</label>
             <input id='major' name='major' type='text' placeholder="Computer Science">
           </p><p>
-            <label>Have you ever attended our Wireless Workshop?</label>
+            <label>Have you ever attended a Cyber Boot Camp?</label>
             <input id='attend' name='attend' type='text' placeholder="yes/no">
-          </p><p>
-            <label>Are you an S&T ACM Student Chapter Member?</label>
-            <input id='acm' name='acm' type='text' placeholder="yes/no">
-          </p><p>
-	    <label>Coupon</label>
-	    <input id='coupons' name='coupons' type='text' placeholder="PROMO">
-	  </p>
+          </p><br />
           <!-- Display the Card element, uses Elements from Stripe -->
           <div class="price">
             <table>
@@ -66,19 +61,17 @@
                 <th><h4>Price</h4></th>
               </tr>
               <tr>
-                <td>ACM Member Admission: </td>
-                <td>$25.00</td>
+                <td>Normal Application Price (Hotel, Transportation, NOT food): </td>
+                <td>$250.00</td>
               </tr>
               <tr>
-                  <td>Regular Admission: </td>
-                  <td>$30.00</td>
+                <th><h4>20 people will be selected</h4></th>
               </tr>
               <tr>
-                  <td>Please contact for coupon: </td>
-                  <td>kanm29@mst.edu</td>
+                <td>If you are not chosen you will be refunded.</td>
               </tr>
             </table>
-          </div><br /><br />
+          </div><br />
           <div class="form-row">
             <label for="card-element">
               Credit or debit card
@@ -93,7 +86,7 @@
             <div id="card-errors"></div>
             </div><br />
               <!--<input type="submit" class="submit" value="Submit Payment">-->
-              <h3 style="color:red">Registration is closed! Please try again next time!</h3>
+              <h3 style="color:red">Registration is full! Please try again next time!</h3>
           </form>
 	    </div>
     </div><br /><br /><br />
