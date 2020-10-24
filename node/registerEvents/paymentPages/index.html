@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="ACM Security Website Events Page">
+    <meta name="keywords" content="ACM Security, Missouri S&T">
+    <meta name="author" content="Charles Rawlins">
+
+    <title>ACM Security Homepage</title>
+
+    <!-- CSS Files -->
+    <link href="../../../css/mdb-free.css" rel="stylesheet">
+    <link href="../../../css/particles.css" media="screen" rel="stylesheet">
+    <!-- Font Awesome for prettier icons -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+
+</head>
+
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+<body style="padding-top: 56px;">
+<!--Navigation-->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #040405;">
+    <div class="container">
+        <a class="navbar-brand" href="../">ACM Security at Missouri S&T</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="../../../index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../../../learn/">Learn Security</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../../../events/">Events
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../../../cdt/">Cyber Defense
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../../../merch/">Merch</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../../../contact/">Contact Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../../../archive/">Archive</a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Setup Particles and page background -->
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<div class="jumbotron-main">
+<!--    <div id="card-errors" role="alert"></div>-->
+    <div id="particles-js">
+        <canvas class="particles-js-canvas-el" width="1409" height="319" style="width: 100%; height: 100%;">
+        </canvas>
+    </div>
+    <script src="../../../globalScripts/particles.js"></script>
+    <div class="row justify-content-center">
+        <div class="card h-auto mb-3 bg-dark text-white" style="width: 25rem;">
+            <div class="card-header">INSERT Registration</div>
+
+            <div class="card-body" style="width: 25rem;">
+                <p>
+                    <label>Name</label><br>
+                    <input class="w-100 input-group-lg" id='eventname' type='name' placeholder="Joe Miner" style="border-radius: 5px">
+                </p>
+                <p>
+                    <label>Email Address</label><br>
+                    <input class="w-100" id='emails' type='email' placeholder="youremail@here.com"style="border-radius: 5px">
+                </p>
+                <p>
+                    <label>Major</label><br>
+                    <input class="w-100" id='major'  type='text' placeholder="Computer Science"style="border-radius: 5px">
+                </p>
+                <p>
+                    <label>Have you ever attended a Cantenna event?</label><br>
+                    <input class="w-100" id='attend' type='text' placeholder="Yes/no"style="border-radius: 5px">
+                </p>
+                <p>
+                    <label>Are you an S&T ACM Student Chapter Member?</label><br>
+                    <input class="w-100" id='acm'type='text' placeholder="Yes/no"style="border-radius: 5px">
+                </p>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading text-center">
+                        <hr class="primary-color">
+                        <span id="card_type"><h2>Admission: $5</h2></span>
+                    </div>
+                    <div class="panel-body">
+<!--                        TODO: Change API Endpoint-->
+                        <form action="" method="POST" id="payment-form">
+                            <div class="payment-errors"></div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label>Cardholder Name</label>
+                                        <input class="form-control input-lg" id="name" type="text" data-stripe="name" placeholder="Joe Miner">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label>Card Number</label>
+                                        <input class="form-control input-lg" id="number" type="tel" size="20" data-stripe="number" placeholder="4242 4242 4242 4242">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-7">
+                                    <div class="form-group">
+                                        <label>Expiry</label>
+                                        <input class="form-control input-lg" id="cc_exp" type="tel" size="2" data-stripe="exp" placeholder="MM / YY">
+                                    </div>
+                                </div>
+                                <div class="col-md-5">
+                                    <div class="form-group">
+                                        <label>CVC</label>
+                                        <input class="form-control input-lg" id="cvc" type="tel" size="4" data-stripe="cvc" placeholder="555" autocomplete="off">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mt-n2">
+                                <div class="col-md-12">
+                                    <button class="btn btn-lg btn-block btn-success submit" type="submit">Pay $5</button>
+                                </div>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+
+                <br/>
+                <hr class="primary-color">
+                <p>For payment issues, please contact Charles Rawlins (crfmb@mst.edu)
+                    or on the <a href="https://discord.gg/44A6kdv">ACM Sec Discord</a>.
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--    Scripts-->
+
+<!-- Client Side Javascript to tokenize the card data and send it to the Server.js
+which then it will be sent to stripe servers to charge the card. The info doesn't
+touch our own server.' -->
+<!--TODO Cowsay this-->
+<!-- Use Jquery in this example -->
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="../../../bootstrap/dist/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../../../globalScripts/mdb.min.js"></script>
+<!-- Bootstrap JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+        integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+        crossorigin="anonymous"></script>
+<!-- Stripe.js to collect payment details -->
+<script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/jquery.payment/1.4.1/jquery.payment.js"></script>
+<!--Main script for handling client payments-->
+<script src="clientPay.js"></script>
+
+<!--  ________________________________________   -->
+<!--< With stripe.js, your payment info won't >  -->
+<!--	            touch our server!         >  -->
+<!--  ----------------------------------------   -->
+<!--    \  ^__^                           		 -->
+<!--     \ (oo)\_______                   		 -->
+<!--       (__)\        )\/\              		 -->
+<!--            ||----ww|                 		 -->
+<!--            ||     ||                 		 -->
+
+</body>
+</html>
