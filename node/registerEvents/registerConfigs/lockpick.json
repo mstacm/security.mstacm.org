@@ -1,0 +1,14 @@
+{
+  "event": {
+    "title": "Lockpicking Fall 2020",
+    "admissionprice": "$5",
+    "forms": [{
+      "id": "eventname",
+      "type": "name",
+      "placeholder": "Joe Miner",
+      "label": "Name"
+    },{
+// TODO Add other forms
+    }]
+    }
+  }
