@@ -2,11 +2,16 @@
   "name": "acmsecbackend",
   "version": "1.0.0",
   "description": "Backend files for acmsec.mst.edu, including API endpoints for event registration and merch purchases",
-  "main": "index.js",
+  "main": "emailLists/index.js",
   "scripts": {
     "test": "echo \"Test the API endpoints with Postman!\"",
-    "start": "nodemon index.js"
+    "start": "nodemon emailLists/index.js"
   },
   "author": "Charles Rawlins",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "googleapis": "^39.2.0",
+    "stripe": "^8.114.0"
+  }
 }
