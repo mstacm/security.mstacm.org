@@ -1,7 +1,13 @@
+
+// SET REGISTRATION EVENT PARAMETERS FROM JSON FILE HERE
+var eventFile = "./registerConfigs/lockpickexample.json"
+
+
 // Require API framework tools
 const express = require('express')
 var cors = require('cors') // Required to make API calls work well
 const app = express();
+const fs = require('fs');
 app.use(express.json());
 app.use(cors()) // Required for REST API with site
 
@@ -59,13 +65,17 @@ app.get("/getregevent", (req, res) =>
 //     res.render("https://acmsigsec.mst.edu/myapp/website/register2.html", {keyPublishable}));
 //
 
-app.get("/regcharge", (req, res) =>{
+app.get("/regCharge", (req, res) =>{
     // TODO Pass form info for autogeneration from json files
+    let eventInfo = JSON.parse(fs.readFileSync(eventFile))
+    // let serverInfo = eventInfo.event.serverinfo;
+    res.send(JSON.stringify(eventInfo.event.clientInfo))
+    console.log("Sent info!")
 });
 
 
 //Post the charge from stripe Merch page
-app.post('/regcharge', function(req, res) {
+app.post('/regCharge', function(req, res) {
 
     //Checks to see if we are out of available rows in spreadsheet
     //Authentication to spreadsheet to count the rows in the google spreadsheet.
