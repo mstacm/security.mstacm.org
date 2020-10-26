@@ -167,8 +167,6 @@
             // Submit
             $('#payment-submit').on('click', function (e) {
                 e.preventDefault();
-                $('#payment-submit').prop('disabled',true);
-                $('#payment-submit').text("Please wait...")
                 var cardData = {
                     'name': $('#name').val()
                 };
@@ -177,6 +175,7 @@
                     if (result.error && result.error.message) {
                         alert(result.error.message);
                     } else {
+                        alert("Success! You will be redirected shortly...")
                         // Pass token to our server to finalize payment
                         makeTransaction(result.token.id)
                     }
