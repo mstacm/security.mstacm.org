@@ -13,177 +13,188 @@
     <link href="../../../css/mdb-free.css" rel="stylesheet">
     <link href="../../../css/particles.css" media="screen" rel="stylesheet">
     <!-- Font Awesome for prettier icons -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        /* Blue outline on focus */
+        .StripeElement--focus {
+            border-color: #80BDFF;
+            outline: 0;
+            box-shadow: 0 0 0 .2rem rgba(0, 123, 255, .25);
+            transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+        }
 
+        /* Can't see what I type without this */
+        #card-number.form-control,
+        #card-cvc.form-control,
+        #card-exp.form-control {
+            display: inline-block;
+        }
+    </style>
 </head>
 
-<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 
-<body style="padding-top: 56px;">
-<!--Navigation-->
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #040405;">
-    <div class="container">
-        <a class="navbar-brand" href="../">ACM Security at Missouri S&T</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse"
-                data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
-                aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="../../../index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="../../../learn/">Learn Security</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="../../../events/">Events
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="../../../cdt/">Cyber Defense
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="../../../merch/">Merch</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="../../../contact/">Contact Us</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="../../../archive/">Archive</a>
-                </li>
-
-            </ul>
-        </div>
-    </div>
-</nav>
+<body style="padding-top: 30px; padding-bottom: 30px">
 
 <!-- Setup Particles and page background -->
 <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 <div class="jumbotron-main">
-<!--    <div id="card-errors" role="alert"></div>-->
+    <!--    <div id="card-errors" role="alert"></div>-->
     <div id="particles-js">
         <canvas class="particles-js-canvas-el" width="1409" height="319" style="width: 100%; height: 100%;">
         </canvas>
     </div>
     <script src="../../../globalScripts/particles.js"></script>
+
     <div class="row justify-content-center">
         <div class="card h-auto mb-3 bg-dark text-white" style="width: 25rem;">
-            <div class="card-header">INSERT Registration</div>
+            <div class="card-header" id="userFormTitle">
+                <!--                Generate title from clientPay.js-->
+            </div>
 
             <div class="card-body" style="width: 25rem;">
-                <p>
-                    <label>Name</label><br>
-                    <input class="w-100 input-group-lg" id='eventname' type='name' placeholder="Joe Miner" style="border-radius: 5px">
-                </p>
-                <p>
-                    <label>Email Address</label><br>
-                    <input class="w-100" id='emails' type='email' placeholder="youremail@here.com"style="border-radius: 5px">
-                </p>
-                <p>
-                    <label>Major</label><br>
-                    <input class="w-100" id='major'  type='text' placeholder="Computer Science"style="border-radius: 5px">
-                </p>
-                <p>
-                    <label>Have you ever attended a Cantenna event?</label><br>
-                    <input class="w-100" id='attend' type='text' placeholder="Yes/no"style="border-radius: 5px">
-                </p>
-                <p>
-                    <label>Are you an S&T ACM Student Chapter Member?</label><br>
-                    <input class="w-100" id='acm'type='text' placeholder="Yes/no"style="border-radius: 5px">
-                </p>
+                <div id="userForms">
+                    <!--                    Autogenerate User forms-->
+                </div>
 
-                <div class="panel panel-default">
-                    <div class="panel-heading text-center">
-                        <hr class="primary-color">
-                        <span id="card_type"><h2>Admission: $5</h2></span>
+            </div>
+
+        </div>
+
+
+    </div>
+    <div class="row justify-content-center">
+        <div class="card" style="width: 25rem">
+            <div class="card-header">
+                <div class="row justify-content-between">
+                    <div class="col">
+                        <h3 id="paymentCharge">
+                            <!--                    Insert price from js here-->
+                        </h3>
                     </div>
-                    <div class="panel-body">
-<!--                        TODO: Change API Endpoint-->
-                        <form action="" method="POST" id="payment-form">
-                            <div class="payment-errors"></div>
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        <label>Cardholder Name</label>
-                                        <input class="form-control input-lg" id="name" type="text" data-stripe="name" placeholder="Joe Miner">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        <label>Card Number</label>
-                                        <input class="form-control input-lg" id="number" type="tel" size="20" data-stripe="number" placeholder="4242 4242 4242 4242">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-7">
-                                    <div class="form-group">
-                                        <label>Expiry</label>
-                                        <input class="form-control input-lg" id="cc_exp" type="tel" size="2" data-stripe="exp" placeholder="MM / YY">
-                                    </div>
-                                </div>
-                                <div class="col-md-5">
-                                    <div class="form-group">
-                                        <label>CVC</label>
-                                        <input class="form-control input-lg" id="cvc" type="tel" size="4" data-stripe="cvc" placeholder="555" autocomplete="off">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row mt-n2">
-                                <div class="col-md-12">
-                                    <button class="btn btn-lg btn-block btn-success submit" type="submit">Pay $5</button>
-                                </div>
-                            </div>
-                        </form>
-
+                    <div class="col-2">
+                        <img src="stripe.png" style="height: 25px;float: right">
                     </div>
                 </div>
 
-                <br/>
-                <hr class="primary-color">
-                <p>For payment issues, please contact Charles Rawlins (crfmb@mst.edu)
-                    or on the <a href="https://discord.gg/44A6kdv">ACM Sec Discord</a>.
-
+            </div>
+            <div class="card-body">
+                <form id="payment-form">
+                    <label for="name">Name on Card</label>
+                    <div class="input-group mb-2">
+                        <input type="text" class="form-control" id="name" placeholder="Joe Miner">
+                    </div>
+                    <label for="card-number">Credit Card Number</label>
+                    <img src="acceptedCards/visa.png" style="height: 30px">
+                    <img src="acceptedCards/mastercard.png" style="height: 30px">
+                    <img src="acceptedCards/discover.png" style="height: 30px">
+                    <img src="acceptedCards/amexpress.png" style="height: 30px">
+                    <div class="input-group mb-2">
+                        <span id="card-number" class="form-control">
+                            <!-- Stripe Card Element -->
+                        </span>
+                    </div>
+                    <label for="card-cvc">CVC Number</label>
+                    <div class="input-group mb-2">
+                        <span id="card-cvc" class="form-control">
+                            <!-- Stripe CVC Element -->
+                        </span>
+                    </div>
+                    <label for="card-exp">Expiration</label>
+                    <div class="input-group mb-2">
+                        <span id="card-exp" class="form-control">
+                            <!-- Stripe Card Expiry Element -->
+                        </span>
+                    </div>
+                    <div class="row justify-content-center align-middle">
+                        <button id="payment-submit" class="btn btn-primary mt-1">Submit Payment</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
 </div>
 
-<!--    Scripts-->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+    <script src="https://js.stripe.com/v3/"></script>
+    <script>
+        $(document).ready(function () {
 
-<!-- Client Side Javascript to tokenize the card data and send it to the Server.js
-which then it will be sent to stripe servers to charge the card. The info doesn't
-touch our own server.' -->
-<!--TODO Cowsay this-->
-<!-- Use Jquery in this example -->
-<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-<script src="../../../bootstrap/dist/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="../../../globalScripts/mdb.min.js"></script>
-<!-- Bootstrap JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
-        integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
-        crossorigin="anonymous"></script>
-<!-- Stripe.js to collect payment details -->
-<script type="text/javascript" src="https://js.stripe.com/v2/"></script>
-<script type="text/javascript"
-        src="https://cdnjs.cloudflare.com/ajax/libs/jquery.payment/1.4.1/jquery.payment.js"></script>
-<!--Main script for handling client payments-->
-<script src="clientPay.js"></script>
+            // Create a Stripe client
+            var stripe = Stripe('pk_test_51Hfm7wJCIpvTNXndqyN2ZsYxepcYkEsWrWTSmLoZidAZXAhheQdkRCuQKA7ylETVP8H4Rl42gEFgyGOMvpPgIpFx00yy6dHKbX');
 
-<!--  ________________________________________   -->
-<!--< With stripe.js, your payment info won't >  -->
-<!--	            touch our server!         >  -->
-<!--  ----------------------------------------   -->
-<!--    \  ^__^                           		 -->
-<!--     \ (oo)\_______                   		 -->
-<!--       (__)\        )\/\              		 -->
-<!--            ||----ww|                 		 -->
-<!--            ||     ||                 		 -->
+            // Create an instance of Elements
+            var elements = stripe.elements();
+
+            // Try to match bootstrap 4 styling
+            var style = {
+                base: {
+                    'lineHeight': '1.35',
+                    'fontSize': '1.11rem',
+                    'color': '#495057',
+                    'fontFamily': 'apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif'
+                }
+            };
+
+            // Card number
+            var card = elements.create('cardNumber', {
+                'placeholder': '4242 4242 4242 4242',
+                'style': style
+            });
+            card.mount('#card-number');
+
+            // CVC
+            var cvc = elements.create('cardCvc', {
+                'placeholder': '111',
+                'style': style
+            });
+            cvc.mount('#card-cvc');
+
+            // Card expiry
+            var exp = elements.create('cardExpiry', {
+                'placeholder': '01/01',
+                'style': style
+            });
+            exp.mount('#card-exp');
+
+            // Submit
+            $('#payment-submit').on('click', function (e) {
+                e.preventDefault();
+                var cardData = {
+                    'name': $('#name').val()
+                };
+                stripe.createToken(card, cardData).then(function (result) {
+                    console.log(result);
+                    if (result.error && result.error.message) {
+                        alert(result.error.message);
+                    } else {
+                        alert("Success! You will be redirected shortly...")
+                        // Pass token to our server to finalize payment
+                        makeTransaction(result.token.id)
+                    }
+                });
+            });
+
+        });
+    </script>
+    <script src="clientPay.js"></script>
+
+    <!--  ________________________________________   -->
+    <!--< With stripe.js, your payment info won't >  -->
+    <!--	            touch our server!         >  -->
+    <!--  ----------------------------------------   -->
+    <!--    \  ^__^                           		 -->
+    <!--     \ (oo)\_______                   		 -->
+    <!--       (__)\        )\/\              		 -->
+    <!--            ||----ww|                 		 -->
+    <!--            ||     ||                 		 -->
 
 </body>
 </html>
