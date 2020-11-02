@@ -1,14 +1,38 @@
+// GET request to check if registration is full, otherwise redirect
+$(document).on('click','#registerButton',function (event){
+    event.preventDefault()
+
+    $.ajax({
+        type:'GET',
+        url:'http://localhost:3001/getRegEvent',
+        contentType: "application/json",
+
+        success: function(json) {
+
+            eventData = json
+
+            if (eventData.canRegister){
+                // Move to a new location or you can do something else
+                window.location.replace(eventData.dataLink);
+
+            }else{
+                alert("Sorry! Registration is full! Please come back next year!")
+                $("#registerButton").addClass('disabled')
+            }
+        },
+
+        error: function() {
+            alert("Error! Please refresh and try again!");
+        }
+    });
+
+
+
+    ;
+
+});
+
 
 function loadReg(){
-    var xhr= new XMLHttpRequest();
-    xhr.open('GET', 'https://acmsec.mst.edu', true);
-    xhr.onreadystatechange= function() {
-        if (this.readyState!==4) return;
-        if (this.status!==200) return; // or whatever error handling you want
-        var myWindow = window.open("", "myWindow", "width=200,height=100");
-        myWindow.document.write(this.responseText);
-        // myWindow.opener.document.write("<p>This is the source window!</p>");
-        // document.getElementById('y').innerHTML= this.responseText;
-    };
-    xhr.send();
+
 }
