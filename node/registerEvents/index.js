@@ -1,3 +1,5 @@
+
+// TODO Cleanup, remove old keys from repo
 const fs = require('fs');
 var json5 = require('json5');
 var bodyParser = require('body-parser')
