@@ -112,6 +112,8 @@ app.post('/regCharge', function(req, res) {
                     console.log(err)
                 });
             console.log("Payment was successful.");
+            // TODO Send email upon successful registration
+
             res.send(JSON.stringify({trxnSuccess:"Your payment was successful!",success:true}));
         };
     });
