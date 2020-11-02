@@ -1,0 +1,46 @@
+{
+  "event": {
+  // This is a test of json5!
+    "serverInfo": {
+      "title": "Lockpicking Fall 2020 (Example)",
+      "stripesk" : 'sk_test_51Hfm7wJCIpvTNXndKiL73lvLvkXrKwDdhz50IN2a9Rfs0O9FllUw7EQpeMEwy7IX2U7P3dOjwbjhN4w53jRJuxja00FnXzcsq8',
+      "maxRegisters": 20,
+      "chargePrice": 500,
+      "googleSheetsInfo": {
+        "sheetsFileID": "1McfvAZaixu_a4CZ4Oifqdu26tyI9PNlQ9PNA8UmXK98",
+        "authEmail": "registration@acm-sec-backend.iam.gserviceaccount.com",
+        "keyFile": "acmdrive.pem"
+      }
+    },
+    "clientInfo": {
+      "title": "Lockpicking Fall 2020 (Example)",
+      "admissionPrice": "$5",
+      "forms": [{
+        "id": "eventname",
+        "type": "name",
+        "placeholder": "Joe Miner",
+        "label": "Name"
+      },{
+        "id": "emails",
+        "type": "email",
+        "placeholder": "youremail@here.com",
+        "label": "Email Address"
+      },{
+        "id": "major",
+        "type": "text",
+        "placeholder": "Computer Science",
+        "label": "Major"
+      },{
+        "id": "attend",
+        "type": "text",
+        "placeholder": "Yes/No",
+        "label": "Have you ever attended a Cantenna evert?"
+      },{
+        "id": "acm",
+        "type": "text",
+        "placeholder": "Yes/No",
+        "label": "Are you an S&T ACM Student Chapter Member?"
+      }]
+    }
+    }
+  }
