@@ -1,2 +1,7 @@
 ./updateSite.sh
 ./node/ACM Sec Backend-c7e090995ffd.json
+./test.html
+./node/registerEvents/.env
+./node/registerEvents/*.pem
+./node/registerEvents/*.p12
+./node/registerEvents/registerConfigs
