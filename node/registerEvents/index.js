@@ -5,6 +5,7 @@ const express = require('express')
 var cors = require('cors') // Required to make API calls work well
 
 const forceSync = require('sync-rpc')
+var emailmod = require('./regEmails')
 
 
 // SET REGISTRATION EVENT PARAMETERS FROM HJSON FILE HERE
@@ -112,7 +113,9 @@ app.post('/regCharge', function(req, res) {
                     console.log(err)
                 });
             console.log("Payment was successful.");
-            // TODO Send email upon successful registration
+
+            // Send the new user an email and let the officers know
+            emailmod.sendRegEmail(eventname,email,serverInfo.title)
 
             res.send(JSON.stringify({trxnSuccess:"Your payment was successful!",success:true}));
         };

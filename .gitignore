@@ -5,6 +5,5 @@
 ./node/registerEvents/.env
 ./node/registerEvents/*.pem
 ./node/registerEvents/*.p12
-./node/registerEvents/registerConfigs
 ./node/registerEvents/*.json
-./node/registerEvents/registerConfigs/*.json5
+./node/registerEvents/registerConfigs/*
