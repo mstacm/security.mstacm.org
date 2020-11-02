@@ -1,4 +1,5 @@
 ./updateSite.sh
+./noSecureChrome.sh
 ./node/ACM Sec Backend-c7e090995ffd.json
 ./test.html
 ./node/registerEvents/.env
@@ -6,3 +7,4 @@
 ./node/registerEvents/*.p12
 ./node/registerEvents/registerConfigs
 ./node/registerEvents/*.json
+./node/registerEvents/registerConfigs/*.json5
