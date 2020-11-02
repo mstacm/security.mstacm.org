@@ -5,3 +5,4 @@
 ./node/registerEvents/*.pem
 ./node/registerEvents/*.p12
 ./node/registerEvents/registerConfigs
+./node/registerEvents/*.json
