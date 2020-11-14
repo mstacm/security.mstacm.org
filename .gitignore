@@ -2,10 +2,7 @@
 ./noSecureChrome.sh
 ./node/ACM Sec Backend-c7e090995ffd.json
 ./test.html
-./node/registerEvents/.env
-./node/registerEvents/*.pem
-./node/registerEvents/*.p12
-./node/registerEvents/*.json
+./node/registerEvents/paymentPages/*.pem
 ./node/registerEvents/registerConfigs/*
-./node/merchPage/merchConfigs/*.pem
-./node/merchPage/paymentPages/*.pem
+./node/merchPage/merchConfigs/*
+./node/merchPage/paymetnPages/*.pem
