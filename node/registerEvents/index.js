@@ -2,7 +2,7 @@
  * Main ACM Registration file.
  *
  * Provides the backend support for event registration for ACM Security.
- * Config 3.json5 files can be found in ./registerConfigs
+ * Config *.json5 files can be found in ./registerConfigs
  *
  * @file   index.js
  * @author Charles Rawlins.
