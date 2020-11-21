@@ -24,6 +24,7 @@ var eventSpread = require('google-spreadsheet-append-es5');
 
 // Load config file and parse data for front and back end
 data = fs.readFileSync(eventFile);
+
 var merchInfo= json5.parse(data)
 var serverInfo = merchInfo.merch.serverInfo;
 const app = express();
