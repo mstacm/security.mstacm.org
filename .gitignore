@@ -1,2 +1,8 @@
 ./updateSite.sh
-
+./noSecureChrome.sh
+./node/ACM Sec Backend-c7e090995ffd.json
+./test.html
+./node/registerEvents/paymentPages/*.pem
+./node/registerEvents/registerConfigs/*
+./node/merchPage/merchConfigs/*
+./node/merchPage/paymetnPages/*.pem

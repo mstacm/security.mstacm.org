@@ -1,0 +1,24 @@
+{
+  "name": "acmsecbackend",
+  "version": "1.0.0",
+  "description": "Backend files for acmsec.mst.edu, including API endpoints for event registration and merch purchases",
+  "main": "emailLists/index.js",
+  "scripts": {
+    "test": "echo \"Test the API endpoints with Postman!\"",
+    "start": "nodemon emailLists/index.js"
+  },
+  "author": "Charles Rawlins",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "edit-google-spreadsheet": "^0.3.0",
+    "fs": "0.0.1-security",
+    "googleapis": "^39.2.0",
+    "hjson": "^3.2.1",
+    "html": "^1.0.0",
+    "json5": "^2.1.3",
+    "stripe": "^8.114.0",
+    "sync-rpc": "^1.3.6"
+  }
+}
