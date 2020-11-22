@@ -1,3 +1,4 @@
+
 /**
  * Registration checker.
  *
@@ -11,15 +12,23 @@
 var eventFile = "./registerConfigs/lockpickexample.json5"
 
 // Get required libraries
+
 var Spreadsheet = require('edit-google-spreadsheet');
 const fs = require('fs');
 var json5 = require('json5');
 
+
 // Parse event info
+
+
+
+var eventFile = "./registerConfigs/lockpickexample.json5"
+
 data = fs.readFileSync(eventFile);
 var eventInfo= json5.parse(data)
 var serverInfo = eventInfo.event.serverInfo;
 var sheetInfo = serverInfo.googleSheetsInfo
+
 
 /**
  * Object.size
@@ -27,7 +36,8 @@ var sheetInfo = serverInfo.googleSheetsInfo
  * Finds the size of the given object by the number of key-value entries
  *
  * @param {Object}    obj           Object with unknown length
- */
+
+
 Object.size = function(obj) {
     var size = 0, key;
     for (key in obj) {
@@ -36,6 +46,7 @@ Object.size = function(obj) {
     return size;
 };
 
+
 /**
  * Synchronous spreadsheet loading.
  *
@@ -43,6 +54,7 @@ Object.size = function(obj) {
  *
  * @returns {int}   getVal  Number of rows in the spreadsheet-1 (number of current users.
  */
+
 function asyncFunction() {
     return (getVal) => {
         Spreadsheet.load({
@@ -83,5 +95,10 @@ function delay(t, v) {
     })
 }
 
+
 // Export sync function for use in index.js
+
+// Email for informing of new registration
+cdtOfficerEmail = 'gzlfyb@mst.edu';
+
 module.exports = asyncFunction
