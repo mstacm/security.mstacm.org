@@ -1,3 +1,4 @@
+
 /**
  * Main ACM Registration file.
  *
@@ -15,6 +16,7 @@ const fs = require('fs');
 var json5 = require('json5');
 var bodyParser = require('body-parser')
 const express = require('express')
+
 // Required to make API calls work well
 var cors = require('cors')
 const forceSync = require('sync-rpc')
@@ -23,11 +25,13 @@ var emailmod = require('./regEmails')
 var eventSpread = require('google-spreadsheet-append-es5');
 
 // Load config file and parse data for front and back end
+
 data = fs.readFileSync(eventFile);
 var eventInfo= json5.parse(data)
 var clientInfo = eventInfo.event.clientInfo;
 var serverInfo = eventInfo.event.serverInfo;
 const app = express();
+
 
 // Setup stripe keys
 const stripe = require("stripe")(serverInfo.stripesk);
@@ -36,6 +40,7 @@ const stripe = require("stripe")(serverInfo.stripesk);
 const syncFunction = forceSync(require.resolve('./getRegisters'))
 
 // Setup configs for the server app
+
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(cors()) // Required for REST API with site
@@ -51,6 +56,7 @@ var spreadsheet = eventSpread({
     fileId: sheetInfo.sheetsFileID
 });
 
+
 /**
  * Event registration API endpoint
  *
@@ -58,6 +64,7 @@ var spreadsheet = eventSpread({
  * there are enough spots availible first.
  *
  */
+
 app.get("/getRegEvent", (req, res) =>{
     // Get number of spreadsheet rows synchronously
     const getVal = 0
@@ -73,12 +80,14 @@ app.get("/getRegEvent", (req, res) =>{
 
 });
 
+
 /**
  * Registration page API endpoint.
  *
  * Endpoint for GETting data to autogenerate data for the user form for registration
  *
  */
+
 app.get("/regCharge", (req, res) =>{
     res.send(JSON.stringify(clientInfo))
     console.log("Sent info!")
@@ -93,6 +102,7 @@ app.get("/regCharge", (req, res) =>{
  * @param {String}  key         Key value to search for.
  * @returns {Object} value      Value of desired key.
  */
+
 function getKey(objArray,key){
 
     for(i in objArray){
@@ -102,6 +112,7 @@ function getKey(objArray,key){
     }
 
 }
+
 
 /**
  * POST registration page endpoint
@@ -114,13 +125,16 @@ function getKey(objArray,key){
 app.post('/regCharge', function(req, res) {
 
     // Set the charge amount on server side for security.
+
     let Chargeamount = serverInfo.chargePrice;
 
     // TODO Add coupon support
     // if (req.body.coupons === process.env.PROMO){
     //     Chargeamount = 2500; }
 
+
     //Parse incoming data from registration page
+
     userdata = req.body.data
     token = getKey(userdata,"token")
     email = getKey(userdata,"emails")
@@ -129,7 +143,9 @@ app.post('/regCharge', function(req, res) {
     attend = getKey(userdata,"attend")
     major = getKey(userdata,"major")
 
+
     //Create new Stripe charge with public/private keys
+
     var charge = stripe.charges.create({
         amount: Chargeamount,
         currency: "usd",
@@ -137,12 +153,16 @@ app.post('/regCharge', function(req, res) {
         description: serverInfo.title + " " + eventname,
         receipt_email:email
     }, function (err, charge){
+
         //If charge fails, log error and let user know.
+
         if(err){
             console.log(err);
             res.send(JSON.stringify({trxnSuccess:"Your card was declined!",success:false}));
         }else{
+
             // Charge succeeds! Log the registration in the google spreadsheet and email user/officer
+
             spreadsheet.add({
                 timestamp: new Date(),
                 name:eventname,
@@ -155,12 +175,16 @@ app.post('/regCharge', function(req, res) {
                     console.log(err)
                 });
 
+
+
             console.log("Payment was successful.");
 
             // Send the new user an email and let the officers know
             emailmod.sendRegEmail(eventname,email,serverInfo.title)
 
+
             // Let the user know that processing was successful
+
             res.send(JSON.stringify({trxnSuccess:"Your payment was successful!",success:true}));
         };
     });
@@ -168,5 +192,7 @@ app.post('/regCharge', function(req, res) {
 });
 
 // Setup port options for starting backend
+
 const port = process.env.PORT || 3001; // Leave as 3001 for event registration, allowing processes to be taken down
+
 app.listen(port,()=> console.log(`Listening on port ${port}!`));

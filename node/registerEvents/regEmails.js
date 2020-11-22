@@ -19,6 +19,7 @@ const regEmail = "acmsecmerch@gmail.com"
 
 module.exports = {
 
+
     /**
      * sendRegEmail
      *
@@ -33,6 +34,7 @@ module.exports = {
     sendRegEmail: function (username,email,eventname){
 
         // User email body
+
         var regBodyUser = '<h3>ACM Security Team</h3>' + '<hr> <par>'+username+', thank you for registering for \''
             + eventname + '\'! Our officers have been notified of your registration. We look forward to seeing you!' +
             '</par>'
@@ -42,6 +44,7 @@ module.exports = {
             eventname+'.</par>'
 
         // Send a no-reply email to the new registration user
+
         sendmail({
             from: 'no-reply@acm.com',
             to: email,
@@ -54,6 +57,7 @@ module.exports = {
         });
 
         // Send a no-reply email to remind the officer
+
         sendmail({
             from: 'no-reply@acm.com',
             to: regEmail,
