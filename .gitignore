@@ -7,3 +7,5 @@
 ./node/registerEvents/*.p12
 ./node/registerEvents/*.json
 ./node/registerEvents/registerConfigs/*
+./node/merchPage/merchConfigs/*.pem
+./node/merchPage/paymentPages/*.pem

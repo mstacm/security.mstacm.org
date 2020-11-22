@@ -32,7 +32,7 @@ SRC,CompEng 5410,2020,Intro to Computer Communication Networks,"Design of comput
 SRC,CompEng 5420,2020,Intro to Network Security,"Network management, testing and security. Key encryption, management, intrusion detection, etc.",Undergrad_Grad
 SRC,CompEng 5430,2020,Wireless Networks,"Transmission fundamentals, coding techniques, error control, satellite and cellular networks, etc.",Undergrad_Grad
 SRC,CompEng 5510,2020,Fault Tolerant Digital Systems,"Fault models, hardware redundency, evaluation techniques, system design, etc.",Undergrad_Grad
-SRC,CompEng 6420,2020,Wireless Ad Hock and Sensor Networks,"Intro to ad hock and sensor networks, IEEE standards, wireless channel issues, quality of service, etc.",Grad
+SRC,CompEng 6420,2020,Wireless Ad Hoc and Sensor Networks,"Intro to ad hoc and sensor networks, IEEE standards, wireless channel issues, quality of service, etc.",Grad
 SRC,CompEng 6430,2020,High Speed Networks,"State-of-the-art high speed networks, modeling, simulation, traffic management, etc.",Grad
 SRC,CompEng 6440,2020,Network Performance Analysis,Intro to performance analysis and modeling of computer networks.,Grad
 SRC,CompEng 6510,2020,Resilient Networks,Reliability and fault tolerence for network centric systems.,Grad
