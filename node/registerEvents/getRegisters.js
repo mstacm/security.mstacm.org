@@ -1,15 +1,42 @@
 
+/**
+ * Registration checker.
+ *
+ * Provides external functions to registerEvents/index.js for finding the number of current registrations.
+ *
+ * @file   getRegisters.js
+ * @author Charles Rawlins.
+ */
+
+// Change for different events
+var eventFile = "./registerConfigs/lockpickexample.json5"
+
+// Get required libraries
+
 var Spreadsheet = require('edit-google-spreadsheet');
 const fs = require('fs');
 var json5 = require('json5');
 
 
+// Parse event info
+
+
 
 var eventFile = "./registerConfigs/lockpickexample.json5"
+
 data = fs.readFileSync(eventFile);
 var eventInfo= json5.parse(data)
 var serverInfo = eventInfo.event.serverInfo;
 var sheetInfo = serverInfo.googleSheetsInfo
+
+
+/**
+ * Object.size
+ *
+ * Finds the size of the given object by the number of key-value entries
+ *
+ * @param {Object}    obj           Object with unknown length
+
 
 Object.size = function(obj) {
     var size = 0, key;
@@ -18,6 +45,15 @@ Object.size = function(obj) {
     }
     return size;
 };
+
+
+/**
+ * Synchronous spreadsheet loading.
+ *
+ * Loads the event registration synchronously for quick verification of number of current registration users.
+ *
+ * @returns {int}   getVal  Number of rows in the spreadsheet-1 (number of current users.
+ */
 
 function asyncFunction() {
     return (getVal) => {
@@ -59,9 +95,10 @@ function delay(t, v) {
     })
 }
 
+
+// Export sync function for use in index.js
+
 // Email for informing of new registration
 cdtOfficerEmail = 'gzlfyb@mst.edu';
-
-
 
 module.exports = asyncFunction
