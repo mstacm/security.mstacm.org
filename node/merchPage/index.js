@@ -80,15 +80,21 @@ function checkValid(valArray){
 
 }
 
-
+/**
+* GET merch page endpoint
+*
+* GET endpoint for redirecting users to merch page. Will redirect to paymentPages/index.html
+*/
+app.get('/merchPage', (req, res) => {
+    res.redirect('https://acmsec.mst.edu/node/merchPage/paymentPages/');
+});
 
 /**
- * POST registration page endpoint
+ * POST merch page endpoint
  *
- * POST endpoint for registration page. Stripe payment token will be submitted here.
+ * POST endpoint for merch page. Stripe payment token will be submitted here.
  * User registration will then be added to desired spreadsheet from config file and emails
  * will be sent to officer email and new recipient.
- *
  */
 app.post('/merchCharge', function(req, res) {
 
@@ -118,7 +124,6 @@ app.post('/merchCharge', function(req, res) {
 
     let totalCharge = shirtPrice*numShirts + stickPrice*numStick + collPrice*numColl
 
-    //TODO Fix spreadsheet issue, emails issue
     //Create new Stripe charge with public/private keys
     var charge = stripe.charges.create({
         amount: totalCharge,
