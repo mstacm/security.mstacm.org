@@ -1,4 +1,5 @@
 // File generated from our OpenAPI spec
+
 declare module 'stripe' {
   namespace Stripe {
     /**
@@ -62,7 +63,7 @@ declare module 'stripe' {
       /**
        * Date this return was created.
        */
-      created?: RangeQueryParam | number;
+      created?: Stripe.RangeQueryParam | number;
 
       /**
        * Specifies which fields in the response should be expanded.

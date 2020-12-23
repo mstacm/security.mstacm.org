@@ -1,4 +1,5 @@
 // File generated from our OpenAPI spec
+
 declare module 'stripe' {
   namespace Stripe {
     /**
@@ -40,7 +41,7 @@ declare module 'stripe' {
       /**
        * Set of [key-value pairs](https://stripe.com/docs/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.
        */
-      metadata?: Metadata;
+      metadata?: Stripe.Metadata;
 
       /**
        * If the Alipay account object is not reusable, the exact amount that you can create a charge for.

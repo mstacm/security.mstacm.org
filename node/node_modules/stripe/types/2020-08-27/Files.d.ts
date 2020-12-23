@@ -1,4 +1,5 @@
 // File generated from our OpenAPI spec
+
 declare module 'stripe' {
   namespace Stripe {
     /**
@@ -63,6 +64,7 @@ declare module 'stripe' {
 
     namespace File {
       type Purpose =
+        | 'account_requirement'
         | 'additional_verification'
         | 'business_icon'
         | 'business_logo'
@@ -83,7 +85,7 @@ declare module 'stripe' {
     }
 
     interface FileListParams extends PaginationParams {
-      created?: RangeQueryParam | number;
+      created?: Stripe.RangeQueryParam | number;
 
       /**
        * Specifies which fields in the response should be expanded.
@@ -98,6 +100,7 @@ declare module 'stripe' {
 
     namespace FileListParams {
       type Purpose =
+        | 'account_requirement'
         | 'additional_verification'
         | 'business_icon'
         | 'business_logo'

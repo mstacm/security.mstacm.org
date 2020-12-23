@@ -1,4 +1,5 @@
 // File generated from our OpenAPI spec
+
 declare module 'stripe' {
   namespace Stripe {
     /**
@@ -93,7 +94,7 @@ declare module 'stripe' {
     }
 
     interface EventListParams extends PaginationParams {
-      created?: RangeQueryParam | number;
+      created?: Stripe.RangeQueryParam | number;
 
       /**
        * Filter events by whether all webhooks were successfully delivered. If false, events which are still pending or have failed all delivery attempts to a webhook endpoint will be returned.

@@ -1,4 +1,5 @@
 // File generated from our OpenAPI spec
+
 declare module 'stripe' {
   namespace Stripe {
     namespace Radar {
@@ -51,7 +52,7 @@ declare module 'stripe' {
         /**
          * Set of [key-value pairs](https://stripe.com/docs/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.
          */
-        metadata: Metadata;
+        metadata: Stripe.Metadata;
 
         /**
          * The name of the value list.
@@ -114,7 +115,7 @@ declare module 'stripe' {
         /**
          * Set of [key-value pairs](https://stripe.com/docs/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format. Individual keys can be unset by posting an empty value to them. All keys can be unset by posting an empty value to `metadata`.
          */
-        metadata?: MetadataParam;
+        metadata?: Stripe.MetadataParam;
       }
 
       namespace ValueListCreateParams {
@@ -149,7 +150,7 @@ declare module 'stripe' {
         /**
          * Set of [key-value pairs](https://stripe.com/docs/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format. Individual keys can be unset by posting an empty value to them. All keys can be unset by posting an empty value to `metadata`.
          */
-        metadata?: MetadataParam;
+        metadata?: Stripe.MetadataParam;
 
         /**
          * The human-readable name of the value list.
@@ -168,7 +169,7 @@ declare module 'stripe' {
          */
         contains?: string;
 
-        created?: RangeQueryParam | number;
+        created?: Stripe.RangeQueryParam | number;
 
         /**
          * Specifies which fields in the response should be expanded.

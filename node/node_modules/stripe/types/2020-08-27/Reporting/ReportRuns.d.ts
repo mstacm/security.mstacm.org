@@ -1,4 +1,5 @@
 // File generated from our OpenAPI spec
+
 declare module 'stripe' {
   namespace Stripe {
     namespace Reporting {
@@ -806,7 +807,7 @@ declare module 'stripe' {
       }
 
       interface ReportRunListParams extends PaginationParams {
-        created?: RangeQueryParam | number;
+        created?: Stripe.RangeQueryParam | number;
 
         /**
          * Specifies which fields in the response should be expanded.
