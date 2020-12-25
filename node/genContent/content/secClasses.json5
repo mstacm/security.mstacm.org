@@ -1,0 +1,262 @@
+// JSON content for the Missouri S&T course listings on the 'Learn Security' page.
+[
+    {
+        "class": "Computer Science",
+        "contentID": "ContentComputerScience",
+        "tabID": "IDComputerScience",
+        "classEntries": [
+            {
+                "course": "CompSci 2500",
+                "year": "2020",
+                "title": "Algorithms",
+                "details": "Intro to basic algorithms.",
+                "level": "Undergrad"
+            },
+            {
+                "course": "CompSci 3600",
+                "year": "2020",
+                "title": "Intro to Computer Security",
+                "details": "Intro to Computer/Cyber Security, encryption, networking, etc. Taught by Patrick Taylor",
+                "level": "Undergrad"
+            },
+            {
+                "course": "CompSci 3601",
+                "year": "2020",
+                "title": "Digital Forensics",
+                "details": "Digital forensics, legal procedures, find data in hard drives, taught by Karl Lutzen",
+                "level": "Undergrad"
+            },
+            {
+                "course": "CompSci 4001",
+                "year": "2020",
+                "title": "Intro to Cyber Security Offense",
+                "details": "Offensive Security, Mobile App Security, Taught by Sammie Bush in spring semesters",
+                "level": "Undergrad"
+            },
+            {
+                "course": "CompSci 4601",
+                "year": "2020",
+                "title": "Comp Network Concepts and Technology",
+                "details": "Computer network concepts and new concepts. Construction, operation and management.",
+                "level": "Undergrad"
+            },
+            {
+                "course": "CompSci 5402",
+                "year": "2020",
+                "title": "Intro to Data Mining",
+                "details": "Intro to data mining with experience. Classification, clustering, outlier/novelty detection, etc.",
+                "level": "Undergrad_Grad"
+            },
+            {
+                "course": "CompSci 5500",
+                "year": "2020",
+                "title": "Structure of a Compiler",
+                "details": "Learn how to build a compiler. Learn how a language works. Recommended by most government labs.",
+                "level": "Undergrad_Grad"
+            },
+            {
+                "course": "CompSci 5600",
+                "year": "2020",
+                "title": "Computer Networks",
+                "details": "Dedicated class to computer networking, basics and some advanced. Taught by Patrick Taylor",
+                "level": "Undergrad_Grad"
+            },
+            {
+                "course": "CompSci 5601",
+                "year": "2020",
+                "title": "Security Operations and Management",
+                "details": "Management and security of digital infrestructure. Taught by system admin Karl Lutzen",
+                "level": "Undergrad_Grad"
+            },
+            {
+                "course": "CompSci 5602",
+                "year": "2020",
+                "title": "Intro to Cryptography",
+                "details": "Intro to the fundamentals of cryptography.",
+                "level": "Undergrad_Grad"
+            },
+            {
+                "course": "CompSci 6200",
+                "year": "2020",
+                "title": "Algorithmics II",
+                "details": "Advanced algorithms.",
+                "level": "Grad"
+            },
+            {
+                "course": "CompSci 6304",
+                "year": "2020",
+                "title": "Cloud Computing and Big Data Management",
+                "details": "Privacy, security and management of cloud computing and big data.",
+                "level": "Grad"
+            },
+            {
+                "course": "CompSci 6600",
+                "year": "2020",
+                "title": "Formal Methods in Computer Security",
+                "details": "Learn about vulnerabilities, threats and how to mitigate different attacks.",
+                "level": "Grad"
+            },
+            {
+                "course": "CompSci 6601",
+                "year": "2020",
+                "title": "Privacy Preserving Data Integration and Analysis",
+                "details": "Basic protocols in statistic and cryptography, learn about sanitation and privacy-preserving techniques",
+                "level": "Grad"
+            },
+            {
+                "course": "CompSci 6602",
+                "year": "2020",
+                "title": "Network Performance Analysis",
+                "details": "Modeling and analysis of computer networks.",
+                "level": "Grad"
+            },
+            {
+                "course": "CompSci 6603",
+                "year": "2020",
+                "title": "Advanced Topics in Wireless Networks",
+                "details": "Fundamentals and recent advances in wireless networking",
+                "level": "Grad"
+            },
+            {
+                "course": "CompSci 6605",
+                "year": "2020",
+                "title": "Advanced Network Security",
+                "details": "Authentication, denial of service and other security issues on wired and wireless networks.",
+                "level": "Grad"
+            }
+        ]
+    },
+    {
+        "class": "Information Security and Technology",
+        "contentID": "ContentInformationSecurityandTechnology",
+        "tabID": "IDInformationSecurityandTechnology",
+        "classEntries": [
+            {
+                "course": "IS&T 3321",
+                "year": "2020",
+                "title": "Network Performance Design and Management",
+                "details": "Design, manage and deply computer networks and protocols.",
+                "level": "Undergrad"
+            },
+            {
+                "course": "IS&T 3333",
+                "year": "2020",
+                "title": "Data Networks and Information Security",
+                "details": "Current/New networking and information security priciples",
+                "level": "Undergrad"
+            },
+            {
+                "course": "IS&T 3343",
+                "year": "2020",
+                "title": "Systems Analysis",
+                "details": "Buisiness information systems are analyzed, designed and introduced into the buisiness environment.",
+                "level": "Undergrad"
+            },
+            {
+                "course": "IS&T 4780",
+                "year": "2020",
+                "title": "Human and Organizational Factors in Cybersecurity",
+                "details": "Human factors in cybersecurity and information assurance. Fraud prevention, insider threat detection, etc.",
+                "level": "Undergrad_Grad"
+            },
+            {
+                "course": "IS&T 5652",
+                "year": "2020",
+                "title": "Advanced Web Development",
+                "details": "Dynamic web interaction. Hands-on approach with servers, mobile software development, etc.",
+                "level": "Undergrad_Grad"
+            },
+            {
+                "course": "IS&T 6336",
+                "year": "2020",
+                "title": "Foundations of Internet Computing",
+                "details": "Computer networking and website information security are discussed. ",
+                "level": "Grad"
+            },
+            {
+                "course": "IS&T 6443",
+                "year": "2020",
+                "title": "Information Retrieval and Analysis",
+                "details": "Storage and retreival systems, text mining, collaborative filtering, etc.",
+                "level": "Grad"
+            },
+            {
+                "course": "IS&T 6448",
+                "year": "2020",
+                "title": "Building the Data Warehouse",
+                "details": "Data modeling and processes to build a data warehouse. Security, schemes, web access, etc.",
+                "level": "Grad"
+            },
+            {
+                "course": "IS&T 6780",
+                "year": "2020",
+                "title": "Adv Human and Organizational Factors in Cybersecurity",
+                "details": "Current challenges in protecting integrity, availability and confidentiality of information.",
+                "level": "Grad"
+            }
+        ]
+    },
+    {
+        "class": "Computer Engineering",
+        "contentID": "ContentComputerEngineering",
+        "tabID": "IDComputerEngineering",
+        "classEntries": [
+            {
+                "course": "CompEng 5410",
+                "year": "2020",
+                "title": "Intro to Computer Communication Networks",
+                "details": "Design of computer networks, protocols, archetecture and performance. Hardware-side networking.",
+                "level": "Undergrad_Grad"
+            },
+            {
+                "course": "CompEng 5420",
+                "year": "2020",
+                "title": "Intro to Network Security",
+                "details": "Network management, testing and security. Key encryption, management, intrusion detection, etc.",
+                "level": "Undergrad_Grad"
+            },
+            {
+                "course": "CompEng 5430",
+                "year": "2020",
+                "title": "Wireless Networks",
+                "details": "Transmission fundamentals, coding techniques, error control, satellite and cellular networks, etc.",
+                "level": "Undergrad_Grad"
+            },
+            {
+                "course": "CompEng 5510",
+                "year": "2020",
+                "title": "Fault Tolerant Digital Systems",
+                "details": "Fault models, hardware redundency, evaluation techniques, system design, etc.",
+                "level": "Undergrad_Grad"
+            },
+            {
+                "course": "CompEng 6420",
+                "year": "2020",
+                "title": "Wireless Ad Hoc and Sensor Networks",
+                "details": "Intro to ad hoc and sensor networks, IEEE standards, wireless channel issues, quality of service, etc.",
+                "level": "Grad"
+            },
+            {
+                "course": "CompEng 6430",
+                "year": "2020",
+                "title": "High Speed Networks",
+                "details": "State-of-the-art high speed networks, modeling, simulation, traffic management, etc.",
+                "level": "Grad"
+            },
+            {
+                "course": "CompEng 6440",
+                "year": "2020",
+                "title": "Network Performance Analysis",
+                "details": "Intro to performance analysis and modeling of computer networks.",
+                "level": "Grad"
+            },
+            {
+                "course": "CompEng 6510",
+                "year": "2020",
+                "title": "Resilient Networks",
+                "details": "Reliability and fault tolerence for network centric systems.",
+                "level": "Grad"
+            }
+        ]
+    }
+]
