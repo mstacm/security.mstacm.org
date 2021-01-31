@@ -1,19 +1,27 @@
-// NAME: Charles Rawlins
-// FILE: officerProfileGen.js
-// Desc: These functions automatically generates the officer entries for the /contact/
-// page from the content in OfficerProfiles.csv.
+/**
+ * Current officer profile generation script
+ *
+ * Generates the officer profiles for the contact page
+ *
+ * @file   currOfficerGen.js
+ * @author Charles Rawlins
+ */
 
 // Generate the officer cards upon load of /contact/
 window.onload = generateCurrOfficers();
 
-// Generates current officer profiles
+/**
+ * Officer content generation API call
+ *
+ * Calls the data from the site backend for content generation
+ */
 function generateCurrOfficers(){
 
     var currOfficers;
     // Get learning content from backend
     $.ajax({
         type:'GET',
-        url:'http://localhost:3003/currentOfficers',
+        url:'https://acmsec.mst.edu:3003/currentOfficers',
         contentType: "application/json",
 
         success: function(json) {
@@ -30,6 +38,11 @@ function generateCurrOfficers(){
 
 }
 
+/**
+ * Officer profile generation
+ *
+ * Generates the current officer profiles
+ */
 function generateProfiles(currOfficers){
 
     // Generate year

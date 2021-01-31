@@ -30,13 +30,12 @@ var acmOfficers = json5.parse(fs.readFileSync('./content/officerProfiles.json5')
 currOfficers = acmOfficers.shift();
 officerHistory = acmOfficers; // Remove current officers
 
-//Learning page resources (mst courses and learning links)
+// Learning page resources (mst courses and learning links)
 app.get("/learningGen", (req, res) =>{
     pageContent = {'learningResources':learningRsc,'mstCourses':mstCourses};
     res.send(pageContent)
     console.log("Sent learning data!")
 });
-
 
 //TODO Event info (current/archive)
 // app.get("/eventGen", (req, res) =>{
@@ -45,7 +44,7 @@ app.get("/learningGen", (req, res) =>{
 //     console.log("Sent learning data!")
 // });
 
-//TODO Officer Page and archive
+// Current officer data for contact page
 app.get("/currentOfficers", (req, res) =>{
     // Get most recent officers for contact page
     pageContent = {'currOfficers':currOfficers};
@@ -53,6 +52,7 @@ app.get("/currentOfficers", (req, res) =>{
     console.log("Sent current officer data!")
 });
 
+// Officer history for archive page
 app.get("/officerHistory", (req, res) =>{
     //Get all past officers, not current ones for archive page
     pageContent = {'officerHistory':officerHistory};
