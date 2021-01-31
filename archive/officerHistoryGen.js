@@ -21,7 +21,7 @@ function generateOfficersHistory(){
     // Get learning content from backend
     $.ajax({
         type:'GET',
-        url:'https://acmsec.mst.edu:3003/officerHistory',
+        url:'https://acmsec.mst.edu/officerHistory',
         contentType: "application/json",
 
         success: function(json) {

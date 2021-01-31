@@ -21,7 +21,7 @@ function generateCurrOfficers(){
     // Get learning content from backend
     $.ajax({
         type:'GET',
-        url:'https://acmsec.mst.edu:3003/currentOfficers',
+        url:'https://acmsec.mst.edu/currentOfficers',
         contentType: "application/json",
 
         success: function(json) {

@@ -22,7 +22,7 @@ function generateData(){
     // Get learning content from backend
     $.ajax({
         type:'GET',
-        url:'https://acmsec.mst.edu:3003/learningGen',
+        url:'https://acmsec.mst.edu/learningGen',
         contentType: "application/json",
 
         success: function(json) {
