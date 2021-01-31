@@ -14,8 +14,6 @@
     <link href="../css/particles.css" media="screen" rel="stylesheet">
 
     <!--    Scripts-->
-    <script type="text/javascript" src="../globalScripts/libraries/d3/d3.js"></script>
-    <script type="text/javascript" src="../contact/officerProfileGen.js"></script>
     <script src="../vendor/jquery/jquery.min.js"></script>
     <script src="../bootstrap/dist/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../globalScripts/mdb.min.js"></script>
@@ -49,13 +47,13 @@
                 <li class="nav-item">
                     <a class="nav-link" href="../merch">Merch</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="../contact">Contact Us</a>
-                </li>
                 <li class="nav-item active">
                     <a class="nav-link" href="./">Archive
                         <span class="sr-only">(current)</span>
                     </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../contact">Contact Us</a>
                 </li>
 
             </ul>
@@ -73,12 +71,24 @@
     <script src="../globalScripts/particles.js"></script>
     <div class="container page-content">
         <div class="page-content">
-            <div class="container py-2 bg-dark text-white rounded mb-3 animated fadeIn">
-                <div class="row">
-                    <div class="col" align="center">
-                        <h2>Coming Soon!</h2>
-                        <hr class="bg-primary">
-                    </div>
+            <div class="container bg-dark text-white rounded my-3 h-auto animated fadeIn">
+                <div class="col text-center py-2">
+                    <h2>Event History (Coming Soon!)</h2>
+                </div>
+            </div>
+
+            <div class="container bg-dark text-white rounded my-3 h-auto animated fadeIn">
+                <div class="col text-center pt-2">
+                    <h2 id="officerYear">Officer History</h2>
+                    <hr class="bg-primary">
+                </div>
+                <ul class="nav nav-pills pt-2" id="yearTabs">
+
+                    <!--                    Auto-generated officer year categories go here.-->
+                </ul>
+                <div class="tab-content py-2" id="officerTabContents">
+
+                    <!--                    Auto-generated officer entries go here.-->
                 </div>
             </div>
         </div>
@@ -86,9 +96,9 @@
     </div>
 </div>
 
-
-
 </body>
+
+<script type="text/javascript" src="./officerHistoryGen.js"></script>
 
 <!--  ______________________________________________________   -->
 <!--< Check out the old version of the site at '/OldSite'!   > -->

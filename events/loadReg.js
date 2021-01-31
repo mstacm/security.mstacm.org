@@ -26,10 +26,6 @@ $(document).on('click','#registerButton',function (event){
         }
     });
 
-
-
-    ;
-
 });
 
 

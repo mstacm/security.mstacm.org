@@ -1,77 +1,58 @@
-// NAME: Charles Rawlins
-// FILE: learningGen.js
-// DESC: This script automatically generates the learning resource
-// and course entries for the /learn/ page. It reads from learningResources.csv and secClasses.csv
-// for content. The other auto-generated resource pages use this page as a template (e.g. copy-paste).
+/**
+ * Learning page content generation script
+ *
+ * Generates the learning resource links and Missouri S&T class listings for './index.html'. The data
+ * is loaded from the backend in '../node/genContent'
+ *
+ * @file   learningGen.js
+ * @author Charles Rawlins
+ */
 
-// Basic class used for handling learning resource data.
-class learningEntry{
+// Generate content for page upon load of /learn/
+window.onload = generateData();
 
-    // Generate tab and content IDs for handling nav javascript
-    constructor(learningEntry) {
-        this.learning = learningEntry;
-        this.contentID = "Content" + this.learning.replace(/\s/g, '');
-        this.tabID = "ID" + this.learning.replace(/\s/g, '');
-        this.learningEntries = [];
-    }
+/**
+* Content generation API call
+*
+* Calls the data from the site backend for content generation
+*/
+function generateData(){
+    var learnResources;
+    var mstCourses;
+    // Get learning content from backend
+    $.ajax({
+        type:'GET',
+        url:'https://acmsec.mst.edu/learningGen',
+        contentType: "application/json",
 
-    // Convert data over...
-    addEntry(dataEntry){
-        var newData = {name:dataEntry.name, site:dataEntry.site};
-        this.learningEntries.push(newData);
-    }
+        success: function(json) {
 
-}
+            learnResources = json['learningResources']
+            mstCourses = json['mstCourses']
 
-// Basic class used for handling the Missouri S&T course data.
-class classEntry{
+            generateLearning(learnResources);
+            generateCourses(mstCourses);
+        },
 
-    // Generate tab and content IDs for handling nav javascript
-    constructor(catEntry) {
-        this.class = catEntry;
-        this.contentID = "Content" + this.class.replace(/\s/g, '');
-        this.tabID = "ID" + this.class.replace(/\s/g, '');
-        this.classEntries = [];
-    }
-
-    addEntry(dataEntry){
-        // Convert data over...
-        var newData = {course:dataEntry.course,year:dataEntry.year,title:dataEntry.title,details:dataEntry.details,level:dataEntry.level};
-        this.classEntries.push(newData);
-    }
-
-}
-
-// Generate content for both navs upon load of /learn/
-window.onload = generateLearning();
-window.onload = generateCourses();
-
-// Calls the d3 csv read function and parses/generates entries for the learning resources.
-function generateLearning(){
-    // Read in learning data with d3 (let this be the only function processed for clarity)
-    d3.csv("../miscContent/learningResources.csv").then(function(data){
-
-        // Parse csv lines into headers and learning resource data
-        var catEntries = [];
-        var workingSite = {};
-        for(var i = 0; i < data.length; i++){
-
-            if(data[i].desc == "CAT"){ // Year category entry
-                if(Object.keys(workingSite).length != 0) {
-                    catEntries.push(workingSite);
-                }
-                workingSite = new learningEntry(data[i].name);
-
-            }else{ // Resource entry (can add more categories if needed later)
-                workingSite.addEntry(data[i]);
-            }
-
+        error: function() {
+            alert("Error! Please refresh and try again!");
         }
-        catEntries.push(workingSite);
+    });
+
+}
+
+//
+
+/**
+ * Learning resource generator
+ *
+ * Generates entries for the learning resources.
+ */
+function generateLearning(learnResources){
 
         // Generate cat tab html code
         var catBlock = '';
-        for(var i = 0; i < catEntries.length; i++) {
+        for(var i = 0; i < learnResources.length; i++) {
 
             // li entry example:
             // <li class="nav-item">
@@ -81,13 +62,13 @@ function generateLearning(){
 
             catBlock += '<li class="nav-item py-2">';
             if(i == 0){
-                catBlock += '<a class="nav-link active" id="'+catEntries[i].tabID+'" data-toggle="tab" href="#' +
-                    catEntries[i].contentID+'" role="tab" aria-controls="'+catEntries[i].contentID+'" ' +
-                    'aria-selected="true">'+catEntries[i].learning+'</a>'
+                catBlock += '<a class="nav-link active" id="'+learnResources[i].tabID+'" data-toggle="tab" href="#' +
+                    learnResources[i].contentID+'" role="tab" aria-controls="'+learnResources[i].contentID+'" ' +
+                    'aria-selected="true">'+learnResources[i].learning+'</a>'
             }else{
-                catBlock += '<a class="nav-link" id="'+catEntries[i].tabID+'" data-toggle="tab" href="#' +
-                    catEntries[i].contentID+'" role="tab" aria-controls="'+catEntries[i].contentID+'" ' +
-                    'aria-selected="false">'+catEntries[i].learning+'</a>'
+                catBlock += '<a class="nav-link" id="'+learnResources[i].tabID+'" data-toggle="tab" href="#' +
+                    learnResources[i].contentID+'" role="tab" aria-controls="'+learnResources[i].contentID+'" ' +
+                    'aria-selected="false">'+learnResources[i].learning+'</a>'
             }
 
             catBlock += '</li>'
@@ -99,7 +80,7 @@ function generateLearning(){
         var tabContents = document.getElementById('resourceTabContent')
 
         // Generate tab contents from learning csv file.
-        for (var i = 0; i < catEntries.length; i++){
+        for (var i = 0; i < learnResources.length; i++){
             // learning resource button example:
             // <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
             //     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, eveniet earum.
@@ -109,17 +90,17 @@ function generateLearning(){
 
             tabBlock = "";
             if(i == 0){
-                tabBlock += '<div class="tab-pane fade show active" id="'+catEntries[i].contentID +'" role="tabpanel"' +
-                    ' aria-labelledby="'+catEntries[i].tabID+'">';
+                tabBlock += '<div class="tab-pane fade show active" id="'+learnResources[i].contentID +'" role="tabpanel"' +
+                    ' aria-labelledby="'+learnResources[i].tabID+'">';
             }else{
-                tabBlock += '<div class="tab-pane fade show" id="'+catEntries[i].contentID+'" role="tabpanel" ' +
-                    'aria-labelledby="'+catEntries[i].tabID+'">';
+                tabBlock += '<div class="tab-pane fade show" id="'+learnResources[i].contentID+'" role="tabpanel" ' +
+                    'aria-labelledby="'+learnResources[i].tabID+'">';
             }
             tabBlock += '<div class="row justify-content-md-center mt-2">';
 
-            for(var j=0;j < catEntries[i].learningEntries.length; j++){
-                tabBlock += '<a class="btn btn-primary mx-1 my-1" href="'+catEntries[i].learningEntries[j].site +
-                    '" target="_blank">'+catEntries[i].learningEntries[j].name+'</a><br/>';
+            for(var j=0;j < learnResources[i].learningEntries.length; j++){
+                tabBlock += '<a class="btn btn-primary mx-1 my-1" href="'+learnResources[i].learningEntries[j].site +
+                    '" target="_blank">'+learnResources[i].learningEntries[j].name+'</a><br/>';
             }
             tabBlock += '</div>'; // Row div
             tabBlock += '</div>'; // tab div
@@ -127,46 +108,31 @@ function generateLearning(){
             tabContents.innerHTML += tabBlock;
 
         }
-    });
 
 }
 
-// Calls the d3 csv read function and parses/generates entries for the course resources.
-function generateCourses(){
-    // Read in learning data with d3 (let this be the only function processed for clarity)
-    d3.csv("../miscContent/secClasses.csv").then(function(data){
+//
 
-        // Parse csv lines into headers and learning resource data
-        var catEntries = [];
-        var workingClass = {};
-        for(var i = 0; i < data.length; i++){
-
-            if(data[i].desc == "CAT"){ // Year category entry
-                if(Object.keys(workingClass).length != 0) {
-                    catEntries.push(workingClass);
-                }
-                workingClass = new classEntry(data[i].course);
-
-            }else{ // Class entry (can add more categories if needed later)
-                workingClass.addEntry(data[i]);
-            }
-
-        }
-        catEntries.push(workingClass);
+/**
+ * Course listing generator
+ *
+ * Generates entries for the course resources
+ */
+function generateCourses(mstCourses){
 
         // Generate cat tab html code
         var catBlock = '';
-        for(var i = 0; i < catEntries.length; i++) {
+        for(var i = 0; i < mstCourses.length; i++) {
 
             catBlock += '<li class="nav-item py-2">';
             if(i == 0){
-                catBlock += '<a class="nav-link active" id="'+catEntries[i].tabID+'" data-toggle="tab" href="#' +
-                    catEntries[i].contentID+'" role="tab" aria-controls="'+catEntries[i].contentID+'" ' +
-                    'aria-selected="true">'+catEntries[i].class+'</a>'
+                catBlock += '<a class="nav-link active" id="'+mstCourses[i].tabID+'" data-toggle="tab" href="#' +
+                    mstCourses[i].contentID+'" role="tab" aria-controls="'+mstCourses[i].contentID+'" ' +
+                    'aria-selected="true">'+mstCourses[i].class+'</a>'
             }else{
-                catBlock += '<a class="nav-link" id="'+catEntries[i].tabID+'" data-toggle="tab" href="#' +
-                    catEntries[i].contentID+'" role="tab" aria-controls="'+catEntries[i].contentID+'" ' +
-                    'aria-selected="false">'+catEntries[i].class+'</a>'
+                catBlock += '<a class="nav-link" id="'+mstCourses[i].tabID+'" data-toggle="tab" href="#' +
+                    mstCourses[i].contentID+'" role="tab" aria-controls="'+mstCourses[i].contentID+'" ' +
+                    'aria-selected="false">'+mstCourses[i].class+'</a>'
             }
 
             catBlock += '</li>'
@@ -178,7 +144,7 @@ function generateCourses(){
         var classTabContents = document.getElementById('classTabContent')
 
         // Generate year tab contents from learning csv file.
-        for (var i = 0; i < catEntries.length; i++){
+        for (var i = 0; i < mstCourses.length; i++){
 
             // Example cards:
             // <div class="card h-100 mb-3 bg-primary text-black-50" style="width: 15rem;">
@@ -191,17 +157,17 @@ function generateCourses(){
 
             tabBlock = "";
             if(i == 0){
-                tabBlock += '<div class="tab-pane fade show active" id="'+catEntries[i].contentID+
-                    '" role="tabpanel" aria-labelledby="'+catEntries[i].tabID+'">';
+                tabBlock += '<div class="tab-pane fade show active" id="'+mstCourses[i].contentID+
+                    '" role="tabpanel" aria-labelledby="'+mstCourses[i].tabID+'">';
             }else{
                 tabBlock += '<div class="tab-pane fade show" id="'+
-                    catEntries[i].contentID+'" role="tabpanel" aria-labelledby="'+catEntries[i].tabID+'">';
+                    mstCourses[i].contentID+'" role="tabpanel" aria-labelledby="'+mstCourses[i].tabID+'">';
             }
             tabBlock += '<div class="row d-flex justify-content-md-center mt-2">';
 
-            for(var j=0;j < catEntries[i].classEntries.length; j++){
+            for(var j=0;j < mstCourses[i].classEntries.length; j++){
                 // Change background color based on course difficulty level
-                switch(catEntries[i].classEntries[j].level){
+                switch(mstCourses[i].classEntries[j].level){
                     case 'Undergrad_Grad':
                         tabBlock += '<div class="card  mb-3 mx-2 bg-warning text-black-50" style="width: 15rem;">';
                         break;
@@ -214,11 +180,11 @@ function generateCourses(){
                         break;
                 };
 
-                tabBlock += '<div class="card-header">'+catEntries[i].classEntries[j].course+' ('+
-                    catEntries[i].classEntries[j].year+')</div>';
+                tabBlock += '<div class="card-header">'+mstCourses[i].classEntries[j].course+' ('+
+                    mstCourses[i].classEntries[j].year+')</div>';
                 tabBlock += '<div class="card-body" style="width: 15rem;">';
-                tabBlock += '<h5 class="card-title">'+catEntries[i].classEntries[j].title+'</h5>';
-                tabBlock += '<p class="card-text text-black-50">'+catEntries[i].classEntries[j].details+'</p>';
+                tabBlock += '<h5 class="card-title">'+mstCourses[i].classEntries[j].title+'</h5>';
+                tabBlock += '<p class="card-text text-black-50">'+mstCourses[i].classEntries[j].details+'</p>';
                 tabBlock += '</div>';
                 tabBlock += '</div>';
             }
@@ -228,6 +194,5 @@ function generateCourses(){
             classTabContents.innerHTML += tabBlock;
 
         }
-    });
 
 }
