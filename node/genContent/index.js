@@ -23,21 +23,42 @@ app.use(bodyParser.json());
 app.use(cors()) // Required for REST API with site
 
 // Load resources for all pages
-var learningRsc = fs.readFileSync('./content/learningResources.json5');
-learningRsc = json5.parse(learningRsc)
-var mstcourses = fs.readFileSync('./content/secClasses.json5');
-mstcourses = json5.parse(mstcourses);
+var learningRsc = json5.parse(fs.readFileSync('./content/learningResources.json5'));
+var mstCourses = json5.parse(fs.readFileSync('./content/secClasses.json5'));
+var acmOfficers = json5.parse(fs.readFileSync('./content/officerProfiles.json5'));
+
+currOfficers = acmOfficers.shift();
+officerHistory = acmOfficers; // Remove current officers
 
 //Learning page resources (mst courses and learning links)
 app.get("/learningGen", (req, res) =>{
-    pageContent = {'learningResources':learningRsc,'mstCourses':mstcourses};
+    pageContent = {'learningResources':learningRsc,'mstCourses':mstCourses};
     res.send(pageContent)
     console.log("Sent learning data!")
 });
 
+
 //TODO Event info (current/archive)
+// app.get("/eventGen", (req, res) =>{
+//     pageContent = {'learningResources':learningRsc,'mstCourses':mstcourses};
+//     res.send(pageContent)
+//     console.log("Sent learning data!")
+// });
 
 //TODO Officer Page and archive
+app.get("/currentOfficers", (req, res) =>{
+    // Get most recent officers for contact page
+    pageContent = {'currOfficers':currOfficers};
+    res.send(pageContent)
+    console.log("Sent current officer data!")
+});
+
+app.get("/officerHistory", (req, res) =>{
+    //Get all past officers, not current ones for archive page
+    pageContent = {'officerHistory':officerHistory};
+    res.send(pageContent)
+    console.log("Sent officer history data!")
+});
 
 const port = process.env.PORT || 3003; // Leave as 3003 for misc content gen, allowing for portions of site to be
                                         // enabled/disabled
