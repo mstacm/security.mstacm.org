@@ -1,6 +1,93 @@
 // Array of officer profiles for the history of ACM security
 [
     {
+        "year": "Spring 2021",
+        "contentID": "ContentSpring2021",
+        "tabID": "IDSpring2021",
+        "OfficerEntries": [
+            {
+                "name": "Pamela Petterchak",
+                "role": "Chair",
+                "image": "../images/Fall2020Pics/pamela_petterchak.png",
+                "educ": "CS/CpE Junior",
+                "desc": "Future cybersecurity professional, interested in social engineering prevention and national security.",
+                "email": "pfpg7m@mst.edu",
+                "linkedin": "https://www.linkedin.com/in/pamela-petterchak/"
+            },
+            {
+                "name": "Morgen Nicodemus",
+                "role": "Vice Chair & CPTC Captain",
+                "image": "../images/Fall2020Pics/morgen.jpg",
+                "educ": "CS Senior",
+                "desc": "Loves challenges involved with Security, including CTFs. Hopes to build a career as a Penetration Tester.",
+                "email": "mrnx8d@umsystem.edu",
+                "linkedin": "https://www.linkedin.com/in/morgen-nicodemus/"
+            },
+            {
+                "name": "Dr. Taylor",
+                "role": "Advisor",
+                "image": "N/A",
+                "educ": "CS PhD",
+                "desc": "Associate Professor with tenure and Associate Chair of Undergraduate Studies and Outreach Activities in the <a href=\"https://cs.mst.edu/\">CS Department</a> at Missouri S&T.,taylor@mst.edu,N/A"
+            },
+            {
+                "name": "Charles Rawlins",
+                "role": "Webmaster",
+                "image": "../images/Spring2021Pics/Charles_Rawlins.p",
+                "educ": "CpE PhD Student",
+                "desc": "Currently researching blockchain and machine learning for IoT Security.",
+                "email": "crfmb@mst.edu",
+                "linkedin": "https://www.linkedin.com/in/charles-rawlins-b37294123/"
+            },
+            {
+                "name": "Akruti Joshi",
+                "role": "Secretary",
+                "image": "../images/Spring2021Pics/Akruti_Joshi.jpg",
+                "educ": "CS Freshmen",
+                "desc": "I am very friendly with people around me. I am honest and confident in things I do.",
+                "email": "ajmdx@mst.edu",
+                "linkedin": "N/A"
+            },
+            {
+                "name": "Gavin Lewis",
+                "role": "CCDC Captain",
+                "image": "../images/Fall2020Pics/gavinLewis.png",
+                "educ": "CS Senior",
+                "desc": "Interested in cyber defense and leadership.",
+                "email": "gzlfyb@mst.edu",
+                "linkedin": "https://www.linkedin.com/in/gavin-lewis-93a623180/"
+            },
+            {
+                "name": "Mayowa Daniel",
+                "role": "CTF Captain",
+                "image": "N/A",
+                "educ": "CpE Junior",
+                "desc": "I like improvement. I like getting better at things I enjoy.",
+                "email": "danielmayowamichael@gmail.com",
+                "linkedin": "linkedin.com/in/mayowa-daniel-07ab21191"
+            },
+            {
+                "name": "Jamason Velvet",
+                "role": "CTF Captain & Special Projects",
+                "image": "../images/Fall2020Pics/JV.jpg",
+                "educ": "CS Senior",
+                "desc": "Interested in applying Computer Science techniques to medicine.",
+                "email": "jsvg78@umsystem.edu",
+                "linkedin": "https://www.linkedin.com/in/jamason-velvet"
+            },
+            {
+                "name": "Anthony Sharp",
+                "role": "Special Projects",
+                "image": "../images/Fall2020Pics/anthony_sharp.png",
+                "educ": "CS/Math Senior",
+                "desc": "Future cybersecurity professional and mathematician, interested in cybersecurity analysts and software developer.",
+                "email": "avsrcm@mst.edu",
+                "linkedin": "https://www.linkedin.com/in/anthony-sharp-879267162/"
+            }
+        ]
+
+    },
+    {
         "year": "Fall 2020",
         "contentID": "ContentFall2020",
         "tabID": "IDFall2020",
