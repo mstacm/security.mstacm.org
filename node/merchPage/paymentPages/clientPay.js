@@ -1,59 +1,32 @@
 console.log("Loaded Resource!")
 let currSum = 0
-let currShirts = 0
-let currStick = 0
-let currColl = 0
-let shirtPrice = 25
-let stickPrice = 5
-let collPrice = 10
+let currBundles = 0
+let bundlePrice = 20
+let discCode = "None"
 
 $(document).ready(function(){
-    $('#numShirts').keypress(function(event){
-        var keycode = (event.keyCode ? event.keyCode : event.which);
-        if(keycode == '13') {
-            let shirtText = $('#numShirts').val()
-            shirtNum = parseInt(shirtText)
-            if (checkInvalid(shirtNum)) {
-                alert("Please enter a valid number!")
-            } else {
-                currShirts = shirtNum
-                updatePrice()
-            }
+    $('#numBundles').change(function(event){
+        let bundleText = $('#numBundles').val()
+        bundleNum = parseInt(bundleText)
+        if (checkInvalid(bundleNum)) {
+            alert("Please enter a valid number!")
+        } else {
+            currBundles = bundleNum
+            updatePrice()
         }
+
     });
 
-    $('#numStickers').keypress(function(event){
-        var keycode = (event.keyCode ? event.keyCode : event.which);
-        if(keycode == '13') {
-            let stickText = $('#numStickers').val()
-            stickNum = parseInt(stickText)
-            if (checkInvalid(stickNum)) {
-                alert("Please enter a valid number!")
-            } else {
-                currStick = stickNum
-                updatePrice()
-            }
-        }
+    $('#merchDiscount').change(function(event){
+        let discText = $('#merchDiscount').val()
+        discCode = discText
     });
 
-    $('#numColl').keypress(function(event){
-        var keycode = (event.keyCode ? event.keyCode : event.which);
-        if(keycode == '13') {
-            let collText = $('#numColl').val()
-            collNum = parseInt(collText)
-            if (checkInvalid(collNum)) {
-                alert("Please enter a valid number!")
-            } else {
-                currColl = collNum
-                updatePrice()
-            }
-        }
-    });
 });
 
 function updatePrice(){
 
-    let sumPrice = shirtPrice*currShirts + stickPrice*currStick + collPrice*currColl
+    let sumPrice = bundlePrice*currBundles
     $('#paymentCharge').text( "Total Price: $" + sumPrice)
 
 }
@@ -68,21 +41,36 @@ function checkInvalid(newVal){
     }
 
     return false
+}
 
+function getShirtsize(){
+    var shirtSize = 'S'
+    if ($("#smallRadio").prop("checked", true)){
+        shirtSize = 'S'
+    }else if ($("#medRadio").prop("checked", true)){
+        shirtSize = 'M'
+    }else if ($("#largeRadio").prop("checked", true)){
+        shirtSize = 'L'
+    }else if ($("#xlRadio").prop("checked", true)){
+        shirtSize = 'XL'
+    }
+
+    return shirtSize
 }
 
 function makeTransaction(token){
     userdata = {}
     userdata.merchName = $('#merchName').val()
     userdata.email = $('#merchEmail').val()
-    userdata.numShirts = currShirts
-    userdata.numStickers = currStick
-    userdata.numColl = currColl
+
+    userdata.numBundles = currBundles
+    userdata.shirtSize = getShirtSize()
+    userdata.discCode = discCode
     userdata.token = token
 
     $.ajax({
         type:'POST',
-        url:'http://localhost:3002/merchCharge',
+        url:'http://acmsec.mst.edu:3002/merchCharge',
         data:JSON.stringify({data:userdata}),
         processData: false,
         contentType: 'application/json',

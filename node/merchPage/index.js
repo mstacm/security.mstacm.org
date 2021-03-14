@@ -85,7 +85,7 @@ function checkValid(valArray){
 *
 * GET endpoint for redirecting users to merch page. Will redirect to paymentPages/index.html
 */
-app.get('/merchPage', (req, res) => {
+app.get('/merchPayPage', (req, res) => {
     res.redirect('https://acmsec.mst.edu/node/merchPage/paymentPages/');
 });
 
@@ -100,29 +100,26 @@ app.post('/merchCharge', function(req, res) {
 
     // Set the charge amount on server side for security.
     let Chargeamounts = serverInfo.chargePrices;
-    shirtPrice = Chargeamounts[0]
-    stickPrice = Chargeamounts[1]
-    collPrice = Chargeamounts[2]
-
-    // TODO Add coupon support
-    // if (req.body.coupons === process.env.PROMO){
-    //     Chargeamount = 2500; }
+    bundlePrice = Chargeamounts[0]
 
     //Parse incoming data from registration page
     userdata = req.body.data
     merchName = userdata.merchName
     email = userdata.email
-    numShirts = userdata.numShirts
-    numStick = userdata.numStickers
-    numColl = userdata.numColl
+    numBundles = userdata.numBundles
+    discCode = userdata.discCode
     token = userdata.token
 
-    if(checkValid([numShirts,numStick,numColl])){
+    if(checkValid([numBundles])){
         res.send(JSON.stringify({trxnSuccess:"Invalid entry!",success:false}));
     }
-    // All merch numbers are valid, proceed with purchase
 
-    let totalCharge = shirtPrice*numShirts + stickPrice*numStick + collPrice*numColl
+    // All merch numbers are valid, proceed with purchase
+    let totalCharge = bundlePrice * numBundles;
+
+    if (discCode === serverInfo.discCode){
+        totalCharge = (bundlePrice - serverInfo.discAmount) * numBundles;
+    }
 
     //Create new Stripe charge with public/private keys
     var charge = stripe.charges.create({
@@ -142,9 +139,7 @@ app.post('/merchCharge', function(req, res) {
                 timestamp: new Date(),
                 name:merchName,
                 email:email,
-                shirts:numShirts,
-                stickers:numStick,
-                collections:numColl,
+                bundles:numBundles,
                 fulfilled:'NO'
                 },
                 function(err, res){
@@ -154,7 +149,7 @@ app.post('/merchCharge', function(req, res) {
             console.log("Payment was successful.");
 
             // Send the new user an email and let the officers know
-            emailmod.sendMerchEmail(merchName,email,[numShirts,numStick,numColl])
+            emailmod.sendMerchEmail(merchName,email,[numBundles])
 
             // Let the user know that processing was successful
             res.send(JSON.stringify({trxnSuccess:"Your payment was successful!",success:true}));

@@ -31,9 +31,7 @@ module.exports = {
      */
 
     sendMerchEmail: function (username,email,purchases){
-        var numShirts = purchases[0]
-        var numStick = purchases[1]
-        var numColl = purchases[2]
+        var numBundles = purchases[0]
 
         // User email body
         var merchBodyUser = '<h3>ACM Security Team</h3>' + '<hr> <par>'+username+', thank you for your purchase! ' +
@@ -41,9 +39,7 @@ module.exports = {
             '</par>' +
             '<par>For your reference, here is what you purchased:' +
             '<ul>' +
-            '<li># of Shirts:'+numShirts+'</li>'+
-            '<li># of Stickers:'+numStick+'</li>'+
-            '<li># of Sticker Collections:'+numColl+'</li>'+
+            '<li># of bundles:'+numBundles+'</li>'+
             '</ul></par>'
 
         // Officer email body
@@ -53,9 +49,7 @@ module.exports = {
             '<par>' +
             'Here is what they purchased:'+
             '<ul>' +
-            '<li># of Shirts:'+numShirts+'</li>'+
-            '<li># of Stickers:'+numStick+'</li>'+
-            '<li># of Sticker Collections:'+numColl+'</li>'+
+            '<li># of bundles:'+numBundles+'</li>'+
             '</ul>'+
             '</par>'
 
