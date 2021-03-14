@@ -86,7 +86,7 @@ function checkValid(valArray){
 * GET endpoint for redirecting users to merch page. Will redirect to paymentPages/index.html
 */
 app.get('/merchPayPage', (req, res) => {
-    res.redirect('https://acmsec.mst.edu/node/merchPage/paymentPages/');
+    res.redirect('./paymentPages/index.html');
 });
 
 /**
@@ -107,6 +107,7 @@ app.post('/merchCharge', function(req, res) {
     merchName = userdata.merchName
     email = userdata.email
     numBundles = userdata.numBundles
+    shirtSize = userdata.shirtSize
     discCode = userdata.discCode
     token = userdata.token
 
@@ -140,6 +141,7 @@ app.post('/merchCharge', function(req, res) {
                 name:merchName,
                 email:email,
                 bundles:numBundles,
+                shirtsize: shirtSize,
                 fulfilled:'NO'
                 },
                 function(err, res){
@@ -149,7 +151,7 @@ app.post('/merchCharge', function(req, res) {
             console.log("Payment was successful.");
 
             // Send the new user an email and let the officers know
-            emailmod.sendMerchEmail(merchName,email,[numBundles])
+            emailmod.sendMerchEmail(merchName,email,[numBundles],shirtSize)
 
             // Let the user know that processing was successful
             res.send(JSON.stringify({trxnSuccess:"Your payment was successful!",success:true}));

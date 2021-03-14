@@ -1,7 +1,8 @@
-console.log("Loaded Resource!")
+
 let currSum = 0
 let currBundles = 0
 let bundlePrice = 20
+let shirtSize = 'S'
 let discCode = "None"
 
 $(document).ready(function(){
@@ -15,6 +16,27 @@ $(document).ready(function(){
             updatePrice()
         }
 
+    });
+
+    $('#smallRadio').change(function(event){
+        shirtSize = 'S'
+        console.log(shirtSize)
+    });
+
+    $('#medRadio').change(function(event){
+        shirtSize = 'M'
+        console.log(shirtSize)
+    });
+
+    $('#largeRadio').change(function(event){
+        shirtSize = 'L'
+        console.log(shirtSize)
+    });
+
+    $('#xlRadio').change(function(event){
+
+        shirtSize = 'XL'
+        console.log(shirtSize)
     });
 
     $('#merchDiscount').change(function(event){
@@ -43,34 +65,19 @@ function checkInvalid(newVal){
     return false
 }
 
-function getShirtsize(){
-    var shirtSize = 'S'
-    if ($("#smallRadio").prop("checked", true)){
-        shirtSize = 'S'
-    }else if ($("#medRadio").prop("checked", true)){
-        shirtSize = 'M'
-    }else if ($("#largeRadio").prop("checked", true)){
-        shirtSize = 'L'
-    }else if ($("#xlRadio").prop("checked", true)){
-        shirtSize = 'XL'
-    }
-
-    return shirtSize
-}
-
 function makeTransaction(token){
     userdata = {}
     userdata.merchName = $('#merchName').val()
     userdata.email = $('#merchEmail').val()
 
     userdata.numBundles = currBundles
-    userdata.shirtSize = getShirtSize()
+    userdata.shirtSize = shirtSize
     userdata.discCode = discCode
     userdata.token = token
 
     $.ajax({
         type:'POST',
-        url:'http://acmsec.mst.edu:3002/merchCharge',
+        url:'http://localhost:3002/merchCharge',
         data:JSON.stringify({data:userdata}),
         processData: false,
         contentType: 'application/json',
@@ -80,7 +87,7 @@ function makeTransaction(token){
             const trxnSuccess = json.trxnSuccess
 
             if (json.success){
-                alert("Your purchase was successful! You will be redirected shortly!");
+                alert("Your purchase was successful! You will be redirected shortly! Please check for an email in your spam filter!");
                 window.setTimeout(function(){
                     // Move back to the march page
                     window.location.href = "https://acmsec.mst.edu/merch/";

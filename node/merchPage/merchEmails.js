@@ -30,26 +30,29 @@ module.exports = {
      * @param {String}    eventname      Name of current registration event to remind user.
      */
 
-    sendMerchEmail: function (username,email,purchases){
+    sendMerchEmail: function (username,email,purchases,shirtSize){
         var numBundles = purchases[0]
 
+        // TODO update with shirt sizes and spacing
         // User email body
         var merchBodyUser = '<h3>ACM Security Team</h3>' + '<hr> <par>'+username+', thank you for your purchase! ' +
             'Our officers have been notified and will contact you shortly!' +
             '</par>' +
             '<par>For your reference, here is what you purchased:' +
             '<ul>' +
-            '<li># of bundles:'+numBundles+'</li>'+
+            '<li># of bundles: '+numBundles+'</li>'+
+            '<li>Shirt sizes: '+shirtSize+'</li>'+
             '</ul></par>'
 
         // Officer email body
         var merchBodyOfficer = '<h3>ACM Security Team</h3>' + '<hr> <par>' + username + ' has made a merch purchase, ' +
-            'please check the google spreadsheet.' +
+            'please check the google spreadsheet. ' +
             '</par>' +
             '<par>' +
             'Here is what they purchased:'+
             '<ul>' +
-            '<li># of bundles:'+numBundles+'</li>'+
+            '<li># of bundles: '+numBundles+'</li>'+
+            '<li>Shirt sizes: '+shirtSize+'</li>'+
             '</ul>'+
             '</par>'
 
