@@ -161,5 +161,5 @@ app.post('/merchCharge', function(req, res) {
 });
 
 // Setup port options for starting backend
-const port = process.env.PORT || 3002; // Leave as 3001 for event registration, allowing processes to be taken down
+const port = process.env.PORT || 3002; // Leave as 3002 for merch payment, allowing processes to be taken down
 app.listen(port,()=> console.log(`Listening on port ${port}!`));
