@@ -17,14 +17,14 @@ declare module 'stripe' {
       object: 'item';
 
       /**
-       * Total before any discounts or taxes is applied.
+       * Total before any discounts or taxes are applied.
        */
-      amount_subtotal: number | null;
+      amount_subtotal: number;
 
       /**
        * Total after discounts and taxes.
        */
-      amount_total: number | null;
+      amount_total: number;
 
       /**
        * Three-letter [ISO currency code](https://www.iso.org/iso-4217-currency-codes.html), in lowercase. Must be a [supported currency](https://stripe.com/docs/currencies).
@@ -42,14 +42,9 @@ declare module 'stripe' {
       discounts?: Array<LineItem.Discount>;
 
       /**
-       * Prices define the unit cost, currency, and (optional) billing cycle for both recurring and one-time purchases of products.
-       * [Products](https://stripe.com/docs/api#products) help you track inventory or provisioning, and prices help you track payment terms. Different physical goods or levels of service should be represented by products, and pricing options should be represented by prices. This approach lets you change prices without having to change your provisioning scheme.
-       *
-       * For example, you might have a single "gold" product that has prices for $10/month, $100/year, and €9 once.
-       *
-       * Related guides: [Set up a subscription](https://stripe.com/docs/billing/subscriptions/set-up-subscription), [create an invoice](https://stripe.com/docs/billing/invoices/create), and more about [products and prices](https://stripe.com/docs/billing/prices-guide).
+       * The price used to generate the line item.
        */
-      price: Stripe.Price;
+      price: Stripe.Price | null;
 
       /**
        * The quantity of products being purchased.
