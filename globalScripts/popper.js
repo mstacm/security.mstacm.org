@@ -1314,7 +1314,7 @@ function computeStyle(data, options) {
   var left = void 0,
       top = void 0;
   if (sideA === 'bottom') {
-    // when offsetParent is <html> the positioning is relative to the bottom of the screen (excluding the scrollbar)
+    // when offsetParent is <html lang="en"> the positioning is relative to the bottom of the screen (excluding the scrollbar)
     // and not the bottom of the html element
     if (offsetParent.nodeName === 'HTML') {
       top = -offsetParent.clientHeight + offsets.bottom;
