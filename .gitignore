@@ -1,10 +1,10 @@
 # Private configuration files
-node/registerEvents/registerConfigs/
-node/merchPage/merchConfigs/
-*/ACM Sec Backend-c7e090995ffd.json
+registerConfigs/
+merchConfigs/
+ACM Sec Backend-c7e090995ffd.json
 
 # Test files
-*/test.html
+test.html
 
 # Private keys
 *.pem
@@ -14,7 +14,7 @@ node/merchPage/merchConfigs/
 *.sh
 
 # node.js development files
-node/node_modules/
+node_modules/
 
 # Built files
-bootstrap/dist/
+dist/
