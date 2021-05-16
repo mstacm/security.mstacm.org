@@ -1,8 +1,20 @@
-./updateSite.sh
-./noSecureChrome.sh
-./node/ACM Sec Backend-c7e090995ffd.json
-./test.html
-./node/registerEvents/paymentPages/*.pem
-./node/registerEvents/registerConfigs/*
-./node/merchPage/merchConfigs/*
-./node/merchPage/paymetnPages/*.pem
+# Private configuration files
+node/registerEvents/registerConfigs/
+node/merchPage/merchConfigs/
+*/ACM Sec Backend-c7e090995ffd.json
+
+# Test files
+*/test.html
+
+# Private keys
+*.pem
+*.p12
+
+# Development scripts
+*.sh
+
+# node.js development files
+node/node_modules/
+
+# Built files
+bootstrap/dist/
