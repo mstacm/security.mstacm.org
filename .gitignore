@@ -18,3 +18,6 @@ node_modules/
 
 # Built files
 dist/
+
+# Don't touch the old site
+OldSite/
