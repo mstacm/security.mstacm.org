@@ -20,7 +20,7 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job.
     steps:
       - name: git pull acmsec.mst.edu
-        uses: garygrossgarten/github-action-ssh@v0.6.3
+        uses: garygrossgarten/github-action-ssh@v0.6.4
         with:
           command: cd /var/www/acmsec.mst.edu && sudo git pull
           host: ${{ secrets.HOST }}
