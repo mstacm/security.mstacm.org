@@ -26,3 +26,5 @@ jobs:
           host: ${{ secrets.HOST }}
           username: ctf-admin
           password: ${{ secrets.PASSWORD }}
+          tryKeyboard: true
+
