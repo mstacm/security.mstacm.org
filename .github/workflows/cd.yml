@@ -24,5 +24,6 @@ jobs:
         with:
           command: cd /var/www/acmsec.mst.edu && sudo git pull
           host: ${{ secrets.HOST }}
+          port: 22
           username: ctf-admin
           privateKey: ${{ secrets.PRIVATE_KEY }}
