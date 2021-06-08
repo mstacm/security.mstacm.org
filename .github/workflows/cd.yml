@@ -1,29 +1,21 @@
 # Keep acmsec.mst.edu up to date with master.
 name: Continuous Deployment
 
-# Controls when the action will run.
 on:
-  # Triggers the workflow on push events to the master branch
   push:
     branches: [ master ]
 
-  # Allows you to run this workflow manually from the Actions tab.
   workflow_dispatch:
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel.
 jobs:
-  # This workflow contains a single job called "build"
   Continuous-Deployment:
-    # The type of runner that the job will run on.
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
 
-    # Steps represent a sequence of tasks that will be executed as part of the job.
     steps:
-      - name: git pull acmsec.mst.edu
+      - name: Sync master branch to webserver
         uses: garygrossgarten/github-action-ssh@v0.6.4
         with:
           command: cd /var/www/acmsec.mst.edu && sudo git pull
           host: ${{ secrets.HOST }}
-          port: 22
           username: ctf-admin
           privateKey: ${{ secrets.PRIVATE_KEY }}
