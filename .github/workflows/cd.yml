@@ -15,7 +15,7 @@ jobs:
       - name: Sync master branch to webserver
         uses: garygrossgarten/github-action-ssh@v0.6.4
         with:
-          command: cd /var/www/acmsec.mst.edu && sudo git pull
+          command: cd /var/www/acmsec.mst.edu && sudo git pull && sudo npm install
           host: ${{ secrets.HOST }}
           username: ctf-admin
           privateKey: ${{ secrets.PRIVATE_KEY }}
