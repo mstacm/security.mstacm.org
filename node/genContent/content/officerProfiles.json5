@@ -26,16 +26,15 @@
             {
                 "name": "Dr. Taylor",
                 "role": "Advisor",
-                "image": "N/A",
+                "image": null,
                 "educ": "CS PhD",
                 "desc": "Associate Professor with tenure and Associate Chair of Undergraduate Studies and Outreach Activities in the <a href=\"https://cs.mst.edu/\">CS Department</a> at Missouri S&T.,taylor@mst.edu,N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Charles Rawlins",
                 "role": "Webmaster",
-                "image": "../images/Spring2021Pics/Charles_Rawlins.jpg",
                 "educ": "CpE PhD Student",
                 "desc": "Currently researching blockchain and machine learning for IoT Security.",
                 "email": "crfmb@mst.edu",
@@ -48,7 +47,7 @@
                 "educ": "CS Freshmen",
                 "desc": "I am very friendly with people around me. I am honest and confident in things I do.",
                 "email": "ajmdx@mst.edu",
-                "linkedin": "N/A"
+                "linkedin": null
             },
             {
                 "name": "Gavin Lewis",
@@ -62,7 +61,7 @@
             {
                 "name": "Mayowa Daniel",
                 "role": "CTF Captain",
-                "image": "N/A",
+                "image": null,
                 "educ": "CpE Junior",
                 "desc": "I like improvement. I like getting better at things I enjoy.",
                 "email": "danielmayowamichael@gmail.com",
@@ -115,7 +114,7 @@
             {
                 "name": "Charles Rawlins",
                 "role": "Webmaster",
-                "image": "../images/Fall2020Pics/CharlesRawlins.png",
+                "image": "/images/Fall2020Pics/CharlesRawlins.png",
                 "educ": "CpE PhD Student",
                 "desc": "Currently researching the world of distributed ledgers for the next generation of the Internet.",
                 "email": "crfmb@mst.edu",
@@ -124,14 +123,14 @@
             {
                 "name": "Dr. Taylor",
                 "role": "Advisor",
-                "image": "N/A",
+                "image": null,
                 "educ": "CS PhD",
                 "desc": "Associate Professor with tenure and Associate Chair of Undergraduate Studies and Outreach Activities in the <a href=\"https://cs.mst.edu/\">CS Department</a> at Missouri S&T.,taylor@mst.edu,N/A"
             },
             {
                 "name": "Matthew Stroble",
                 "role": "Secretary",
-                "image": "N/A",
+                "image": null,
                 "educ": "CS Senior",
                 "desc": "An elusive ninja.",
                 "email": "mssgwb@umsystem.edu",
@@ -191,7 +190,7 @@
             {
                 "name": "Dr. Taylor",
                 "role": "Advisor",
-                "image": "N/A",
+                "image": null,
                 "educ": "CS PhD",
                 "desc": "Associate Professor with tenure and Associate Chair of Undergraduate Studies and Outreach Activities in the <a href=\"https://cs.mst.edu/\">CS Department</a> at Missouri S&T.,taylor@mst.edu,N/A"
             },
@@ -207,92 +206,92 @@
             {
                 "name": "Jamason Velvet",
                 "role": "Webmaster",
-                "image": "N/A",
+                "image": null,
                 "educ": "CS",
-                "desc": "N/A",
+                "desc": null,
                 "email": "jsvg78@mst.edu",
-                "linkedin": "N/A"
+                "linkedin": null
             },
             {
                 "name": "Joel Pashi",
                 "role": "Archivist/Secretary",
-                "image": "N/A",
+                "image": null,
                 "educ": "CS",
-                "desc": "N/A",
+                "desc": null,
                 "email": "jkpxb6@mst.edu",
-                "linkedin": "N/A"
+                "linkedin": null
             },
             {
                 "name": "Morgen Nicodemus",
                 "role": "CTF Captain",
-                "image": "N/A",
+                "image": null,
                 "educ": "CS",
-                "desc": "N/A",
+                "desc": null,
                 "email": "mrnx8d@mst.edu",
                 "linkedin": ""
             },
             {
                 "name": "Gavin Lewis",
                 "role": "CCDC Captain",
-                "image": "N/A",
+                "image": null,
                 "educ": "CS",
-                "desc": "N/A",
+                "desc": null,
                 "email": "gzlfyb@mst.edu",
-                "linkedin": "N/A"
+                "linkedin": null
             },
             {
                 "name": "Kevin Patel",
                 "role": "Special Projects",
                 "image": "../images/Fall2020Pics/Kevin_Patel.png",
                 "educ": "CS Junior",
-                "desc": "N/A",
+                "desc": null,
                 "email": "krppmc@mst.edu",
-                "linkedin": "N/A"
+                "linkedin": null
             },
             {
                 "name": "Nicholas Lambert",
                 "role": "Special Projects",
-                "image": "N/A",
+                "image": null,
                 "educ": "CS",
-                "desc": "N/A",
+                "desc": null,
                 "email": "nalbbb@mst.edu",
-                "linkedin": "N/A"
+                "linkedin": null
             },
             {
                 "name": "Ethan O'Dell",
                 "role": "Special Projects",
-                "image": "N/A",
+                "image": null,
                 "educ": "CS",
-                "desc": "N/A",
+                "desc": null,
                 "email": "eofx7@mst.edu",
-                "linkedin": "N/A"
+                "linkedin": null
             },
             {
                 "name": "Divya Digavalli",
                 "role": "Special Projects",
-                "image": "N/A",
+                "image": null,
                 "educ": "CS",
-                "desc": "N/A",
+                "desc": null,
                 "email": "ddmgw@mst.edu",
-                "linkedin": "N/A"
+                "linkedin": null
             },
             {
                 "name": "Brenden Barlow",
                 "role": "Special Projects",
-                "image": "N/A",
+                "image": null,
                 "educ": "CS Senior",
-                "desc": "N/A",
+                "desc": null,
                 "email": "bkb9tb@mst.edu",
-                "linkedin": "N/A"
+                "linkedin": null
             },
             {
                 "name": "Pamela Petterchak",
                 "role": "Special Projects",
-                "image": "N/A",
+                "image": null,
                 "educ": "CS Junior",
-                "desc": "N/A",
+                "desc": null,
                 "email": "pfpg7m@mst.edu",
-                "linkedin": "N/A"
+                "linkedin": null
             }
         ]
     },
@@ -304,110 +303,110 @@
             {
                 "name": "Tanner Stephens",
                 "role": "Chair",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Kevin Newell",
                 "role": "Vice Chair and CTF Captain",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Gavin Lewis",
                 "role": "CCDC Captain",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Hannah Reinbolt",
                 "role": "Webmaster",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Alexander Hatfalvi",
                 "role": "Webmaster",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Steven Giangreco",
                 "role": "Special Projects",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Shelby Hayes",
                 "role": "Special Projects",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Benden Barlow",
                 "role": "Special Projects",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Pamela Petterchek",
                 "role": "Special Projects",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Divya Digavalli",
                 "role": "Publicity",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Kevin Patel",
                 "role": "Secretary",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Dr. Tauritz",
                 "role": "Faulty Advisor",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             }
         ]
     },
@@ -419,128 +418,128 @@
             {
                 "name": "Tanner Stephens",
                 "role": "Chair",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Kevin Newell",
                 "role": "Vice Chair and CTF Captain",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Gavin Lewis",
                 "role": "CCDC Captain",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Hannah Reinbolt",
                 "role": "Webmaster",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Alexander Hatfalvi",
                 "role": "Webmaster",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Steven Giangreco",
                 "role": "Special Projects",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Shelby Hayes",
                 "role": "Special Projects",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "David Wood",
                 "role": "Special Projects",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Benden Barlow",
                 "role": "Special Projects",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Pamela Petterchek",
                 "role": "Special Projects",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Divya Digavalli",
                 "role": "Publicity",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Ebba Oldenborg",
                 "role": "Publicity",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Kevin Patel",
                 "role": "Secretary",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Dr. Tauritz",
                 "role": "Faulty Advisor",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             }
         ]
     },
@@ -552,128 +551,128 @@
             {
                 "name": "Brendan Curran",
                 "role": "Chair and CTF Captain",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Tanner Stephens",
                 "role": "Vice Chair",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Kevin Patel",
                 "role": "Secretary",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Kevin Newell",
                 "role": "CTF Coordinator",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Adam Eaton",
                 "role": "CCDC and CPTC Captain",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Hannah Reinbolt",
                 "role": "Webmaster",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Alexander Hatfalvi",
                 "role": "Webmaster",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Steven Giangreco",
                 "role": "Special Projects",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Shelby Hayes",
                 "role": "Special Projects",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "David Wood",
                 "role": "Special Projects",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Pamela Petterchek",
                 "role": "Special Projects",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Ebba Oldenborg",
                 "role": "Publicity",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Henry Wong",
                 "role": "Publicity",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Dr. Tauritz",
                 "role": "Faulty Advisor",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             }
         ]
     },
@@ -685,146 +684,146 @@
             {
                 "name": "Eric Michalak",
                 "role": "Chair and CTF Captain",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Brendan Curran",
                 "role": "Vice Chair",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Steven Giangreco",
                 "role": "Secretary",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Shawn McCormick",
                 "role": "CTF Coordinator",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Tanner Stephens",
                 "role": "Archivist",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Sammie Bush",
                 "role": "CCDC Captain",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Adam Eaton",
                 "role": "CCDC Vice Captain",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Hannah Reinbolt",
                 "role": "Webmaster",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Alexander Hatfalvi",
                 "role": "Webmaster",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Steven Giangreco",
                 "role": "Special Projects",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Shelby Hayes",
                 "role": "Special Projects",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Mark Myers",
                 "role": "Special Projects",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "David Wood",
                 "role": "Special Projects",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Tanner Stephens",
                 "role": "Special Projects",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Katrina Ward",
                 "role": "Publicity",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Dr. Tauritz",
                 "role": "Faulty Advisor",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             }
         ]
     },
@@ -836,110 +835,110 @@
             {
                 "name": "Eric Michalak",
                 "role": "Chair",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Dr. Taylor",
                 "role": "CDT Coach",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Brendan Curran",
                 "role": "Vice Chair and Webmaster",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Steven Giangreco",
                 "role": "Secretary",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "CTF Coordinator",
                 "role": "Shawn McCormick",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Tanner Stephens",
                 "role": "Archivist",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Hannah Reinbolt",
                 "role": "Webmaster",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Henry Wong",
                 "role": "Special Projects",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Joshua Morris",
                 "role": "Special Projects",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Mark Anderson",
                 "role": "Publicity",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Katrina Ward",
                 "role": "University Relations",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Dr. Tauritz",
                 "role": "Faulty Advisor",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             }
         ]
     },
@@ -951,110 +950,110 @@
             {
                 "name": "Eric Michalak",
                 "role": "Chair",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Brendan Curran",
                 "role": "Vice Chair",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Steven Giangreco",
                 "role": "Secretary",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Anna Pankiewicz",
                 "role": "Webmaster",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Henry Wong",
                 "role": "Special Projects",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Trey Nickelsen",
                 "role": "Special Projects",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Sammie Bush",
                 "role": "Special Projects",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Mark Anderson",
                 "role": "Publicity",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Katrina Ward",
                 "role": "University Relations",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Eric Michalak",
                 "role": "M57 Captain",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Sammie Bush",
                 "role": "CCDC Captain",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Dr. Tauritz",
                 "role": "Faculty Advisor",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             }
         ]
     },
@@ -1066,119 +1065,119 @@
             {
                 "name": "Sammie Bush",
                 "role": "Chair",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Eric Michalak",
                 "role": "Vice Chair",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Trey Nickelsen",
                 "role": "Secretary",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Sean Ryan",
                 "role": "Webmaster",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Anna Pankiewicz",
                 "role": "Webmaster",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Katrina Ward",
                 "role": "Special Projects",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Mark Anderson",
                 "role": "Special Projects",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Steven Giangreco",
                 "role": "Special Projects",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Julia Calandro",
                 "role": "Publicity",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Alex Bertels",
                 "role": "University Relations",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Sammie Bush",
                 "role": "Cyber Defense Captain",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Eric Michalak",
                 "role": "Cyber Defense Vice Captain",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Dr. Tauritz",
                 "role": "Faculty Advisor",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             }
         ]
     },
@@ -1190,92 +1189,92 @@
             {
                 "name": "Sammie Bush",
                 "role": "Chair",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Caleb McGennis",
                 "role": "Vice Chair",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Trey Nickelsen",
                 "role": "Secretary",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Sean Ryan",
                 "role": "Webmaster",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Katrina Ward",
                 "role": "Special Projects",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Julia Calandro",
                 "role": "Publicity",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Alex Bertels",
                 "role": "University Relations",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Sammie Bush",
                 "role": "Cyber Defense Captain",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Caleb McGennis",
                 "role": "Cyber Defense Vice Captain",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Dr. Tauritz",
                 "role": "Faculty Advisor",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             }
         ]
     },
@@ -1287,137 +1286,137 @@
             {
                 "name": "Lance Pendergrass",
                 "role": "Chair",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Sammie Bush",
                 "role": "Vice Chair",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Katrina Ward",
                 "role": "Secretary",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Lauren Kroenung",
                 "role": "Webmaster",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Luis Pereira",
                 "role": "Webmaster",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Brad Emge",
                 "role": "Special Projects",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Valentin Frommherz",
                 "role": "Special Projects",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Elizabeth Billings",
                 "role": "Special Projects",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Trey Nickelsen",
                 "role": "Special Projects",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Caleb McGennis",
                 "role": "Special Projects",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Lauren Kroenung",
                 "role": "Publicity",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Alex Bertels",
                 "role": "University Relations",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Sammie Bush",
                 "role": "Cyber Defense Captain",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Tim MalcomVetter",
                 "role": "Industry Consultant/Cbyer Defense Team Advisor",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Dr. Tauritz",
                 "role": "Faculty Advisor",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             }
         ]
     },
@@ -1429,110 +1428,110 @@
             {
                 "name": "Lance Pendergrass",
                 "role": "Chair",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Sammie Bush",
                 "role": "Vice Chair",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Katrina Ward",
                 "role": "Secretary",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Lauren Kroenung",
                 "role": "Webmaster",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Luis Pereira",
                 "role": "Webmaster",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Brad Eme",
                 "role": "Special Projects",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Jeff Rogers",
                 "role": "Special Projects",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Valentin Frommherz",
                 "role": "Special Projects",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Cara Strunk",
                 "role": "Publicity",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Alex Bertels",
                 "role": "University Relations",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Sammie Bush",
                 "role": "Cyber Defense Captain",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Dr. Tauritz",
                 "role": "Faculty Advisor",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             }
         ]
     },
@@ -1544,128 +1543,128 @@
             {
                 "name": "Lance Pendergrass",
                 "role": "Chair",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Sammie Bush",
                 "role": "Vice Chair",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Jeffery Rodgers",
                 "role": "Secretary",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Lauren Kroenung",
                 "role": "Webmaster",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Justin O'Brien",
                 "role": "Special Projects",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Chris Dunn",
                 "role": "Special Projects",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Jeff Rogers",
                 "role": "Special Projects",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Aaron Yoder",
                 "role": "Special Projects",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Sammie Bush",
                 "role": "Special Projects",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Katrina Ward",
                 "role": "Publicity",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Alex Bertels",
                 "role": "University Relations",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Brad Emge",
                 "role": "University Relations",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Jacob Magdziarz",
                 "role": "Cyber Defense Captain",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Dr. Tauritz",
                 "role": "Faculty Advisor",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             }
         ]
     },
@@ -1677,92 +1676,92 @@
             {
                 "name": "Chris Rawlings",
                 "role": "Chair",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Lance Pendergrass",
                 "role": "Vice Chair",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Jeffery Rodgers",
                 "role": "Secretary",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Lauren Kroenung",
                 "role": "Webmaster",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Justin O'Brien",
                 "role": "Special Projects",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Katrina Ward",
                 "role": "Publicity",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Alex Bertels",
                 "role": "University Relations",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Brad Emge",
                 "role": "University Relations",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Jacob Magdziarz",
                 "role": "Cyber Defense Captain",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Dr. Tauritz",
                 "role": "Faculty Advisor",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             }
         ]
     },
@@ -1774,92 +1773,92 @@
             {
                 "name": "Jacob Magdziarz",
                 "role": "Chair",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Chris Rawlings",
                 "role": "Vice Chair",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Alex Bertels",
                 "role": "Secretary",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Justin O'Brien",
                 "role": "Webmaster",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Lance Pendergrass",
                 "role": "Special Projects",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Jasenko Hosic",
                 "role": "Special Projects",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Jeffrey Shellburg",
                 "role": "Special Projects",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Lauren Kroenung",
                 "role": "Publicity",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Jeffrey Rodgers",
                 "role": "University Relations",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Dr. Tauritz",
                 "role": "Faculty Advisor",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             }
         ]
     },
@@ -1871,92 +1870,92 @@
             {
                 "name": "Jacob Magdziarz",
                 "role": "Chair",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Chris Rawlings",
                 "role": "Vice Chair",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Alex Bertels",
                 "role": "Secretary",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Justin O'Brien",
                 "role": "Webmaster",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Lance Pendergrass",
                 "role": "Special Projects",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Jasenko Hosic",
                 "role": "Special Projects",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Jeffrey Shellburg",
                 "role": "Special Projects",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Lauren Kroenung",
                 "role": "Publicity",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Jeffrey Rodgers",
                 "role": "University Relations",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Dr. Tauritz",
                 "role": "Faculty Advisor",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             }
         ]
     },
@@ -1968,92 +1967,92 @@
             {
                 "name": "Jacob Magdziarz",
                 "role": "Chair",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Caitlin Derr",
                 "role": "Vice Chair",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Yaxi Liu",
                 "role": "Secretary",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Justin O'Brien",
                 "role": "Webmaster",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Jeff Shelburg",
                 "role": "Special Projects",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Chris Rawlings",
                 "role": "Special Projects",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Jasenko Hosic",
                 "role": "Special Projects",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Ryan Birmingham",
                 "role": "Special Projects",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Michael Wisely",
                 "role": "Publicity",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Dr. Tauritz",
                 "role": "Faculty Advisor",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             }
         ]
     },
@@ -2065,92 +2064,92 @@
             {
                 "name": "Jacob Magdziarz",
                 "role": "Chair",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Caitlin Derr",
                 "role": "Vice Chair",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Yaxi Liu",
                 "role": "Secretary",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Justin O'Brien",
                 "role": "Webmaster",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Jeff Shelburg",
                 "role": "Special Projects",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Chris Rawlings",
                 "role": "Special Projects",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Jasenko Hosic",
                 "role": "Special Projects",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Ryan Birmingham",
                 "role": "Special Projects",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Michael Wisely",
                 "role": "Publicity",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Dr. Tauritz",
                 "role": "Faculty Advisor",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             }
         ]
     },
@@ -2162,65 +2161,65 @@
             {
                 "name": "Jeff Shelburg",
                 "role": "Co-Chair",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Michael Wisely",
                 "role": "Co-Chair",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Caitlin Derr",
                 "role": "Secretary",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Ben Tullis",
                 "role": "Webmaster",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Jason Magdziarz",
                 "role": "Special Projects",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Justin O'Brien",
                 "role": "Special Projects",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Dr. Tauritz",
                 "role": "Faculty Advisor",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             }
         ]
     },
@@ -2232,65 +2231,65 @@
             {
                 "name": "Jeff Shelburg",
                 "role": "Co-Chair",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Michael Wisely",
                 "role": "Co-Chair",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Ryan Birmingham",
                 "role": "Secretary",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Ben Tullis",
                 "role": "Webmaster",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Jason Magdziarz",
                 "role": "Special Projects",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Justin O'Brien",
                 "role": "Special Projects",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Dr. Tauritz",
                 "role": "Faculty Advisor",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             }
         ]
     },
@@ -2302,83 +2301,83 @@
             {
                 "name": "Jeff Shelburg",
                 "role": "Co-Chair",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "John Brown",
                 "role": "Co-Chair",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Allan",
                 "role": "Secretary",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Patrick Edgett",
                 "role": "Webmaster",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Andrew",
                 "role": "Special Projects",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Ben",
                 "role": "Special Projects",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Michael Wisely",
                 "role": "Publicity",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Jordan",
                 "role": "University Relations",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             },
             {
                 "name": "Dr. Tauritz",
                 "role": "Faculty Advisor",
-                "image": "BLANK",
-                "educ": "N/A",
-                "desc": "N/A",
-                "email": "N/A",
-                "linkedin": "N/A"
+                "image": null,
+                "educ": null,
+                "desc": null,
+                "email": null,
+                "linkedin": null
             }
         ]
     }

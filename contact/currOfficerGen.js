@@ -21,7 +21,7 @@ function generateCurrOfficers(){
     // Get learning content from backend
     $.ajax({
         type:'GET',
-        url:'https://acmsec.mst.edu/currentOfficers',
+        url:'/currentOfficers',
         contentType: "application/json",
 
         success: function(json) {
@@ -96,11 +96,11 @@ function generateProfiles(currOfficers){
         // Card header
         tabBlock += '<div class="card-header">' + officerEntries[j].role + '</div>'
         // Card image
-        if (officerEntries[j].image == "N/A") {
+        if (officerEntries[j].image == null) {
             tabBlock += '<img class="img-fluid" src="../images/OldOfficerPics/blank.png" alt="' +
                 officerEntries[j].name + '" style="width: 100%">';
 
-        } else if(officerEntries[j].image == "BLANK"){
+        } else if(officerEntries[j].image == null){
             // Empty image
         }else {
             tabBlock += '<img class="img-fluid" src="' + officerEntries[j].image + '" alt="' +
@@ -113,7 +113,7 @@ function generateProfiles(currOfficers){
         // Card body title
         tabBlock += '<h5 class="card-title">' + officerEntries[j].name + '</h5>';
         // Card body desc.
-        if (officerEntries[j].desc != "N/A") {
+        if (officerEntries[j].desc != null) {
             tabBlock += '<p class="card-text">' + officerEntries[j].desc + '\n</p>';
             tabBlock += '<p class="card-text">' + officerEntries[j].educ + '</p>';
         }
@@ -122,13 +122,13 @@ function generateProfiles(currOfficers){
         tabBlock += '</div>';
 
         //Card email and linkedin
-        if((officerEntries[j].email || officerEntries[j].linkedin) != "N/A") {
+        if((officerEntries[j].email || officerEntries[j].linkedin) != null) {
             tabBlock += '<div class="card-footer " style="width: 15rem;">';
-            if (officerEntries[j].email != "N/A") {
+            if (officerEntries[j].email != null) {
                 tabBlock += '<a href="mailto:' + officerEntries[j].email + '" class="btn btn-primary float-left">Email</a>';
             }
 
-            if (officerEntries[j].linkedin != "N/A") {
+            if (officerEntries[j].linkedin != null) {
                 tabBlock += '<a href="' + officerEntries[j].linkedin + '" class="btn btn-primary float-right">LinkedIn</a>';
             }
             // Card footer /div
