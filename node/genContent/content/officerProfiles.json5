@@ -8,7 +8,7 @@
             {
                 "name": "Pamela Petterchak",
                 "role": "Chair",
-                "image": "../images/Fall2020Pics/pamela_petterchak.png",
+                "image": "/images/Fall2020Pics/pamela_petterchak.png",
                 "educ": "CS/CpE Junior",
                 "desc": "Future cybersecurity professional, interested in social engineering prevention and national security.",
                 "email": "pfpg7m@mst.edu",
@@ -17,7 +17,7 @@
             {
                 "name": "Morgen Nicodemus",
                 "role": "Vice Chair & CPTC Captain",
-                "image": "../images/Fall2020Pics/morgen.jpg",
+                "image": "/images/Fall2020Pics/morgen.jpg",
                 "educ": "CS Senior",
                 "desc": "Loves challenges involved with Security, including CTFs. Hopes to build a career as a Penetration Tester.",
                 "email": "mrnx8d@umsystem.edu",
@@ -35,6 +35,7 @@
             {
                 "name": "Charles Rawlins",
                 "role": "Webmaster",
+                "image": "/images/Spring2021Pics/Charles_Rawlins.jpg",
                 "educ": "CpE PhD Student",
                 "desc": "Currently researching blockchain and machine learning for IoT Security.",
                 "email": "crfmb@mst.edu",
@@ -43,8 +44,8 @@
             {
                 "name": "Akruti Joshi",
                 "role": "Secretary",
-                "image": "../images/Spring2021Pics/Akruti_Joshi.jpg",
                 "educ": "CS Freshmen",
+                "image": "/images/Spring2021Pics/Akruti_Joshi.jpg",
                 "desc": "I am very friendly with people around me. I am honest and confident in things I do.",
                 "email": "ajmdx@mst.edu",
                 "linkedin": null
@@ -52,7 +53,7 @@
             {
                 "name": "Gavin Lewis",
                 "role": "CCDC Captain",
-                "image": "../images/Fall2020Pics/gavinLewis.png",
+                "image": "/images/Fall2020Pics/gavinLewis.png",
                 "educ": "CS Senior",
                 "desc": "Interested in cyber defense and leadership.",
                 "email": "gzlfyb@mst.edu",
@@ -70,7 +71,7 @@
             {
                 "name": "Jamason Velvet",
                 "role": "CTF Captain & Special Projects",
-                "image": "../images/Fall2020Pics/JV.jpg",
+                "image": "/images/Fall2020Pics/JV.jpg",
                 "educ": "CS Senior",
                 "desc": "Interested in applying Computer Science techniques to medicine.",
                 "email": "jsvg78@umsystem.edu",
@@ -79,7 +80,7 @@
             {
                 "name": "Anthony Sharp",
                 "role": "Special Projects",
-                "image": "../images/Fall2020Pics/anthony_sharp.png",
+                "image": "/images/Fall2020Pics/anthony_sharp.png",
                 "educ": "CS/Math Senior",
                 "desc": "Future cybersecurity professional and mathematician, interested in cybersecurity analysts and software developer.",
                 "email": "avsrcm@mst.edu",
@@ -96,7 +97,7 @@
             {
                 "name": "Hannah Reinbolt",
                 "role": "Chair",
-                "image": "../images/Fall2020Pics/hannah-reinbolt.png",
+                "image": "/images/Fall2020Pics/hannah-reinbolt.png",
                 "educ": "CS Senior",
                 "desc": "Dedicated to cyber-security, exploring new technology, and chilling with the friends!",
                 "email": "hmrvg9@mst.edu",
@@ -105,7 +106,7 @@
             {
                 "name": "Pamela Petterchak",
                 "role": "Vice-chair",
-                "image": "../images/Fall2020Pics/pamela_petterchak.png",
+                "image": "/images/Fall2020Pics/pamela_petterchak.png",
                 "educ": "CS/CpE Junior",
                 "desc": "Future cybersecurity professional, interested in social engineering prevention and national security.",
                 "email": "pfpg7m@mst.edu",
@@ -139,7 +140,7 @@
             {
                 "name": "Morgen Nicodemus",
                 "role": "CPTC Captain",
-                "image": "../images/Fall2020Pics/morgen.jpg",
+                "image": "/images/Fall2020Pics/morgen.jpg",
                 "educ": "CS Senior",
                 "desc": "Loves challenges involved with Security, including CTFs. Hopes to build a career as a Penetration Tester.",
                 "email": "mrnx8d@umsystem.edu",
@@ -148,7 +149,7 @@
             {
                 "name": "Gavin Lewis",
                 "role": "CCDC Captain",
-                "image": "../images/Fall2020Pics/gavinLewis.png",
+                "image": "/images/Fall2020Pics/gavinLewis.png",
                 "educ": "CS Senior",
                 "desc": "Interested in cyber defense and leadership.",
                 "email": "gzlfyb@mst.edu",
@@ -157,7 +158,7 @@
             {
                 "name": "Jamason Velvet",
                 "role": "CTF Captain & Special Projects",
-                "image": "../images/Fall2020Pics/JV.jpg",
+                "image": "/images/Fall2020Pics/JV.jpg",
                 "educ": "CS Senior",
                 "desc": "Interested in applying Computer Science techniques to medicine.",
                 "email": "jsvg78@umsystem.edu",
@@ -166,7 +167,7 @@
             {
                 "name": "Anthony Sharp",
                 "role": "Special Projects",
-                "image": "../images/Fall2020Pics/anthony_sharp.png",
+                "image": "/images/Fall2020Pics/anthony_sharp.png",
                 "educ": "CS/Math Senior",
                 "desc": "Future cybersecurity professional and mathematician, interested in cybersecurity analysts and software developer.",
                 "email": "avsrcm@mst.edu",
@@ -182,7 +183,7 @@
             {
                 "name": "Kevin Newell",
                 "role": "Chair & CPTC Captain",
-                "image": "../images/Fall2020Pics/kevin-newell.png",
+                "image": "/images/Fall2020Pics/kevin-newell.png",
                 "educ": "CS Senior",
                 "desc": "Looking forward to pushing the cybersecurity industry forward!",
                 "email": "kanm29@mst.edu"
@@ -197,7 +198,7 @@
             {
                 "name": "Hannah Reinbolt",
                 "role": "Vice Chair",
-                "image": "../images/Fall2020Pics/hannah-reinbolt.png",
+                "image": "/images/Fall2020Pics/hannah-reinbolt.png",
                 "educ": "CS Junior",
                 "desc": "Dedicated to cyber-security, exploring new technology, and chilling with the friends!",
                 "email": "hmrvg9@mst.edu",
@@ -242,7 +243,7 @@
             {
                 "name": "Kevin Patel",
                 "role": "Special Projects",
-                "image": "../images/Fall2020Pics/Kevin_Patel.png",
+                "image": "/images/Fall2020Pics/Kevin_Patel.png",
                 "educ": "CS Junior",
                 "desc": null,
                 "email": "krppmc@mst.edu",
