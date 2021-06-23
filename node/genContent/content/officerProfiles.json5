@@ -1,6 +1,98 @@
 // Array of officer profiles for the history of ACM security
 [
     {
+        "year": "Fall 2021",
+        "contentID": "ContentFall2021",
+        "tabID": "IDFall2021",
+        "officerEntries": [
+            {
+                // Expecting new picture
+                "name": "Pamela Petterchak",
+                "role": "Chair",
+                "image": "/images/Fall2020Pics/pamela_petterchak.png",
+                "educ": "CS/CpE Senior",
+                "desc": "Future cybersecurity professional, interested in social engineering prevention and national security.",
+                "email": "pfpg7m@mst.edu",
+                "linkedin": "https://www.linkedin.com/in/pamela-petterchak/"
+            },
+            {
+                "name": "Charles Rawlins",
+                "role": "Vice Chair",
+                "image": "/images/Spring2021Pics/Charles_Rawlins.jpg",
+                "educ": "CpE PhD Student",
+                "desc": "Currently researching blockchain and machine learning for IoT Security.",
+                "email": "crfmb@mst.edu",
+                "linkedin": "https://www.linkedin.com/in/charles-rawlins-b37294123/"
+            },
+            {
+                // Awaiting response to update request
+                "name": "Akruti Joshi",
+                "role": "Secretary / Archivist",
+                "image": "/images/Spring2021Pics/Akruti_Joshi.jpg",
+                "educ": "CS Sophomore",
+                "desc": "I am very friendly with people around me. I am honest and confident in things I do.",
+                "email": "ajmdx@mst.edu",
+                "linkedin": null,
+            },
+            {
+                // Expecting new picture
+                "name": "Mayowa Daniel",
+                "role": "CTF Captain",
+                "image": null,
+                "educ": "CpE Senior",
+                "desc": "I like improvement. I like getting better at things I enjoy.",
+                "email": "danielmayowamichael@gmail.com",
+                "linkedin": "https://linkedin.com/in/mayowa-daniel-07ab21191"
+            },
+            {
+                "name": "Beck Saunders",
+                "role": "CPTC Captain",
+                "image": "/images/Fall2021Pics/Beck_Saunders_Photo.jpg",
+                "educ": "CE && EE Junior",
+                "desc": "Interested in everything from cybersecurity to lasers.",
+                "email": "bts4fn@umsystem.edu",
+                "linkedin": "https://www.linkedin.com/in/beck-saunders-6a87901a3",
+            },
+            {
+                "name": "Nate Kean",
+                "role": "Webmaster",
+                "image": "/images/Fall2021Pics/nate-kean-4-8-2021.jpg",
+                "educ": "CS Sophomore",
+                "desc": "Passionate about learning, computer problem solving, and programming.",
+                "email": "natekean@mst.edu",
+                "linkedin": "https://www.linkedin.com/in/nate-kean/"
+            },
+            {
+                // Expecting new picture
+                "name": "Anthony Sharp",
+                "role": "Special Projects",
+                "image": null, // "/images/Fall2020Pics/anthony_sharp.png",
+                "educ": "CS/Math Senior",
+                "desc": "Future cybersecurity professional and mathematician, interested in cybersecurity analysts and software developer.",
+                "email": "avsrcm@mst.edu",
+                "linkedin": "https://www.linkedin.com/in/anthony-sharp-879267162/"
+            },
+            {
+                "name": "Adam Crawford",
+                "role": "Special Projects",
+                "image": "/images/Fall2021Pics/adam_crawford.jpg",
+                "educ": "IST Sophomore",
+                "desc": "Enjoys learning about most things related to computers, especially cybersecurity, networking, and software development.",
+                "email": "archyk@mst.edu",
+                "linkedin": "https://www.linkedin.com/in/adam-craw/"
+            },
+            {
+                "name": "Dr. Taylor",
+                "role": "Advisor",
+                "image": null,
+                "educ": "CS PhD",
+                "desc": "Associate Professor with tenure and Associate Chair of Undergraduate Studies and Outreach Activities in the <a href=\"https://cs.mst.edu/\">CS Department</a> at Missouri S&T.",
+                "email": "taylor@mst.edu",
+                "linkedin": null
+            },
+        ]
+    },
+    {
         "year": "Spring 2021",
         "contentID": "ContentSpring2021",
         "tabID": "IDSpring2021",
