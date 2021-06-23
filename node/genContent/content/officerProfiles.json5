@@ -66,7 +66,7 @@
                 // Expecting new picture
                 "name": "Anthony Sharp",
                 "role": "Special Projects",
-                "image": null, // "/images/Fall2020Pics/anthony_sharp.png",
+                "image": "/images/Fall2020Pics/anthony_sharp.png",
                 "educ": "CS/Math Senior",
                 "desc": "Future cybersecurity professional and mathematician, interested in cybersecurity analysts and software developer.",
                 "email": "avsrcm@mst.edu",
