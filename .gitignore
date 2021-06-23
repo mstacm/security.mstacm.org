@@ -1,3 +1,7 @@
+# IDE configuration files
+.vscode/
+.idea/
+
 # Private configuration files
 registerConfigs/
 merchConfigs/
@@ -15,7 +19,6 @@ test.html
 
 # node.js development files
 node_modules/
-node/node_modules/
 
 # Built files
 dist/
