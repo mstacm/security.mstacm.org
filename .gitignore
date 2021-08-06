@@ -25,3 +25,6 @@ dist/
 
 # Don't touch the old site
 OldSite/
+
+# Environment variables
+.env
