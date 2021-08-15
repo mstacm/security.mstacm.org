@@ -63,10 +63,9 @@
                 "linkedin": "https://www.linkedin.com/in/nate-kean/"
             },
             {
-                // Expecting new picture
                 "name": "Anthony Sharp",
                 "role": "Special Projects",
-                "image": "/images/Fall2020Pics/anthony_sharp.png",
+                "image": "/images/Fall2021Pics/20210813_1642572.jpg",
                 "educ": "CS/Math Senior",
                 "desc": "Future cybersecurity professional and mathematician, interested in cybersecurity analysts and software developer.",
                 "email": "avsrcm@mst.edu",
