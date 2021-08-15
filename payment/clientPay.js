@@ -1,110 +1,81 @@
+const bundlePrice = 20;
+let numBundles = 1;
+let shirtSize = 'S';
 
-let currSum = 0
-let currBundles = 0
-let bundlePrice = 20
-let shirtSize = 'S'
-let discCode = "None"
-
-$(document).ready(function(){
-    $('#numBundles').change(function(event){
-        let bundleText = $('#numBundles').val()
-        bundleNum = parseInt(bundleText)
+$(document).ready( () => {
+    $('#numBundles').change( () => {
+        const bundleNum = parseInt($('#numBundles').val());
         if (checkInvalid(bundleNum)) {
-            alert("Please enter a valid number!")
+            alert("Please enter a valid number!");
         } else {
-            currBundles = bundleNum
-            updatePrice()
+            numBundles = bundleNum;
+            updatePrice();
         }
-
     });
 
-    $('#smallRadio').change(function(event){
-        shirtSize = 'S'
-        console.log(shirtSize)
+    $('#smallRadio').change( () => {
+        shirtSize = 'S';
     });
 
-    $('#medRadio').change(function(event){
-        shirtSize = 'M'
-        console.log(shirtSize)
+    $('#medRadio').change( () => {
+        shirtSize = 'M';
     });
 
-    $('#largeRadio').change(function(event){
-        shirtSize = 'L'
-        console.log(shirtSize)
+    $('#largeRadio').change( () => {
+        shirtSize = 'L';
     });
 
-    $('#xlRadio').change(function(event){
-
-        shirtSize = 'XL'
-        console.log(shirtSize)
+    $('#xlRadio').change( () => {
+        shirtSize = 'XL';
     });
 
-    $('#merchDiscount').change(function(event){
-        let discText = $('#merchDiscount').val()
-        discCode = discText
-    });
-
+    updatePrice();
 });
 
-function updatePrice(){
-
-    let sumPrice = bundlePrice*currBundles
-    $('#paymentCharge').text( "Total Price: $" + sumPrice)
+function updatePrice() {
+    $('#paymentCharge').text("Total Price: $" + bundlePrice * numBundles);
 
 }
 
-function checkInvalid(newVal){
-
-    if(isNaN(newVal)){
-        return true
-    }
-    if(newVal < 0){
-        return true
-    }
-
-    return false
+function checkInvalid(newVal) {
+    return isNaN(newVal) || newVal < 1 || newVal % 1 !== 0;
 }
 
-function makeTransaction(token){
-    userdata = {}
-    userdata.merchName = $('#merchName').val()
-    userdata.email = $('#merchEmail').val()
-
-    userdata.numBundles = currBundles
-    userdata.shirtSize = shirtSize
-    userdata.discCode = discCode
-    userdata.token = token
+function makeTransaction(transactionToken) {
+    const userdata = {
+        customerName: $('#customerName').val(),
+        email: $('#merchEmail').val(),
+        numBundles: numBundles,
+        shirtSize: shirtSize,
+        discCode: $('#merchDiscount').val(),
+        transactionToken: transactionToken,
+    };
 
     $.ajax({
-        type:'POST',
-        url:'http://localhost:3002/merchCharge',
-        data:JSON.stringify({data:userdata}),
+        type: 'POST',
+        url: 'https://acmsec.mst.edu:3002/merchCharge',
+        data: JSON.stringify(userdata),
         processData: false,
         contentType: 'application/json',
 
-        success: function(json) {
-            json = JSON.parse(json)
-            const trxnSuccess = json.trxnSuccess
+        success: (json) => {
+            json = JSON.parse(json);
+            const trxnSuccess = json.trxnSuccess;
 
-            if (json.success){
+            if (json.success) {
                 alert("Your purchase was successful! You will be redirected shortly! Please check for an email in your spam filter!");
-                window.setTimeout(function(){
+                window.setTimeout( () => {
                     // Move back to the march page
                     window.location.href = "https://acmsec.mst.edu/merch/";
                 }, 3000);
-            }else{
+            } else {
                 alert("Uh-oh! Something went wrong. " + trxnSuccess + " Refresh and try again!");
             }
 
         },
 
-        error: function() {
+        error: () => {
             alert("Error! Please refresh and try again!");
-        }
+        },
     });
-
-
 }
-
-
-
