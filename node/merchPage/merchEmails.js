@@ -53,7 +53,7 @@
          const merchBodyOfficer = `<h3>ACM Security Team</h3>
              <hr>
              <p>
-                 ${username} has made a merch purchase! Please check the Google Spreadsheet.
+                 ${username} has made a merch purchase! Please check the Google Spreadsheet: <a href="https://docs.google.com/spreadsheets/d/1b6y8t9aTqSK60bHThASNjyPMj1fMc6c87pYXl3WnosU/edit#gid=0">https://docs.google.com/spreadsheets/d/1b6y8t9aTqSK60bHThASNjyPMj1fMc6c87pYXl3WnosU/edit#gid=0</a>.
              </p>
              <p>
                  Here is what they purchased:
@@ -88,4 +88,3 @@
          });
      },
  };
- 
