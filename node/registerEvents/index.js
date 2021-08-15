@@ -48,7 +48,7 @@ app.get("/getRegEvent", (req, res) =>{
     }else{
         // Have enough space, let person register!
         // Send link for client
-        res.send({dataLink:"https://acmsec.mst.edu/node/registerEvents/paymentPages/",canRegister:true})
+        res.send({dataLink:"https://acmsec.mst.edu/node/registerEvents/payment/",canRegister:true})
     }
 
 });

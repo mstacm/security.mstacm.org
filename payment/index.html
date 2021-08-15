@@ -10,8 +10,8 @@
     <title>ACM Security Homepage</title>
 
     <!-- CSS Files -->
-    <link href="../../../css/mdb-free.css" rel="stylesheet">
-    <link href="../../../css/particles.css" media="screen" rel="stylesheet">
+    <link href="/css/mdb-free.css" rel="stylesheet">
+    <link href="/css/particles.css" media="screen" rel="stylesheet">
     <!-- Font Awesome for prettier icons -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
           integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -39,13 +39,14 @@
         $(document).ready(function () {
 
             // Create a Stripe client
-            var stripe = Stripe('pk_test_51Hfm7wJCIpvTNXndr8RoGxVKs1u0ZBZfCQ8eN4Wx0n6622unbjBzAQ7L61wGvK7Qte0Ssyi9qooDT1gFritGXQyT00FPgJpHpJ');
+            const stripePK = 'pk_test_51Hfm7wJCIpvTNXndr8RoGxVKs1u0ZBZfCQ8eN4Wx0n6622unbjBzAQ7L61wGvK7Qte0Ssyi9qooDT1gFritGXQyT00FPgJpHpJ';
+            const stripe = Stripe(stripePK);
 
             // Create an instance of Elements
-            var elements = stripe.elements();
+            const elements = stripe.elements();
 
             // Try to match bootstrap 4 styling
-            var style = {
+            const style = {
                 base: {
                     'lineHeight': '1.35',
                     'fontSize': '1.11rem',
@@ -55,21 +56,21 @@
             };
 
             // Card number
-            var card = elements.create('cardNumber', {
+            const card = elements.create('cardNumber', {
                 'placeholder': '4242 4242 4242 4242',
                 'style': style
             });
             card.mount('#card-number');
 
             // CVC
-            var cvc = elements.create('cardCvc', {
+            const cvc = elements.create('cardCvc', {
                 'placeholder': '111',
                 'style': style
             });
             cvc.mount('#card-cvc');
 
             // Card expiry
-            var exp = elements.create('cardExpiry', {
+            const exp = elements.create('cardExpiry', {
                 'placeholder': '01/01',
                 'style': style
             });
@@ -80,7 +81,7 @@
                 e.preventDefault();
                 $('#payment-submit').prop('disabled',true);
                 $('#payment-submit').text("Please wait...")
-                var cardData = {
+                const cardData = {
                     'name': $('#name').val()
                 };
                 stripe.createToken(card, cardData).then(function (result) {
@@ -89,7 +90,7 @@
                         alert(result.error.message);
                     } else {
                         // Pass token to our server to finalize payment
-                        makeTransaction(result.token.id)
+                        makeTransaction(result.token.id);
                     }
                 });
             });
@@ -109,7 +110,7 @@
         <canvas class="particles-js-canvas-el" width="1409" height="319" style="width: 100%; height: 100%;">
         </canvas>
     </div>
-    <script src="../../../globalScripts/particles.js"></script>
+    <script src="/globalScripts/particles.js" defer></script>
 
     <div class="row justify-content-center">
         <div class="card h-auto mb-3 bg-dark text-white" style="width: 25rem;">
@@ -181,7 +182,7 @@
                 <div class="row justify-content-between">
                     <div class="col">
                         <h3 id="paymentCharge">
-                            Total Price:$0<!--                    Insert price from js here-->
+                            Total Price: $0 <!--                    Insert price from js here-->
                         </h3>
                     </div>
                     <div class="col-2">

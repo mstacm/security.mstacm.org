@@ -83,10 +83,10 @@ function checkValid(valArray){
 /**
 * GET merch page endpoint
 *
-* GET endpoint for redirecting users to merch page. Will redirect to paymentPages/index.html
+* GET endpoint for redirecting users to merch page. Will redirect to payment/index.html
 */
 app.get('/merchPayPage', (req, res) => {
-    res.redirect('./paymentPages/index.html');
+    res.redirect('./payment/index.html');
 });
 
 /**
