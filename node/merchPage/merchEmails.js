@@ -25,30 +25,15 @@
      /**
       * sendMerchEmail
       *
-      * Sends a success email to a new registration user and a reminder email to
-      * an ACM officer.
+      * Send a success email to the ACM officers that a new purchase has been
+      * made.
       *
       * @param {string} username  Customer's name.
-      * @param {string} email     Customer's email address.
       * @param {number} numBundles Number of merch bundles the customer purchased.
       * @param {string} shirtSize Shirt size.
       */
  
-     sendMerchEmail: function (username, email, numBundles, shirtSize) {
-         // User email body
-         const merchBodyUser = `<h3>ACM Security Team</h3>
-             <hr>
-             <p>
-                 ${username}, thank you for your purchase! Our officers have been notified and will contact you shortly!
-             </p>
-             <p>
-                 For your reference, here is what you purchased:
-                 <ul>
-                     <li>Merch bundle</li>
-                     <li>Shirt size: ${shirtSize}</li>
-                 </ul>
-             </p>`;
- 
+     sendMerchEmail: function (username, numBundles, shirtSize) {
          // Officer email body
          const merchBodyOfficer = `<h3>ACM Security Team</h3>
              <hr>
@@ -62,18 +47,6 @@
                      <li>Shirt size: ${shirtSize}</li>
                  </ul>
              </p>`;
- 
-         // Send a no-reply email about the merch purchase to the customer
-         sendmail({
-             from: 'no-reply@acm.com',
-             to: email,
-             subject: 'ACM Security Merch Purchase',
-             html: merchBodyUser,
-         }, function (err, reply) {
-             if (err) {
-                 console.error("User email was not sent successfully!", err);
-             }
-         });
  
          // Send a no-reply email to remind the officer of the purchase
          sendmail({
