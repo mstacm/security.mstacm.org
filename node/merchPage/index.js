@@ -56,7 +56,7 @@ app.use(cors());  // Required for REST API with site
  * POST endpoint for merch page. Stripe payment token will be submitted here.
  * Customer's purchase will then be added to the spreadsheet listed in the
  * config file and emails will be sent to the ACM merch email and the customer.
- * 
+ *
  * TODO: Enforce the maximum number of bundles on the server side.
  */
 app.post("/merchCharge", async (req, res) => {
@@ -67,6 +67,7 @@ app.post("/merchCharge", async (req, res) => {
      * @type {OrderInfo}
      */
     const order = req.body;
+    console.log("Order received", order);
 
     // Parse user's data from registration page
     const { customerName, email, numBundles, shirtSize, discCode, transactionToken } = order;
@@ -133,6 +134,8 @@ app.post("/merchCharge", async (req, res) => {
             ]],
         }
     });
+
+    console.log("Order logged to the spreadsheet.");
 
     emailmod.sendMerchEmail(
         customerName,
