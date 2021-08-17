@@ -85,7 +85,6 @@
                     'name': $('#name').val()
                 };
                 stripe.createToken(card, cardData).then(function (result) {
-                    console.log(result);
                     if (result.error && result.error.message) {
                         alert(result.error.message);
                     } else {
