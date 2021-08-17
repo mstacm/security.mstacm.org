@@ -106,9 +106,13 @@ app.post("/merchCharge", async (req, res) => {
         return;
     }
 
-    // Payment was successful; log the order to the spreadsheet and
-    // send an email notification to the officers.
     console.log("Payment was successful.");
+
+    // Let the user know that processing was successful
+    res.send({
+        trxnSuccess: "Your payment was successful!",
+        success: true,
+    });
 
     // TODO: Make it so that you don't have to await this
     const sheets = await sheetsClientPromise;
@@ -139,16 +143,9 @@ app.post("/merchCharge", async (req, res) => {
 
     emailmod.sendMerchEmail(
         customerName,
-        email,
         numBundles,
         shirtSize
     );
-
-    // Let the user know that processing was successful
-    res.send({
-        trxnSuccess: "Your payment was successful!",
-        success: true,
-    });
 });
 
 
