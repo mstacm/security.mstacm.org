@@ -6,23 +6,22 @@
         "tabID": "IDFall2021",
         "officerEntries": [
             {
-                // Expecting new picture
-                "name": "Pamela Petterchak",
-                "role": "Chair",
-                "image": "/images/Fall2020Pics/pamela_petterchak.png",
-                "educ": "CS/CpE Senior",
-                "desc": "Future cybersecurity professional, interested in social engineering prevention and national security.",
-                "email": "pfpg7m@mst.edu",
-                "linkedin": "https://www.linkedin.com/in/pamela-petterchak/"
-            },
-            {
                 "name": "Charles Rawlins",
-                "role": "Vice Chair",
+                "role": "Chair",
                 "image": "/images/Spring2021Pics/Charles_Rawlins.jpg",
                 "educ": "CpE PhD Student",
                 "desc": "Currently researching blockchain and machine learning for IoT Security.",
                 "email": "crfmb@mst.edu",
                 "linkedin": "https://www.linkedin.com/in/charles-rawlins-b37294123/"
+            },
+            {
+                "name": "Pamela Petterchak",
+                "role": "Vice Chair",
+                "image": "/images/Fall2020Pics/pamela_petterchak.png",
+                "educ": "CS/CpE Senior",
+                "desc": "Future cybersecurity professional, interested in social engineering prevention and national security.",
+                "email": "pfpg7m@mst.edu",
+                "linkedin": "https://www.linkedin.com/in/pamela-petterchak/"
             },
             {
                 // Awaiting response to update request
