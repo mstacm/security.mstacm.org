@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="ACM Security Website Homepage">
+  <meta name="keywords" content="ACM Security, Missouri S&T">
+  <meta name="author" content="Charles Rawlins">
+
+  <title>Wireless Workshop Registration | ACM Security</title>
+
+  <!-- CSS Files -->
+  <link href="/css/mdb-free.css" rel="stylesheet">
+  <link href="/css/particles.css" media="screen" rel="stylesheet">
+  <link href="pay-form-style.css" rel="stylesheet">
+
+  <!--Scripts-->
+  <script src="/vendor/jquery/jquery.min.js"></script>
+  <script src="/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="/globalScripts/mdb.min.js"></script>
+  <script src="https://js.stripe.com/v3/"></script>
+  <script src="payment.js" defer></script>
+</head>
+
+<body style="padding-top: 56px;">
+
+<!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #040405;">
+    <div class="container">
+      <a class="navbar-brand" href="/">ACM Security at Missouri S&T</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse"
+              data-target="#navbarResponsive" aria-controls="navbarResponsive"
+              aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="/">Home
+              <span class="sr-only">(current)</span> <!--Used for accessibility with text readers-->
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/learn">Learn Security</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/events">Events</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/cdt">Cyber Defense</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/merch">Merch</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/archive">Archive</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/contact">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+<!-- Setup Particles and page background -->
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<div class="jumbotron-main">
+  <div id="particles-js">
+    <canvas class="particles-js-canvas-el" width="1409" height="319" style="width: 100%; height: 100%;">
+    </canvas>
+  </div>
+  <script src="/globalScripts/particles.js" defer></script>
+<!--  Custom div to allow particles to go behind bootstrap widgets-->
+  <div class="container-fluid animated fadeIn">
+      <div class="row justify-content-center" style="height: 80vh">
+        <div class="col">
+          <div class="card h-100 bg-dark">
+            <iframe title="Registration form"
+                    src="https://docs.google.com/forms/d/e/1FAIpQLSei3xV4NGQscUcWSUFxHUDyAwbrqyZW7Xo1nlI94PsWmVGSSw/viewform?embedded=true"
+                    width="100%" height="100%"
+                    frameborder="0"
+                    marginheight="0" marginwidth="0">
+                Loading…
+            </iframe>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 bg-dark text-white align-items-center">
+            <div class="card-header w-100">
+              <div class="row justify-content-between">
+                  <div class="col">
+                      <h3 id="paymentCharge">
+                          Payment: $60
+                      </h3>
+                  </div>
+                  <div class="col-2">
+                      <img src="stripe.png" style="height: 25px;float: right">
+                  </div>
+              </div>
+
+          </div>
+          <div class="card-body w-50">
+              <form id="payment-form">
+                  <label for="name">Name on Card*</label>
+                  <div class="input-group mb-2">
+                      <input type="text" class="form-control" id="name" placeholder="Joe Miner" required>
+                  </div>
+                  <label for="card-number">Card Number*</label>
+                  <img src="acceptedCards/visa.png" style="height: 30px">
+                  <img src="acceptedCards/mastercard.png" style="height: 30px">
+                  <img src="acceptedCards/discover.png" style="height: 30px">
+                  <img src="acceptedCards/amexpress.png" style="height: 30px">
+                  <div class="input-group mb-2 mt-2">
+                      <span id="card-number" class="form-control">
+                          <!-- Stripe Card Element -->
+                      </span>
+                  </div>
+                  <label for="card-cvc">CVC*</label>
+                  <div class="input-group mb-2">
+                      <span id="card-cvc" class="form-control">
+                          <!-- Stripe CVC Element -->
+                      </span>
+                  </div>
+                  <label for="card-exp">Expiration Date*</label>
+                  <div class="input-group mb-2">
+                      <span id="card-exp" class="form-control">
+                          <!-- Stripe Card Expiry Element -->
+                      </span>
+                  </div>
+                  <label for="email">Email Address*</label>
+                  <div class="input-group mb-2">
+                      <input type="email" class="form-control" id="email">
+                  </div>
+                  <label for="discount-code">Discount Code</label>
+                  <div class="input-group mb-4">
+                      <input type="text" class="form-control" id="discount-code">
+                  </div>
+                  <div class="row justify-content-center align-middle">
+                      <button id="payment-submit" class="btn btn-primary mt-1">Submit Payment</button>
+                  </div>
+              </form>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+
+  <!--    ________________________________________   -->
+  <!--  < With stripe.js, your payment info won't >  -->
+  <!--  <               touch our server!         >  -->
+  <!--    ----------------------------------------   -->
+  <!--      \  ^__^                                  -->
+  <!--       \ (oo)\_______                          -->
+  <!--         (__)\        )\/\                     -->
+  <!--              ||----ww|                        -->
+  <!--              ||     ||                        -->
+
+</html>
