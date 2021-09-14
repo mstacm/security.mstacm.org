@@ -24,10 +24,10 @@ module.exports = {
      * Send a notification to the ACM officers that someone has submitted an
      * event registration form.
      *
-     * @param {string} customerName    Registrant's name.
-     * @param {string} email           Registrant's email.
-     * @param {string} totalCharge     Amount charged for registration.
-     * @param {string} eventName       Name of event.
+     * @param {string}  customerName    Registrant's name.
+     * @param {string}  email           Registrant's email.
+     * @param {string}  totalCharge     Amount charged for registration.
+     * @param {string}  eventName       Name of event.
      * @param {?string} discCode        Discount code used, if any.
      */
 
