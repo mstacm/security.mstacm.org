@@ -2,6 +2,8 @@
     // Create a Stripe client
     const event = await fetch("/api/registration/event-info/wireless-workshop-2021")
         .then(response => response.json());
+
+    if (event.full) return;
     const stripe = Stripe(event.stripePK);
 
     // Create an instance of Elements

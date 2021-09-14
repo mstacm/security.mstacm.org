@@ -1,34 +1,18 @@
-// GET request to check if registration is full, otherwise redirect
-$(document).on('click','#registerButton',function (event){
-    event.preventDefault()
-
+$(document).ready(() => {
     $.ajax({
-        type:'GET',
-        url:'http://localhost:3001/getRegEvent',
+        type:"GET",
+        url:"http://localhost:3001/getRegEvent",
         contentType: "application/json",
 
-        success: function(json) {
-
-            eventData = json
-
-            if (eventData.canRegister){
-                // Move to a new location or you can do something else
-                window.location.replace(eventData.dataLink);
-
-            }else{
-                alert("Sorry! Registration is full! Please come back next year!")
-                $("#registerButton").addClass('disabled')
+        success: (event) => {
+            if (event.full){
+                $("#register-button").css("pointer-events", "none");
+                $("#register-button").text("Registration is full");
             }
         },
 
-        error: function() {
-            alert("Error! Please refresh and try again!");
+        error: (response) => {
+            console.error("Error getting event info:", response);
         }
     });
-
 });
-
-
-function loadReg(){
-
-}

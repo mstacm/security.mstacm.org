@@ -151,8 +151,11 @@ app.get("/api/registration/event-info/:eventName", (req, res) => {
     // Delete the coupon code data from the response
     delete eventInfo.discountCodes;
 
-    // Add the public key to use for the Stripe payment form
-    eventInfo.stripePK = config.stripePK;
+    eventInfo.full = (await getNumRegistrants()) >= eventInfo.maxRegistrants;
+    delete eventInfo.maxRegistrants;
+
+    // Add the public key to use in the Stripe payment form
+    if (!eventInfo.full) eventInfo.stripePK = config.stripePK;
 
     res.send(eventInfo);
 });
