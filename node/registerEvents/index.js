@@ -5,7 +5,7 @@
  * events.
  *
  * @file   index.js
- * @author Charles Rawlins.
+ * @author Charles Rawlins & Nate Kean.
  */
 
 // Log uncaught errors in production; throw them in development.
@@ -40,6 +40,16 @@ app.use(express.json());
 app.use(cors());  // Required for REST API with site
 
 
+async function getNumRegistrants() {
+    const sheets = await sheetsClientPromise;
+    const sheet = await sheets.spreadsheets.values.get({
+        spreadsheetId: config.googleSheetsInfo.spreadsheetID,
+        range: `A2`,
+    });
+    return sheet.data.values.length;
+}
+
+
 /**
  * @typedef {Object} OrderInfo
  * @property {string} customerName
@@ -56,7 +66,8 @@ app.use(cors());  // Required for REST API with site
  * the customer's purchase is added to the order log spreadsheet,
  * and a notification of the purchase is sent to the ACM Security officers.
  */
-app.post("/api/registration/submit-purchase/:eventName", async (req, res) => {
+// app.post("/api/registration/submit-purchase/:eventName", async (req, res) => {
+app.post("/regCharge", async (req, res) => {
     /**
      * @type {OrderInfo}
      */
@@ -66,7 +77,8 @@ app.post("/api/registration/submit-purchase/:eventName", async (req, res) => {
     // Parse user's data from registration page
     const { customerName, email, discCode, transactionToken } = order;
 
-    let event = config.events[req.params.eventName];
+    // let event = config.events[req.params.eventName];
+    let event = config.events["wireless-workshop-2021"];
 
     if (event === undefined) {
         return res.status(400).send("Invalid event name");
@@ -136,14 +148,14 @@ app.post("/api/registration/submit-purchase/:eventName", async (req, res) => {
 
 
 /**
- * GET Stripe Public Key
+ * GET Event info
  * 
- * Returns the registration page's public Stripe key.
- * Storing the Stripe public key in the same place as the secret key (on the
- * server) makes it easier to update the two in tandem for development purposes.
+ * Returns information about the current event.
  */
-app.get("/api/registration/event-info/:eventName", (req, res) => {
-    const eventInfo = {...config.events[req.params.eventName]};
+// app.get("/api/registration/event-info/:eventName", (req, res) => {
+app.get("/getRegEvent", async (req, res) => {
+    //const eventInfo = {...config.events[req.params.eventName]};
+    const eventInfo = {...config.events["wireless-workshop-2021"]};
     if (eventInfo === undefined) {
         return res.status(400).send("Invalid event name");
     }

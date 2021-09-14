@@ -1,6 +1,6 @@
 (async function () {
     // Create a Stripe client
-    const event = await fetch("/api/registration/event-info/wireless-workshop-2021")
+    const event = await fetch("/getRegEvent")
         .then(response => response.json());
 
     if (event.full) return;
@@ -61,7 +61,8 @@
     function makeTransaction(transactionToken) {
         $.ajax({
             type: 'POST',
-            url: 'https://acmsec.mst.edu/api/registration/submit-purchase/wireless-workshop-2021',
+            // url: 'https://acmsec.mst.edu/api/registration/submit-purchase/wireless-workshop-2021',
+            url: '/regCharge',
             data: JSON.stringify({
                 customerName: $('#name').val(),
                 email: $('#email').val(),
@@ -71,7 +72,7 @@
             contentType: 'application/json',
 
             success: (response) => {
-                $('#payment-submit').text("Payment successfull");
+                $('#payment-submit').text("Payment successful");
                 alert("Your payment was successful! Please complete the Google Form on the left if you have not already to complete your registration.");
             },
 
