@@ -35,27 +35,33 @@ const sheetsClientPromise = auth.getClient().then( (authClient) => {
 const app = express();
 
 // Middleware
-// app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(cors());  // Required for REST API with site
 
 
-async function getNumRegistrants() {
-    const sheets = await sheetsClientPromise;
-    const sheet = await sheets.spreadsheets.values.get({
-        spreadsheetId: config.googleSheetsInfo.spreadsheetID,
-        range: `A2`,
-    });
-    return sheet.data.values.length;
-}
+// async function getNumRegistrants() {
+//     const sheets = await sheetsClientPromise;
+//     const { data } = await sheets.spreadsheets.values.get({
+//         spreadsheetId: config.googleSheetsInfo.spreadsheetID,
+//         range: "A2:A",
+//     });
+
+//     let numRegistrants = 0;
+//     console.log(data.values || "undefined");
+//     for (const row of data.values) {
+//         numRegistrants += row[0].length > 0
+//     }
+//     return numRegistrants;
+// }
 
 
 /**
- * @typedef {Object} OrderInfo
- * @property {string} customerName
- * @property {string} email
- * @property {?string} discCode Discount code
- * @property {string} transactionToken Unique Stripe payment token
+ * @typedef  {Object}   OrderInfo
+ * @property {string}   customerName
+ * @property {string}   email
+ * @property {?string}  discCode          Discount code
+ * @property {string}   transactionToken  Unique Stripe payment token
  */
 
 /**
@@ -163,7 +169,8 @@ app.get("/getRegEvent", async (req, res) => {
     // Delete the coupon code data from the response
     delete eventInfo.discountCodes;
 
-    eventInfo.full = (await getNumRegistrants()) >= eventInfo.maxRegistrants;
+    // eventInfo.full = (await getNumRegistrants()) >= eventInfo.maxRegistrants;
+    eventInfo.full = false;
     delete eventInfo.maxRegistrants;
 
     // Add the public key to use in the Stripe payment form
