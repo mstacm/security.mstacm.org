@@ -3,7 +3,13 @@
     const event = await fetch("/getRegEvent")
         .then(response => response.json());
 
-    if (event.full) return;
+        
+    $("#payment-amount").text("$" + event.cost);
+    if (event.full) {
+        alert("Sorry! This event is full and is no longer accepting registration.");
+        window.history.back();
+    };
+
     const stripe = Stripe(event.stripePK);
 
     // Create an instance of Elements
