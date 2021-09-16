@@ -1,7 +1,7 @@
 $(document).ready(() => {
     $.ajax({
         type:"GET",
-        url:"http://localhost:3001/getRegEvent",
+        url:"/getRegEvent",
         contentType: "application/json",
 
         success: (event) => {
