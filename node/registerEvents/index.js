@@ -20,6 +20,7 @@ const stripe = require("stripe")(config.stripeSK);
 const express = require("express");
 const cors = require("cors");
 const googleSheets = require("@googleapis/sheets");
+const fs = require("fs/promises");
 
 const auth = new googleSheets.auth.GoogleAuth({
     keyFilename: config.googleSheetsInfo.keyFilename,
@@ -54,6 +55,29 @@ app.use(cors());  // Required for REST API with site
 //     }
 //     return numRegistrants;
 // }
+
+// BODGE: Store the number of registrants in a file instead of counting them
+// from the spreadsheet. Opens the door to potential data redundancy errors.
+// This is a temporary solution until I can figure out how to get this
+// information with the Google Sheets API.
+async function getNumRegistrants() {
+    let registrantCount;
+    try {
+        registrantCount = await fs.readFile("./private/registrantCount.txt", "utf8");
+    } catch (err) {
+        if (err.code === "ENOENT") {
+            registrantCount = 0;
+        } else {
+            console.error(err);
+        }
+    }
+    registrantCount = parseInt(registrantCount);
+    return registrantCount;
+}
+
+async function setNumRegistrants(newCount) {
+    await fs.writeFile("./private/registrantCount.txt", newCount);
+}
 
 
 /**
@@ -141,6 +165,8 @@ app.post("/regCharge", async (req, res) => {
         }
     });
 
+    setNumRegistrants(await getNumRegistrants() + 1);
+
     console.log("Order logged to the spreadsheet.");
 
     emailmod.sendRegEmail(
@@ -169,8 +195,9 @@ app.get("/getRegEvent", async (req, res) => {
     // Delete the coupon code data from the response
     delete eventInfo.discountCodes;
 
-    // eventInfo.full = (await getNumRegistrants()) >= eventInfo.maxRegistrants;
-    eventInfo.full = false;
+    // Don't expose the current number of registrants; just tell the user
+    // whether the event is full or not.
+    eventInfo.full = (await getNumRegistrants()) >= eventInfo.maxRegistrants;
     delete eventInfo.maxRegistrants;
 
     // Add the public key to use in the Stripe payment form
