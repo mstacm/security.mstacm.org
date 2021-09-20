@@ -40,7 +40,7 @@ module.exports = {
                 ${customerName} has paid the registration fee for ${eventName}! <br>
                 Customer's email address: ${email} <br>
                 Total amount paid: $${totalCharge} <br>
-                Discount code used: ${discCode | "None"}
+                Discount code used: ${discCode || "None"}
             </p>
             <p>
                 <a href="https://docs.google.com/spreadsheets/d/1UaY_AdPptlRSU_bWP5yVYJc8qwieY-EUPYtJhR8wIDQ/edit#gid=0">
