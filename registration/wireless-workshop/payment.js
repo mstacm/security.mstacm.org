@@ -50,7 +50,7 @@
     $('#payment-submit').on('click', function (e) {
         e.preventDefault();
         $('#payment-submit').prop('disabled', true);
-        $('#payment-submit').text("Please wait...");
+        $('#payment-submit').text("Submitting...");
         const cardData = {
             'name': $('#name').val()
         };
@@ -63,6 +63,14 @@
         });
     });
 
+    $("#agree").on("change", function (e) {
+        if (e.currentTarget.checked) {
+            $("#payment-submit").prop('disabled', false);
+        } else {
+            $("#payment-submit").prop('disabled', true);
+        }
+    });
+
     // Pass token to our server to finalize payment
     function makeTransaction(transactionToken) {
         $.ajax({
@@ -72,8 +80,15 @@
             data: JSON.stringify({
                 customerName: $('#name').val(),
                 email: $('#email').val(),
+                major: $('#major').val(),
+                year: $('input[name="year"]:checked').val(),
+                discovered: $('input[name="discovered"]:checked').val(),
+                experience: $('input[name="experience"]:checked').val(),
+                membership: $('input[name="membership"]:checked').val(),
+                commentsQuestions: $('#comments-questions').val(),
                 transactionToken: transactionToken,
-                discCode: $('#discount-code').val(),
+                // discCode: $('#discount-code').val(),
+                discCode: "",
             }),
             contentType: 'application/json',
 

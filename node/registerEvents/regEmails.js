@@ -37,14 +37,14 @@ module.exports = {
             <h2>ACM Security Team</h2>
             <hr>
             <p>
-                ${customerName} has paid the registration fee for ${eventName}! <br>
+                Customer <u>${customerName}</u> just registered for ${eventName}! <br>
                 Customer's email address: ${email} <br>
                 Total amount paid: $${totalCharge} <br>
                 Discount code used: ${discCode || "None"}
             </p>
             <p>
                 <a href="https://docs.google.com/spreadsheets/d/1UaY_AdPptlRSU_bWP5yVYJc8qwieY-EUPYtJhR8wIDQ/edit#gid=0">
-                    View all registration payments
+                    View all registrations
                 </a>
             </p>
         `;
@@ -53,7 +53,7 @@ module.exports = {
         sendmail({
             from: 'no-reply@acmsec.mst.edu',
             to: regEmail,
-            subject: `Received ${eventName} Registration Payment`,
+            subject: `Received ${eventName} Registration`,
             html: regBodyOfficer,
         }, function (err, reply) {
             if(err){

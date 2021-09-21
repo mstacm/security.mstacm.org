@@ -76,6 +76,7 @@ async function getNumRegistrants() {
 }
 
 async function setNumRegistrants(newCount) {
+    if (typeof newCount === "number") newCount = newCount.toString();
     await fs.writeFile("./private/registrantCount.txt", newCount);
 }
 
@@ -84,6 +85,12 @@ async function setNumRegistrants(newCount) {
  * @typedef  {Object}   OrderInfo
  * @property {string}   customerName
  * @property {string}   email
+ * @property {string}   major
+ * @property {string}   year
+ * @property {string}   discovered
+ * @property {string}   experience
+ * @property {string}   membership
+ * @property {?string}  commentsQuestions
  * @property {?string}  discCode          Discount code
  * @property {string}   transactionToken  Unique Stripe payment token
  */
@@ -104,9 +111,6 @@ app.post("/regCharge", async (req, res) => {
     const order = req.body;
     console.log("Order received:", order);
 
-    // Parse user's data from registration page
-    const { customerName, email, discCode, transactionToken } = order;
-
     // let event = config.events[req.params.eventName];
     let event = config.events["wireless-workshop-2021"];
 
@@ -117,7 +121,7 @@ app.post("/regCharge", async (req, res) => {
     let finalCharge = event.cost;
 
     for (const discountCode in event.discountCodes) {
-        if (discountCode.toUpperCase() === discCode.toUpperCase()) {
+        if (discountCode.toUpperCase() === order.discCode.toUpperCase()) {
             finalCharge -= event.discountCodes[discountCode];
             break;  // DESIGN DECISION: Only apply the first code in the list
         }
@@ -129,9 +133,9 @@ app.post("/regCharge", async (req, res) => {
         charge = await stripe.charges.create({
             amount: finalCharge * 100,  // Stripe expects cents
             currency: "usd",
-            source: transactionToken,
+            source: order.transactionToken,
             description: event.title + " - ACM Security",
-            receipt_email: email,
+            receipt_email: order.email,
         });
     } catch (error) {
         // If the charge fails, log the error and let the user know.
@@ -157,10 +161,16 @@ app.post("/regCharge", async (req, res) => {
             // Values are placed in the row from left to right.
             values: [[
                 (new Date()).toString(),  // Purchase timestamp
-                customerName,
-                email,
+                order.customerName,
+                order.email,
                 charge.amount / 100,
-                discCode || "",
+                order.discCode || "",
+                order.major,
+                order.year,
+                order.discovered,
+                order.experience,
+                order.membership,
+                order.commentsQuestions,
             ]],
         }
     });
@@ -170,11 +180,11 @@ app.post("/regCharge", async (req, res) => {
     console.log("Order logged to the spreadsheet.");
 
     emailmod.sendRegEmail(
-        customerName,
-        email,
+        order.customerName,
+        order.email,
         charge.amount / 100,
         event.title,
-        discCode,
+        order.discCode,
     );
 });
 
@@ -185,7 +195,7 @@ app.post("/regCharge", async (req, res) => {
  * Returns information about the current event.
  */
 // app.get("/api/registration/event-info/:eventName", (req, res) => {
-app.get("/getRegEvent", async (req, res) => {
+app.get("/getRegEvent", async (_, res) => {
     //const eventInfo = {...config.events[req.params.eventName]};
     const eventInfo = {...config.events["wireless-workshop-2021"]};
     if (eventInfo === undefined) {
