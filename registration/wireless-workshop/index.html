@@ -14,7 +14,6 @@
   <!-- CSS Files -->
   <link href="/css/mdb-free.css" rel="stylesheet">
   <link href="/css/particles.css" media="screen" rel="stylesheet">
-  <link href="pay-form-style.css" rel="stylesheet">
 
   <!--Scripts-->
   <script src="/vendor/jquery/jquery.min.js"></script>
@@ -25,6 +24,7 @@
 
   <style>
     label {
+      display: block;
       height: unset;
       line-height: unset;
       font-weight: normal;
@@ -91,6 +91,11 @@
       <form class="row justify-content-center mb-4">
         <div class="col">
           <div class="card h-100 bg-dark align-items-center pb-4">
+            <div class="card-header w-100">
+              <div class="row justify-content-between pl-3">
+                <h4>Register</h4>
+              </div>
+            </div>
             <div style="width: 80%">
               <label for="name">Name*</label>
               <div class="input-group mb-2">
@@ -204,15 +209,14 @@
             <div class="card-header w-100">
               <div class="row justify-content-between">
                   <div class="col">
-                      <h3 id="paymentCharge">
+                      <h4 id="paymentCharge">
                           Payment: <span id="payment-amount" style="font-size: 1.75rem">...</span>
-                      </h3>
+                      </h4>
                   </div>
                   <div class="col-2">
                       <img src="stripe.png" style="height: 25px;float: right">
                   </div>
               </div>
-
           </div>
           <div class="card-body" style="width: 80%">
             <label for="card-number">Card Number*</label>

@@ -47,12 +47,12 @@
     exp.mount('#card-exp');
 
     // Submit
-    $('#payment-submit').on('click', function (e) {
-        e.preventDefault();
-        $('#payment-submit').prop('disabled', true);
-        $('#payment-submit').text("Submitting...");
+    $("form").on("submit", function (event) {
+        event.preventDefault();
+        $("#payment-submit").prop("disabled", true);
+        $("#payment-submit").text("Submitting...");
         const cardData = {
-            'name': $('#name').val()
+            "name": $("#name").val()
         };
         stripe.createToken(card, cardData).then(function (result) {
             if (result.error && result.error.message) {
