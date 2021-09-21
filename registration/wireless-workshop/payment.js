@@ -63,13 +63,6 @@
         });
     });
 
-    $("#agree").on("change", function (e) {
-        if (e.currentTarget.checked) {
-            $("#payment-submit").prop('disabled', false);
-        } else {
-            $("#payment-submit").prop('disabled', true);
-        }
-    });
 
     // Pass token to our server to finalize payment
     function makeTransaction(transactionToken) {
