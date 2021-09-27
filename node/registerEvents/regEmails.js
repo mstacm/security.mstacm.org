@@ -12,63 +12,53 @@ const sendmail = require('sendmail')({
     silent: false,
     smtpPort: 25, // Default: 25
     smtpHost: 'localhost'
-})
+});
 
 // Send email reminder to officer managing merch emails and new registrations
-const regEmail = "acmsecmerch@gmail.com"
+const regEmail = "acmsecmerch@gmail.com";
 
 module.exports = {
-
-
     /**
      * sendRegEmail
      *
-     * Sends a success email to a new registration user and a reminder email to
-     * an ACM officer.
+     * Send a notification to the ACM officers that someone has submitted an
+     * event registration form.
      *
-     * @param {String}    username       Username for new registration user.
-     * @param {String}    email          Email for the new registration user.
-     * @param {String}    eventname      Name of current registration event to remind user.
+     * @param {string}  customerName    Registrant's name.
+     * @param {string}  email           Registrant's email.
+     * @param {string}  totalCharge     Amount charged for registration.
+     * @param {string}  eventName       Name of event.
+     * @param {?string} discCode        Discount code used, if any.
      */
 
-    sendRegEmail: function (username,email,eventname){
-
-        // User email body
-
-        var regBodyUser = '<h3>ACM Security Team</h3>' + '<hr> <par>'+username+', thank you for registering for \''
-            + eventname + '\'! Our officers have been notified of your registration. We look forward to seeing you!' +
-            '</par>'
-
+    sendRegEmail: function (customerName, email, totalCharge, eventName, discCode) {
         // Officer email body
-        var regBodyOfficer = '<h3>ACM Security Team</h3>' + '<hr> <par>' + username + ' has registered and paid for '+
-            eventname+'.</par>'
-
-        // Send a no-reply email to the new registration user
-
-        sendmail({
-            from: 'no-reply@acm.com',
-            to: email,
-            subject: 'ACM Security ' +eventname+ ' Registration',
-            html: regBodyUser,
-        }, function(err, reply) {
-            if(err){
-                console.log("User email was not sent successfully!")
-            }
-        });
+        const regBodyOfficer = `
+            <h2>ACM Security Team</h2>
+            <hr>
+            <p>
+                Customer <u>${customerName}</u> just registered for ${eventName}! <br>
+                Customer's email address: ${email} <br>
+                Total amount paid: $${totalCharge} <br>
+                Discount code used: ${discCode || "None"}
+            </p>
+            <p>
+                <a href="https://docs.google.com/spreadsheets/d/1UaY_AdPptlRSU_bWP5yVYJc8qwieY-EUPYtJhR8wIDQ/edit#gid=0">
+                    View all registrations
+                </a>
+            </p>
+        `;
 
         // Send a no-reply email to remind the officer
-
         sendmail({
-            from: 'no-reply@acm.com',
+            from: 'no-reply@acmsec.mst.edu',
             to: regEmail,
-            subject: eventname + ' New Registration',
+            subject: `Received ${eventName} Registration`,
             html: regBodyOfficer,
-        }, function(err, reply) {
+        }, function (err, reply) {
             if(err){
                 console.log("Officer email was not sent successfully!")
             }
         });
-
     }
-
-}
+};

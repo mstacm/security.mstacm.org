@@ -53,7 +53,7 @@ function makeTransaction(transactionToken) {
 
     $.ajax({
         type: 'POST',
-        url: 'https://acmsec.mst.edu/merchCharge',
+        url: 'https://acmsec.mst.edu/api/merch/submit-purchase',
         data: JSON.stringify(userdata),
         processData: false,
         contentType: 'application/json',

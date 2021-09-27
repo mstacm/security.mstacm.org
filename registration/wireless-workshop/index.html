@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="ACM Security Website Homepage">
+  <meta name="keywords" content="ACM Security, Missouri S&T">
+  <meta name="author" content="Charles Rawlins">
+
+  <title>Wireless Workshop Registration | ACM Security</title>
+
+  <!-- CSS Files -->
+  <link href="/css/mdb-free.css" rel="stylesheet">
+  <link href="/css/particles.css" media="screen" rel="stylesheet">
+
+  <!--Scripts-->
+  <script src="/vendor/jquery/jquery.min.js"></script>
+  <script src="/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="/globalScripts/mdb.min.js"></script>
+  <script src="https://js.stripe.com/v3/"></script>
+  <script src="payment.js" defer></script>
+
+  <style>
+    label {
+      display: block;
+      height: unset;
+      line-height: unset;
+      font-weight: normal;
+    }
+    
+    label:not(.radio-group) {
+      margin-top: 1.5rem;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body class="text-white" style="padding-top: 56px;">
+
+<!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #040405;">
+    <div class="container">
+      <a class="navbar-brand" href="/">ACM Security at Missouri S&T</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse"
+              data-target="#navbarResponsive" aria-controls="navbarResponsive"
+              aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="/">Home
+              <span class="sr-only">(current)</span> <!--Used for accessibility with text readers-->
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/learn">Learn Security</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/events">Events</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/cdt">Cyber Defense</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/merch">Merch</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/archive">Archive</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/contact">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+<!-- Setup Particles and page background -->
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<div class="jumbotron-main">
+  <div id="particles-js">
+    <canvas class="particles-js-canvas-el" width="1409" height="319" style="width: 100%; height: 100%;">
+    </canvas>
+  </div>
+  <script src="/globalScripts/particles.js" defer></script>
+<!--  Custom div to allow particles to go behind bootstrap widgets-->
+  <div class="container animated fadeIn">
+      <form class="row justify-content-center mb-4">
+        <div class="col">
+          <div class="card h-100 bg-dark align-items-center pb-4">
+            <div class="card-header w-100">
+              <div class="row justify-content-between pl-3">
+                <h4>Register</h4>
+              </div>
+            </div>
+            <div style="width: 80%">
+              <label for="name">Name*</label>
+              <div class="input-group mb-2">
+                  <input type="text" class="form-control" id="name" required>
+              </div>
+              <label for="email">Email Address*</label>
+              <div class="input-group mb-2">
+                  <input type="email" class="form-control" id="email" required>
+              </div>
+              <label for="major">Major*</label>
+              <div class="input-group mb-2">
+                  <input type="text" class="form-control" id="major" required>
+              </div>
+              <div>
+                <p style="margin-top: 1.5rem; margin-bottom: 0.5rem"><b>University Year*</b></p>
+                <label for="year-freshman" class="radio-group">
+                  <input type="radio" id="year-freshman" name="year" value="Freshman" required>
+                  Freshman
+                </label>
+                <label for="year-sophomore" class="radio-group">
+                  <input type="radio" id="year-sophomore" name="year" value="Sophomore">
+                  Sophomore
+                </label>
+                <label for="year-junior" class="radio-group">
+                  <input type="radio" id="year-junior" name="year" value="Junior">
+                  Junior
+                </label>
+                <label for="year-senior" class="radio-group">
+                  <input type="radio" id="year-senior" name="year" value="Senior">
+                  Senior
+                </label>
+                <label for="year-masters" class="radio-group">
+                  <input type="radio" id="year-masters" name="year" value="Masters">
+                  Masters
+                </label>
+                <label for="year-doctorate" class="radio-group">
+                  <input type="radio" id="year-doctorate" name="year" value="Doctorate">
+                  Doctorate
+                </label>
+                <label for="year-other" class="radio-group">
+                  <input type="radio" id="year-other" name="year" value="Other">
+                  Other
+                </label>
+              </div>
+              <div>
+                <p style="margin-top: 1.5rem; margin-bottom: 0.5rem"><b>How did you hear about this event?*</b></p>
+                <label for="discovered-poster" class="radio-group">
+                  <input type="radio" id="discovered-poster" name="discovered" value="Poster" required>
+                  Poster
+                </label>
+                <label for="discovered-class" class="radio-group">
+                  <input type="radio" id="discovered-class" name="discovered" value="Class">
+                  Class
+                </label>
+                <label for="discovered-email" class="radio-group">
+                  <input type="radio" id="discovered-email" name="discovered" value="Email">
+                  Email
+                </label>
+                <label for="discovered-discord" class="radio-group">
+                  <input type="radio" id="discovered-discord" name="discovered" value="Discord">
+                  Discord
+                </label>
+                <label for="discovered-word-of-mouth" class="radio-group">
+                  <input type="radio" id="discovered-word-of-mouth" name="discovered" value="Word of mouth">
+                  Word of mouth
+                </label>
+                <label for="discovered-other" class="radio-group">
+                  <input type="radio" id="discovered-other" name="discovered" value="Other">
+                  Other
+                </label>
+              </div>
+              <div>
+                <p style="margin-top: 1.5rem; margin-bottom: 0.5rem"><b>Do you have cybersecurity experience?</b></p>
+                <label for="experience-yes" class="radio-group">
+                  <input type="radio" id="experience-yes" name="experience" value="Yes" required>
+                  Yes
+                </label>
+                <label for="experience-no" class="radio-group">
+                  <input type="radio" id="experience-no" name="experience" value="No">
+                  No
+                </label>
+                <label for="experience-maybe" class="radio-group">
+                  <input type="radio" id="experience-maybe" name="experience" value="Maybe">
+                  Maybe
+                </label>
+              </div>
+              <div>
+                <p style="margin-top: 1.5rem; margin-bottom: 0.5rem"><b>Are you an ACM member?*</b></p>
+                <label for="membership-yes" class="radio-group">
+                  <input type="radio" id="membership-yes" name="membership" value="Yes" required>
+                  Yes
+                </label>
+                <label for="membership-no" class="radio-group">
+                  <input type="radio" id="membership-no" name="membership" value="No">
+                  No
+                </label>
+              </div>
+              <label for="agree" class="radio-group">
+                <input type="checkbox" id="agree" class="mt-4 mb-4" name="agree" required>
+                <b>I agree to the safety regulations.*</b>
+              </label>
+              <label for="comments-questions" class="radio-group">
+                <b>Comments and questions</b><br>
+                <textarea id="comments-questions" class="w-100" name="comments-questions"></textarea>
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 bg-dark align-items-center">
+            <div class="card-header w-100">
+              <div class="row justify-content-between">
+                  <div class="col">
+                      <h4 id="paymentCharge">
+                          Payment: <span id="payment-amount" style="font-size: 1.75rem">...</span>
+                      </h4>
+                  </div>
+                  <div class="col-2">
+                      <img src="stripe.png" style="height: 25px;float: right">
+                  </div>
+              </div>
+          </div>
+          <div class="card-body" style="width: 80%">
+            <label for="card-number">Card Number*</label>
+            <img src="accepted-cards/visa.png" style="height: 30px">
+            <img src="accepted-cards/mastercard.png" style="height: 30px">
+            <img src="accepted-cards/discover.png" style="height: 30px">
+            <img src="accepted-cards/amexpress.png" style="height: 30px">
+            <div class="input-group mb-2 mt-2">
+                <span id="card-number" class="form-control">
+                    <!-- Stripe Card Element -->
+                </span>
+            </div>
+            <label for="card-cvc">CVC*</label>
+            <div class="input-group mb-2">
+                <span id="card-cvc" class="form-control">
+                    <!-- Stripe CVC Element -->
+                </span>
+            </div>
+            <label for="card-exp">Expiration Date*</label>
+            <div class="input-group mb-2">
+                <span id="card-exp" class="form-control">
+                    <!-- Stripe Card Expiry Element -->
+                </span>
+            </div>
+            <!-- <label for="discount-code">Discount Code</label>
+            <div class="input-group mb-2">
+                <input type="text" class="form-control" id="discount-code">
+            </div> -->
+            <div class="row justify-content-center align-middle mt-4">
+                <input type="submit" id="payment-submit" class="btn btn-primary mt-1" value="Pay &amp; Register">
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+</body>
+
+  <!--    ________________________________________   -->
+  <!--  < With stripe.js, your payment info won't >  -->
+  <!--  <               touch our server!         >  -->
+  <!--    ----------------------------------------   -->
+  <!--      \  ^__^                                  -->
+  <!--       \ (oo)\_______                          -->
+  <!--         (__)\        )\/\                     -->
+  <!--              ||----ww|                        -->
+  <!--              ||     ||                        -->
+
+</html>

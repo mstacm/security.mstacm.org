@@ -51,15 +51,16 @@ app.use(cors());  // Required for REST API with site
  */
 
 /**
- * POST merch page endpoint
+ * POST Submit Purchase
  *
- * POST endpoint for merch page. Stripe payment token will be submitted here.
- * Customer's purchase will then be added to the spreadsheet listed in the
- * config file and emails will be sent to the ACM merch email and the customer.
+ * Endpoint for submitting a merch purchase.
+ * The purchase's Stripe payment token is submitted to Stripe,
+ * the customer's purchase is added to the order log spreadsheet,
+ * and a notification of the purchase is sent to the ACM Security officers.
  *
  * TODO: Enforce the maximum number of bundles on the server side.
  */
-app.post("/merchCharge", async (req, res) => {
+app.post("/api/merch/submit-purchase", async (req, res) => {
     // Set the charge amount on server side for security.
     const bundlePrice = config.chargePrices[0];
 
@@ -146,6 +147,18 @@ app.post("/merchCharge", async (req, res) => {
         numBundles,
         shirtSize
     );
+});
+
+
+/**
+ * GET Stripe Public Key
+ * 
+ * Returns the merch page's public Stripe key.
+ * Storing the Stripe public key in the same place as the secret key (on the
+ * server) makes it easier to update the two in tandem for development purposes.
+ */
+app.get("/api/merch/stripe-pk", (_, res) => {
+    res.send(config.stripePK);
 });
 
 
