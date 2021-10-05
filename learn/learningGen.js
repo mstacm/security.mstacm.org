@@ -147,7 +147,7 @@ function generateCourses(mstCourses){
         for (var i = 0; i < mstCourses.length; i++){
 
             // Example cards:
-            // <div class="card h-100 mb-3 bg-primary text-black-50" style="width: 15rem;">
+            // <div class="card h-100 mb-3 bg-primary text-white" style="width: 15rem;">
             //     <div class="card-header">CompSci 2500 (2020)</div>
             // <div class="card-body" style="width: 15rem;">
             //     <h5 class="card-title">Algorithms</h5>
@@ -169,14 +169,14 @@ function generateCourses(mstCourses){
                 // Change background color based on course difficulty level
                 switch(mstCourses[i].classEntries[j].level){
                     case 'Undergrad_Grad':
-                        tabBlock += '<div class="card  mb-3 mx-2 bg-warning text-black-50" style="width: 15rem;">';
+                        tabBlock += '<div class="card  mb-3 mx-2 bg-warning text-white" style="width: 15rem;">';
                         break;
                     case 'Grad':
-                        tabBlock += '<div class="card  mb-3 mx-2 bg-danger text-black-50" style="width: 15rem;">';
+                        tabBlock += '<div class="card  mb-3 mx-2 bg-danger text-white" style="width: 15rem;">';
                         break;
                     case 'Undergrad':
                     default:
-                        tabBlock += '<div class="card mb-3 mx-2 bg-primary text-black-50" style="width: 15rem;">';
+                        tabBlock += '<div class="card mb-3 mx-2 bg-primary text-white" style="width: 15rem;">';
                         break;
                 };
 
@@ -184,7 +184,7 @@ function generateCourses(mstCourses){
                     mstCourses[i].classEntries[j].year+')</div>';
                 tabBlock += '<div class="card-body" style="width: 15rem;">';
                 tabBlock += '<h5 class="card-title">'+mstCourses[i].classEntries[j].title+'</h5>';
-                tabBlock += '<p class="card-text text-black-50">'+mstCourses[i].classEntries[j].details+'</p>';
+                tabBlock += '<p class="card-text text-white">'+mstCourses[i].classEntries[j].details+'</p>';
                 tabBlock += '</div>';
                 tabBlock += '</div>';
             }
