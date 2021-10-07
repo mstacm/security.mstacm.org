@@ -183,11 +183,9 @@ app.post("/regCharge", async (req, res) => {
     console.log("Order logged to the spreadsheet.");
 
     emailmod.sendRegEmail(
-        order.customerName,
-        order.email,
+        order,
         charge.amount / 100,
         event.title,
-        order.discCode,
     );
 });
 
