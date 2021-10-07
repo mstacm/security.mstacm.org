@@ -73,7 +73,7 @@
         event.preventDefault();
         $("#payment-submit")
             .prop("disabled", true)
-            .text("Submitting...");
+            .val("Submitting...");
         const cardData = {
             "name": $("#name").val()
         };
@@ -105,8 +105,8 @@
             contentType: 'application/json',
 
             success: (response) => {
-                $('#payment-submit').text("Payment successful");
                 $("registration-success").modal("show");
+                $('#payment-submit').val("Payment successful");
             },
 
             error: (response) => {
