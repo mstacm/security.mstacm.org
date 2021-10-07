@@ -120,7 +120,12 @@ app.post("/regCharge", async (req, res) => {
         return res.status(400).send("Invalid event name");
     }
 
-    let finalCharge = event.cost;
+    let finalCharge;
+    if (order.attendanceType === "In-person") {
+        finalCharge = event.cost.inPerson;
+    } else {
+        finalCharge = event.cost.online;
+    }
 
     for (const discountCode in event.discountCodes) {
         if (discountCode.toUpperCase() === order.discCode.toUpperCase()) {
