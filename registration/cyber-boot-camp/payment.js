@@ -7,7 +7,7 @@
     $("#cost-in-person").text("$" + event.cost.inPerson);
     $("#cost-online").text("$" + event.cost.online);
 
-    let selectedCost = event.cost.inPerson;
+    let selectedCost;
     
     $("#attending-in-person")
         .on("change", function () {
