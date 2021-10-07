@@ -84,18 +84,15 @@ async function setNumRegistrants(newCount) {
 
 
 /**
- * @typedef  {Object}   OrderInfo
- * @property {string}   customerName
- * @property {string}   email
- * @property {string}   major
- * @property {string}   year
- * @property {string}   discovered
- * @property {string}   experience
- * @property {string}   membership
- * @property {?string}  commentsQuestions
- * @property {?string}  discCode          Discount code
- * @property {string}   transactionToken  Unique Stripe payment token
+ * @typedef  {Object} OrderInfo
+ * @property {string} customerName
+ * @property {string} email
+ * @property {string} phoneNumber
+ * @property {string} major
+ * @property {string} year              Class in college
  * @property {"In-person" | "Online"} attendanceType
+ * @property {?string} discCode          Discount code
+ * @property {string} transactionToken  Unique Stripe payment token
  */
 
 /**
@@ -172,14 +169,11 @@ app.post("/regCharge", async (req, res) => {
                 order.attendanceType,
                 order.customerName,
                 order.email,
+                order.phoneNumber,
                 charge.amount / 100,
                 order.discCode || "",
                 order.major,
                 order.year,
-                order.discovered,
-                order.experience,
-                order.membership,
-                order.commentsQuestions,
             ]],
         }
     });
