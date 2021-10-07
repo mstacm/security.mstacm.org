@@ -95,6 +95,7 @@ async function setNumRegistrants(newCount) {
  * @property {?string}  commentsQuestions
  * @property {?string}  discCode          Discount code
  * @property {string}   transactionToken  Unique Stripe payment token
+ * @property {"In-person" | "Online"} attendanceType
  */
 
 /**
@@ -168,6 +169,7 @@ app.post("/regCharge", async (req, res) => {
             // Values are placed in the row from left to right.
             values: [[
                 (new Date()).toString(),  // Purchase timestamp
+                order.attendanceType,
                 order.customerName,
                 order.email,
                 charge.amount / 100,
