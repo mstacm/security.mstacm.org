@@ -35,6 +35,8 @@ const sheetsClientPromise = auth.getClient().then( (authClient) => {
 
 const app = express();
 
+const eventSlug = "cyber-boot-camp-2022";
+
 // Middleware
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -112,7 +114,7 @@ app.post("/regCharge", async (req, res) => {
     console.log("Order received:", order);
 
     // let event = config.events[req.params.eventName];
-    let event = config.events["wireless-workshop-2021"];
+    let event = config.events[eventSlug];
 
     if (event === undefined) {
         return res.status(400).send("Invalid event name");
@@ -197,7 +199,7 @@ app.post("/regCharge", async (req, res) => {
 // app.get("/api/registration/event-info/:eventName", (req, res) => {
 app.get("/getRegEvent", async (_, res) => {
     //const eventInfo = {...config.events[req.params.eventName]};
-    const eventInfo = {...config.events["wireless-workshop-2021"]};
+    const eventInfo = {...config.events[eventSlug]};
     if (eventInfo === undefined) {
         return res.status(400).send("Invalid event name");
     }
