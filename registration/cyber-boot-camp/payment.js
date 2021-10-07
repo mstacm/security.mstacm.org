@@ -105,8 +105,8 @@
             contentType: 'application/json',
 
             success: (response) => {
-                $("registration-success").modal("show");
                 $('#payment-submit').val("Payment successful");
+                $("#registration-success").modal("show");
             },
 
             error: (response) => {
