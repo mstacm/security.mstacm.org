@@ -1,7 +1,6 @@
 (async function () {
     // Create a Stripe client
-    // const event = await fetch("/getRegEvent")
-    const event = await fetch("http://localhost:3001/getRegEvent")
+    const event = await fetch("/getRegEvent")
         .then(response => response.json());
 
     // Reactively update cost based on selected attendance type 
@@ -91,8 +90,7 @@
     function makeTransaction(transactionToken) {
         $.ajax({
             type: 'POST',
-            // url: '/regCharge',
-            url: 'http://localhost:3001/regCharge',
+            url: '/regCharge',
             data: JSON.stringify({
                 customerName: $('#name').val(),
                 email: $('#email').val(),
