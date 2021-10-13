@@ -16,7 +16,7 @@ jobs:
         uses: garygrossgarten/github-action-ssh@v0.6.4
         with:
           # git pull from master; ensure installed node packages are up to date with package.json; restart node services
-          command: cd /var/www/acmsec.mst.edu && git checkout master && git pull && cd node && npm install && pm2 restart contentProvide & pm2 restart emailLists
+          command: pushd /var/www/acmsec.mst.edu && git checkout master && git pull && pushd node && npm install && pm2 restart contentProvide & pm2 restart emailLists
           host: ${{ secrets.HOST }}
           username: ctf-admin
           privateKey: ${{ secrets.PRIVATE_KEY }}
