@@ -9,7 +9,7 @@
   <meta name="keywords" content="ACM Security, Missouri S&T">
   <meta name="author" content="Charles Rawlins & Nate Kean">
 
-  <title>Cyber Boot Camp Registration | ACM Security</title>
+  <title>Lockpicking Competition Registration | ACM Security</title>
 
   <!-- CSS Files -->
   <link href="/css/mdb-free.css" rel="stylesheet">
@@ -90,7 +90,7 @@
         <h5 class="modal-title">Registration Successful</h5>
       </div>
       <div class="modal-body">
-        <p>Thank you for registering for Cyber Boot Camp!</p>
+        <p>Thank you for registering for the Lockpicking Competition!</p>
         <p>Press Next to proceed to the Google Form and enter the rest of your registration information.</p>
       </div>
       <div class="modal-footer" style="border-top: 1px solid rgba(0, 0, 0, 0.125);">
@@ -112,31 +112,20 @@
 <!--  Custom div to allow particles to go behind bootstrap widgets-->
   <div class="container animated fadeIn">
       <form class="row justify-content-center mb-4">
-        <input type="hidden" name="slug" id="slug" value="cyber-boot-camp-2022">
+        <input type="hidden" name="slug" id="slug" value="lockpicking-competition-2021">
         <div class="col">
           <div class="card h-100 bg-dark align-items-center pb-4">
             <div class="card-header w-100">
               <div class="row justify-content-between pl-3">
-                <h4>Cyber Boot Camp Registration</h4>
+                <h4>Lockpicking Competition Registration</h4>
               </div>
             </div>
             <div style="width: 80%">
               <p class="pt-4"><em>
-                Event goes from January 9th - 15th, 2022. <br>
-                Cost is <span id="cost-in-person">...</span> in-person and <span id="cost-online">...</span> online.
+                Event is [TIME AND DATE]. <br>
               </em></p>
               <div id="warnings"></div>
-              <div>
-                <p style="margin-top: 1.5rem; margin-bottom: 0.5rem"><b>Attending*</b></p>
-                <label for="attending-in-person" class="radio-group">
-                  <input type="radio" id="attending-in-person" name="attending" value="In-person" required checked>
-                  In-person
-                </label>
-                <label for="attending-online" class="radio-group">
-                  <input type="radio" id="attending-online" name="attending" value="Online">
-                  Online
-                </label>
-              </div>
+              <input type="hidden" name="attending" value="In-person">
               <label for="name">Name*</label>
               <div class="input-group mb-2">
                   <input type="text" class="form-control" id="name" required>
@@ -228,6 +217,7 @@
             <div class="input-group mb-2">
                 <input type="text" class="form-control" id="discount-code">
             </div> -->
+            <input type="hidden" id="discount-code" value="">
             <div class="row justify-content-center align-middle mt-4">
                 <input type="submit" id="payment-submit" class="btn btn-primary mt-1" value="Pay &amp; Register">
             </div>

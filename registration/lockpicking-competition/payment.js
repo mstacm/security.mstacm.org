@@ -6,49 +6,12 @@
         },
     });
 
-    // Update cost based on selected attendance type 
-    $("#cost-in-person").text("$" + event.cost.inPerson);
-    $("#cost-online").text("$" + event.cost.online);
-
-    let selectedCost;
-    
-    $("#attending-in-person")
-        .on("change", function () {
-            if ($(this).is(":checked")) {
-                selectedCost = event.cost.inPerson;
-                $("#payment-amount").text("$" + selectedCost);
-            }
-        });
-    $("#attending-online")
-        .on("change", function () {
-            if ($(this).is(":checked")) {
-                selectedCost = event.cost.online;
-                $("#payment-amount").text("$" + selectedCost);
-            }
-        });
-
-    $("#payment-amount").text("$" + selectedCost);
+    $("#payment-amount").text("$" + event.cost.inPerson);
 
     // Do not allow the user to register if the event is full
-    if (event.full.inPerson && event.full.online) {
+    if (event.full.inPerson) {
         alert("Sorry! This event is full and is no longer accepting registration.");
         window.history.back();
-    } else if (event.full.inPerson) {
-        $("#attending-in-person").prop("disabled", true);
-        $("#attending-online").prop("checked", true);
-        $("#warnings").text("⚠ In-person registration is now full.");
-    } else if (event.full.online) {
-        $("#attending-online").prop("disabled", true);
-        $("#attending-in-person").prop("checked", true);
-        $("#warnings").text("⚠ Online registration is now full.");
-    }
-
-    if ($("#attending-in-person").is(":checked")) {
-        selectedCost = event.cost.inPerson;
-        $("#payment-amount").text("$" + selectedCost);
-    } else if ($("#attending-online").is(":checked")) {
-        selectedCost = event.cost.online;
-        $("#payment-amount").text("$" + selectedCost);
     }
 
     // Create a Stripe client
@@ -117,10 +80,9 @@
                     phoneNumber: $("#phone-number").val(),
                     major: $("#major").val(),
                     year: $('input[name="year"]:checked').val(),
-                    attendanceType: $('input[name="attending"]:checked').val(),
+                    attendanceType: $('input[name="attending"]').val(),
                     transactionToken: transactionToken,
-                    // discCode: $("#discount-code").val(),
-                    discCode: "",
+                    discCode: $("#discount-code").val(),
                 }),
                 contentType: "application/json",
             });
