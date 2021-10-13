@@ -23,8 +23,6 @@ const cors = require("cors");
 
 const app = express();
 
-const eventSlug = "cyber-boot-camp-2022";
-
 // Middleware
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -33,6 +31,7 @@ app.use(cors());  // Required for REST API with site
 
 /**
  * @typedef  {Object} OrderInfo
+ * @property {string} slug              Event identifier
  * @property {string} customerName
  * @property {string} email
  * @property {string} phoneNumber
@@ -51,7 +50,6 @@ app.use(cors());  // Required for REST API with site
  * the customer's purchase is added to the order log spreadsheet,
  * and a notification of the purchase is sent to the ACM Security officers.
  */
-// app.post("/api/registration/submit-purchase/:eventName", async (req, res) => {
 app.post("/regCharge", async (req, res) => {
     /**
      * @type {OrderInfo}
@@ -59,8 +57,7 @@ app.post("/regCharge", async (req, res) => {
     const order = req.body;
     console.log("Order received:", order);
 
-    // let event = config.events[req.params.eventName];
-    let event = config.events[eventSlug];
+    let event = config.events[order.slug];
 
     if (event === undefined) {
         return res.status(400).send("Invalid event name");
@@ -128,32 +125,30 @@ app.post("/regCharge", async (req, res) => {
  * 
  * Returns information about the current event.
  */
-// app.get("/api/registration/event-info/:eventName", (req, res) => {
-app.get("/getRegEvent", async (_, res) => {
-    //const eventInfo = {...config.events[req.params.eventName]};
-    const eventInfo = {...config.events[eventSlug]};
-    if (eventInfo === undefined) {
+app.get("/getRegEvent", async (req, res) => {
+    const event = {...config.events[req.query.slug]};
+    if (event === undefined) {
         return res.status(400).send("Invalid event name");
     }
 
     // Delete the coupon code data from the response
-    delete eventInfo.discountCodes;
+    delete event.discountCodes;
 
     // Don't expose the current number of registrants; just tell the user
     // whether the event is full or not.
-    eventInfo.full = {
-        inPerson: (await getNumInPersonRegistrants()) >= eventInfo.maxRegistrants.inPerson,
-        online: (await getNumOnlineRegistrants()) >= eventInfo.maxRegistrants.online,
+    event.full = {
+        inPerson: (await sheets.inPersonRegistrations(event.spreadsheetID)) >= event.maxRegistrants.inPerson,
+        online: (await sheets.onlineRegistrations(event.spreadsheetID)) >= event.maxRegistrants.online,
     };
     
-    delete eventInfo.maxRegistrants;
+    delete event.maxRegistrants;
 
     // Add the public key to use in the Stripe payment form
-    if (!eventInfo.full.inPerson || !eventInfo.full.online) {
-        eventInfo.stripePK = config.stripePK;
+    if (!event.full.inPerson || !event.full.online) {
+        event.stripePK = config.stripePK;
     }
 
-    res.send(eventInfo);
+    res.send(event);
 });
 
 

@@ -1,7 +1,10 @@
 (async function () {
-    // Create a Stripe client
-    const event = await fetch("/getRegEvent")
-        .then(response => response.json());
+    // Download this event's information from the server
+    const event = await $.ajax("http://localhost:3001/getRegEvent", {
+        data: {
+            slug: $("#slug").val(),
+        },
+    });
 
     // Reactively update cost based on selected attendance type 
     $("#cost-in-person").text("$" + event.cost.inPerson);
@@ -129,5 +132,6 @@
                 alert(`Uh-oh! Something went wrong. ${response} Refresh and try again!`);
             },
         });
+                    slug: $("#slug").val(),
     }
 })();
