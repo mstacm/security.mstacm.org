@@ -5,7 +5,7 @@ $(document).ready(() => {
         contentType: "application/json",
 
         success: (event) => {
-            if (event.full) {
+            if (event.full.inPerson && event.full.online) {
                 $("#register-button").css("pointer-events", "none");
                 $("#register-button").css("filter", "saturate(25%)");
                 $("#register-button").text("Registration is full");

@@ -35,6 +35,8 @@ const sheetsClientPromise = auth.getClient().then( (authClient) => {
 
 const app = express();
 
+const eventSlug = "cyber-boot-camp-2022";
+
 // Middleware
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -60,10 +62,10 @@ app.use(cors());  // Required for REST API with site
 // from the spreadsheet. Opens the door to potential data redundancy errors.
 // This is a temporary solution until I can figure out how to get this
 // information with the Google Sheets API.
-async function getNumRegistrants() {
+async function getNumOnlineRegistrants() {
     let registrantCount;
     try {
-        registrantCount = await fs.readFile("./private/registrantCount.txt", "utf8");
+        registrantCount = await fs.readFile("./private/registrantCountOnline.txt", "utf8");
     } catch (err) {
         if (err.code === "ENOENT") {
             registrantCount = 0;
@@ -75,24 +77,42 @@ async function getNumRegistrants() {
     return registrantCount;
 }
 
-async function setNumRegistrants(newCount) {
+async function setNumInPersonRegistrants(newCount) {
     if (typeof newCount === "number") newCount = newCount.toString();
-    await fs.writeFile("./private/registrantCount.txt", newCount);
+    await fs.writeFile("./private/registrantCountOnline.txt", newCount);
+}
+
+async function getNumInPersonRegistrants() {
+    let registrantCount;
+    try {
+        registrantCount = await fs.readFile("./private/registrantCountInPerson.txt", "utf8");
+    } catch (err) {
+        if (err.code === "ENOENT") {
+            registrantCount = 0;
+        } else {
+            console.error(err);
+        }
+    }
+    registrantCount = parseInt(registrantCount);
+    return registrantCount;
+}
+
+async function setNumOnlineRegistrants(newCount) {
+    if (typeof newCount === "number") newCount = newCount.toString();
+    await fs.writeFile("./private/registrantCountInPerson.txt", newCount);
 }
 
 
 /**
- * @typedef  {Object}   OrderInfo
- * @property {string}   customerName
- * @property {string}   email
- * @property {string}   major
- * @property {string}   year
- * @property {string}   discovered
- * @property {string}   experience
- * @property {string}   membership
- * @property {?string}  commentsQuestions
- * @property {?string}  discCode          Discount code
- * @property {string}   transactionToken  Unique Stripe payment token
+ * @typedef  {Object} OrderInfo
+ * @property {string} customerName
+ * @property {string} email
+ * @property {string} phoneNumber
+ * @property {string} major
+ * @property {string} year              Class in college
+ * @property {"In-person" | "Online"} attendanceType
+ * @property {?string} discCode          Discount code
+ * @property {string} transactionToken  Unique Stripe payment token
  */
 
 /**
@@ -112,13 +132,18 @@ app.post("/regCharge", async (req, res) => {
     console.log("Order received:", order);
 
     // let event = config.events[req.params.eventName];
-    let event = config.events["wireless-workshop-2021"];
+    let event = config.events[eventSlug];
 
     if (event === undefined) {
         return res.status(400).send("Invalid event name");
     }
 
-    let finalCharge = event.cost;
+    let finalCharge;
+    if (order.attendanceType === "In-person") {
+        finalCharge = event.cost.inPerson;
+    } else {
+        finalCharge = event.cost.online;
+    }
 
     for (const discountCode in event.discountCodes) {
         if (discountCode.toUpperCase() === order.discCode.toUpperCase()) {
@@ -161,30 +186,30 @@ app.post("/regCharge", async (req, res) => {
             // Values are placed in the row from left to right.
             values: [[
                 (new Date()).toString(),  // Purchase timestamp
+                order.attendanceType,
                 order.customerName,
                 order.email,
+                order.phoneNumber,
                 charge.amount / 100,
                 order.discCode || "",
                 order.major,
                 order.year,
-                order.discovered,
-                order.experience,
-                order.membership,
-                order.commentsQuestions,
             ]],
         }
     });
 
-    setNumRegistrants(await getNumRegistrants() + 1);
+    if (order.attendanceType === "In-person") {
+        setNumInPersonRegistrants(await getNumInPersonRegistrants() + 1);
+    } else {
+        setNumOnlineRegistrants(await getNumOnlineRegistrants() + 1);
+    }
 
     console.log("Order logged to the spreadsheet.");
 
     emailmod.sendRegEmail(
-        order.customerName,
-        order.email,
+        order,
         charge.amount / 100,
         event.title,
-        order.discCode,
     );
 });
 
@@ -197,7 +222,7 @@ app.post("/regCharge", async (req, res) => {
 // app.get("/api/registration/event-info/:eventName", (req, res) => {
 app.get("/getRegEvent", async (_, res) => {
     //const eventInfo = {...config.events[req.params.eventName]};
-    const eventInfo = {...config.events["wireless-workshop-2021"]};
+    const eventInfo = {...config.events[eventSlug]};
     if (eventInfo === undefined) {
         return res.status(400).send("Invalid event name");
     }
@@ -207,11 +232,17 @@ app.get("/getRegEvent", async (_, res) => {
 
     // Don't expose the current number of registrants; just tell the user
     // whether the event is full or not.
-    eventInfo.full = (await getNumRegistrants()) >= eventInfo.maxRegistrants;
+    eventInfo.full = {
+        inPerson: (await getNumInPersonRegistrants()) >= eventInfo.maxRegistrants.inPerson,
+        online: (await getNumOnlineRegistrants()) >= eventInfo.maxRegistrants.online,
+    };
+    
     delete eventInfo.maxRegistrants;
 
     // Add the public key to use in the Stripe payment form
-    if (!eventInfo.full) eventInfo.stripePK = config.stripePK;
+    if (!eventInfo.full.inPerson || !eventInfo.full.online) {
+        eventInfo.stripePK = config.stripePK;
+    }
 
     res.send(eventInfo);
 });
