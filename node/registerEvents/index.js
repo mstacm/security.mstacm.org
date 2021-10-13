@@ -16,22 +16,10 @@ process.on("unhandledRejection", process.env.NODE_ENV !== "production" ?
 
 const config = require("./private/config");
 const emailmod = require("./regEmails");
+const sheets = require("./sheets");
 const stripe = require("stripe")(config.stripeSK);
 const express = require("express");
 const cors = require("cors");
-const googleSheets = require("@googleapis/sheets");
-const fs = require("fs/promises");
-
-const auth = new googleSheets.auth.GoogleAuth({
-    keyFilename: config.googleSheetsInfo.keyFilename,
-    scopes: ["https://www.googleapis.com/auth/spreadsheets"],
-});
-const sheetsClientPromise = auth.getClient().then( (authClient) => {
-    return googleSheets.sheets({
-        version: "v4",
-        auth: authClient,
-    });
-});
 
 const app = express();
 
@@ -43,66 +31,6 @@ app.use(express.json());
 app.use(cors());  // Required for REST API with site
 
 
-// async function getNumRegistrants() {
-//     const sheets = await sheetsClientPromise;
-//     const { data } = await sheets.spreadsheets.values.get({
-//         spreadsheetId: config.googleSheetsInfo.spreadsheetID,
-//         range: "A2:A",
-//     });
-
-//     let numRegistrants = 0;
-//     console.log(data.values || "undefined");
-//     for (const row of data.values) {
-//         numRegistrants += row[0].length > 0
-//     }
-//     return numRegistrants;
-// }
-
-// BODGE: Store the number of registrants in a file instead of counting them
-// from the spreadsheet. Opens the door to potential data redundancy errors.
-// This is a temporary solution until I can figure out how to get this
-// information with the Google Sheets API.
-async function getNumOnlineRegistrants() {
-    let registrantCount;
-    try {
-        registrantCount = await fs.readFile("./private/registrantCountOnline.txt", "utf8");
-    } catch (err) {
-        if (err.code === "ENOENT") {
-            registrantCount = 0;
-        } else {
-            console.error(err);
-        }
-    }
-    registrantCount = parseInt(registrantCount);
-    return registrantCount;
-}
-
-async function setNumInPersonRegistrants(newCount) {
-    if (typeof newCount === "number") newCount = newCount.toString();
-    await fs.writeFile("./private/registrantCountOnline.txt", newCount);
-}
-
-async function getNumInPersonRegistrants() {
-    let registrantCount;
-    try {
-        registrantCount = await fs.readFile("./private/registrantCountInPerson.txt", "utf8");
-    } catch (err) {
-        if (err.code === "ENOENT") {
-            registrantCount = 0;
-        } else {
-            console.error(err);
-        }
-    }
-    registrantCount = parseInt(registrantCount);
-    return registrantCount;
-}
-
-async function setNumOnlineRegistrants(newCount) {
-    if (typeof newCount === "number") newCount = newCount.toString();
-    await fs.writeFile("./private/registrantCountInPerson.txt", newCount);
-}
-
-
 /**
  * @typedef  {Object} OrderInfo
  * @property {string} customerName
@@ -111,7 +39,7 @@ async function setNumOnlineRegistrants(newCount) {
  * @property {string} major
  * @property {string} year              Class in college
  * @property {"In-person" | "Online"} attendanceType
- * @property {?string} discCode          Discount code
+ * @property {?string} discCode         Discount code
  * @property {string} transactionToken  Unique Stripe payment token
  */
 
@@ -172,37 +100,18 @@ app.post("/regCharge", async (req, res) => {
     console.log("Payment was successful.");
     res.send("Your payment was successful!");
 
-    // TODO: Make it so that you don't have to await this
-    const sheets = await sheetsClientPromise;
-
     // Add a row to the bottom of the spreadsheet.
-    await sheets.spreadsheets.values.append({
-        spreadsheetId: config.googleSheetsInfo.spreadsheetID,
-        range: "A1",
-        valueInputOption: "RAW",
-        requestBody: {
-            majorDimension: "ROWS",
-
-            // Values are placed in the row from left to right.
-            values: [[
-                (new Date()).toString(),  // Purchase timestamp
-                order.attendanceType,
-                order.customerName,
-                order.email,
-                order.phoneNumber,
-                charge.amount / 100,
-                order.discCode || "",
-                order.major,
-                order.year,
-            ]],
-        }
-    });
-
-    if (order.attendanceType === "In-person") {
-        setNumInPersonRegistrants(await getNumInPersonRegistrants() + 1);
-    } else {
-        setNumOnlineRegistrants(await getNumOnlineRegistrants() + 1);
-    }
+    await sheets.addRegistration(event.spreadsheetID, [
+        (new Date()).toString(),  // Purchase timestamp
+        order.attendanceType,
+        order.customerName,
+        order.email,
+        order.phoneNumber,
+        charge.amount / 100,
+        order.discCode || "",
+        order.major,
+        order.year,
+    ]);
 
     console.log("Order logged to the spreadsheet.");
 
