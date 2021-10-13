@@ -2,12 +2,7 @@
   "name": "acmsecbackend",
   "version": "1.0.0",
   "description": "Backend files for acmsec.mst.edu, including API endpoints for event registration and merch purchases",
-  "main": "emailLists/index.js",
-  "scripts": {
-    "test": "echo \"Test the API endpoints with Postman!\"",
-    "start": "nodemon emailLists/index.js",
-    "merch": "nodemon merchPage/index.js"
-  },
+  "scripts": {},
   "author": "Charles Rawlins",
   "license": "ISC",
   "dependencies": {
@@ -15,7 +10,6 @@
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "json5": "^2.2.0",
-    "nodemon": "^2.0.12",
     "sendmail": "^1.6.1",
     "stripe": "^8.148.0"
   },
