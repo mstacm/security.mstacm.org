@@ -128,27 +128,31 @@ app.post("/regCharge", async (req, res) => {
 app.get("/getRegEvent", async (req, res) => {
     const event = {...config.events[req.query.slug]};
     if (event === undefined) {
-        return res.status(400).send("Invalid event name");
+        return res.status(400).send("Invalid event identifier");
     }
 
-    // Delete the coupon code data from the response
-    delete event.discountCodes;
+    const inPersonFull = (await sheets.inPersonRegistrations(event.spreadsheetID))
+        >= event.maxRegistrants.inPerson;
+    const onlineFull = (await sheets.onlineRegistrations(event.spreadsheetID))
+        >= event.maxRegistrants.online;
 
-    // Don't expose the current number of registrants; just tell the user
-    // whether the event is full or not.
-    event.full = {
-        inPerson: (await sheets.inPersonRegistrations(event.spreadsheetID)) >= event.maxRegistrants.inPerson,
-        online: (await sheets.onlineRegistrations(event.spreadsheetID)) >= event.maxRegistrants.online,
-    };
-    
-    delete event.maxRegistrants;
+    res.send({
+        title: event.title,
+        cost: event.cost,
 
-    // Add the public key to use in the Stripe payment form
-    if (!event.full.inPerson || !event.full.online) {
-        event.stripePK = config.stripePK;
-    }
+        // Don't expose the current number of registrations; just tell the user
+        // whether the event is full or not.
+        full: {
+            inPerson: inPersonFull,
+            online: onlineFull,
+        },
 
-    res.send(event);
+        // Add the public key to use in the Stripe payment form
+        // (but only if the event is open for registration)
+        stripePK: (!inPersonFull || !onlineFull) ?
+            config.stripePK :
+            null,
+    });
 });
 
 
