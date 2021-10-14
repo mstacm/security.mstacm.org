@@ -30,16 +30,16 @@ app.use(cors());  // Required for REST API with site
 
 
 /**
- * @typedef  {Object} OrderInfo
- * @property {string} slug              Event identifier
+ * @typedef  {Object} Order
+ * @property {string} slug - Event identifier
  * @property {string} customerName
  * @property {string} email
- * @property {string} phoneNumber
  * @property {string} major
- * @property {string} year              Class in college
+ * @property {string} year - Class in college
  * @property {"In-person" | "Online"} attendanceType
- * @property {?string} discCode         Discount code
- * @property {string} transactionToken  Unique Stripe payment token
+ * @property {Object.<string, string>} [extra] - Extra information
+ * @property {?string} discCode - Discount code
+ * @property {string} transactionToken - Unique Stripe payment token
  */
 
 /**
@@ -52,17 +52,20 @@ app.use(cors());  // Required for REST API with site
  */
 app.post("/regCharge", async (req, res) => {
     /**
-     * @type {OrderInfo}
+     * @type {Order}
      */
     const order = req.body;
     console.log("Order received:", order);
 
-    let event = config.events[order.slug];
+    const event = config.events[order.slug];
 
     if (event === undefined) {
         return res.status(400).send("Invalid event name");
     }
 
+    order.extra = order.extra || {};
+
+    // Determine the cost based on attendance type
     let finalCharge;
     if (order.attendanceType === "In-person") {
         finalCharge = event.cost.inPerson;
@@ -70,6 +73,7 @@ app.post("/regCharge", async (req, res) => {
         finalCharge = event.cost.online;
     }
 
+    // Check for and apply a discount code
     for (const discountCode in event.discountCodes) {
         if (discountCode.toUpperCase() === order.discCode.toUpperCase()) {
             finalCharge -= event.discountCodes[discountCode];
@@ -99,24 +103,19 @@ app.post("/regCharge", async (req, res) => {
 
     // Add a row to the bottom of the spreadsheet.
     await sheets.addRegistration(event.spreadsheetID, [
-        (new Date()).toString(),  // Purchase timestamp
+        (new Date()).toString(),  // Payment timestamp
         order.attendanceType,
         order.customerName,
         order.email,
-        order.phoneNumber,
-        charge.amount / 100,
-        order.discCode || "",
         order.major,
         order.year,
+        charge.amount / 100,
+        ...Object.values(order.extra),  // Slap all the extra info onto the end
     ]);
-
     console.log("Order logged to the spreadsheet.");
 
-    emailmod.sendRegEmail(
-        order,
-        charge.amount / 100,
-        event.title,
-    );
+    emailmod.sendRegEmail(event, order, charge.amount / 100);
+    console.log("Order notification sent to officers.");
 });
 
 

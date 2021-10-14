@@ -114,13 +114,15 @@
                     slug: $("#slug").val(),
                     customerName: $("#name").val(),
                     email: $("#email").val(),
-                    phoneNumber: $("#phone-number").val(),
                     major: $("#major").val(),
                     year: $('input[name="year"]:checked').val(),
                     attendanceType: $('input[name="attending"]:checked').val(),
                     transactionToken: transactionToken,
                     // discCode: $("#discount-code").val(),
                     discCode: "",
+                    extra: {
+                        phoneNumber: $("#phone-number").val(),
+                    }
                 }),
                 contentType: "application/json",
             });
