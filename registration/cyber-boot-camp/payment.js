@@ -1,3 +1,4 @@
+// TODO: Test and make sure this still works after the backend changes
 (async function () {
     // Download this event's information from the server
     const event = await $.ajax("http://localhost:3001/getRegEvent", {
