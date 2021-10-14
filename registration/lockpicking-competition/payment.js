@@ -70,6 +70,7 @@
     // Pass token to our server to finalize payment
     async function submitOrder(transactionToken) {
         try {
+            // TODO: Can you get the form inputs from the form element itself?
             await $.ajax({
                 type: "POST",
                 url: "http://localhost:3001/regCharge",
@@ -77,7 +78,6 @@
                     slug: $("#slug").val(),
                     customerName: $("#name").val(),
                     email: $("#email").val(),
-                    phoneNumber: $("#phone-number").val(),
                     major: $("#major").val(),
                     year: $('input[name="year"]:checked').val(),
                     attendanceType: $('input[name="attending"]').val(),
