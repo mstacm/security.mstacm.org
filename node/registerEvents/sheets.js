@@ -17,8 +17,8 @@ const sheetsClientPromise = auth.getClient().then( (authClient) => {
  * Get the value of a single cell in a sheet.
  * 
  * @param {string} spreadsheetID
- * @param {string} coordinate A1 notation location of the cell
- * @returns {Promise<any>} The value of the cell
+ * @param {string} coordinate - A1 notation location of the cell
+ * @returns {Promise<any>} - The value of the cell
  */
 async function getValue(spreadsheetID, coordinate) {
     const sheets = await sheetsClientPromise;
@@ -70,6 +70,12 @@ async function createMetadata(spreadsheetID) {
 
 
 module.exports = {
+    /**
+     * Get the number of in-person registrations for an event.
+     * 
+     * @param {string} spreadsheetID 
+     * @returns {Promise<number>} - The number of in-person registrations
+     */
     inPersonRegistrations: async function(spreadsheetID) {
         let registrations;
         try {
@@ -81,6 +87,12 @@ module.exports = {
         return parseInt(registrations);
     },
 
+    /**
+     * Get the number of online registrations for an event.
+     * 
+     * @param {string} spreadsheetID 
+     * @returns {Promise<number>} - The number of online registrations
+     */
     onlineRegistrations: async function(spreadsheetID) {
         let registrations;
         try {
@@ -92,9 +104,15 @@ module.exports = {
         return parseInt(registrations);
     },
 
+    /**
+     * 
+     * @param {string} spreadsheetID
+     * @param {any[]} values - Values to add to the row, left to right
+     * @returns {Promise<void>}
+     */
     addRegistration: async function(spreadsheetID, values) {
         const sheets = await sheetsClientPromise;
-        return sheets.spreadsheets.values.append({
+        await sheets.spreadsheets.values.append({
             spreadsheetId: spreadsheetID,
             range: "Registrations!A1",
             valueInputOption: "RAW",
