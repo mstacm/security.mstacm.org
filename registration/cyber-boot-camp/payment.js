@@ -1,7 +1,7 @@
 // TODO: Test and make sure this still works after the backend changes
 (async function () {
     // Download this event's information from the server
-    const event = await $.ajax("http://localhost:3001/getRegEvent", {
+    const event = await $.ajax("/getRegEvent", {
         data: {
             slug: $("#slug").val(),
         },
@@ -110,7 +110,7 @@
         try {
             await $.ajax({
                 type: "POST",
-                url: "http://localhost:3001/regCharge",
+                url: "/regCharge",
                 data: JSON.stringify({
                     slug: $("#slug").val(),
                     customerName: $("#name").val(),
