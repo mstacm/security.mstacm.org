@@ -71,21 +71,25 @@ async function createMetadata(spreadsheetID) {
 
 module.exports = {
     inPersonRegistrations: async function(spreadsheetID) {
+        let registrations;
         try {
-            return await getValue(spreadsheetID, "Metadata!B2");
+            registrations = await getValue(spreadsheetID, "Metadata!B2");
         } catch (err) {
             await createMetadata(spreadsheetID);
-            return await getValue(spreadsheetID, "Metadata!B2");
+            registrations = await getValue(spreadsheetID, "Metadata!B2");
         }
+        return parseInt(registrations);
     },
 
     onlineRegistrations: async function(spreadsheetID) {
+        let registrations;
         try {
-            return await getValue(spreadsheetID, "Metadata!B3");
+            registrations = await getValue(spreadsheetID, "Metadata!B3");
         } catch (err) {
             await createMetadata(spreadsheetID);
-            return await getValue(spreadsheetID, "Metadata!B3");
+            registrations = await getValue(spreadsheetID, "Metadata!B3");
         }
+        return parseInt(registrations);
     },
 
     addRegistration: async function(spreadsheetID, values) {
