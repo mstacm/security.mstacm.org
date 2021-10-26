@@ -27,7 +27,7 @@ jobs:
             pm2 restart 1 &
             pm2 restart 2 &
             pm2 restart 6 &
-            pm2 restart 8
+            pm2 restart 8 &
           host: ${{ secrets.HOST }}
           username: ctf-admin
           privateKey: ${{ secrets.PRIVATE_KEY }}
