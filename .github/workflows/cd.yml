@@ -24,8 +24,10 @@ jobs:
             git pull &&\
             pushd node &&
             npm install &&
-            pm2 restart contentProvide &
-            pm2 restart emailLists
+            pm2 restart 1 &
+            pm2 restart 2 &
+            pm2 restart 6 &
+            pm2 restart 8
           host: ${{ secrets.HOST }}
           username: ctf-admin
           privateKey: ${{ secrets.PRIVATE_KEY }}
