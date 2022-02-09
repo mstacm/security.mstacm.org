@@ -173,9 +173,9 @@
         ]
     },
     {
-        "learning": "Hardware Tools",
-        "contentID": "ContentHardwareTools",
-        "tabID": "IDHardwareTools",
+        "learning": "Hardware",
+        "contentID": "ContentHardware",
+        "tabID": "IDHardware",
         "learningEntries": [
             {
                 "name": "hak5",
@@ -204,9 +204,9 @@
         ]
     },
     {
-        "learning": "Software Tools",
-        "contentID": "ContentSoftwareTools",
-        "tabID": "IDSoftwareTools",
+        "learning": "Software",
+        "contentID": "ContentSoftware",
+        "tabID": "IDSoftware",
         "learningEntries": [
             {
                 "name": "Kali Linux",
