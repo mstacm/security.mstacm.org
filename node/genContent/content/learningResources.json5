@@ -204,9 +204,9 @@
         ]
     },
     {
-        "learning": "Virtual Tools",
-        "contentID": "ContentVirtualTools",
-        "tabID": "IDVirtualTools",
+        "learning": "Software Tools",
+        "contentID": "ContentSoftwareTools",
+        "tabID": "IDSoftwareTools",
         "learningEntries": [
             {
                 "name": "Kali Linux",
