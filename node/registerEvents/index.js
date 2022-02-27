@@ -23,8 +23,6 @@ const cors = require("cors");
 
 const app = express();
 
-const eventSlug = "cyber-boot-camp-2022";
-
 // Middleware
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -37,7 +35,7 @@ app.use(cors());  // Required for REST API with site
  * @property {string} customerName
  * @property {string} email
  * @property {string} major
- * @property {string} year - Class in college
+ * @property {?string} year - Class in college
  * @property {"In-person" | "Online"} attendanceType
  * @property {Object.<string, string>} [extra] - Extra information
  * @property {?string} discCode - Discount code
