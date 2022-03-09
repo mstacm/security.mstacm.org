@@ -43,7 +43,7 @@
         $(document).ready(async function () {
 
             // Create a Stripe client
-            const stripePK = await fetch("/api/merch/stripe-pk");
+            const stripePK = await fetch("/merchCharge?stripepk=1");
             const stripe = Stripe(stripePK);
 
             // Create an instance of Elements

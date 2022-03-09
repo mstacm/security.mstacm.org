@@ -60,7 +60,11 @@ app.use(cors());  // Required for REST API with site
  *
  * TODO: Enforce the maximum number of bundles on the server side.
  */
-app.post("/api/merch/submit-purchase", async (req, res) => {
+app.post("/merchCharge", async (req, res) => {
+    if (req.params.stripepk) {
+        return res.send(config.stripePK);
+    }
+
     // Set the charge amount on server side for security.
     const bundlePrice = config.chargePrices[0];
 
@@ -157,9 +161,9 @@ app.post("/api/merch/submit-purchase", async (req, res) => {
  * Storing the Stripe public key in the same place as the secret key (on the
  * server) makes it easier to update the two in tandem for development purposes.
  */
-app.get("/api/merch/stripe-pk", (_, res) => {
-    res.send(config.stripePK);
-});
+// app.get("/api/merch/stripe-pk", (_, res) => {
+//     res.send(config.stripePK);
+// });
 
 
 // Setup port options for starting backend
