@@ -3,7 +3,8 @@
 .idea/
 
 # Private configuration files
-config.js
+private/
+!*.example.*
 merchConfigs/
 ACM Sec Backend-c7e090995ffd.json
 
