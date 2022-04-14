@@ -4,6 +4,7 @@
 
 # Private configuration files
 private/
+!*.example.*
 merchConfigs/
 ACM Sec Backend-c7e090995ffd.json
 
