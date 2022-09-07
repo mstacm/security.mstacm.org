@@ -1,6 +1,76 @@
 // Array of officer profiles for the history of ACM security
 [
     {
+        "year": "Fall 2022",
+        "contentID": "ContentFall2022",
+        "tabID": "IDFall2022",
+        "officerEntries": [
+            {
+                "name": "Adam Crawford",
+                "role": "Chair",
+                "image": "/images/Fall2021Pics/adam_crawford.jpg",
+                "educ": "IST Junior",
+                "desc": "I enjoy learning about most things related to computers, especially cybersecurity, networking, and software development.",
+                "email": "archyk@mst.edu",
+                "linkedin": "https://www.linkedin.com/in/adam-craw/"
+            },
+            {
+                "name": "Gabe Haegele",
+                "role": "Vice Chair",
+                "image": "/images/Fall2022Pics/gabe-haegele.jpg",
+                "educ": "CS Junior",
+                "desc": "I think everyone should watch the 2014 documentary The Hacker Wars.",
+                "email": "gjhcnp@umsystem.edu",
+                "linkedin": null
+            },
+            {
+                "name": "Andrew Rollins",
+                "role": "M57 Captain",
+                "image": null,
+                "educ": "CS/CpE Freshman",
+                "desc": "Interested in keeping up to date.",
+                "email": "hkbkmq@umsystem.edu",
+                "linkedin": null
+            },
+            {
+                "name": "James Callender",
+                "role": "Special Projects",
+                "image": null,
+                "educ": "IST/CS Freshman",
+                "desc": "Interested in working for any computer science related projects.",
+                "email": "JCallender@mst.edu",
+                "linkedin": null
+            },
+            {
+                "name": "Himanth Bobba",
+                "role": "Special Projects",
+                "image": null,
+                "educ": "CS/CpE Freshman",
+                "desc": "Interested in keeping up to date.",
+                "email": "hkbkmq@umsystem.edu",
+                "linkedin": "https://www.linkedin.com/in/himanth-bobba-30090120b/"
+            },
+            {
+                "name": "Nate Kean",
+                "role": "Webmaster",
+                "image": "/images/Fall2021Pics/nate-kean-4-8-2021.jpg",
+                "educ": "CS Junior",
+                "desc": "Passionate about learning, computer problem solving, and programming.",
+                "email": "natekean@mst.edu",
+                "linkedin": "https://www.linkedin.com/in/nate-kean/"
+            },
+            {
+                "name": "Dr. Taylor",
+                "role": "Faculty Advisor",
+                "image": null,
+                "educ": "CS PhD",
+                "desc": "Associate Professor with tenure and Associate Chair of Undergraduate Studies and Outreach Activities in the <a href=\"https://cs.mst.edu/\">CS Department</a> at Missouri S&T.",
+                "email": "taylor@mst.edu",
+                "linkedin": null
+            },
+        ]
+    },
+    {
         "year": "Spring 2022",
         "contentID": "ContentSpring2022",
         "tabID": "IDSpring2022",
