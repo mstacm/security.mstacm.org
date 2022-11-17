@@ -9,9 +9,9 @@
 
     // Update cost based on selected attendance type 
     $("#cost-in-person").text("$" + event.cost.inPerson);
-    $("#cost-online").text("$" + event.cost.online);
+    // $("#cost-online").text("$" + event.cost.online);
 
-    let selectedCost;
+    let selectedCost = event.cost.inPerson;
     
     $("#attending-in-person")
         .on("change", function () {
@@ -20,13 +20,13 @@
                 $("#payment-amount").text("$" + selectedCost);
             }
         });
-    $("#attending-online")
-        .on("change", function () {
-            if ($(this).is(":checked")) {
-                selectedCost = event.cost.online;
-                $("#payment-amount").text("$" + selectedCost);
-            }
-        });
+    // $("#attending-online")
+    //     .on("change", function () {
+    //         if ($(this).is(":checked")) {
+    //             selectedCost = event.cost.online;
+    //             $("#payment-amount").text("$" + selectedCost);
+    //         }
+    //     });
 
     $("#payment-amount").text("$" + selectedCost);
 
@@ -36,21 +36,23 @@
         window.history.back();
     } else if (event.full.inPerson) {
         $("#attending-in-person").prop("disabled", true);
-        $("#attending-online").prop("checked", true);
+        // $("#attending-online").prop("checked", true);
         $("#warnings").text("⚠ In-person registration is now full.");
-    } else if (event.full.online) {
-        $("#attending-online").prop("disabled", true);
-        $("#attending-in-person").prop("checked", true);
-        $("#warnings").text("⚠ Online registration is now full.");
     }
+    // else if (event.full.online) {
+    //     $("#attending-online").prop("disabled", true);
+    //     $("#attending-in-person").prop("checked", true);
+    //     $("#warnings").text("⚠ Online registration is now full.");
+    // }
 
     if ($("#attending-in-person").is(":checked")) {
         selectedCost = event.cost.inPerson;
         $("#payment-amount").text("$" + selectedCost);
-    } else if ($("#attending-online").is(":checked")) {
-        selectedCost = event.cost.online;
-        $("#payment-amount").text("$" + selectedCost);
     }
+    // else if ($("#attending-online").is(":checked")) {
+    //     selectedCost = event.cost.online;
+    //     $("#payment-amount").text("$" + selectedCost);
+    // }
 
     // Create a Stripe client
     const stripe = Stripe(event.stripePK);
@@ -117,7 +119,7 @@
                     email: $("#email").val(),
                     major: $("#major").val(),
                     year: $('input[name="year"]:checked').val(),
-                    attendanceType: $('input[name="attending"]:checked').val(),
+                    attendanceType: $('input[name="attending"]:checked').val() ?? $('input[name="attending"]').val(),
                     transactionToken: transactionToken,
                     // discCode: $("#discount-code").val(),
                     discCode: "",
@@ -127,10 +129,11 @@
                 }),
                 contentType: "application/json",
             });
+            $("#payment-submit").val("Payment successful");
+            $("#registration-success").modal("show");
         } catch (error) {
+            console.error(error);
             alert(`Uh-oh! Something went wrong. ${error} Refresh and try again!`);
         }
-        $("#payment-submit").val("Payment successful");
-        $("#registration-success").modal("show");
     }
 })();
