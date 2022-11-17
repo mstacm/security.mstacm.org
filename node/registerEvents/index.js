@@ -35,7 +35,7 @@ app.use(cors());  // Required for REST API with site
  * @property {string} customerName
  * @property {string} email
  * @property {string} major
- * @property {?string} year - Class in college
+ * @property {string} year - Class in college
  * @property {"In-person" | "Online"} attendanceType
  * @property {Object.<string, string>} [extra] - Extra information
  * @property {?string} discCode - Discount code
@@ -69,8 +69,10 @@ app.post("/regCharge", async (req, res) => {
     let finalCharge;
     if (order.attendanceType === "In-person") {
         finalCharge = event.cost.inPerson;
-    } else {
+    } else if (order.attendanceType === "Online") {
         finalCharge = event.cost.online;
+    } else {
+        return res.status(400).send("Invalid attendance type");
     }
 
     // Check for and apply a discount code
@@ -94,7 +96,7 @@ app.post("/regCharge", async (req, res) => {
     } catch (error) {
         // If the charge fails, log the error and let the user know.
         console.error(error);
-        return res.status(402).send("Your card was declined!");
+        return res.status(402).send("Error in card transaction :(");
     }
 
     // Let the user know that processing was successful
