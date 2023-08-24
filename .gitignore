@@ -1,7 +1,3 @@
-# IDE configuration files
-.vscode/
-.idea/
-
 # Private configuration files
 private/
 !*.example.*
