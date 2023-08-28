@@ -1,31 +1,3 @@
 # IDE configuration files
 .vscode/
 .idea/
-
-# Private configuration files
-private/
-!*.example.*
-merchConfigs/
-ACM Sec Backend-c7e090995ffd.json
-
-# Test files
-test.html
-
-# Private keys
-*.pem
-*.p12
-
-# Development scripts
-*.sh
-
-# node.js development files
-node_modules/
-
-# Built files
-dist/
-
-# Don't touch the old site
-OldSite/
-
-# Environment variables
-.env
