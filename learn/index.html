@@ -1,520 +1,519 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<meta name="description" content="ACM Security Website Homepage">
-		<meta name="keywords" content="ACM Security, Missouri S&amp;T">
-		<meta name="author" content="Charles Rawlins">
-		<title>Learn Security | ACM Security</title>
-		<!-- CSS Files -->
-		<link href="/css/mdb-free.css" rel="stylesheet">
-		<link href="/css/particles.css" media="screen" rel="stylesheet">
-		<!--Scripts-->
-		<script src="/js/jquery.min.js"></script>
-		<script src="/js/bootstrap.min.js"></script>
-		<script type="text/javascript" src="/js/mdb.min.js"></script>
-	</head>
-	<body style="padding-top: 56px;">
-		<!--Navigation-->
-		<nav class="navbar navbar-expand-lg navbar-dark fixed-top p-0" style="background-color: #040405;">
-			<div class="container">
-				<a class="navbar-brand" href="/">
-					<img src="/img/SourcePics/logo.svg" style="height: 2.5rem" class="mr-2">
-					ACM Security at Missouri S&T
-				</a>
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon"></span>
-				</button>
-				<div class="collapse navbar-collapse" id="navbarResponsive">
-					<ul class="navbar-nav ml-auto">
-						<li class="nav-item">
-							<a class="nav-link waves-effect waves-light" href="/">Home</a>
-						</li>
-						<li class="nav-item active">
-							<a class="nav-link waves-effect waves-light" href=".">Learn Security <span class="sr-only">(current)</span>
-							</a>
-						</li>
-						<!-- <li class="nav-item">
-							<a class="nav-link waves-effect waves-light" href="/events">Events</a>
-						</li> -->
-						<li class="nav-item">
-							<a class="nav-link waves-effect waves-light" href="/archive">Archive</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link waves-effect waves-light" href="/contact">Contact Us</a>
-						</li>
-					</ul>
-				</div>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="Learn Security | ACM Security">
+	<meta name="keywords" content="ACM Security, Missouri S&amp;T">
+	<meta name="author" content="Charles Rawlins">
+	<title>Learn Security | ACM Security</title>
+
+	<link href="/css/mdb-free.css" rel="stylesheet">
+	<link href="/css/particles.css" media="screen" rel="stylesheet">
+
+	<script src="/js/jquery.min.js"></script>
+	<script src="/js/bootstrap.min.js"></script>
+	<script src="/js/mdb.min.js"></script>
+</head>
+<body style="padding-top: 56px;">
+	<!--Navigation-->
+	<nav class="navbar navbar-expand-lg navbar-dark fixed-top p-0" style="background-color: #040405;">
+		<div class="container">
+			<a class="navbar-brand" href="/">
+				<img src="/img/SourcePics/logo.svg" style="height: 2.5rem" class="mr-2">
+				ACM Security at Missouri S&T
+			</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarResponsive">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item">
+						<a class="nav-link waves-effect waves-light" href="/">Home</a>
+					</li>
+					<li class="nav-item active">
+						<a class="nav-link waves-effect waves-light" href=".">Learn Security <span class="sr-only">(current)</span>
+						</a>
+					</li>
+					<!-- <li class="nav-item">
+						<a class="nav-link waves-effect waves-light" href="/events">Events</a>
+					</li> -->
+					<li class="nav-item">
+						<a class="nav-link waves-effect waves-light" href="/archive">Archive</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link waves-effect waves-light" href="/contact">Contact Us</a>
+					</li>
+				</ul>
 			</div>
-		</nav>
-		<!-- Setup Particles and page background -->
-		<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-		<div class="jumbotron-main">
-			<div id="particles-js">
-				<canvas class="particles-js-canvas-el" width="1175" height="928" style="width: 100%; height: 100%;"></canvas>
-			</div>
-			<script src="/js/particles.js" defer=""></script>
-			<div class="container page-content">
-				<div class="page-content">
-					<div class="card bg-dark py-3 text-white animated fadeIn">
-						<div class="col-auto">
-							<h2 class="text-center text-white">Learning Resources</h2>
-							<hr class="bg-primary">
+		</div>
+	</nav>
+	<!-- Setup Particles and page background -->
+	<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+	<div class="jumbotron-main">
+		<div id="particles-js">
+			<canvas class="particles-js-canvas-el" width="1175" height="928" style="width: 100%; height: 100%;"></canvas>
+		</div>
+		<script src="/js/particles.js" defer=""></script>
+		<div class="container page-content">
+			<div class="page-content">
+				<div class="card bg-dark py-3 text-white animated fadeIn">
+					<div class="col-auto">
+						<h2 class="text-center text-white">Learning Resources</h2>
+						<hr class="bg-primary">
+					</div>
+					<div class="row">
+						<div class="col-2 mb-3 ml-2">
+							<ul class="nav nav-pills flex-column" id="resourceTab">
+								<li class="nav-item py-2">
+									<a class="nav-link active" id="IDMedia" data-toggle="tab" href="#ContentMedia" role="tab" aria-controls="ContentMedia" aria-selected="true">Media</a>
+								</li>
+								<li class="nav-item py-2">
+									<a class="nav-link" id="IDActivities" data-toggle="tab" href="#ContentActivities" role="tab" aria-controls="ContentActivities" aria-selected="false">Activities</a>
+								</li>
+								<li class="nav-item py-2">
+									<a class="nav-link" id="IDCourses" data-toggle="tab" href="#ContentCourses" role="tab" aria-controls="ContentCourses" aria-selected="false">Courses</a>
+								</li>
+								<li class="nav-item py-2">
+									<a class="nav-link" id="IDNews" data-toggle="tab" href="#ContentNews" role="tab" aria-controls="ContentNews" aria-selected="false">News</a>
+								</li>
+								<li class="nav-item py-2">
+									<a class="nav-link" id="IDVulnerabilities" data-toggle="tab" href="#ContentVulnerabilities" role="tab" aria-controls="ContentVulnerabilities" aria-selected="false">Vulnerabilities</a>
+								</li>
+								<li class="nav-item py-2">
+									<a class="nav-link" id="IDPhysicalSecurity" data-toggle="tab" href="#ContentPhysicalSecurity" role="tab" aria-controls="ContentPhysicalSecurity" aria-selected="false">Physical Security</a>
+								</li>
+								<li class="nav-item py-2">
+									<a class="nav-link" id="IDHardware" data-toggle="tab" href="#ContentHardware" role="tab" aria-controls="ContentHardware" aria-selected="false">Hardware</a>
+								</li>
+								<li class="nav-item py-2">
+									<a class="nav-link" id="IDSoftware" data-toggle="tab" href="#ContentSoftware" role="tab" aria-controls="ContentSoftware" aria-selected="false">Software</a>
+								</li>
+								<li class="nav-item py-2">
+									<a class="nav-link" id="IDAcademia" data-toggle="tab" href="#ContentAcademia" role="tab" aria-controls="ContentAcademia" aria-selected="false">Academia</a>
+								</li>
+							</ul>
+							<!-- <a href="https://groups.google.com/forum/embed/?place=forum/sec-brief&showsearch=true&showpopout=true&showtabs=false"
+																	class="btn btn-primary  mx-2 mb-2" role="button" id="forum_embed" target="_blank">
+																		Check out Dr. T's <br> Security Brief!
+																	</a> -->
 						</div>
-						<div class="row">
-							<div class="col-2 mb-3 ml-2">
-								<ul class="nav nav-pills flex-column" id="resourceTab">
-									<li class="nav-item py-2">
-										<a class="nav-link active" id="IDMedia" data-toggle="tab" href="#ContentMedia" role="tab" aria-controls="ContentMedia" aria-selected="true">Media</a>
-									</li>
-									<li class="nav-item py-2">
-										<a class="nav-link" id="IDActivities" data-toggle="tab" href="#ContentActivities" role="tab" aria-controls="ContentActivities" aria-selected="false">Activities</a>
-									</li>
-									<li class="nav-item py-2">
-										<a class="nav-link" id="IDCourses" data-toggle="tab" href="#ContentCourses" role="tab" aria-controls="ContentCourses" aria-selected="false">Courses</a>
-									</li>
-									<li class="nav-item py-2">
-										<a class="nav-link" id="IDNews" data-toggle="tab" href="#ContentNews" role="tab" aria-controls="ContentNews" aria-selected="false">News</a>
-									</li>
-									<li class="nav-item py-2">
-										<a class="nav-link" id="IDVulnerabilities" data-toggle="tab" href="#ContentVulnerabilities" role="tab" aria-controls="ContentVulnerabilities" aria-selected="false">Vulnerabilities</a>
-									</li>
-									<li class="nav-item py-2">
-										<a class="nav-link" id="IDPhysicalSecurity" data-toggle="tab" href="#ContentPhysicalSecurity" role="tab" aria-controls="ContentPhysicalSecurity" aria-selected="false">Physical Security</a>
-									</li>
-									<li class="nav-item py-2">
-										<a class="nav-link" id="IDHardware" data-toggle="tab" href="#ContentHardware" role="tab" aria-controls="ContentHardware" aria-selected="false">Hardware</a>
-									</li>
-									<li class="nav-item py-2">
-										<a class="nav-link" id="IDSoftware" data-toggle="tab" href="#ContentSoftware" role="tab" aria-controls="ContentSoftware" aria-selected="false">Software</a>
-									</li>
-									<li class="nav-item py-2">
-										<a class="nav-link" id="IDAcademia" data-toggle="tab" href="#ContentAcademia" role="tab" aria-controls="ContentAcademia" aria-selected="false">Academia</a>
-									</li>
-								</ul>
-								<!-- <a href="https://groups.google.com/forum/embed/?place=forum/sec-brief&showsearch=true&showpopout=true&showtabs=false"
-																		class="btn btn-primary  mx-2 mb-2" role="button" id="forum_embed" target="_blank">
-																		 Check out Dr. T's <br> Security Brief!
-																		</a> -->
-							</div>
-							<div class="col-9 rounded ml-4" style="background-color:#17191c;">
-								<div class="tab-content" id="resourceTabContent">
-									<div class="tab-pane fade show active" id="ContentMedia" role="tabpanel" aria-labelledby="IDMedia">
-										<div class="row justify-content-md-center mt-2">
-											<a class="btn btn-primary mx-1 my-1 waves-effect waves-light" href="http://www.securitytube.net/" target="_blank">SecurityTube</a>
-											<br>
-											<a class="btn btn-primary mx-1 my-1 waves-effect waves-light" href="https://null-byte.wonderhowto.com/how-to/" target="_blank">Null Byte</a>
-											<br>
-											<a class="btn btn-primary mx-1 my-1 waves-effect waves-light" href="https://www.securitysift.com/" target="_blank">Security Sift</a>
-											<br>
-											<a class="btn btn-primary mx-1 my-1 waves-effect waves-light" href="https://www.enigmagroup.it/en/" target="_blank">Enigma Group</a>
-											<br>
-											<a class="btn btn-primary mx-1 my-1 waves-effect waves-light" href="https://www.grc.com/securitynow.htm/" target="_blank">Security Now!</a>
-											<br>
-											<a class="btn btn-primary mx-1 my-1 waves-effect waves-light" href="https://malicious.life/" target="_blank">Malicious Life</a>
-											<br>
-										</div>
+						<div class="col-9 rounded ml-4" style="background-color:#17191c;">
+							<div class="tab-content" id="resourceTabContent">
+								<div class="tab-pane fade show active" id="ContentMedia" role="tabpanel" aria-labelledby="IDMedia">
+									<div class="row justify-content-md-center mt-2">
+										<a class="btn btn-primary mx-1 my-1 waves-effect waves-light" href="http://www.securitytube.net/" target="_blank">SecurityTube</a>
+										<br>
+										<a class="btn btn-primary mx-1 my-1 waves-effect waves-light" href="https://null-byte.wonderhowto.com/how-to/" target="_blank">Null Byte</a>
+										<br>
+										<a class="btn btn-primary mx-1 my-1 waves-effect waves-light" href="https://www.securitysift.com/" target="_blank">Security Sift</a>
+										<br>
+										<a class="btn btn-primary mx-1 my-1 waves-effect waves-light" href="https://www.enigmagroup.it/en/" target="_blank">Enigma Group</a>
+										<br>
+										<a class="btn btn-primary mx-1 my-1 waves-effect waves-light" href="https://www.grc.com/securitynow.htm/" target="_blank">Security Now!</a>
+										<br>
+										<a class="btn btn-primary mx-1 my-1 waves-effect waves-light" href="https://malicious.life/" target="_blank">Malicious Life</a>
+										<br>
 									</div>
-									<div class="tab-pane fade show" id="ContentActivities" role="tabpanel" aria-labelledby="IDActivities">
-										<div class="row justify-content-md-center mt-2">
-											<a class="btn btn-primary mx-1 my-1 waves-effect waves-light" href="https://www.pentesterlab.com/" target="_blank">PentesterLab</a>
-											<br>
-											<a class="btn btn-primary mx-1 my-1 waves-effect waves-light" href="http://www.itsecgames.com/" target="_blank">bWAPP</a>
-											<br>
-											<a class="btn btn-primary mx-1 my-1 waves-effect waves-light" href="https://docs.rapid7.com/metasploit/metasploitable-2-exploitability-guide" target="_blank">Metasploitable</a>
-											<br>
-											<a class="btn btn-primary mx-1 my-1 waves-effect waves-light" href="https://owasp.org/www-project-webgoat/" target="_blank">OWASP WebGoat</a>
-											<br>
-											<a class="btn btn-primary mx-1 my-1 waves-effect waves-light" href="http://3564020356.org/" target="_blank">+Ma's Reversing</a>
-											<br>
-											<a class="btn btn-primary mx-1 my-1 waves-effect waves-light" href="https://www.hackthissite.org/" target="_blank">hackthissite</a>
-											<br>
-											<a class="btn btn-primary mx-1 my-1 waves-effect waves-light" href="http://www.hackertest.net/" target="_blank">Hacker Test</a>
-											<br>
-											<a class="btn btn-primary mx-1 my-1 waves-effect waves-light" href="http://smashthestack.org/" target="_blank">Smash the Stack</a>
-											<br>
-											<a class="btn btn-primary mx-1 my-1 waves-effect waves-light" href="https://overthewire.org/wargames/" target="_blank">overthewire</a>
-											<br>
-										</div>
+								</div>
+								<div class="tab-pane fade show" id="ContentActivities" role="tabpanel" aria-labelledby="IDActivities">
+									<div class="row justify-content-md-center mt-2">
+										<a class="btn btn-primary mx-1 my-1 waves-effect waves-light" href="https://www.pentesterlab.com/" target="_blank">PentesterLab</a>
+										<br>
+										<a class="btn btn-primary mx-1 my-1 waves-effect waves-light" href="http://www.itsecgames.com/" target="_blank">bWAPP</a>
+										<br>
+										<a class="btn btn-primary mx-1 my-1 waves-effect waves-light" href="https://docs.rapid7.com/metasploit/metasploitable-2-exploitability-guide" target="_blank">Metasploitable</a>
+										<br>
+										<a class="btn btn-primary mx-1 my-1 waves-effect waves-light" href="https://owasp.org/www-project-webgoat/" target="_blank">OWASP WebGoat</a>
+										<br>
+										<a class="btn btn-primary mx-1 my-1 waves-effect waves-light" href="http://3564020356.org/" target="_blank">+Ma's Reversing</a>
+										<br>
+										<a class="btn btn-primary mx-1 my-1 waves-effect waves-light" href="https://www.hackthissite.org/" target="_blank">hackthissite</a>
+										<br>
+										<a class="btn btn-primary mx-1 my-1 waves-effect waves-light" href="http://www.hackertest.net/" target="_blank">Hacker Test</a>
+										<br>
+										<a class="btn btn-primary mx-1 my-1 waves-effect waves-light" href="http://smashthestack.org/" target="_blank">Smash the Stack</a>
+										<br>
+										<a class="btn btn-primary mx-1 my-1 waves-effect waves-light" href="https://overthewire.org/wargames/" target="_blank">overthewire</a>
+										<br>
 									</div>
-									<div class="tab-pane fade show" id="ContentCourses" role="tabpanel" aria-labelledby="IDCourses">
-										<div class="row justify-content-md-center mt-2">
-												<a class="btn btn-primary mx-1 my-1 waves-effect waves-light" href="https://www.offsec.com/metasploit-unleashed/" target="_blank">Metasploit Unleashed</a>
-												<br>
-												<a class="btn btn-primary mx-1 my-1 waves-effect waves-light" href="http://opensecuritytraining.info/Training.html" target="_blank">Open Security Training</a>
-												<br>
-												<a class="btn btn-primary mx-1 my-1 waves-effect waves-light" href="https://www.khanacademy.org/computing/computer-science/cryptography" target="_blank">Khan Academy Crypto</a>
-												<br>
-												<a class="btn btn-primary mx-1 my-1 waves-effect waves-light" href="https://fulltimehacker.com/" target="_blank">Fulltime Hacker</a>
-												<br>
-										</div>
+								</div>
+								<div class="tab-pane fade show" id="ContentCourses" role="tabpanel" aria-labelledby="IDCourses">
+									<div class="row justify-content-md-center mt-2">
+											<a class="btn btn-primary mx-1 my-1 waves-effect waves-light" href="https://www.offsec.com/metasploit-unleashed/" target="_blank">Metasploit Unleashed</a>
+											<br>
+											<a class="btn btn-primary mx-1 my-1 waves-effect waves-light" href="http://opensecuritytraining.info/Training.html" target="_blank">Open Security Training</a>
+											<br>
+											<a class="btn btn-primary mx-1 my-1 waves-effect waves-light" href="https://www.khanacademy.org/computing/computer-science/cryptography" target="_blank">Khan Academy Crypto</a>
+											<br>
+											<a class="btn btn-primary mx-1 my-1 waves-effect waves-light" href="https://fulltimehacker.com/" target="_blank">Fulltime Hacker</a>
+											<br>
 									</div>
-									<div class="tab-pane fade show" id="ContentNews" role="tabpanel" aria-labelledby="IDNews">
-										<div class="row justify-content-md-center mt-2">
-											<a class="btn btn-primary mx-1 my-1 waves-effect waves-light" href="https://cyberpunk.xyz/ice" target="_blank">Cyberpunk ICE</a>
-											<br>
-											<a class="btn btn-primary mx-1 my-1 waves-effect waves-light" href="https://krebsonsecurity.com/" target="_blank">Krebs on Security</a>
-											<br>
-											<a class="btn btn-primary mx-1 my-1 waves-effect waves-light" href="https://www.sans.org/white-papers/" target="_blank">SANS White Papers</a>
-											<br>
-											<a class="btn btn-primary mx-1 my-1 waves-effect waves-light" href="https://resources.infosecinstitute.com/" target="_blank">Infosec Institute</a>
-											<br>
-											<a class="btn btn-primary mx-1 my-1 waves-effect waves-light" href="https://packetstormsecurity.com/" target="_blank">Packet Storm Security</a>
-											<br>
-											<a class="btn btn-primary mx-1 my-1 waves-effect waves-light" href="https://www.corelan.be/" target="_blank">Corelan</a>
-											<br>
-											<a class="btn btn-primary mx-1 my-1 waves-effect waves-light" href="https://www.blackhat.com/" target="_blank">Black Hat</a>
-											<br>
-											<a class="btn btn-primary mx-1 my-1 waves-effect waves-light" href="https://www.linux-magazine.com/" target="_blank">Linux Magazine</a>
-											<br>
-											<a class="btn btn-primary mx-1 my-1 waves-effect waves-light" href="https://www.2600.com/" target="_blank">2600</a>
-											<br>
-											<a class="btn btn-primary mx-1 my-1 waves-effect waves-light" href="https://threatpost.com/" target="_blank">Threatpost</a>
-											<br>
-											<a class="btn btn-primary mx-1 my-1 waves-effect waves-light" href="https://www.helpnetsecurity.com/insecuremag-archive/" target="_blank">(IN)SECURE Magazine</a>
-											<br>
-											<a class="btn btn-primary mx-1 my-1 waves-effect waves-light" href="http://magazine.hitb.org/index.html" target="_blank">HITB Magazine</a>
-											<br>
-											<a class="btn btn-primary mx-1 my-1 waves-effect waves-light" href="https://media.defcon.org/" target="_blank">DEFCON</a>
-											<br>
-										</div>
+								</div>
+								<div class="tab-pane fade show" id="ContentNews" role="tabpanel" aria-labelledby="IDNews">
+									<div class="row justify-content-md-center mt-2">
+										<a class="btn btn-primary mx-1 my-1 waves-effect waves-light" href="https://cyberpunk.xyz/ice" target="_blank">Cyberpunk ICE</a>
+										<br>
+										<a class="btn btn-primary mx-1 my-1 waves-effect waves-light" href="https://krebsonsecurity.com/" target="_blank">Krebs on Security</a>
+										<br>
+										<a class="btn btn-primary mx-1 my-1 waves-effect waves-light" href="https://www.sans.org/white-papers/" target="_blank">SANS White Papers</a>
+										<br>
+										<a class="btn btn-primary mx-1 my-1 waves-effect waves-light" href="https://resources.infosecinstitute.com/" target="_blank">Infosec Institute</a>
+										<br>
+										<a class="btn btn-primary mx-1 my-1 waves-effect waves-light" href="https://packetstormsecurity.com/" target="_blank">Packet Storm Security</a>
+										<br>
+										<a class="btn btn-primary mx-1 my-1 waves-effect waves-light" href="https://www.corelan.be/" target="_blank">Corelan</a>
+										<br>
+										<a class="btn btn-primary mx-1 my-1 waves-effect waves-light" href="https://www.blackhat.com/" target="_blank">Black Hat</a>
+										<br>
+										<a class="btn btn-primary mx-1 my-1 waves-effect waves-light" href="https://www.linux-magazine.com/" target="_blank">Linux Magazine</a>
+										<br>
+										<a class="btn btn-primary mx-1 my-1 waves-effect waves-light" href="https://www.2600.com/" target="_blank">2600</a>
+										<br>
+										<a class="btn btn-primary mx-1 my-1 waves-effect waves-light" href="https://threatpost.com/" target="_blank">Threatpost</a>
+										<br>
+										<a class="btn btn-primary mx-1 my-1 waves-effect waves-light" href="https://www.helpnetsecurity.com/insecuremag-archive/" target="_blank">(IN)SECURE Magazine</a>
+										<br>
+										<a class="btn btn-primary mx-1 my-1 waves-effect waves-light" href="http://magazine.hitb.org/index.html" target="_blank">HITB Magazine</a>
+										<br>
+										<a class="btn btn-primary mx-1 my-1 waves-effect waves-light" href="https://media.defcon.org/" target="_blank">DEFCON</a>
+										<br>
 									</div>
-									<div class="tab-pane fade show" id="ContentVulnerabilities" role="tabpanel" aria-labelledby="IDVulnerabilities">
-										<div class="row justify-content-md-center mt-2">
-											<a class="btn btn-primary mx-1 my-1 waves-effect waves-light" href="http://routerpwn.com/" target="_blank">Routerpwn</a>
-											<br>
-											<a class="btn btn-primary mx-1 my-1 waves-effect waves-light" href="https://www.exploit-db.com/" target="_blank">Exploit Database</a>
-											<br>
-											<a class="btn btn-primary mx-1 my-1 waves-effect waves-light" href="https://www.cvedetails.com/" target="_blank">CVEdetails</a>
-											<br>
-										</div>
+								</div>
+								<div class="tab-pane fade show" id="ContentVulnerabilities" role="tabpanel" aria-labelledby="IDVulnerabilities">
+									<div class="row justify-content-md-center mt-2">
+										<a class="btn btn-primary mx-1 my-1 waves-effect waves-light" href="http://routerpwn.com/" target="_blank">Routerpwn</a>
+										<br>
+										<a class="btn btn-primary mx-1 my-1 waves-effect waves-light" href="https://www.exploit-db.com/" target="_blank">Exploit Database</a>
+										<br>
+										<a class="btn btn-primary mx-1 my-1 waves-effect waves-light" href="https://www.cvedetails.com/" target="_blank">CVEdetails</a>
+										<br>
 									</div>
-									<div class="tab-pane fade show" id="ContentPhysicalSecurity" role="tabpanel" aria-labelledby="IDPhysicalSecurity">
-										<div class="row justify-content-md-center mt-2">
-											<a class="btn btn-primary mx-1 my-1 waves-effect waves-light" href="https://www.youtube.com/@DeviantOllam" target="_blank">DeviantOllam</a>
-											<br>
-											<a class="btn btn-primary mx-1 my-1 waves-effect waves-light" href="https://home.howstuffworks.com/home-improvement/household-safety/lock-picking1.htm" target="_blank">howstuffworks: Lock Picking</a>
-											<br>
-											<a class="btn btn-primary mx-1 my-1 waves-effect waves-light" href="https://toool.us/resources.html" target="_blank">TOOOL</a>
-											<br>
-											<a class="btn btn-primary mx-1 my-1 waves-effect waves-light" href="https://www.youtube.com/user/bosnianbill/videos" target="_blank">BosnianBill</a>
-											<br>
-											<a class="btn btn-primary mx-1 my-1 waves-effect waves-light" href="https://www.lockpicking101.com/" target="_blank">Lock Picking 101 Forum</a>
-											<br>
-											<a class="btn btn-primary mx-1 my-1 waves-effect waves-light" href="https://www.sparrowslockpicks.com/" target="_blank">Sparrows Lock Picks</a>
-											<br>
-										</div>
+								</div>
+								<div class="tab-pane fade show" id="ContentPhysicalSecurity" role="tabpanel" aria-labelledby="IDPhysicalSecurity">
+									<div class="row justify-content-md-center mt-2">
+										<a class="btn btn-primary mx-1 my-1 waves-effect waves-light" href="https://www.youtube.com/@DeviantOllam" target="_blank">DeviantOllam</a>
+										<br>
+										<a class="btn btn-primary mx-1 my-1 waves-effect waves-light" href="https://home.howstuffworks.com/home-improvement/household-safety/lock-picking1.htm" target="_blank">howstuffworks: Lock Picking</a>
+										<br>
+										<a class="btn btn-primary mx-1 my-1 waves-effect waves-light" href="https://toool.us/resources.html" target="_blank">TOOOL</a>
+										<br>
+										<a class="btn btn-primary mx-1 my-1 waves-effect waves-light" href="https://www.youtube.com/user/bosnianbill/videos" target="_blank">BosnianBill</a>
+										<br>
+										<a class="btn btn-primary mx-1 my-1 waves-effect waves-light" href="https://www.lockpicking101.com/" target="_blank">Lock Picking 101 Forum</a>
+										<br>
+										<a class="btn btn-primary mx-1 my-1 waves-effect waves-light" href="https://www.sparrowslockpicks.com/" target="_blank">Sparrows Lock Picks</a>
+										<br>
 									</div>
-									<div class="tab-pane fade show" id="ContentHardware" role="tabpanel" aria-labelledby="IDHardware">
-										<div class="row justify-content-md-center mt-2">
-											<a class="btn btn-primary mx-1 my-1 waves-effect waves-light" href="https://shop.hak5.org/" target="_blank">hak5</a>
-											<br>
-											<a class="btn btn-primary mx-1 my-1 waves-effect waves-light" href="http://unlocked.own-hero.net/2014/07/10/preview-photobump-plastic-bumpkeys/" target="_blank">PhotoBump</a>
-											<br>
-										</div>
+								</div>
+								<div class="tab-pane fade show" id="ContentHardware" role="tabpanel" aria-labelledby="IDHardware">
+									<div class="row justify-content-md-center mt-2">
+										<a class="btn btn-primary mx-1 my-1 waves-effect waves-light" href="https://shop.hak5.org/" target="_blank">hak5</a>
+										<br>
+										<a class="btn btn-primary mx-1 my-1 waves-effect waves-light" href="http://unlocked.own-hero.net/2014/07/10/preview-photobump-plastic-bumpkeys/" target="_blank">PhotoBump</a>
+										<br>
 									</div>
-									<div class="tab-pane fade show" id="ContentSoftware" role="tabpanel" aria-labelledby="IDSoftware">
-										<div class="row justify-content-md-center mt-2">
-											<a class="btn btn-primary mx-1 my-1 waves-effect waves-light" href="https://www.kali.org/" target="_blank">Kali Linux</a>
-											<br>
-											<a class="btn btn-primary mx-1 my-1 waves-effect waves-light" href="https://www.pfsense.org/" target="_blank">pfSense</a>
-											<br>
-											<a class="btn btn-primary mx-1 my-1 waves-effect waves-light" href="https://tails.net/" target="_blank">Tails</a>
-											<br>
-											<a class="btn btn-primary mx-1 my-1 waves-effect waves-light" href="https://ophcrack.sourceforge.io/" target="_blank">ophcrack</a>
-											<br>
-											<a class="btn btn-primary mx-1 my-1 waves-effect waves-light" href="https://www.sans.org/tools/sift-workstation/" target="_blank">SANS SIFT Workstation</a>
-											<br>
-										</div>
+								</div>
+								<div class="tab-pane fade show" id="ContentSoftware" role="tabpanel" aria-labelledby="IDSoftware">
+									<div class="row justify-content-md-center mt-2">
+										<a class="btn btn-primary mx-1 my-1 waves-effect waves-light" href="https://www.kali.org/" target="_blank">Kali Linux</a>
+										<br>
+										<a class="btn btn-primary mx-1 my-1 waves-effect waves-light" href="https://www.pfsense.org/" target="_blank">pfSense</a>
+										<br>
+										<a class="btn btn-primary mx-1 my-1 waves-effect waves-light" href="https://tails.net/" target="_blank">Tails</a>
+										<br>
+										<a class="btn btn-primary mx-1 my-1 waves-effect waves-light" href="https://ophcrack.sourceforge.io/" target="_blank">ophcrack</a>
+										<br>
+										<a class="btn btn-primary mx-1 my-1 waves-effect waves-light" href="https://www.sans.org/tools/sift-workstation/" target="_blank">SANS SIFT Workstation</a>
+										<br>
 									</div>
-									<div class="tab-pane fade show" id="ContentAcademia" role="tabpanel" aria-labelledby="IDAcademia">
-										<div class="row justify-content-md-center mt-2">
-											<a class="btn btn-primary mx-1 my-1 waves-effect waves-light" href="https://ieeexplore.ieee.org/search/searchresult.jsp?newsearch=true&amp;queryText=Security" target="_blank">IEEExplore Security</a>
-											<br>
-											<a class="btn btn-primary mx-1 my-1 waves-effect waves-light" href="https://dl-acm-org.libproxy.mst.edu/action/doSearch?AllField=Security" target="_blank">ACM Digital Library</a>
-											<br>
-										</div>
+								</div>
+								<div class="tab-pane fade show" id="ContentAcademia" role="tabpanel" aria-labelledby="IDAcademia">
+									<div class="row justify-content-md-center mt-2">
+										<a class="btn btn-primary mx-1 my-1 waves-effect waves-light" href="https://ieeexplore.ieee.org/search/searchresult.jsp?newsearch=true&amp;queryText=Security" target="_blank">IEEExplore Security</a>
+										<br>
+										<a class="btn btn-primary mx-1 my-1 waves-effect waves-light" href="https://dl-acm-org.libproxy.mst.edu/action/doSearch?AllField=Security" target="_blank">ACM Digital Library</a>
+										<br>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-					<div class="card bg-dark my-3 text-white fadeIn">
-						<div class="col-auto">
-							<h2 class="text-center text-white pt-2 mb-n3">Missouri S&amp;T Courses</h2>
-							<hr class="bg-primary">
-							<div class="row justify-content-center">
-								<a href="#" class="btn btn-primary disabled mx-2 mb-2 waves-effect waves-light" role="button" aria-disabled="true">Undergraduate</a>
-								<a href="#" class="btn btn-warning disabled mx-2 mb-2 waves-effect waves-light" role="button" aria-disabled="true">Undergraduate + Graduate</a>
-								<a href="#" class="btn btn-danger disabled mx-2 mb-2 text-black-50 waves-effect waves-light" role="button" aria-disabled="true">Graduate</a>
-							</div>
+				</div>
+				<div class="card bg-dark my-3 text-white fadeIn">
+					<div class="col-auto">
+						<h2 class="text-center text-white pt-2 mb-n3">Missouri S&amp;T Courses</h2>
+						<hr class="bg-primary">
+						<div class="row justify-content-center">
+							<a href="#" class="btn btn-primary disabled mx-2 mb-2 waves-effect waves-light" role="button" aria-disabled="true">Undergraduate</a>
+							<a href="#" class="btn btn-warning disabled mx-2 mb-2 waves-effect waves-light" role="button" aria-disabled="true">Undergraduate + Graduate</a>
+							<a href="#" class="btn btn-danger disabled mx-2 mb-2 text-black-50 waves-effect waves-light" role="button" aria-disabled="true">Graduate</a>
 						</div>
-						<div class="row">
-							<div class="col-2 mb-3 ml-2">
-								<ul class="nav nav-pills flex-column" id="classTab">
-									<!--                            Auto-generated class categories will go here.-->
-									<li class="nav-item py-2">
-										<a class="nav-link active" id="IDComputerScience" data-toggle="tab" href="#ContentComputerScience" role="tab" aria-controls="ContentComputerScience" aria-selected="true">Computer Science</a>
-									</li>
-									<li class="nav-item py-2">
-										<a class="nav-link" id="IDInformationSecurityandTechnology" data-toggle="tab" href="#ContentInformationSecurityandTechnology" role="tab" aria-controls="ContentInformationSecurityandTechnology" aria-selected="false">Information Security and Technology</a>
-									</li>
-									<li class="nav-item py-2">
-										<a class="nav-link" id="IDComputerEngineering" data-toggle="tab" href="#ContentComputerEngineering" role="tab" aria-controls="ContentComputerEngineering" aria-selected="false">Computer Engineering</a>
-									</li>
-								</ul>
-							</div>
-							<div class="col-9 rounded ml-4 mb-3" style="background-color:#17191c;">
-								<div class="tab-content" id="classTabContent">
-									<!--                            Relevant auto-generated class cards will go here.-->
-									<div class="tab-pane fade show active" id="ContentComputerScience" role="tabpanel" aria-labelledby="IDComputerScience">
-										<div class="row d-flex justify-content-md-center mt-2">
-											<div class="card mb-3 mx-2 bg-primary text-white" style="width: 15rem;">
-												<div class="card-header">CompSci 2500 (2020)</div>
-												<div class="card-body" style="width: 15rem;">
-													<h5 class="card-title">Algorithms</h5>
-													<p class="card-text text-white">Intro to basic algorithms.</p>
-												</div>
+					</div>
+					<div class="row">
+						<div class="col-2 mb-3 ml-2">
+							<ul class="nav nav-pills flex-column" id="classTab">
+								<!--                            Auto-generated class categories will go here.-->
+								<li class="nav-item py-2">
+									<a class="nav-link active" id="IDComputerScience" data-toggle="tab" href="#ContentComputerScience" role="tab" aria-controls="ContentComputerScience" aria-selected="true">Computer Science</a>
+								</li>
+								<li class="nav-item py-2">
+									<a class="nav-link" id="IDInformationSecurityandTechnology" data-toggle="tab" href="#ContentInformationSecurityandTechnology" role="tab" aria-controls="ContentInformationSecurityandTechnology" aria-selected="false">Information Security and Technology</a>
+								</li>
+								<li class="nav-item py-2">
+									<a class="nav-link" id="IDComputerEngineering" data-toggle="tab" href="#ContentComputerEngineering" role="tab" aria-controls="ContentComputerEngineering" aria-selected="false">Computer Engineering</a>
+								</li>
+							</ul>
+						</div>
+						<div class="col-9 rounded ml-4 mb-3" style="background-color:#17191c;">
+							<div class="tab-content" id="classTabContent">
+								<!--                            Relevant auto-generated class cards will go here.-->
+								<div class="tab-pane fade show active" id="ContentComputerScience" role="tabpanel" aria-labelledby="IDComputerScience">
+									<div class="row d-flex justify-content-md-center mt-2">
+										<div class="card mb-3 mx-2 bg-primary text-white" style="width: 15rem;">
+											<div class="card-header">CompSci 2500 (2020)</div>
+											<div class="card-body" style="width: 15rem;">
+												<h5 class="card-title">Algorithms</h5>
+												<p class="card-text text-white">Intro to basic algorithms.</p>
 											</div>
-											<div class="card mb-3 mx-2 bg-primary text-white" style="width: 15rem;">
-												<div class="card-header">CompSci 3600 (2020)</div>
-												<div class="card-body" style="width: 15rem;">
-													<h5 class="card-title">Intro to Computer Security</h5>
-													<p class="card-text text-white">Intro to Computer/Cyber Security, encryption, networking, etc. Taught by Patrick Taylor</p>
-												</div>
+										</div>
+										<div class="card mb-3 mx-2 bg-primary text-white" style="width: 15rem;">
+											<div class="card-header">CompSci 3600 (2020)</div>
+											<div class="card-body" style="width: 15rem;">
+												<h5 class="card-title">Intro to Computer Security</h5>
+												<p class="card-text text-white">Intro to Computer/Cyber Security, encryption, networking, etc. Taught by Patrick Taylor</p>
 											</div>
-											<div class="card mb-3 mx-2 bg-primary text-white" style="width: 15rem;">
-												<div class="card-header">CompSci 3601 (2020)</div>
-												<div class="card-body" style="width: 15rem;">
-													<h5 class="card-title">Digital Forensics</h5>
-													<p class="card-text text-white">Digital forensics, legal procedures, find data in hard drives, taught by Karl Lutzen</p>
-												</div>
+										</div>
+										<div class="card mb-3 mx-2 bg-primary text-white" style="width: 15rem;">
+											<div class="card-header">CompSci 3601 (2020)</div>
+											<div class="card-body" style="width: 15rem;">
+												<h5 class="card-title">Digital Forensics</h5>
+												<p class="card-text text-white">Digital forensics, legal procedures, find data in hard drives, taught by Karl Lutzen</p>
 											</div>
-											<div class="card mb-3 mx-2 bg-primary text-white" style="width: 15rem;">
-												<div class="card-header">CompSci 4001 (2020)</div>
-												<div class="card-body" style="width: 15rem;">
-													<h5 class="card-title">Intro to Cyber Security Offense</h5>
-													<p class="card-text text-white">Offensive Security, Mobile App Security, Taught by Sammie Bush in spring semesters</p>
-												</div>
+										</div>
+										<div class="card mb-3 mx-2 bg-primary text-white" style="width: 15rem;">
+											<div class="card-header">CompSci 4001 (2020)</div>
+											<div class="card-body" style="width: 15rem;">
+												<h5 class="card-title">Intro to Cyber Security Offense</h5>
+												<p class="card-text text-white">Offensive Security, Mobile App Security, Taught by Sammie Bush in spring semesters</p>
 											</div>
-											<div class="card mb-3 mx-2 bg-primary text-white" style="width: 15rem;">
-												<div class="card-header">CompSci 4601 (2020)</div>
-												<div class="card-body" style="width: 15rem;">
-													<h5 class="card-title">Comp Network Concepts and Technology</h5>
-													<p class="card-text text-white">Computer network concepts and new concepts. Construction, operation and management.</p>
-												</div>
+										</div>
+										<div class="card mb-3 mx-2 bg-primary text-white" style="width: 15rem;">
+											<div class="card-header">CompSci 4601 (2020)</div>
+											<div class="card-body" style="width: 15rem;">
+												<h5 class="card-title">Comp Network Concepts and Technology</h5>
+												<p class="card-text text-white">Computer network concepts and new concepts. Construction, operation and management.</p>
 											</div>
-											<div class="card  mb-3 mx-2 bg-warning text-white" style="width: 15rem;">
-												<div class="card-header">CompSci 5402 (2020)</div>
-												<div class="card-body" style="width: 15rem;">
-													<h5 class="card-title">Intro to Data Mining</h5>
-													<p class="card-text text-white">Intro to data mining with experience. Classification, clustering, outlier/novelty detection, etc.</p>
-												</div>
+										</div>
+										<div class="card  mb-3 mx-2 bg-warning text-white" style="width: 15rem;">
+											<div class="card-header">CompSci 5402 (2020)</div>
+											<div class="card-body" style="width: 15rem;">
+												<h5 class="card-title">Intro to Data Mining</h5>
+												<p class="card-text text-white">Intro to data mining with experience. Classification, clustering, outlier/novelty detection, etc.</p>
 											</div>
-											<div class="card  mb-3 mx-2 bg-warning text-white" style="width: 15rem;">
-												<div class="card-header">CompSci 5500 (2020)</div>
-												<div class="card-body" style="width: 15rem;">
-													<h5 class="card-title">Structure of a Compiler</h5>
-													<p class="card-text text-white">Learn how to build a compiler. Learn how a language works. Recommended by most government labs.</p>
-												</div>
+										</div>
+										<div class="card  mb-3 mx-2 bg-warning text-white" style="width: 15rem;">
+											<div class="card-header">CompSci 5500 (2020)</div>
+											<div class="card-body" style="width: 15rem;">
+												<h5 class="card-title">Structure of a Compiler</h5>
+												<p class="card-text text-white">Learn how to build a compiler. Learn how a language works. Recommended by most government labs.</p>
 											</div>
-											<div class="card  mb-3 mx-2 bg-warning text-white" style="width: 15rem;">
-												<div class="card-header">CompSci 5600 (2020)</div>
-												<div class="card-body" style="width: 15rem;">
-													<h5 class="card-title">Computer Networks</h5>
-													<p class="card-text text-white">Dedicated class to computer networking, basics and some advanced. Taught by Patrick Taylor</p>
-												</div>
+										</div>
+										<div class="card  mb-3 mx-2 bg-warning text-white" style="width: 15rem;">
+											<div class="card-header">CompSci 5600 (2020)</div>
+											<div class="card-body" style="width: 15rem;">
+												<h5 class="card-title">Computer Networks</h5>
+												<p class="card-text text-white">Dedicated class to computer networking, basics and some advanced. Taught by Patrick Taylor</p>
 											</div>
-											<div class="card  mb-3 mx-2 bg-warning text-white" style="width: 15rem;">
-												<div class="card-header">CompSci 5601 (2020)</div>
-												<div class="card-body" style="width: 15rem;">
-													<h5 class="card-title">Security Operations and Management</h5>
-													<p class="card-text text-white">Management and security of digital infrestructure. Taught by system admin Karl Lutzen</p>
-												</div>
+										</div>
+										<div class="card  mb-3 mx-2 bg-warning text-white" style="width: 15rem;">
+											<div class="card-header">CompSci 5601 (2020)</div>
+											<div class="card-body" style="width: 15rem;">
+												<h5 class="card-title">Security Operations and Management</h5>
+												<p class="card-text text-white">Management and security of digital infrestructure. Taught by system admin Karl Lutzen</p>
 											</div>
-											<div class="card  mb-3 mx-2 bg-warning text-white" style="width: 15rem;">
-												<div class="card-header">CompSci 5602 (2020)</div>
-												<div class="card-body" style="width: 15rem;">
-													<h5 class="card-title">Intro to Cryptography</h5>
-													<p class="card-text text-white">Intro to the fundamentals of cryptography.</p>
-												</div>
+										</div>
+										<div class="card  mb-3 mx-2 bg-warning text-white" style="width: 15rem;">
+											<div class="card-header">CompSci 5602 (2020)</div>
+											<div class="card-body" style="width: 15rem;">
+												<h5 class="card-title">Intro to Cryptography</h5>
+												<p class="card-text text-white">Intro to the fundamentals of cryptography.</p>
 											</div>
-											<div class="card  mb-3 mx-2 bg-danger text-white" style="width: 15rem;">
-												<div class="card-header">CompSci 6200 (2020)</div>
-												<div class="card-body" style="width: 15rem;">
-													<h5 class="card-title">Algorithmics II</h5>
-													<p class="card-text text-white">Advanced algorithms.</p>
-												</div>
+										</div>
+										<div class="card  mb-3 mx-2 bg-danger text-white" style="width: 15rem;">
+											<div class="card-header">CompSci 6200 (2020)</div>
+											<div class="card-body" style="width: 15rem;">
+												<h5 class="card-title">Algorithmics II</h5>
+												<p class="card-text text-white">Advanced algorithms.</p>
 											</div>
-											<div class="card  mb-3 mx-2 bg-danger text-white" style="width: 15rem;">
-												<div class="card-header">CompSci 6304 (2020)</div>
-												<div class="card-body" style="width: 15rem;">
-													<h5 class="card-title">Cloud Computing and Big Data Management</h5>
-													<p class="card-text text-white">Privacy, security and management of cloud computing and big data.</p>
-												</div>
+										</div>
+										<div class="card  mb-3 mx-2 bg-danger text-white" style="width: 15rem;">
+											<div class="card-header">CompSci 6304 (2020)</div>
+											<div class="card-body" style="width: 15rem;">
+												<h5 class="card-title">Cloud Computing and Big Data Management</h5>
+												<p class="card-text text-white">Privacy, security and management of cloud computing and big data.</p>
 											</div>
-											<div class="card  mb-3 mx-2 bg-danger text-white" style="width: 15rem;">
-												<div class="card-header">CompSci 6600 (2020)</div>
-												<div class="card-body" style="width: 15rem;">
-													<h5 class="card-title">Formal Methods in Computer Security</h5>
-													<p class="card-text text-white">Learn about vulnerabilities, threats and how to mitigate different attacks.</p>
-												</div>
+										</div>
+										<div class="card  mb-3 mx-2 bg-danger text-white" style="width: 15rem;">
+											<div class="card-header">CompSci 6600 (2020)</div>
+											<div class="card-body" style="width: 15rem;">
+												<h5 class="card-title">Formal Methods in Computer Security</h5>
+												<p class="card-text text-white">Learn about vulnerabilities, threats and how to mitigate different attacks.</p>
 											</div>
-											<div class="card  mb-3 mx-2 bg-danger text-white" style="width: 15rem;">
-												<div class="card-header">CompSci 6601 (2020)</div>
-												<div class="card-body" style="width: 15rem;">
-													<h5 class="card-title">Privacy Preserving Data Integration and Analysis</h5>
-													<p class="card-text text-white">Basic protocols in statistic and cryptography, learn about sanitation and privacy-preserving techniques</p>
-												</div>
+										</div>
+										<div class="card  mb-3 mx-2 bg-danger text-white" style="width: 15rem;">
+											<div class="card-header">CompSci 6601 (2020)</div>
+											<div class="card-body" style="width: 15rem;">
+												<h5 class="card-title">Privacy Preserving Data Integration and Analysis</h5>
+												<p class="card-text text-white">Basic protocols in statistic and cryptography, learn about sanitation and privacy-preserving techniques</p>
 											</div>
-											<div class="card  mb-3 mx-2 bg-danger text-white" style="width: 15rem;">
-												<div class="card-header">CompSci 6602 (2020)</div>
-												<div class="card-body" style="width: 15rem;">
-													<h5 class="card-title">Network Performance Analysis</h5>
-													<p class="card-text text-white">Modeling and analysis of computer networks.</p>
-												</div>
+										</div>
+										<div class="card  mb-3 mx-2 bg-danger text-white" style="width: 15rem;">
+											<div class="card-header">CompSci 6602 (2020)</div>
+											<div class="card-body" style="width: 15rem;">
+												<h5 class="card-title">Network Performance Analysis</h5>
+												<p class="card-text text-white">Modeling and analysis of computer networks.</p>
 											</div>
-											<div class="card  mb-3 mx-2 bg-danger text-white" style="width: 15rem;">
-												<div class="card-header">CompSci 6603 (2020)</div>
-												<div class="card-body" style="width: 15rem;">
-													<h5 class="card-title">Advanced Topics in Wireless Networks</h5>
-													<p class="card-text text-white">Fundamentals and recent advances in wireless networking</p>
-												</div>
+										</div>
+										<div class="card  mb-3 mx-2 bg-danger text-white" style="width: 15rem;">
+											<div class="card-header">CompSci 6603 (2020)</div>
+											<div class="card-body" style="width: 15rem;">
+												<h5 class="card-title">Advanced Topics in Wireless Networks</h5>
+												<p class="card-text text-white">Fundamentals and recent advances in wireless networking</p>
 											</div>
-											<div class="card  mb-3 mx-2 bg-danger text-white" style="width: 15rem;">
-												<div class="card-header">CompSci 6605 (2020)</div>
-												<div class="card-body" style="width: 15rem;">
-													<h5 class="card-title">Advanced Network Security</h5>
-													<p class="card-text text-white">Authentication, denial of service and other security issues on wired and wireless networks.</p>
-												</div>
+										</div>
+										<div class="card  mb-3 mx-2 bg-danger text-white" style="width: 15rem;">
+											<div class="card-header">CompSci 6605 (2020)</div>
+											<div class="card-body" style="width: 15rem;">
+												<h5 class="card-title">Advanced Network Security</h5>
+												<p class="card-text text-white">Authentication, denial of service and other security issues on wired and wireless networks.</p>
 											</div>
 										</div>
 									</div>
-									<div class="tab-pane fade show" id="ContentInformationSecurityandTechnology" role="tabpanel" aria-labelledby="IDInformationSecurityandTechnology">
-										<div class="row d-flex justify-content-md-center mt-2">
-											<div class="card mb-3 mx-2 bg-primary text-white" style="width: 15rem;">
-												<div class="card-header">IS&amp;T 3321 (2020)</div>
-												<div class="card-body" style="width: 15rem;">
-													<h5 class="card-title">Network Performance Design and Management</h5>
-													<p class="card-text text-white">Design, manage and deply computer networks and protocols.</p>
-												</div>
+								</div>
+								<div class="tab-pane fade show" id="ContentInformationSecurityandTechnology" role="tabpanel" aria-labelledby="IDInformationSecurityandTechnology">
+									<div class="row d-flex justify-content-md-center mt-2">
+										<div class="card mb-3 mx-2 bg-primary text-white" style="width: 15rem;">
+											<div class="card-header">IS&amp;T 3321 (2020)</div>
+											<div class="card-body" style="width: 15rem;">
+												<h5 class="card-title">Network Performance Design and Management</h5>
+												<p class="card-text text-white">Design, manage and deply computer networks and protocols.</p>
 											</div>
-											<div class="card mb-3 mx-2 bg-primary text-white" style="width: 15rem;">
-												<div class="card-header">IS&amp;T 3333 (2020)</div>
-												<div class="card-body" style="width: 15rem;">
-													<h5 class="card-title">Data Networks and Information Security</h5>
-													<p class="card-text text-white">Current/New networking and information security priciples</p>
-												</div>
+										</div>
+										<div class="card mb-3 mx-2 bg-primary text-white" style="width: 15rem;">
+											<div class="card-header">IS&amp;T 3333 (2020)</div>
+											<div class="card-body" style="width: 15rem;">
+												<h5 class="card-title">Data Networks and Information Security</h5>
+												<p class="card-text text-white">Current/New networking and information security priciples</p>
 											</div>
-											<div class="card mb-3 mx-2 bg-primary text-white" style="width: 15rem;">
-												<div class="card-header">IS&amp;T 3343 (2020)</div>
-												<div class="card-body" style="width: 15rem;">
-													<h5 class="card-title">Systems Analysis</h5>
-													<p class="card-text text-white">Buisiness information systems are analyzed, designed and introduced into the buisiness environment.</p>
-												</div>
+										</div>
+										<div class="card mb-3 mx-2 bg-primary text-white" style="width: 15rem;">
+											<div class="card-header">IS&amp;T 3343 (2020)</div>
+											<div class="card-body" style="width: 15rem;">
+												<h5 class="card-title">Systems Analysis</h5>
+												<p class="card-text text-white">Buisiness information systems are analyzed, designed and introduced into the buisiness environment.</p>
 											</div>
-											<div class="card  mb-3 mx-2 bg-warning text-white" style="width: 15rem;">
-												<div class="card-header">IS&amp;T 4780 (2020)</div>
-												<div class="card-body" style="width: 15rem;">
-													<h5 class="card-title">Human and Organizational Factors in Cybersecurity</h5>
-													<p class="card-text text-white">Human factors in cybersecurity and information assurance. Fraud prevention, insider threat detection, etc.</p>
-												</div>
+										</div>
+										<div class="card  mb-3 mx-2 bg-warning text-white" style="width: 15rem;">
+											<div class="card-header">IS&amp;T 4780 (2020)</div>
+											<div class="card-body" style="width: 15rem;">
+												<h5 class="card-title">Human and Organizational Factors in Cybersecurity</h5>
+												<p class="card-text text-white">Human factors in cybersecurity and information assurance. Fraud prevention, insider threat detection, etc.</p>
 											</div>
-											<div class="card  mb-3 mx-2 bg-warning text-white" style="width: 15rem;">
-												<div class="card-header">IS&amp;T 5652 (2020)</div>
-												<div class="card-body" style="width: 15rem;">
-													<h5 class="card-title">Advanced Web Development</h5>
-													<p class="card-text text-white">Dynamic web interaction. Hands-on approach with servers, mobile software development, etc.</p>
-												</div>
+										</div>
+										<div class="card  mb-3 mx-2 bg-warning text-white" style="width: 15rem;">
+											<div class="card-header">IS&amp;T 5652 (2020)</div>
+											<div class="card-body" style="width: 15rem;">
+												<h5 class="card-title">Advanced Web Development</h5>
+												<p class="card-text text-white">Dynamic web interaction. Hands-on approach with servers, mobile software development, etc.</p>
 											</div>
-											<div class="card  mb-3 mx-2 bg-danger text-white" style="width: 15rem;">
-												<div class="card-header">IS&amp;T 6336 (2020)</div>
-												<div class="card-body" style="width: 15rem;">
-													<h5 class="card-title">Foundations of Internet Computing</h5>
-													<p class="card-text text-white">Computer networking and website information security are discussed. </p>
-												</div>
+										</div>
+										<div class="card  mb-3 mx-2 bg-danger text-white" style="width: 15rem;">
+											<div class="card-header">IS&amp;T 6336 (2020)</div>
+											<div class="card-body" style="width: 15rem;">
+												<h5 class="card-title">Foundations of Internet Computing</h5>
+												<p class="card-text text-white">Computer networking and website information security are discussed. </p>
 											</div>
-											<div class="card  mb-3 mx-2 bg-danger text-white" style="width: 15rem;">
-												<div class="card-header">IS&amp;T 6443 (2020)</div>
-												<div class="card-body" style="width: 15rem;">
-													<h5 class="card-title">Information Retrieval and Analysis</h5>
-													<p class="card-text text-white">Storage and retreival systems, text mining, collaborative filtering, etc.</p>
-												</div>
+										</div>
+										<div class="card  mb-3 mx-2 bg-danger text-white" style="width: 15rem;">
+											<div class="card-header">IS&amp;T 6443 (2020)</div>
+											<div class="card-body" style="width: 15rem;">
+												<h5 class="card-title">Information Retrieval and Analysis</h5>
+												<p class="card-text text-white">Storage and retreival systems, text mining, collaborative filtering, etc.</p>
 											</div>
-											<div class="card  mb-3 mx-2 bg-danger text-white" style="width: 15rem;">
-												<div class="card-header">IS&amp;T 6448 (2020)</div>
-												<div class="card-body" style="width: 15rem;">
-													<h5 class="card-title">Building the Data Warehouse</h5>
-													<p class="card-text text-white">Data modeling and processes to build a data warehouse. Security, schemes, web access, etc.</p>
-												</div>
+										</div>
+										<div class="card  mb-3 mx-2 bg-danger text-white" style="width: 15rem;">
+											<div class="card-header">IS&amp;T 6448 (2020)</div>
+											<div class="card-body" style="width: 15rem;">
+												<h5 class="card-title">Building the Data Warehouse</h5>
+												<p class="card-text text-white">Data modeling and processes to build a data warehouse. Security, schemes, web access, etc.</p>
 											</div>
-											<div class="card  mb-3 mx-2 bg-danger text-white" style="width: 15rem;">
-												<div class="card-header">IS&amp;T 6780 (2020)</div>
-												<div class="card-body" style="width: 15rem;">
-													<h5 class="card-title">Adv Human and Organizational Factors in Cybersecurity</h5>
-													<p class="card-text text-white">Current challenges in protecting integrity, availability and confidentiality of information.</p>
-												</div>
+										</div>
+										<div class="card  mb-3 mx-2 bg-danger text-white" style="width: 15rem;">
+											<div class="card-header">IS&amp;T 6780 (2020)</div>
+											<div class="card-body" style="width: 15rem;">
+												<h5 class="card-title">Adv Human and Organizational Factors in Cybersecurity</h5>
+												<p class="card-text text-white">Current challenges in protecting integrity, availability and confidentiality of information.</p>
 											</div>
 										</div>
 									</div>
-									<div class="tab-pane fade show" id="ContentComputerEngineering" role="tabpanel" aria-labelledby="IDComputerEngineering">
-										<div class="row d-flex justify-content-md-center mt-2">
-											<div class="card  mb-3 mx-2 bg-warning text-white" style="width: 15rem;">
-												<div class="card-header">CompEng 5410 (2020)</div>
-												<div class="card-body" style="width: 15rem;">
-													<h5 class="card-title">Intro to Computer Communication Networks</h5>
-													<p class="card-text text-white">Design of computer networks, protocols, archetecture and performance. Hardware-side networking.</p>
-												</div>
+								</div>
+								<div class="tab-pane fade show" id="ContentComputerEngineering" role="tabpanel" aria-labelledby="IDComputerEngineering">
+									<div class="row d-flex justify-content-md-center mt-2">
+										<div class="card  mb-3 mx-2 bg-warning text-white" style="width: 15rem;">
+											<div class="card-header">CompEng 5410 (2020)</div>
+											<div class="card-body" style="width: 15rem;">
+												<h5 class="card-title">Intro to Computer Communication Networks</h5>
+												<p class="card-text text-white">Design of computer networks, protocols, archetecture and performance. Hardware-side networking.</p>
 											</div>
-											<div class="card  mb-3 mx-2 bg-warning text-white" style="width: 15rem;">
-												<div class="card-header">CompEng 5420 (2020)</div>
-												<div class="card-body" style="width: 15rem;">
-													<h5 class="card-title">Intro to Network Security</h5>
-													<p class="card-text text-white">Network management, testing and security. Key encryption, management, intrusion detection, etc.</p>
-												</div>
+										</div>
+										<div class="card  mb-3 mx-2 bg-warning text-white" style="width: 15rem;">
+											<div class="card-header">CompEng 5420 (2020)</div>
+											<div class="card-body" style="width: 15rem;">
+												<h5 class="card-title">Intro to Network Security</h5>
+												<p class="card-text text-white">Network management, testing and security. Key encryption, management, intrusion detection, etc.</p>
 											</div>
-											<div class="card  mb-3 mx-2 bg-warning text-white" style="width: 15rem;">
-												<div class="card-header">CompEng 5430 (2020)</div>
-												<div class="card-body" style="width: 15rem;">
-													<h5 class="card-title">Wireless Networks</h5>
-													<p class="card-text text-white">Transmission fundamentals, coding techniques, error control, satellite and cellular networks, etc.</p>
-												</div>
+										</div>
+										<div class="card  mb-3 mx-2 bg-warning text-white" style="width: 15rem;">
+											<div class="card-header">CompEng 5430 (2020)</div>
+											<div class="card-body" style="width: 15rem;">
+												<h5 class="card-title">Wireless Networks</h5>
+												<p class="card-text text-white">Transmission fundamentals, coding techniques, error control, satellite and cellular networks, etc.</p>
 											</div>
-											<div class="card  mb-3 mx-2 bg-warning text-white" style="width: 15rem;">
-												<div class="card-header">CompEng 5510 (2020)</div>
-												<div class="card-body" style="width: 15rem;">
-													<h5 class="card-title">Fault Tolerant Digital Systems</h5>
-													<p class="card-text text-white">Fault models, hardware redundency, evaluation techniques, system design, etc.</p>
-												</div>
+										</div>
+										<div class="card  mb-3 mx-2 bg-warning text-white" style="width: 15rem;">
+											<div class="card-header">CompEng 5510 (2020)</div>
+											<div class="card-body" style="width: 15rem;">
+												<h5 class="card-title">Fault Tolerant Digital Systems</h5>
+												<p class="card-text text-white">Fault models, hardware redundency, evaluation techniques, system design, etc.</p>
 											</div>
-											<div class="card  mb-3 mx-2 bg-danger text-white" style="width: 15rem;">
-												<div class="card-header">CompEng 6420 (2020)</div>
-												<div class="card-body" style="width: 15rem;">
-													<h5 class="card-title">Wireless Ad Hoc and Sensor Networks</h5>
-													<p class="card-text text-white">Intro to ad hoc and sensor networks, IEEE standards, wireless channel issues, quality of service, etc.</p>
-												</div>
+										</div>
+										<div class="card  mb-3 mx-2 bg-danger text-white" style="width: 15rem;">
+											<div class="card-header">CompEng 6420 (2020)</div>
+											<div class="card-body" style="width: 15rem;">
+												<h5 class="card-title">Wireless Ad Hoc and Sensor Networks</h5>
+												<p class="card-text text-white">Intro to ad hoc and sensor networks, IEEE standards, wireless channel issues, quality of service, etc.</p>
 											</div>
-											<div class="card  mb-3 mx-2 bg-danger text-white" style="width: 15rem;">
-												<div class="card-header">CompEng 6430 (2020)</div>
-												<div class="card-body" style="width: 15rem;">
-													<h5 class="card-title">High Speed Networks</h5>
-													<p class="card-text text-white">State-of-the-art high speed networks, modeling, simulation, traffic management, etc.</p>
-												</div>
+										</div>
+										<div class="card  mb-3 mx-2 bg-danger text-white" style="width: 15rem;">
+											<div class="card-header">CompEng 6430 (2020)</div>
+											<div class="card-body" style="width: 15rem;">
+												<h5 class="card-title">High Speed Networks</h5>
+												<p class="card-text text-white">State-of-the-art high speed networks, modeling, simulation, traffic management, etc.</p>
 											</div>
-											<div class="card  mb-3 mx-2 bg-danger text-white" style="width: 15rem;">
-												<div class="card-header">CompEng 6440 (2020)</div>
-												<div class="card-body" style="width: 15rem;">
-													<h5 class="card-title">Network Performance Analysis</h5>
-													<p class="card-text text-white">Intro to performance analysis and modeling of computer networks.</p>
-												</div>
+										</div>
+										<div class="card  mb-3 mx-2 bg-danger text-white" style="width: 15rem;">
+											<div class="card-header">CompEng 6440 (2020)</div>
+											<div class="card-body" style="width: 15rem;">
+												<h5 class="card-title">Network Performance Analysis</h5>
+												<p class="card-text text-white">Intro to performance analysis and modeling of computer networks.</p>
 											</div>
-											<div class="card  mb-3 mx-2 bg-danger text-white" style="width: 15rem;">
-												<div class="card-header">CompEng 6510 (2020)</div>
-												<div class="card-body" style="width: 15rem;">
-													<h5 class="card-title">Resilient Networks</h5>
-													<p class="card-text text-white">Reliability and fault tolerence for network centric systems.</p>
-												</div>
+										</div>
+										<div class="card  mb-3 mx-2 bg-danger text-white" style="width: 15rem;">
+											<div class="card-header">CompEng 6510 (2020)</div>
+											<div class="card-body" style="width: 15rem;">
+												<h5 class="card-title">Resilient Networks</h5>
+												<p class="card-text text-white">Reliability and fault tolerence for network centric systems.</p>
 											</div>
 										</div>
 									</div>
@@ -525,14 +524,15 @@
 				</div>
 			</div>
 		</div>
-		</script>
-		<!--  _______________________________________________________   -->
-		<!--< Learning web security can help you build a secure site! > -->
-		<!--  -------------------------------------------------------   -->
-		<!--    \  ^__^                                                 -->
-		<!--     \ (oo)\_______                                         -->
-		<!--       (__)\        )\/\                                    -->
-		<!--            ||----ww|                                       -->
-		<!--            ||     ||                                       -->
-	</body>
+	</div>
+	</script>
+	<!--  _______________________________________________________   -->
+	<!--< Learning web security can help you build a secure site! > -->
+	<!--  -------------------------------------------------------   -->
+	<!--    \  ^__^                                                 -->
+	<!--     \ (oo)\_______                                         -->
+	<!--       (__)\        )\/\                                    -->
+	<!--            ||----ww|                                       -->
+	<!--            ||     ||                                       -->
+</body>
 </html>
