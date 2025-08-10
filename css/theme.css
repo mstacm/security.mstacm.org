@@ -1,0 +1,136 @@
+/* ACM Security — Modern Theme (2025)
+   This stylesheet revamps the visual design while preserving all HTML content/structure.
+   It layers on top of Bootstrap 4 + MDB and the existing particles background. */
+
+:root {
+  --bg: #0b0f17;
+  --bg-elev-1: rgba(17, 25, 40, 0.6);
+  --bg-elev-2: rgba(17, 25, 40, 0.8);
+  --text: #e5e7eb;
+  --muted: #a0a7b4;
+  --brand: #62aaff; /* primary accent */
+  --brand-2: #7cdbff; /* secondary accent */
+  --success: #22c55e;
+  --warning: #f59e0b;
+  --danger: #ef4444;
+  --card-border: rgba(255, 255, 255, 0.08);
+  --shadow: 0 10px 30px rgba(0,0,0,0.35);
+}
+
+/* Typography */
+html { scroll-behavior: smooth; }
+body {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, system-ui, sans-serif;
+  color: var(--text);
+  background-color: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  letter-spacing: .2px;
+  color: #f3f4f6;
+}
+
+p, li { color: var(--text); }
+.text-muted, .text-secondary { color: var(--muted) !important; }
+
+/* Links */
+a { color: var(--brand); transition: color .2s ease; }
+a:hover, a:focus { color: var(--brand-2); text-decoration: none; }
+
+/* Navbar (glass effect over particles) */
+.navbar {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  background: rgba(5, 8, 13, 0.65) !important;
+  border-bottom: 1px solid var(--card-border);
+}
+.navbar .navbar-brand { font-weight: 700; letter-spacing: .3px; }
+.navbar .nav-link { color: #cfd6e6 !important; transition: color .15s ease, opacity .15s ease; }
+.navbar .nav-link:hover { color: #ffffff !important; }
+.navbar .nav-item.active .nav-link { color: #fff !important; }
+
+/* Cards — glassmorphism */
+.card.bg-dark, .bg-dark.rounded, .container.bg-dark, .card.h-100.bg-dark, .card.mb-3.bg-dark {
+  background: var(--bg-elev-1) !important;
+  border: 1px solid var(--card-border);
+  border-radius: 16px !important;
+  box-shadow: var(--shadow);
+}
+.card { overflow: hidden; }
+.card-header {
+  background: transparent;
+  border-bottom: 1px solid var(--card-border);
+  font-weight: 600;
+}
+.card-footer { background: transparent; border-top: 1px solid var(--card-border); }
+
+/* Buttons */
+.btn { border-radius: 12px; font-weight: 600; letter-spacing: .2px; }
+.btn-primary {
+  color: #0b0f17;
+  background: linear-gradient(135deg, var(--brand), var(--brand-2));
+  border: 0;
+  box-shadow: 0 6px 18px rgba(98,170,255,0.35);
+}
+.btn-primary:hover, .btn-primary:focus {
+  filter: brightness(1.05);
+  color: #0b0f17;
+}
+.btn-outline-light { border-color: #e5e7eb; color: #e5e7eb; }
+.btn-outline-light:hover { background: #e5e7eb; color: #0b0f17; }
+
+/* Tables */
+.table { color: var(--text); }
+.table thead th { border-bottom: 1px solid var(--card-border); color: #f3f4f6; }
+.table td, .table th { border-top: 1px solid var(--card-border); }
+.table-striped tbody tr:nth-of-type(odd) { background: rgba(255,255,255,0.02); }
+.table-hover tbody tr:hover { background: rgba(255,255,255,0.04); }
+
+/* Pills/Tabs */
+.nav-pills .nav-link {
+  background: transparent;
+  color: #cfd6e6;
+  border: 1px solid var(--card-border);
+  margin-bottom: .4rem;
+  border-radius: 999px;
+}
+.nav-pills .nav-link:hover { color: #fff; border-color: rgba(255,255,255,0.25); }
+.nav-pills .nav-link.active {
+  color: #0b0f17 !important;
+  background: linear-gradient(135deg, var(--brand), var(--brand-2)) !important;
+  border-color: transparent;
+}
+
+/* Dividers */
+.bg-primary { background-color: var(--brand) !important; }
+hr.bg-primary { height: 3px; border: 0; opacity: .9; border-radius: 999px; }
+
+/* Images */
+img.img-fluid, .card img { border-radius: 12px; }
+
+/* Muted panel background blocks (custom darker containers) */
+#resourceTabContent, .page-content .rounded[style*="background-color:#17191c"], .page-content .rounded[style*="background-color: #17191c"], .page-content .rounded.bg-dark {
+  background: var(--bg-elev-2) !important;
+  border: 1px solid var(--card-border);
+  border-radius: 16px !important;
+}
+
+/* Page spacing improvements */
+.page-content .card, .page-content .container { margin-bottom: 1rem; }
+.page-content h2 { font-weight: 800; }
+
+/* Carousel text polish (home page) */
+.carousel-caption h5 { text-shadow: 0 2px 12px rgba(0,0,0,0.6); }
+.carousel-caption p { opacity: .95; }
+
+/* Accessibility: focus outlines */
+:focus { outline: none; }
+.btn:focus, .nav-link:focus, .form-control:focus { box-shadow: 0 0 0 .2rem rgba(98,170,255,.35) !important; }
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  * { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; }
+}
